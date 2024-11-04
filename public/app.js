@@ -1,32 +1,60 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const app = firebase.app();
-    console.log(app);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
-    function googleLogin() {
-        const provider = new firebase.auth.GoogleAuthProvider();
+const firebaseConfig = {
+    apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
+  authDomain: "yukoai-d9c63.firebaseapp.com",
+  databaseURL: "https://yukoai-d9c63-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "yukoai-d9c63",
+  storageBucket: "yukoai-d9c63.firebasestorage.app",
+  messagingSenderId: "503905336199",
+  appId: "1:503905336199:web:a4de7ab6f0af65caa5b122",
+  measurementId: "G-XHC05QS4QB"
+  };
+ 
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
-        firebase.auth().signInWithPopup(provider)
-            .then(result => {
-                const user = result.user;
-                document.getElementById('user-info').textContent = `Hello, ${user.displayName}`;
-                console.log(user);
-            })
-            .catch(error => {
-                console.error("Error during sign-in:", error);
-            });
+  const auth=getAuth();
+  const db=getFirestore();
+
+  onAuthStateChanged(auth, (user)=>{
+    const loggedInUserId=localStorage.getItem('loggedInUserId');
+    if(loggedInUserId){
+        console.log(user);
+        const docRef = doc(db, "users", loggedInUserId);
+        getDoc(docRef)
+        .then((docSnap)=>{
+            if(docSnap.exists()){
+                const userData=docSnap.data();
+                document.getElementById('loggedUserFName').innerText=userData.firstName;
+                document.getElementById('loggedUserEmail').innerText=userData.email;
+                document.getElementById('loggedUserLName').innerText=userData.lastName;
+
+            }
+            else{
+                console.log("no document found matching id")
+            }
+        })
+        .catch((error)=>{
+            console.log("Error getting document");
+        })
     }
-
-    function googleLogout() {
-        firebase.auth().signOut()
-            .then(() => {
-                document.getElementById('user-info').textContent = '';
-                console.log("User signed out.");
-            })
-            .catch(error => {
-                console.error("Error during sign-out:", error);
-            });
+    else{
+        console.log("User Id not Found in Local storage")
     }
+  })
 
-    document.querySelector("button#login").addEventListener("click", googleLogin);
-    document.querySelector("button#logout").addEventListener("click", googleLogout);
-});
+  const logoutButton=document.getElementById('logout');
+
+  logoutButton.addEventListener('click',()=>{
+    localStorage.removeItem('loggedInUserId');
+    signOut(auth)
+    .then(()=>{
+        window.location.href='index.html';
+    })
+    .catch((error)=>{
+        console.error('Error Signing out:', error);
+    })
+  })
