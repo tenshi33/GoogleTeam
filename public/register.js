@@ -30,8 +30,9 @@ signUp.addEventListener('click', (event) => {
     event.preventDefault();
     const email = document.getElementById('rEmail').value;
     const password = document.getElementById('rPassword').value;
-    const firstName = document.getElementById('fName').value;
-    const lastName = document.getElementById('lName').value;
+    const name = document.getElementById('name').value;
+    const course = document.getElementById('course').value;
+    const birthdate = document.getElementById('birthdate').value;
 
     const auth = getAuth();
     const db = getFirestore();
@@ -40,9 +41,9 @@ signUp.addEventListener('click', (event) => {
         .then((userCredential) => {
             const user = userCredential.user;
             const userData = {
-                email: email,
-                firstName: firstName,
-                lastName: lastName
+                name: name,
+                course: course,
+                birthdate: birthdate
             };
             showMessage('Account Created Successfully', 'signUpMessage');
             const docRef = doc(db, "users", user.uid);
@@ -78,7 +79,7 @@ signIn.addEventListener('click', (event) => {
             showMessage('login is successful', 'signInMessage');
             const user = userCredential.user;
             localStorage.setItem('loggedInUserId', user.uid);
-            window.location.href = 'homepage.html';
+            window.location.href = 'index.html';
         })
         .catch((error) => {
             const errorCode = error.code;

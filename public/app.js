@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { getFirestore, getDocs, doc, collection } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
-
+import { getFirestore, getDocs, collection } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
@@ -17,7 +16,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firestore
+// Initialize Firebase Auth and Firestore
+const auth = getAuth();
 const db = getFirestore();
 
 // Function to fetch FAQs
@@ -32,32 +32,51 @@ async function fetchFAQs() {
     return faqs;
 }
 
-// Use the fetched FAQs in your chatbot
-fetchFAQs().then(faqs => {
-    console.log(faqs); // This will log all FAQs
-    // Here you can integrate the FAQs with your chatbot logic
-});
-
-
+// Simple chatbot response function
 async function getBotResponse(userInput) {
     const faqs = await fetchFAQs();
-
-    // Simple matching logic to find an answer
     const matchingFAQ = faqs.find(faq =>
         userInput.toLowerCase().includes(faq.question.toLowerCase())
     );
-
     return matchingFAQ ? matchingFAQ.answer : "I'm sorry, I don't have an answer for that.";
 }
 
-// Example of handling user input
+// Event listener for user input
 document.getElementById('user-input').addEventListener('submit', async (event) => {
     event.preventDefault();
     const userInput = document.getElementById('input-field').value;
     const botResponse = await getBotResponse(userInput);
-
-    // Display bot response
     console.log('Bot:', botResponse);
 });
 
+// Handle logout function
+function logout() {
+    const user = auth.currentUser;  // Check if there is a logged-in user
+    if (user) {
+        console.log("Logging out user:", user.email); // Debugging log
 
+        signOut(auth).then(() => {
+            console.log("User signed out successfully.");
+            window.location.href = "/register.html"; // Redirect to login page after logout
+        }).catch((error) => {
+            console.error("Error signing out:", error);
+        });
+    } else {
+        console.log("No user is logged in."); // Debugging log for case no user is logged in
+    }
+}
+
+// Add event listener for logout button
+document.getElementById('logout-button').addEventListener('click', () => {
+    console.log("Logout button clicked"); // Debugging log
+    logout();
+});
+
+// Check authentication state (optional)
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        console.log("User is logged in:", user.email); // Debugging log
+    } else {
+        console.log("No user is logged in.");
+    }
+});
