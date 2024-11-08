@@ -18,12 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = admin.firestore();
 const auth = getAuth();
-const admin = require('firebase-admin');
-
-admin.initializeApp({
-    credential: admin.credential.cert(require('./path/to/your/serviceAccountKey.json')),
-    databaseURL: "https://your-database-name.firebaseio.com"
-});
 
 
 onAuthStateChanged(auth, (user) => {
