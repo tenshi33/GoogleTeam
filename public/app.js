@@ -1,7 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
     authDomain: "yukoai-d9c63.firebaseapp.com",
@@ -14,125 +16,96 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth();
-const db=getFirestore()
+const db = getFirestore();
 
 document.addEventListener("DOMContentLoaded", function () {
-    const chatLog = document.getElementById("chat-log");
-    const userInput = document.getElementById("user-input");
-    const sendBtn = document.getElementById("send-btn");
     const logoutButton = document.getElementById('logout');
+    const sendButton = document.getElementById('send-btn'); // New send button
+    const chatLog = document.getElementById('chat-log');  // Div or area to display the chat
 
-    let pdfContent = "";
 
-    // Function to handle text-to-speech for a given message
-    function botVoice(message) {
-        if (!message) {
-            console.log("No message provided for text-to-speech.");
-            return;
-        }
-
-        try {
-            const speech = new SpeechSynthesisUtterance();
-            speech.text = message;
-            speech.volume = 1;
-            speech.rate = 1;
-            speech.pitch = 1;
-            window.speechSynthesis.speak(speech);
-        } catch (error) {
-            console.error("Text-to-speech error:", error);
-        }
-    }
-
-    sendBtn.addEventListener("click", function () {
-        handleUserInput();
-    });
-
-    userInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            handleUserInput();
+    // Check authentication state
+    onAuthStateChanged(auth, (user) => {
+        if (!user) {
+            // If no user is logged in, redirect to the login page
+            window.location.href = 'register.html';
+        } else {
+            // You can display user info here if needed
+            console.log("User is logged in:", user.email);
         }
     });
 
-    function handleUserInput() {
-        const userMessage = userInput.value.trim();
-        if (!userMessage) return;
-
-        appendMessage(userMessage, "user-message");
-        userInput.value = "";
-
-        getBotResponse(userMessage).then(botMessage => {
-            appendMessage(botMessage, "bot-message");
-        }).catch(error => {
-            console.error("Error getting bot response:", error);
-            appendMessage("Sorry, there was an error processing your request. Please try again later.", "bot-message");
+    const genAI = new GoogleGenerativeAI(apiKey);
+    
+    let isAwaitingResponse = false;
+    
+    async function run() {
+        // Get the generative model (Gemini Pro)
+        const model = await genAI.getGenerativeModel({ model: "gemini-pro" });
+    
+        // Start the chat model
+        const chat = model.startChat({
+            history: [],
+            generationConfig: {
+                maxOutputTokens: 500,  // Reduced output token limit for faster responses
+            },
         });
-    }
-
-    function appendMessage(message, className) {
-        const messageElement = document.createElement("div");
-        messageElement.classList.add("message", className);
-        messageElement.textContent = message;
-        chatLog.appendChild(messageElement);
-        chatLog.scrollTop = chatLog.scrollHeight;
-    }
-
-    async function getBotResponse(userMessage) {
-        const apiKey = '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'; // Replace with your actual API key
-        const apiUrl = 'https://api.openai.com/v1/chat/completions';
-
-        const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
-        };
-
-        const messages = [
-            { role: "system", content: "You are a helpful assistant capable of analyzing documents." },
-        ];
-
-        if (pdfContent) {
-            messages.push({ role: "system", content: `The document content is as follows:\n${pdfContent}\nUse this document to answer any questions related to it.` });
-        }
-
-        messages.push({ role: "user", content: userMessage });
-
-        const data = {
-            model: "gpt-4-turbo",
-            messages: messages,
-            max_tokens: 500
-        };
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(data)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+    
+        // Function to ask and respond to messages
+        async function askAndRespond() {
+            if (!isAwaitingResponse) {
+                rl.question("You: ", async (msg) => {
+                    isAwaitingResponse = true;  // Set flag to true while awaiting response
+                    try {
+                        const result = await chat.sendMessageStream(msg);
+                        let text = "";
+    
+                        // Stream the result and print AI response in chunks
+                        for await (const chunk of result.stream) {
+                            const chunkText = await chunk.text();
+                            console.log("AI: ", chunkText);
+                            text += chunkText;
+                        }
+    
+                        isAwaitingResponse = false;  // Reset flag after response is complete
+                        askAndRespond();  // Recursively call for the next message
+                    } catch (error) {
+                        console.error("Error:", error);
+                        isAwaitingResponse = false;  // Reset flag on error
+                    }
+                });
+            } else {
+                console.log("Please wait for the current response to complete...");
             }
-
-            const result = await response.json();
-            console.log("Bot response:", result); 
-            return result.choices[0].message.content;
-        } catch (error) {
-            console.error("Error:", error);
-            return "Sorry, I couldn't reach the server. Please try again.";
         }
+    
+        // Start the interaction
+        askAndRespond();
     }
+    
+    run();
+    
 
+    // When the "Send" button is clicked, send the message
+    sendButton.addEventListener("click", () => {
+        const userMessage = rl.value.trim(); // Get the input value
+        if (userMessage) {
+            askAndRespond(userMessage);
+            rl.value = ""; // Clear the input field after sending
+        }
+    });
 
-// Handle user logout
-logoutButton.addEventListener('click',()=>{
-  localStorage.removeItem('loggedInUserId');
-  signOut(auth)
-  .then(()=>{
-      window.location.href='register.html';
-  })
-  .catch((error)=>{
-      console.error('Error Signing out:', error);
-  })
-})
-})
+    // Handle user logout
+    logoutButton.addEventListener('click', () => {
+        signOut(auth)
+            .then(() => {
+                localStorage.removeItem('loggedInUserId');
+                window.location.href = 'register.html';
+            })
+            .catch((error) => {
+                console.error('Error Signing out:', error);
+                showError("Failed to sign out.");
+            })
+    });
+});
