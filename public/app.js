@@ -108,4 +108,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 showError("Failed to sign out.");
             })
     });
+    
 });
