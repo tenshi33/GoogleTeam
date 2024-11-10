@@ -1,12 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { getFirestore, getDocs, collection, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
     authDomain: "yukoai-d9c63.firebaseapp.com",
-    databaseURL: "https://yukoai-d9c63-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "yukoai-d9c63",
     storageBucket: "yukoai-d9c63.firebasestorage.app",
     messagingSenderId: "503905336199",
@@ -16,16 +14,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+
 const auth = getAuth();
+const db=getFirestore()
 
 document.addEventListener("DOMContentLoaded", function () {
     const chatLog = document.getElementById("chat-log");
     const userInput = document.getElementById("user-input");
     const sendBtn = document.getElementById("send-btn");
-    const listenBtn = document.querySelector(".row button"); // Target "Listen" button specifically
+    const logoutButton = document.getElementById('logout');
 
-    let pdfContent = ""; 
+    let pdfContent = "";
 
     // Function to handle text-to-speech for a given message
     function botVoice(message) {
@@ -46,18 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Event listener for the "Listen" button to read the last bot response
-    listenBtn.addEventListener("click", () => {
-        const botMessages = document.querySelectorAll(".bot-message");
-
-        if (botMessages.length > 0) {
-            const lastBotMessage = botMessages[botMessages.length - 1];
-            botVoice(lastBotMessage.textContent); // Read the last bot message
-        } else {
-            console.log("No bot messages found to read.");
-        }
-    });
-
     sendBtn.addEventListener("click", function () {
         handleUserInput();
     });
@@ -70,16 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleUserInput() {
         const userMessage = userInput.value.trim();
-        if (userMessage === "") return;
+        if (!userMessage) return;
 
         appendMessage(userMessage, "user-message");
         userInput.value = "";
 
         getBotResponse(userMessage).then(botMessage => {
             appendMessage(botMessage, "bot-message");
+        }).catch(error => {
+            console.error("Error getting bot response:", error);
+            appendMessage("Sorry, there was an error processing your request. Please try again later.", "bot-message");
         });
     }
-
 
     function appendMessage(message, className) {
         const messageElement = document.createElement("div");
@@ -126,24 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const result = await response.json();
+            console.log("Bot response:", result); 
             return result.choices[0].message.content;
         } catch (error) {
             console.error("Error:", error);
             return "Sorry, I couldn't reach the server. Please try again.";
         }
     }
-});
 
 
-const logoutButton = document.getElementById('logout');
-
-logoutButton.addEventListener('click', () => {
-    localStorage.removeItem('loggedInUserId');
-    signOut(auth)
-        .then(() => {
-            window.location.href = 'register.html';
-        })
-        .catch((error) => {
-            console.error('Error Signing out:', error);
-        })
+// Handle user logout
+logoutButton.addEventListener('click',()=>{
+  localStorage.removeItem('loggedInUserId');
+  signOut(auth)
+  .then(()=>{
+      window.location.href='register.html';
+  })
+  .catch((error)=>{
+      console.error('Error Signing out:', error);
+  })
+})
 })
