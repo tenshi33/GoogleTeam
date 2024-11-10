@@ -32,7 +32,7 @@ signUp.addEventListener('click', (event)=>{
    const password=document.getElementById('rPassword').value;
    const name=document.getElementById('name').value;
    const course=document.getElementById('course').value;
-   const birthdate=document.getElementById('birthdate').value;
+   const studentno=document.getElementById('studentno').value;
 
    const auth=getAuth();
    const db=getFirestore();
@@ -44,13 +44,13 @@ signUp.addEventListener('click', (event)=>{
            email: email,
            name: name,
            course: course,
-           birthdate: birthdate
+           studentno: studentno
        };
        showMessage('Account Created Successfully', 'signUpMessage');
        const docRef=doc(db, "users", user.uid);
        setDoc(docRef,userData)
        .then(()=>{
-           window.location.href='index.html';
+           window.location.href='Homepage.html';
        })
        .catch((error)=>{
            console.error("error writing document", error);
@@ -80,7 +80,7 @@ signIn.addEventListener('click', (event)=>{
        showMessage('login is successful', 'signInMessage');
        const user=userCredential.user;
        localStorage.setItem('loggedInUserId', user.uid);
-       window.location.href='index.html';
+       window.location.href='Homepage.html';
    })
    .catch((error)=>{
        const errorCode=error.code;

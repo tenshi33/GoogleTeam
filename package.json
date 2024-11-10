@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bad-words": "^4.0.0",
     "brew": "^0.0.8",
     "firebase": "^11.0.1",
     "firebase-admin": "^12.7.0",

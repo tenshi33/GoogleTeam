@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Chatbot</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="chat.css">
   </head>
 
@@ -16,21 +16,18 @@
             <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
             <button id="send-btn">Send</button>
         </div>
-        <input type="file" id="file-input" accept=".pdf,.txt" />
+        
         
         <!-- Only "Listen" button without voice selector -->
         <div class="row">
             <button>Listen</button>
         </div>
 
-        <!-- File library container -->
-        <div id="file-library-container">
-            <h3>Uploaded Files</h3>
-            <ul id="file-library"></ul>
-        </div>
-    </div>
 
-    <script src="yuko-file-chatbot.js"></script>
+    </div>
+<button id="logout">Logout</button>
+
+    <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 </body>
 </html>
