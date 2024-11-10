@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
 
@@ -92,3 +92,45 @@ signIn.addEventListener('click', (event)=>{
        }
    })
 })
+// Show the recovery password modal
+document.getElementById('recoverPasswordLink').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('recoverPasswordModal').style.display = 'block'; // Show modal
+});
+
+// Handle reset password button click
+document.getElementById('resetPasswordButton').addEventListener('click', function() {
+    var email = document.getElementById('emailForPasswordReset').value;
+
+    // Check if the email input is not empty
+    if (email === '') {
+        alert('Please enter your email address.');
+        return;
+    }
+
+    // Get the auth object
+    const auth = getAuth();
+
+    // Send password reset email using Firebase Authentication
+    sendPasswordResetEmail(auth, email)
+        .then(function() {
+            // Success
+            document.getElementById('statusMessage').textContent = 'Password reset email sent. Please check your inbox.';
+            document.getElementById('statusMessage').style.color = 'green';
+            document.getElementById('emailForPasswordReset').value = ''; // Clear the input field
+        })
+        .catch(function(error) {
+            // Handle errors
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            if (errorCode === 'auth/invalid-email') {
+                document.getElementById('statusMessage').textContent = 'Invalid email address.';
+            } else if (errorCode === 'auth/user-not-found') {
+                document.getElementById('statusMessage').textContent = 'No user found with this email address.';
+            } else {
+                document.getElementById('statusMessage').textContent = 'Error: ' + errorMessage;
+            }
+            document.getElementById('statusMessage').style.color = 'red';
+        });
+});
