@@ -1,12 +1,9 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import say from "say";  // Import the say library for text-to-speech
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js';
+import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
-// Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",  // Ensure to use the correct API key
+    apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",  // Firebase API key (for Firebase usage, not Gemini)
     authDomain: "yukoai-d9c63.firebaseapp.com",
     projectId: "yukoai-d9c63",
     storageBucket: "yukoai-d9c63.firebasestorage.app",
@@ -19,95 +16,67 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
-const logoutButton=document.getElementById('logout');
 
-
+const logoutButton = document.getElementById('logout');
 document.addEventListener("DOMContentLoaded", function () {
-    const logoutButton = document.getElementById('logout');
     const userInput = document.getElementById('user-input');
-    const sendButton = document.getElementById('send-btn');
     const chatLog = document.getElementById('chat-log');
 
-    console.log("DOM content loaded");
+    // Send button click event
+    document.getElementById('send-btn').addEventListener('click', async () => {
+        await sendMessage();
+    });
 
-    // Ensure buttons are available
-    if (!logoutButton || !sendButton || !userInput) {
-        console.error("Required elements not found: logout, send button, or user input field.");
-        return;
-    } else {
-        console.log("Buttons and input field are ready!");
-    }
-
-    // Initialize the Google Generative AI
-    const apiKey = "AIzaSyBneZnBAmXTajQS5cDt_qrNxC3AUYS6t5I";  // Replace with your API Key
-    const genAI = new GoogleGenerativeAI(apiKey);
-
-    // Function to update the chat log with AI's response
-    function displayChatMessage(message, sender) {
-        const messageElement = document.createElement('li');
-        messageElement.classList.add('chat-message', sender);
-        messageElement.textContent = message;
-        chatLog.appendChild(messageElement);
-    }
-
-    // Function to process the user's message
-    async function processMessage(userMessage) {
-        displayChatMessage(userMessage, 'user-input');
-        
-        try {
-            // Get the generative model (Gemini Pro)
-            const model = await genAI.getGenerativeModel({ model: "gemini-pro" });
-
-            // Start the chat model
-            const chat = model.startChat({
-                history: [],
-                generationConfig: {
-                    maxOutputTokens: 500,  // Max tokens for response
-                },
-            });
-
-            const result = await chat.sendMessageStream(userMessage);
-            let text = "";
-
-            // Stream the result and build the AI's response text
-            for await (const chunk of result.stream) {
-                const chunkText = await chunk.text();
-                text += chunkText;
-            }
-
-            // Display AI's response in the chat log
-            displayChatMessage(text, 'chat-log');
-
-            // Use text-to-speech to read the entire response
-            say.speak(text, "Yuko", 1.0, (err) => {
-                if (err) {
-                    console.error("Error with TTS:", err);
-                }
-            });
-
-        } catch (error) {
-            console.error("Error during AI response:", error);
-            displayChatMessage("Sorry, I couldn't process your message at the moment.", 'chat-log');
-        }
-    }
-
-    // Event listener for sending user input
-    sendButton.addEventListener('click', () => {
-        const userMessage = userInput.value.trim();
-        if (userMessage) {
-            userInput.value = ''; // Clear input field after sending
-            processMessage(userMessage);
+    // Keypress event listener for Enter key
+    userInput.addEventListener('keydown', async (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();  // Prevent form submission (if applicable)
+            await sendMessage();     // Call sendMessage function
         }
     });
 
-logoutButton.addEventListener('click',()=>{
-  localStorage.removeItem('loggedInUserId');
-  signOut(auth)
-  .then(()=>{
-      window.location.href='register.html';
-  })
-  .catch((error)=>{
-      console.error('Error Signing out:', error);
-  })
-})
+    // Function to send message to backend and display bot response
+    async function sendMessage() {
+        const userMessage = userInput.value.trim();
+
+        if (!userMessage) {
+            alert("Please enter a message.");
+            return;
+        }
+
+        chatLog.innerHTML = "<li>Thinking...</li>";  // Show thinking message while awaiting response
+        
+        try {
+            const response = await fetch('http://localhost:3000/api/gemini', {  // Correct backend URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt: userMessage }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch response from Gemini API');
+            }
+
+            const data = await response.json();
+            const botMessage = data.text || 'Sorry, something went wrong!';
+            chatLog.innerHTML = `<li><strong>AI:</strong> ${botMessage}</li>`;
+        } catch (error) {
+            console.error('Error with Gemini API:', error);
+            chatLog.innerHTML = '<li>Sorry, I encountered an error while generating a response.</li>';
+        }
+    }
+
+    // Handle logout functionality
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('loggedInUserId');
+        signOut(auth)
+            .then(() => {
+                window.location.href = 'register.html';
+            })
+            .catch((error) => {
+                console.error('Error Signing out:', error);
+            });
+    });
 });
