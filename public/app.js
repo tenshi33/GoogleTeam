@@ -3,7 +3,7 @@ import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/fir
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",  // Firebase API key (for Firebase usage, not Gemini)
+    apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
     authDomain: "yukoai-d9c63.firebaseapp.com",
     projectId: "yukoai-d9c63",
     storageBucket: "yukoai-d9c63.firebasestorage.app",
