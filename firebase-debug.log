@@ -1,13 +1,15 @@
-[debug] [2024-11-13T14:14:41.319Z] ----------------------------------------------------------------------
-[debug] [2024-11-13T14:14:41.321Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ramil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
-[debug] [2024-11-13T14:14:41.322Z] CLI Version:   13.25.0
-[debug] [2024-11-13T14:14:41.322Z] Platform:      win32
-[debug] [2024-11-13T14:14:41.322Z] Node Version:  v22.11.0
-[debug] [2024-11-13T14:14:41.322Z] Time:          Wed Nov 13 2024 22:14:41 GMT+0800 (Philippine Standard Time)
-[debug] [2024-11-13T14:14:41.322Z] ----------------------------------------------------------------------
+[debug] [2024-11-13T15:35:32.385Z] ----------------------------------------------------------------------
+[debug] [2024-11-13T15:35:32.387Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ramil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2024-11-13T15:35:32.387Z] CLI Version:   13.25.0
+[debug] [2024-11-13T15:35:32.388Z] Platform:      win32
+[debug] [2024-11-13T15:35:32.388Z] Node Version:  v22.11.0
+[debug] [2024-11-13T15:35:32.388Z] Time:          Wed Nov 13 2024 23:35:32 GMT+0800 (Philippine Standard Time)
+[debug] [2024-11-13T15:35:32.388Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-11-13T14:14:41.384Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-11-13T14:14:41.384Z] > authorizing via signed-in user (yohancaballeroo@gmail.com)
+[debug] [2024-11-13T15:35:32.448Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"codebases"}
+[debug] [2024-11-13T15:35:32.453Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-13T15:35:32.453Z] > authorizing via signed-in user (yohancaballeroo@gmail.com)
+[debug] [2024-11-13T15:35:32.455Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"codebases"}
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -30,47 +32,55 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[debug] [2024-11-13T14:14:43.763Z] Using project from CLI flag: yukoai-d9c63
-[debug] [2024-11-13T14:14:43.765Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:43.765Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:43.766Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 [none]
-[debug] [2024-11-13T14:14:44.229Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 200
-[debug] [2024-11-13T14:14:44.229Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 {"projectId":"yukoai-d9c63","projectNumber":"503905336199","displayName":"YukoAI","name":"projects/yukoai-d9c63","resources":{"hostingSite":"yukoai-d9c63","realtimeDatabaseInstance":"yukoai-d9c63-default-rtdb"},"state":"ACTIVE","etag":"1_0cc21aca-afe6-4651-a31e-00bde231489a"}
+[debug] [2024-11-13T15:35:35.339Z] Using project from CLI flag: yukoai-d9c63
+[debug] [2024-11-13T15:35:35.341Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:35.341Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:35.343Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 [none]
+[debug] [2024-11-13T15:35:38.336Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 200
+[debug] [2024-11-13T15:35:38.336Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 {"projectId":"yukoai-d9c63","projectNumber":"503905336199","displayName":"YukoAI","name":"projects/yukoai-d9c63","resources":{"hostingSite":"yukoai-d9c63","realtimeDatabaseInstance":"yukoai-d9c63-default-rtdb"},"state":"ACTIVE","etag":"1_0cc21aca-afe6-4651-a31e-00bde231489a"}
 [info] i  Using project yukoai-d9c63 (YukoAI) 
 [info] 
 === Functions Setup
-[debug] [2024-11-13T14:14:44.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-11-13T14:14:44.236Z] > authorizing via signed-in user (yohancaballeroo@gmail.com)
-[debug] [2024-11-13T14:14:44.236Z] [iam] checking project yukoai-d9c63 for permissions ["firebase.projects.get"]
-[debug] [2024-11-13T14:14:44.237Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:44.237Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:44.237Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions [none]
-[debug] [2024-11-13T14:14:44.237Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions x-goog-quota-user=projects/yukoai-d9c63
-[debug] [2024-11-13T14:14:44.237Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2024-11-13T14:14:45.555Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions 200
-[debug] [2024-11-13T14:14:45.555Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2024-11-13T14:14:45.556Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:45.556Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:45.556Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:45.556Z] Checked if tokens are valid: true, expires at: 1731510543298
-[debug] [2024-11-13T14:14:45.556Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com [none]
-[debug] [2024-11-13T14:14:45.556Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/yukoai-d9c63
-[debug] [2024-11-13T14:14:45.557Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com [none]
-[debug] [2024-11-13T14:14:45.557Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/yukoai-d9c63
-[debug] [2024-11-13T14:14:47.705Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com 200
-[debug] [2024-11-13T14:14:47.706Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com [omitted]
-[debug] [2024-11-13T14:14:47.838Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com 200
-[debug] [2024-11-13T14:14:47.838Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-11-13T15:35:38.344Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-13T15:35:38.345Z] > authorizing via signed-in user (yohancaballeroo@gmail.com)
+[debug] [2024-11-13T15:35:38.345Z] [iam] checking project yukoai-d9c63 for permissions ["firebase.projects.get"]
+[debug] [2024-11-13T15:35:38.346Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:38.346Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:38.346Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions [none]
+[debug] [2024-11-13T15:35:38.346Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions x-goog-quota-user=projects/yukoai-d9c63
+[debug] [2024-11-13T15:35:38.346Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-13T15:35:41.573Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions 200
+[debug] [2024-11-13T15:35:41.574Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-13T15:35:41.574Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:41.575Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:41.575Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:41.575Z] Checked if tokens are valid: true, expires at: 1731513777545
+[debug] [2024-11-13T15:35:41.575Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-13T15:35:41.575Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/yukoai-d9c63
+[debug] [2024-11-13T15:35:41.576Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-13T15:35:41.576Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/yukoai-d9c63
+[debug] [2024-11-13T15:35:43.849Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-13T15:35:43.849Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-13T15:35:44.882Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-13T15:35:44.882Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yukoai-d9c63/services/cloudfunctions.googleapis.com [omitted]
 [info] 
-Detected existing codebase(s): default, yukoai
+Detected existing codebase(s): default
 
-[info] Let's create a new codebase for your functions.
-[info] A directory corresponding to the codebase will be created in your project
-[info] with sample code pre-configured.
+[info] 
+Overwriting codebase default...
 
-[info] See https://firebase.google.com/docs/functions/organize-functions for
-[info] more information on organizing your functions using codebases.
-
-[info] Functions can be deployed with firebase deploy.
-
-[error] functions.codebase must be unique but 'yukoai' was used more than once.
+[info] i  functions/package.json is unchanged 
+[info] i  functions/index.js is unchanged 
+[info] i  functions/.gitignore is unchanged 
+[info] 
+[info] i  Writing configuration info to firebase.json... 
+[info] i  Writing project information to .firebaserc... 
+[info] i  Writing gitignore file to .gitignore... 
+[info] 
+[info] +  Firebase initialization complete! 
+[debug] [2024-11-13T15:37:03.877Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Ramil\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[error] 
+[error] Error: An unexpected error has occurred.

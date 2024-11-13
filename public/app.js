@@ -38,45 +38,40 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to send message to backend and display bot response
     async function sendMessage() {
         const userMessage = userInput.value.trim();
-    
+        
         if (!userMessage) {
             alert("Please enter a message.");
             return;
         }
-    
+        
         chatLog.innerHTML = "<li>Thinking...</li>";  // Show thinking message while awaiting response
         
         try {
-            const apiKey = "AIzaSyBneZnBAmXTajQS5cDt_qrNxC3AUYS6t5I";  // Hardcoded Gemini API key for testing
-    
-            // Replace with your Gemini API endpoint URL if needed
-            const apiEndpoint = "https://gemini.googleapis.com/v1/gemini";  // Replace with Gemini API URL
+            // Update this URL to your Firebase Function endpoint
+            const apiEndpoint = "https://console.firebase.google.com/project/yukoai-d9c63/overview";
             
-            // Direct call to Gemini API
             const response = await fetch(apiEndpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`  // Add API key as Authorization header
                 },
                 body: JSON.stringify({
-                    prompt: userMessage,
-                    // Include other parameters here as per the Gemini API specification
+                    prompt: userMessage,  // Send the user input to the backend
                 }),
             });
-    
+        
             if (!response.ok) {
                 throw new Error('Failed to fetch response from Gemini API');
             }
-    
+        
             const data = await response.json();
-            const botMessage = data.text || 'Sorry, something went wrong!';
+            const botMessage = data.predictions[0].text || 'Sorry, something went wrong!';
             chatLog.innerHTML = `<li><strong>AI:</strong> ${botMessage}</li>`;
         } catch (error) {
             console.error('Error with Gemini API:', error);
             chatLog.innerHTML = '<li>Sorry, I encountered an error while generating a response.</li>';
         }
-    }
+    }    
     
 
     // Handle logout functionality

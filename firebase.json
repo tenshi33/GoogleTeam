@@ -24,10 +24,11 @@
         "firebase-debug.*.log",
         "*.local"
       ]
-    },
-    {
+    }
+  ],
+  "codebases": {
+    "yukoai": {
       "source": "yukoai",
-      "codebase": "yukoai",
       "ignore": [
         "node_modules",
         ".git",
@@ -36,5 +37,5 @@
         "*.local"
       ]
     }
-  ]
+  }
 }
