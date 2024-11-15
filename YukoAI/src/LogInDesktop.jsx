@@ -1,5 +1,7 @@
+import { Login } from './controller/register.js'
 
 function LogInDesktop() {
+
     return(
         <>
             <section className="log-in-section" id="Log-In">
@@ -7,10 +9,10 @@ function LogInDesktop() {
 
                 <div className="log-in">
                     <h1 className="log-in-text">Log In</h1>
-                    <input className="email-address-button" type="email" placeholder="Email Address"></input>
-                    <input className="password-button" type="password" placeholder="Password"></input>
+                    <input className="email-address" id="email" type="email" placeholder="Email Address"></input>
+                    <input className="password" id="password" type="password" placeholder="Password"></input>
                     <a className="forgot-pass-text" href="#" target="_self">Forgot Password?</a>
-                    <button className="log-in-button">Log In</button>
+                    <button id= "login" className="log-in-button">Log In</button>
                     <div className="no-account">
                         <p className="no-account-text">Don’t have an account yet?</p>
                         <a className="sign-up-button" href="#">Sign Up</a>
@@ -26,5 +28,6 @@ function LogInDesktop() {
         
     );
 }
+
 
 export default LogInDesktop
