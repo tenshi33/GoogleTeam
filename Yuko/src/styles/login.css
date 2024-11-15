@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+}
+
+.log-in-section {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.desktop-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.yuko-logo {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    align-items: center;
+    margin: 6vw 0vw 0vw 15vw;
+}
+.logo {
+    width: 25vw;
+}
+
+.log-in {
+    min-width: 30.5vw;
+    min-height: 35vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: #002072;
+    margin: 6vw 5vw 0vw 56vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 2vw;
+    filter: opacity(85%);
+}
+
+.log-in-text {
+    font-size: 3.5vw;
+    margin: 2vw 0vw 0vw 0vw;
+    font-weight: 800;
+}
+
+.email-address-button,
+.password-button {
+    width: 22vw;
+    height: 2.3vw;
+    font-family: 'Calibri';
+    margin-top: 3vw;
+    font-size: 1.1vw;
+    border-radius: 0.8vw;
+    border-width: 0.1vw;
+    border-color: white;
+    background-color: transparent;
+    padding-left: 1vw;
+    border-style: solid;
+    color: white;
+}
+
+.password-button {
+    margin-top: 1.5vw;
+}
+
+
+.forgot-pass-text {
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+    font-family: 'Calibri';
+    font-weight: lighter;
+    font-size: 1vw;
+    margin: 0.5vw 16vw 0vw 0vw;
+}
+
+.log-in-button {
+    margin: 3vw 0vw 0vw 0vw; 
+    width: 11.5vw;
+    height: 4.4vh;
+    font-size: 1.3vw;
+    border-radius: 4vw;
+    border: none;
+    background-image: linear-gradient(to right, #380050, #ED0101);
+    color: white;
+}
+
+.no-account {
+    display: flex;
+    flex-direction: row;
+}
+
+.no-account-text {
+    color: rgb(173, 173, 173);
+    font-family: 'Calibri';
+    font-weight: lighter;
+    font-size: 1vw;
+    display: flex;
+    margin: 5vw 0vw 0vw 0.5vw;
+}
+
+.sign-up-button {
+    color: rgb(241, 241, 241);
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 1vw;
+    display: flex;
+    margin-left: 7.2vw;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .yuko-logo {
+        top: 5%;
+        transform: translate(40%, -10%);
+    }
+
+    .logo {
+        width: 40vw;
+    }
+
+    .log-in {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        background-color: transparent;
+        filter: opacity(100%);
+        transform: translate(-60%, 30%);
+    }
+
+    .log-in-text {
+        font-size: 37px;
+        margin: 45vw 0vw 0vw -50vw;
+    }
+
+    .email-address-button,
+    .password-button {
+        width: 72vw;
+        height: 7.7vw;
+        margin-left: -5vw;
+        font-size: 14px;
+        border-radius: 2vw;
+        border-width: 1.9px;
+        padding-left: 2vw;
+    }
+    .email-address-button {
+        margin-top: 3.5vw;
+    }
+    .password-button {
+        margin-top: 3.9vw;
+    }
+
+    .forgot-pass-text {
+        margin: 2vw 0vw 0vw -55vw;
+        font-size: 14px;
+    }
+
+    .log-in-button {
+        width: 40vw;
+        height: 7.9vw;
+        margin: 11vw 0vw 0vw -9vw;
+        font-size: 17px;
+        font-weight: 600;
+        border: none;
+        justify-content: center;
+    }
+
+    .no-account-text {
+        font-size: 14px;
+        margin: 0vw 0vw 0vw -3vw;
+        bottom: -60%;
+        width: 80vw;
+        position: fixed;
+        justify-content: center;
+    }
+
+    .sign-up-button {
+        font-size: 14px;
+        margin-left: 23vw;
+    }
+}
