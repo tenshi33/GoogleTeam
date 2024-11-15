@@ -1,4 +1,4 @@
-import { Login } from './controller/register.js'
+
 
 function LogInDesktop() {
 
@@ -12,11 +12,17 @@ function LogInDesktop() {
                     <input className="email-address" id="email" type="email" placeholder="Email Address"></input>
                     <input className="password" id="password" type="password" placeholder="Password"></input>
                     <a className="forgot-pass-text" href="#" target="_self">Forgot Password?</a>
+                    <div id="recoverPasswordModal" style={{ display: 'none' }}></div>
+          <input type="email" id="emailForPasswordReset" placeholder="Enter your email" required />
+              <button type="button" id="resetPasswordButton">Reset Password</button>
+              <p id="statusMessage"></p>
                     <button id= "login" className="log-in-button">Log In</button>
                     <div className="no-account">
                         <p className="no-account-text">Don’t have an account yet?</p>
                         <a className="sign-up-button" href="#">Sign Up</a>
                     </div>
+                    
+
                 </div>
 
                 <div className="yuko-logo">
