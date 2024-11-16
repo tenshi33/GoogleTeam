@@ -1,11 +1,8 @@
-// firebase.js
-
 // Import the functions you need from Firebase SDK
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
-// Your Firebase configuration (replace with your actual config)
 const firebaseConfig = {
     apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
     authDomain: "yukoai-d9c63.firebaseapp.com",
