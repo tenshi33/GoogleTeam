@@ -1,30 +1,29 @@
-import { useState } from "react";
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-} from "firebase/auth";
-import "../styles/login.css";
+import React, { useState } from 'react';
+import { auth } from '../../firebase/firebase';  // Import auth from firebase.js
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, } from 'firebase/auth';  // Import login function
+import '../styles/login.css';
 
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+function LogInDesktop() {
+  // Define state variables for email, password, and error message
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [isPasswordModalVisible, setPasswordModalVisible] = useState(false); // Track modal visibility
 
+  // Handle the login process
   const handleLogin = async (event) => {
     event.preventDefault();
 
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      // Try logging in with Firebase Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      console.log("Login successful:", user);
-      localStorage.setItem("loggedInUserId", user.uid);
-      //insert here index.html
+
+      console.log('Login successful:', user);
+      localStorage.setItem('loggedInUserId', user.uid); // Store user ID in localStorage
+
+      
+      window.location.href = '/Yuko';  
     } catch (error) {
       console.error("Login failed:", error);
       setErrorMessage(error.message);
@@ -60,14 +59,12 @@ function Login() {
   return (
     <>
       <section className="log-in-section" id="Log-In">
-        <div className="yuko-logo">
-          <img className="logo" src="./yuko_logo2.png" alt="Yuko Logo" />
-        </div>
-        <img
-          className="desktop-bg"
-          src="./background.png"
-          alt="Background Image"
-        />
+      <div className="yuko-logo">
+      <img className="logo" src="./yuko_logo2.png" alt="Yuko Logo" />
+    </div>
+
+    <img className="desktop-bg" src="./background.png" alt="Background Image" />
+
         <div className="log-in">
           <h1 className="log-in-text">Log In</h1>
           <input
@@ -75,14 +72,14 @@ function Login() {
             type="email"
             placeholder="Email Address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)} // Handle email input change
           />
           <input
             className="password-button"
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)} // Handle password input change
           />
           <p className="recover">
             <a
@@ -95,7 +92,7 @@ function Login() {
               Forgot Password?
             </a>
           </p>
-
+          
           {isPasswordModalVisible && (
             <div id="recoverPasswordModal">
               <input
@@ -130,9 +127,7 @@ function Login() {
 
           <p className="no-account-text">
             Don’t have an account yet?
-            <a className="sign-up-button" href="#">
-              Sign Up
-            </a>
+            <a className="sign-up-button" href="#">Sign Up</a>
           </p>
         </div>
       </section>
@@ -140,6 +135,4 @@ function Login() {
   );
 }
 
-
-
-export default Login;
+export default LogInDesktop;
