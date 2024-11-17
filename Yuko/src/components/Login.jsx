@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { auth } from '../../firebase/firebase';  // Import auth from firebase.js
-import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, } from 'firebase/auth';  // Import login function
+import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
 import '../styles/login.css';
 
 function LogInDesktop() {
@@ -13,6 +12,11 @@ function LogInDesktop() {
   // Handle the login process
   const handleLogin = async (event) => {
     event.preventDefault();
+
+    if (!email || !password) {
+      setErrorMessage('Please enter Email or Password');
+      return;
+    }
 
     try {
       // Try logging in with Firebase Authentication
@@ -73,6 +77,7 @@ function LogInDesktop() {
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)} // Handle email input change
+          required
           />
           <input
             className="password-button"
@@ -80,6 +85,7 @@ function LogInDesktop() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)} // Handle password input change
+          required
           />
           <p className="recover">
             <a
