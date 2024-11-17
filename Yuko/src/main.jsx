@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import LogInDesktop from './components/login.jsx'
+import './index.css'
+import LogInDesktop from './LogInDesktop.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
