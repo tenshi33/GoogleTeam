@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
@@ -141,50 +140,6 @@ function LogInDesktop() {
   );
 }
 
-function SignUp() {
-  const signUp=document.getElementById('submitSignUp');
 
-  signUp.addEventListener('click', (event)=>{
-    event.preventDefault();
-    const email=document.getElementById('rEmail').value;
-    const password=document.getElementById('rPassword').value;
-    const name=document.getElementById('name').value;
-    const course=document.getElementById('course').value;
-    const studentno=document.getElementById('studentno').value;
- 
-    const auth=getAuth();
-    const db=getFirestore();
- 
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential)=>{
-        const user=userCredential.user;
-        const userData={
-            email: email,
-            name: name,
-            course: course,
-            studentno: studentno
-        };
-        showMessage('Account Created Successfully', 'signUpMessage');
-        const docRef=doc(db, "users", user.uid);
-        setDoc(docRef,userData)
-        .then(()=>{
-            window.location.href='Homepage.html';
-        })
-        .catch((error)=>{
-            console.error("error writing document", error);
- 
-        });
-    })
-    .catch((error)=>{
-        const errorCode=error.code;
-        if(errorCode=='auth/email-already-in-use'){
-            showMessage('Email Address Already Exists !!!', 'signUpMessage');
-        }
-        else{
-            showMessage('unable to create User', 'signUpMessage');
-        }
-    })
- });
-}
 
 export default LogInDesktop;
