@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import "../styles/login.css";
 
-function LogInDesktop() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -142,4 +142,4 @@ function LogInDesktop() {
 
 
 
-export default LogInDesktop;
+export default Login;

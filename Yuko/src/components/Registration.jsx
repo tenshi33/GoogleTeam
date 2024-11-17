@@ -1,152 +1,127 @@
-import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import firebaseConfig from './firebase/firebase';  
 
+// Initialize Firebase once in your project
+import { initializeApp } from 'firebase/firebase';
+initializeApp(firebaseConfig);
 
-function register() {
-  const signUp = document.getElementById("submitSignUp");
-  signUp.addEventListener("click", (event) => {
-    event.preventDefault();
-    const email = document.getElementById("rEmail").value;
-    const password = document.getElementById("rPassword").value;
-    const name = document.getElementById("name").value;
-    const course = document.getElementById("course").value;
-    const studentno = document.getElementById("studentno").value;
+const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [course, setCourse] = useState('');
+  const [studentno, setStudentNo] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
     const auth = getAuth();
     const db = getFirestore();
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const userData = {
-          email: email,
-          name: name,
-          course: course,
-          studentno: studentno,
-        };
-        showMessage("Account Created Successfully", "signUpMessage");
-        const docRef = doc(db, "users", user.uid);
-        setDoc(docRef, userData)
-          .then(() => {
-            window.location.href = "Homepage.html";
-          })
-          .catch((error) => {
-            console.error("error writing document", error);
-          });
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        if (errorCode == "auth/email-already-in-use") {
-          showMessage("Email Address Already Exists !!!", "signUpMessage");
-        } else {
-          showMessage("unable to create User", "signUpMessage");
-        }
-      });
-  });
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
 
-  const logIn = document.getElementById("login");
-  signIn.addEventListener("click", (event) => {
-    event.preventDefault();
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const auth = getAuth();
+      // User data to be saved in Firestore
+      const userData = {
+        email,
+        name,
+        course,
+        studentno,
+      };
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        showMessage("login is successful", "signInMessage");
-        const user = userCredential.user;
-        localStorage.setItem("loggedInUserId", user.uid);
-        window.location.href = "Homepage.html";
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        if (errorCode === "auth/invalid-credential") {
-          showMessage("Incorrect Email or Password", "signInMessage");
-        } else {
-          showMessage("Account does not Exist", "signInMessage");
-        }
-      });
-  });
+      // Save user data to Firestore
+      await setDoc(doc(db, 'users', user.uid), userData);
+
+      // Success message
+      setMessage('Account Created Successfully!');
+      setLoading(false);
+
+      // Redirect to Homepage (or any other page)
+      window.location.href = '/Homepage'; // Adjust to your routing logic (use React Router if necessary)
+    } catch (error) {
+      setLoading(false);
+      if (error.code === 'auth/email-already-in-use') {
+        setMessage('Email Address Already Exists!');
+      } else {
+        setMessage('Unable to create user. Please try again.');
+      }
+    }
+  };
+
   return (
-    <>
-      <section className="log-in-section" id="Log-In">
-        <div className="yuko-logo">
-          <img className="logo" src="./yuko_logo2.png" alt="Yuko Logo" />
-        </div>
-        <img
-          className="desktop-bg"
-          src="./background.png"
-          alt="Background Image"
-        />
-        <div className="log-in">
-          <h1 className="log-in-text">Log In</h1>
+    <div className="register-container">
+      <h2>Register</h2>
+      
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Full Name:</label>
           <input
-            className="email-address-button"
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="rEmail">Email:</label>
+          <input
             type="email"
-            placeholder="Email Address"
+            id="rEmail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="rPassword">Password:</label>
           <input
-            className="password-button"
             type="password"
-            placeholder="Password"
+            id="rPassword"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <p className="recover">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setPasswordModalVisible(true);
-              }}
-            >
-              Forgot Password?
-            </a>
-          </p>
-
-          {isPasswordModalVisible && (
-            <div id="recoverPasswordModal">
-              <input
-                type="email"
-                id="emailForPasswordReset"
-                placeholder="Enter your email"
-                required
-              />
-              <button id="forgot-pass-text" type="button" onClick={handlePasswordReset}>
-                Reset Password
-              </button>
-              <p id="statusMessage"></p>
-              <button
-                type="button"
-                onClick={() => setPasswordModalVisible(false)}
-                className="close-modal"
-              >
-                Close
-              </button>
-            </div>
-          )}
-
-          <button className="log-in-button" onClick={handleLogin}>
-            Log In
-          </button>
-
-          {errorMessage && (
-            <p className="error-message" style={{ color: "red" }}>
-              {errorMessage}
-            </p>
-          )}
-
-          <p className="no-account-text">
-            Already have an account?
-            <a className="log-in-page" href="#">
-              Log In
-            </a>
-          </p>
         </div>
-      </section>
-    </>
+
+        <div className="form-group">
+          <label htmlFor="course">Course:</label>
+          <input
+            type="text"
+            id="course"
+            value={course}
+            onChange={(e) => setCourse(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="studentno">Student Number:</label>
+          <input
+            type="text"
+            id="studentno"
+            value={studentno}
+            onChange={(e) => setStudentNo(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Creating Account...' : 'Create Account'}
+        </button>
+      </form>
+
+      {message && <div className="message">{message}</div>}
+    </div>
   );
-}
-export default register;
+};
+
+export default Register;
