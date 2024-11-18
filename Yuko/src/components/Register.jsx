@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
-import firebaseConfig from './firebase/firebase';  
+import { auth, getAuth, createUserWithEmailAndPassword, getFirestore, doc, setDoc } from '../../firebase/firebase';  // Import auth from firebase.js
 
-// Initialize Firebase once in your project
-import { initializeApp } from 'firebase/firebase';
-initializeApp(firebaseConfig);
+function Register(){
 
-const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -43,7 +38,7 @@ const Register = () => {
       setLoading(false);
 
       // Redirect to Homepage (or any other page)
-      window.location.href = '/Homepage'; // Adjust to your routing logic (use React Router if necessary)
+      window.location.href = '/Homepage'; 
     } catch (error) {
       setLoading(false);
       if (error.code === 'auth/email-already-in-use') {
