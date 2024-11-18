@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
+import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
 function LogInDesktop() {
@@ -133,7 +134,7 @@ function LogInDesktop() {
 
           <p className="no-account-text">
             Don’t have an account yet?
-            <a className="sign-up-button" href="#">Sign Up</a>
+            <Link to="/Register" className="sign-up-button">Sign Up</Link>
           </p>
         </div>
       </section>
