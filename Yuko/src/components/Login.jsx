@@ -17,7 +17,7 @@ function LogInDesktop() {
     event.preventDefault();
 
     if (!email || !password) {
-      setErrorMessage('Please enter Email or Password');
+      setErrorMessage('Please enter your Email or Password');
       return;
     }
 
@@ -87,6 +87,12 @@ const handlePasswordReset = async (event) => {
       <form action="#" className="log-in-form">
         <h2 className="login-title">Log In</h2>
 
+        {errorMessage && (
+            <p className="error-message" style={{ color: "red" }}>
+              {errorMessage}
+            </p>
+          )}
+
         <div className="input-wrapper">
           <input 
             className="input-field" 
@@ -126,12 +132,6 @@ const handlePasswordReset = async (event) => {
         </div>
 
         <button className="log-in-button" onClick={handleLogin}>Log In</button>
-
-        {errorMessage && (
-            <p className="error-message" style={{ color: "red" }}>
-              {errorMessage}
-            </p>
-          )}
 
         <p className="no-account-text">Don't have an account yet?
         <Link to="/Register" className="sign-up-button">Sign Up</Link>
