@@ -142,7 +142,7 @@ const handlePasswordReset = async (event) => {
             <div className='recover-pass-container'>
               <div id="recoverPasswordModal" className='recover-pass'>
                 <h2 className='recover-pass-title'>FORGOT YOUR PASSWORD?</h2>
-                <p className='recover-pass-desc'>We’ll send you an email to reset you password.</p>
+                <p className='recover-pass-desc'>We’ll send you an email to reset your password.</p>
 
                 <p id="statusMessage" className="reset-pass-confirmation"></p>
                 <input
