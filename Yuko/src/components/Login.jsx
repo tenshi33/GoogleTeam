@@ -129,6 +129,8 @@ function LogInDesktop() {
               <div id="recoverPasswordModal" className='recover-pass'>
                 <h2 className='recover-pass-title'>FORGOT YOUR PASSWORD?</h2>
                 <p className='recover-pass-desc'>We’ll send you an email to reset you password.</p>
+
+                <p id="statusMessage" className='reset-pass-confirmation'></p>
                 <input
                   className='recover-pass-email'
                   type="email"
@@ -141,7 +143,7 @@ function LogInDesktop() {
                   <button className='reset-pass-button' id="forgot-pass-text" type="button" onClick={handlePasswordReset}>
                     Send me a password reset link
                   </button>
-                  <p id="statusMessage"></p>
+                  
                   <button
                     type="button"
                     onClick={() => setPasswordModalVisible(false)}
