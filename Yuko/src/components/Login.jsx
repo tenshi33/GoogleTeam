@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
+import { auth, getAuth, fetchSignInMethodsForEmail,  signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
@@ -37,31 +37,45 @@ function LogInDesktop() {
     }
   };
 
-  const handlePasswordReset = async (event) => {
-    event.preventDefault();
-    const emailForReset = document.getElementById(
-      "emailForPasswordReset"
-    ).value;
 
-    if (emailForReset === "") {
-      alert("Please enter your email address.");
+const handlePasswordReset = async (event) => {
+  event.preventDefault();
+  const emailForReset = document.getElementById("emailForPasswordReset").value;
+
+  if (emailForReset === "") {
+    alert("Please enter your email address.");
+    return;
+  }
+
+  const authInstance = getAuth();
+  
+  try {
+    // Check if the email is associated with an existing Firebase account
+    const signInMethods = await fetchSignInMethodsForEmail(authInstance, emailForReset);
+
+    if (signInMethods.length === 0) {
+      // If no methods are found, email is not associated with an account
+      document.getElementById("statusMessage").textContent =
+        "No account found with this email.";
+      document.getElementById("statusMessage").style.color = "red";
       return;
     }
 
-    const authInstance = getAuth();
-    try {
-      await sendPasswordResetEmail(authInstance, emailForReset);
-      document.getElementById("statusMessage").textContent =
-        "Password reset email sent. Please check your inbox.";
-      document.getElementById("statusMessage").style.color = "green";
-      document.getElementById("emailForPasswordReset").value = "";
-    } catch (error) {
-      const errorMessage = error.message;
-      document.getElementById("statusMessage").textContent =
-        "Error: " + errorMessage;
-      document.getElementById("statusMessage").style.color = "red";
-    }
-  };
+    // Proceed to send the password reset email if the email exists
+    await sendPasswordResetEmail(authInstance, emailForReset);
+    document.getElementById("statusMessage").textContent =
+      "Password reset email sent. Please check your inbox.";
+    document.getElementById("statusMessage").style.color = "green";
+    document.getElementById("emailForPasswordReset").value = "";
+  } catch (error) {
+    // Handle other errors such as network issues or invalid email format
+    const errorMessage = error.message;
+    document.getElementById("statusMessage").textContent =
+      "Error: " + errorMessage;
+    document.getElementById("statusMessage").style.color = "red";
+  }
+};
+
 
   return (
     <>    
@@ -114,7 +128,7 @@ function LogInDesktop() {
         <button className="log-in-button" onClick={handleLogin}>Log In</button>
 
         {errorMessage && (
-            <p className="error-message">
+            <p className="error-message" style={{ color: "red" }}>
               {errorMessage}
             </p>
           )}
@@ -128,7 +142,7 @@ function LogInDesktop() {
             <div className='recover-pass-container'>
               <div id="recoverPasswordModal" className='recover-pass'>
                 <h2 className='recover-pass-title'>FORGOT YOUR PASSWORD?</h2>
-                <p className='recover-pass-desc'>We’ll send you an email to reset you password.</p>
+                <p className='recover-pass-desc'>We’ll send you an email to reset your password.</p>
 
                 <p id="statusMessage" className="reset-pass-confirmation"></p>
                 <input
@@ -151,6 +165,7 @@ function LogInDesktop() {
                   >
                     Cancel
                   </button>
+                  
                 </div>
               </div>
             </div>
