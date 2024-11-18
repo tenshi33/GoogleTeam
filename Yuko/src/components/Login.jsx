@@ -17,7 +17,7 @@ function LogInDesktop() {
     event.preventDefault();
 
     if (!email || !password) {
-      setErrorMessage('Please enter your Email or Password');
+      setErrorMessage('Please enter your Email or Password.');
       return;
     }
 

@@ -180,6 +180,10 @@ body .recover-pass-container {
   margin-bottom: 3rem;
 }
 
+.error-message {
+  margin-bottom: -0.5vw;
+}
+
 .log-in-form {
   background-color: #002072;
   filter: opacity(85%);
