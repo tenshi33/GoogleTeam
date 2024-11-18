@@ -87,7 +87,7 @@ function LogInDesktop() {
             onChange={(e) => setPassword(e.target.value)} // Handle password input change
           required
           />
-          <p className="recover">
+          <p className="recver">
             <a
               href="#"
               onClick={(e) => {
