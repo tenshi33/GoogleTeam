@@ -181,6 +181,7 @@ body .recover-pass-container {
 }
 
 .error-message {
+  width: 23vw;
   margin-bottom: -0.5vw;
 }
 
