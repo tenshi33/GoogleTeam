@@ -130,7 +130,7 @@ function LogInDesktop() {
                 <h2 className='recover-pass-title'>FORGOT YOUR PASSWORD?</h2>
                 <p className='recover-pass-desc'>We’ll send you an email to reset you password.</p>
 
-                <p id="statusMessage" className='reset-pass-confirmation'></p>
+                <p id="statusMessage" className="reset-pass-confirmation"></p>
                 <input
                   className='recover-pass-email'
                   type="email"
