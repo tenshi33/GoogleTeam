@@ -63,87 +63,105 @@ function LogInDesktop() {
 
   return (
     <>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
-    <div className="log-in-container">
-      <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo"/>
+      <section className="log-in-section" id="Log-In">
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock"
+        />
+        <div className="log-in-container">
+          <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo" />
 
-      
-      <form action="#" className="log-in-form">
-        <h2 className="login-title">Log In</h2>
+          <form action="#" className="log-in-form" onSubmit={handleLogin}>
+            <h2 className="login-title">Log In</h2>
 
-        <div className="input-wrapper">
-          <input 
-            className="input-field" 
-            type="email" 
-            placeholder="Email Address" 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} // Handle email input change
-            required
-          />
-          <i className="material-symbols-outlined">mail</i>
-        </div>
-
-        <div className="input-wrapper">
-          <input 
-            className="input-field" 
-            type="password" 
-            placeholder="Password" 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} // Handle password input change
-            required
-          />
-          <i className="material-symbols-rounded">lock</i>
-          <button className="show-pass">Show</button>
-        </div>
-        
-        <div className="forgot-password-wrapper">
-          <a 
-            className="forgot-pass-link" 
-            href="#" 
-            target="_self" 
-            onClick={(e) => {
-              e.preventDefault();
-              setPasswordModalVisible(true);
-            }}>
-              Forgot Password?
-          </a>
-        </div>
-
-        {isPasswordModalVisible && (
-            <div id="recoverPasswordModal">
+            <div className="input-wrapper">
               <input
+                className="input-field"
                 type="email"
-                id="emailForPasswordReset"
-                placeholder="Enter your email"
+                placeholder="Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} // Handle email input change
                 required
               />
-              <button id="forgot-pass-text" type="button" onClick={handlePasswordReset}>
-                Reset Password
-              </button>
-              <p id="statusMessage"></p>
-              <button
-                type="button"
-                onClick={() => setPasswordModalVisible(false)}
-                className="close-modal"
-              >
-                Close
+              <i className="material-symbols-outlined">mail</i>
+            </div>
+
+            <div className="input-wrapper">
+              <input
+                className="input-field"
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} // Handle password input change
+                required
+              />
+              <i className="material-symbols-rounded">lock</i>
+              <button className="show-pass" type="button">
+                Show
               </button>
             </div>
-          )}
 
-        <button className="log-in-button" onClick={handleLogin}>Log In</button>
+            <div className="forgot-password-wrapper">
+              <a
+                className="forgot-pass-link"
+                href="#"
+                target="_self"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPasswordModalVisible(true);
+                }}
+              >
+                Forgot Password?
+              </a>
+            </div>
 
-        {errorMessage && (
-            <p className="error-message" style={{ color: "red" }}>
-              {errorMessage}
+            {isPasswordModalVisible && (
+              <div id="recoverPasswordModal">
+                <input
+                  type="email"
+                  id="emailForPasswordReset"
+                  placeholder="Enter your email"
+                  required
+                />
+                <button
+                  id="forgot-pass-text"
+                  type="button"
+                  onClick={handlePasswordReset}
+                >
+                  Reset Password
+                </button>
+                <p id="statusMessage"></p>
+                <button
+                  type="button"
+                  onClick={() => setPasswordModalVisible(false)}
+                  className="close-modal"
+                >
+                  Close
+                </button>
+              </div>
+            )}
+
+            <button className="log-in-button" type="submit">
+              Log In
+            </button>
+
+            {errorMessage && (
+              <p className="error-message" style={{ color: "red" }}>
+                {errorMessage}
+              </p>
+            )}
+
+            <p className="no-account-text">
+              Don’t have an account yet?
+              <Link to="/Register" className="sign-up-button">
+                Sign Up
+              </Link>
             </p>
-          )}
-
-          <p className="no-account-text">
-            Don’t have an account yet?
-            <Link to="/Register" className="sign-up-button">Sign Up</Link>
-          </p>
+          </form>
         </div>
       </section>
     </>
