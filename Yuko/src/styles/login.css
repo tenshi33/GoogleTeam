@@ -63,12 +63,12 @@ body .recover-pass-container {
   width: 26.8vw;
 }
 
-.recover-pass .reset-pass-confirmation {
+.reset-pass-confirmation {
   font-size: 1vw;
   font-family: 'Calibri';
   width: 26.8vw;
   margin-bottom: 0.2em;
-  
+  color: #ED0101 !important;
 }
 
 .recover-pass .recover-pass-email {
