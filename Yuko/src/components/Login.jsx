@@ -65,7 +65,7 @@ function LogInDesktop() {
     <>
       <section className="log-in-section" id="Log-In">
       <div className="yuko-logo">
-      <img className="logo" src="./yuko_logo2.png" alt="Yuko Logo" />
+      <img className="logo" src="./yuko_logo_full.png" alt="Yuko Logo" />
     </div>
 
     <img className="desktop-bg" src="./background.png" alt="Background Image" />
