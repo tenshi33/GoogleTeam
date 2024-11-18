@@ -182,7 +182,7 @@ body .recover-pass-container {
 
 .error-message {
   width: 23vw;
-  margin-bottom: -0.5vw;
+  margin-bottom: -0.2vw;
 }
 
 .log-in-form {
@@ -204,7 +204,7 @@ body .recover-pass-container {
   height: 54px;
   width: 23vmax;
   position: relative;
-  margin-top: 1.2rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: row;
 }
@@ -370,6 +370,12 @@ input:-webkit-autofill{
     font-weight: 900;
     margin-bottom: -0.3rem;
   }
+
+  .error-message {
+    width: 80vw;
+    margin-top: 3vw;
+    margin-bottom: 1.2vw;
+  }
   
   .log-in-form {
     background-color: transparent;
@@ -392,7 +398,7 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper {
     width: 80vw;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     margin-bottom: 0rem;
     display: flex;
     flex-direction: row;
