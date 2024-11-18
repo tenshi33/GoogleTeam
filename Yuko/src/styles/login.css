@@ -430,4 +430,191 @@ input:-webkit-autofill{
   .sign-up-button {
     width: 25vw;
   }
+
+  body .recover-pass-container {
+  background-color: black;
+  filter: opacity(95%);
+  display: flex;
+  position: fixed;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.recover-pass-container .recover-pass {
+  background-color: #EEEEEE;
+  filter: opacity(100%);
+  width: 32vw;
+  height: 17vw;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recover-pass .recover-pass-title {
+  color: #002072;
+  font-size: 1.77vw;
+  font-weight: 900;
+  margin-bottom: 1.5vw
+}
+
+.recover-pass .recover-pass-desc {
+  color: #002072;
+  font-family: Calibri, sans-serif;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+  width: 26.8vw;
+}
+
+.recover-pass .recover-pass-email {
+  width: 26.8vw;
+  height: 2.5vw;
+  background-color: #EEEEEE;
+  border: solid;
+  color: #002072;
+  border-color: #002072;
+  border-width: 1.9px;
+  border-radius: 0.7em;
+  padding-left: 2.7vw;
+  font-size: 0.9vw;
+}
+
+.recover-pass .recover-pass-email::placeholder {
+  color: rgb(117, 117, 117);
+}
+
+.recover-pass .material-symbols-outlined {
+  margin-left: -24vw;
+  margin-top: -1.9vw;
+  color: rgb(133, 133, 133);
+  font-size: 1.3vw;
+}
+
+.recover-pass-container .recover-pass :focus ~i{
+  color: #002072;
+  pointer-events: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.recover-pass-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 1.5vw;
+}
+
+.recover-pass-buttons .reset-pass-button:hover {
+  background: linear-gradient(to right,  #7602a8, #ED0101);
+}
+
+.recover-pass-buttons .reset-pass-button {
+  background: linear-gradient(to right, #ED0101, #380050);
+  font-size: 0.8vw;
+  color: white;
+  border: none;
+  width: 15vw;
+  height: 2.3vw;
+  border-radius: 2em;
+}
+
+.recover-pass-buttons .reset-pass-button:active {
+  background: linear-gradient(to right,  #7602a8, #ED0101);
+  width: 14.95vw;
+  height: 2.25vw;
+  font-size: 0.75vw;
+}
+.recover-pass-buttons .close-modal {
+  background-color: #CFCFCF;
+  font-size: 0.8vw;
+  color: #002072;
+  border: none;
+  width: 10.9vw;
+  height: 2.3vw;
+  border-radius: 2em;
+}
+
+.recover-pass-buttons .close-modal:hover {
+  background-color: #b9b9b9;
+}
+
+.recover-pass-buttons .close-modal:active {
+  width: 10.85vw;
+  height: 2.25vw;
+  font-size: 0.75vw;
+}
+
+
+.recover-pass-container .recover-pass {
+  background-color: #EEEEEE;
+  filter: opacity(100%);
+  width: 75vw;
+  height: 50vw;
+}
+
+.recover-pass .recover-pass-title {
+  font-size: 4vw;
+  margin-bottom: 3vw;
+}
+
+.recover-pass .recover-pass-desc {
+  font-size: 3.15vw;
+  width: 61vw;
+  margin-bottom: 3vw;
+}
+
+.recover-pass .recover-pass-email {
+  width: 61vw;
+  height: 6.5vw;
+  font-size: 2.9vw;
+  padding-left: 7.5vw;
+}
+
+.recover-pass .material-symbols-outlined {
+  margin-left: -53vw;
+  margin-top: -5.10vw;
+  color: rgb(133, 133, 133);
+  font-size: 3.6vw;
+}
+
+
+.recover-pass-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  margin-top: 5vw;
+}
+
+.recover-pass-buttons .reset-pass-button {
+  background: linear-gradient(to right, #ED0101, #380050);
+  font-size: 2.5vw;
+  color: white;
+  border: none;
+  width: 60vw;
+  height: 6vw;
+  border-radius: 2em;
+}
+
+.recover-pass-buttons .reset-pass-button:active {
+  width: 59.90vw;
+  height: 5.9vw;
+  font-size:2.45vw;
+}
+.recover-pass-buttons .close-modal {
+  font-size: 2.5vw;
+  width: 60vw;
+  height: 6vw;
+}
+
+.recover-pass-buttons .close-modal:active {
+  width: 59.90vw;
+  height: 5.9vw;
+  font-size:2.45vw;
+}
 }
