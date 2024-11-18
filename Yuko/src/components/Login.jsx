@@ -114,7 +114,7 @@ function LogInDesktop() {
         <button className="log-in-button" onClick={handleLogin}>Log In</button>
 
         {errorMessage && (
-            <p className="error-message" style={{ color: "red" }}>
+            <p className="error-message">
               {errorMessage}
             </p>
           )}
