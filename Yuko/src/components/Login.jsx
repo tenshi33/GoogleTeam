@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
 
 function LogInDesktop() {
@@ -9,6 +10,7 @@ function LogInDesktop() {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isPasswordModalVisible, setPasswordModalVisible] = useState(false); // Track modal visibility
+  const navigate = useNavigate();
 
   // Handle the login process
   const handleLogin = async (event) => {
@@ -28,7 +30,7 @@ function LogInDesktop() {
       localStorage.setItem('loggedInUserId', user.uid); // Store user ID in localStorage
 
       
-      window.location.href = '/Yuko';  
+      navigate('/Yuko');  
     } catch (error) {
       console.error("Login failed:", error);
       setErrorMessage(error.message);
@@ -118,7 +120,7 @@ function LogInDesktop() {
           )}
 
         <p className="no-account-text">Don't have an account yet?
-          <a className="sign-up-button" href="#">Sign Up</a>
+        <Link to="/Register" className="sign-up-button">Sign Up</Link>
         </p>
       </form>
 
