@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
 
 function LogInDesktop() {
@@ -9,6 +10,7 @@ function LogInDesktop() {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isPasswordModalVisible, setPasswordModalVisible] = useState(false); // Track modal visibility
+  const navigate = useNavigate();
 
   // Handle the login process
   const handleLogin = async (event) => {
@@ -28,7 +30,7 @@ function LogInDesktop() {
       localStorage.setItem('loggedInUserId', user.uid); // Store user ID in localStorage
 
       
-      window.location.href = '/Yuko';  
+      navigate('/Yuko');  
     } catch (error) {
       console.error("Login failed:", error);
       setErrorMessage(error.message);
@@ -62,108 +64,98 @@ function LogInDesktop() {
   };
 
   return (
-    <>
-      <section className="log-in-section" id="Log-In">
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock"
-        />
-        <div className="log-in-container">
-          <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo" />
+    <>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
+    <div className="log-in-container">
+      <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo"/>
+      
+      <form action="#" className="log-in-form">
+        <h2 className="login-title">Log In</h2>
 
-          <form action="#" className="log-in-form" onSubmit={handleLogin}>
-            <h2 className="login-title">Log In</h2>
+        <div className="input-wrapper">
+          <input 
+            className="input-field" 
+            type="email" 
+            placeholder="Email Address" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} // Handle email input change
+            required
+          />
+          <i className="material-symbols-outlined">mail</i>
+        </div>
 
-            <div className="input-wrapper">
-              <input
-                className="input-field"
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)} // Handle email input change
-                required
-              />
-              <i className="material-symbols-outlined">mail</i>
-            </div>
+        <div className="input-wrapper">
+          <input 
+            className="input-field" 
+            type="password" 
+            placeholder="Password" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} // Handle password input change
+            required
+          />
+          <i className="material-symbols-rounded">lock</i>
+          <button className="show-pass">Show</button>
+        </div>
+        
+        <div className="forgot-password-wrapper">
+          <a 
+            className="forgot-pass-link" 
+            href="#" 
+            target="_self" 
+            onClick={(e) => {
+              e.preventDefault();
+              setPasswordModalVisible(true);
+            }}>
+              Forgot Password?
+          </a>
+        </div>
 
-            <div className="input-wrapper">
-              <input
-                className="input-field"
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)} // Handle password input change
-                required
-              />
-              <i className="material-symbols-rounded">lock</i>
-              <button className="show-pass" type="button">
-                Show
-              </button>
-            </div>
+        <button className="log-in-button" onClick={handleLogin}>Log In</button>
 
-            <div className="forgot-password-wrapper">
-              <a
-                className="forgot-pass-link"
-                href="#"
-                target="_self"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setPasswordModalVisible(true);
-                }}
-              >
-                Forgot Password?
-              </a>
-            </div>
+        {errorMessage && (
+            <p className="error-message" style={{ color: "red" }}>
+              {errorMessage}
+            </p>
+          )}
 
-            {isPasswordModalVisible && (
-              <div id="recoverPasswordModal">
+        <p className="no-account-text">Don't have an account yet?
+        <Link to="/Register" className="sign-up-button">Sign Up</Link>
+        </p>
+      </form>
+
+      {isPasswordModalVisible && (
+            <div className='recover-pass-container'>
+              <div id="recoverPasswordModal" className='recover-pass'>
+                <h2 className='recover-pass-title'>FORGOT YOUR PASSWORD?</h2>
+                <p className='recover-pass-desc'>We’ll send you an email to reset you password.</p>
+                <p id="statusMessage"></p>
                 <input
+                  className='recover-pass-email'
                   type="email"
                   id="emailForPasswordReset"
                   placeholder="Enter your email"
                   required
                 />
-                <button
-                  id="forgot-pass-text"
-                  type="button"
-                  onClick={handlePasswordReset}
-                >
-                  Reset Password
-                </button>
-                <p id="statusMessage"></p>
-                <button
-                  type="button"
-                  onClick={() => setPasswordModalVisible(false)}
-                  className="close-modal"
-                >
-                  Close
-                </button>
+                <i className="material-symbols-outlined">mail</i>
+                <div className='recover-pass-buttons'>
+                  <button className='reset-pass-button' id="forgot-pass-text" type="button" onClick={handlePasswordReset}>
+                    Send me a password reset link
+                  </button>
+                  
+                  <button
+                    type="button"
+                    onClick={() => setPasswordModalVisible(false)}
+                    className="close-modal"
+                  >
+                    Cancel
+                  </button>
+                  
+                </div>
               </div>
-            )}
-
-            <button className="log-in-button" type="submit">
-              Log In
-            </button>
-
-            {errorMessage && (
-              <p className="error-message" style={{ color: "red" }}>
-                {errorMessage}
-              </p>
-            )}
-
-            <p className="no-account-text">
-              Don’t have an account yet?
-              <Link to="/Register" className="sign-up-button">
-                Sign Up
-              </Link>
-            </p>
-          </form>
-        </div>
-      </section>
+            </div>
+          )}
+    </div>
     </>
   );
 }
