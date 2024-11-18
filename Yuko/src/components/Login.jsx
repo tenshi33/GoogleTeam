@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { auth, getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import auth from firebase.js
+import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
 function LogInDesktop() {
@@ -61,7 +62,9 @@ function LogInDesktop() {
   };
 
   return (
-    <>
+    <>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
     <div className="log-in-container">
       <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo"/>
       
