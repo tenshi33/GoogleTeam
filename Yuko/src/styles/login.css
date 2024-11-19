@@ -369,12 +369,12 @@ input:-webkit-autofill{
     color: white;
     font-size: 2.5em;
     font-weight: 900;
-    margin-bottom: 0.5vw;
+    margin-bottom: 3vw;
   }
 
   .error-message {
     width: 80vw;
-    margin-top: 3vw;
+    margin-top: 1vw;
     margin-bottom: 1.2vw;
   }
   
@@ -434,7 +434,12 @@ input:-webkit-autofill{
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-top: -2vw;
+    margin-top: -0.3vw;
+  }
+
+  .log-in-form .forgot-pass-link {
+    margin-top: 0em;
+    padding-bottom: 30px;
   }
 
   .log-in-form .log-in-button {
@@ -445,16 +450,15 @@ input:-webkit-autofill{
   }
 
   .log-in-form .log-in-button:active {
-    width: 52.9%;
-    height: 39.8px;
-    color: white;
-    font-size: 1.05em;
+    width: 52.95%;
+    height: 39.95px;
+    font-size: 1.08em;
   }
 
   .log-in-container .no-account-text {
     width: 80vw;
     font-size: 0.9em;
-    margin-top: 45vw;
+    margin-top: 39vw;
   }
 
   .sign-up-button {
