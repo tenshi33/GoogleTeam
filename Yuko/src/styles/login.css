@@ -202,7 +202,7 @@ body .recover-pass-container {
 
 .log-in-form .input-wrapper {
   height: 54px;
-  width: 23vmax;
+  width: 23vw;
   position: relative;
   margin-top: 0.8vw;
   display: flex;
