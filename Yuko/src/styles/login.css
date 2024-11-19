@@ -10,7 +10,7 @@ body {
   place-items: center;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
   background-image: url(background.png);
   width: 100%;
@@ -157,7 +157,7 @@ body .recover-pass-container {
 }
 
 .yuko-logo {
-  width: 42vmin;
+  width: 40.5vmin;
   margin-right: 7vw;
 }
 
