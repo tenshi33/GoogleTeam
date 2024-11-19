@@ -434,7 +434,7 @@ input:-webkit-autofill{
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-top: -0.3vw;
+    margin-top: -1vw;
   }
 
   .log-in-form .forgot-pass-link {
@@ -446,19 +446,19 @@ input:-webkit-autofill{
     width: 53%;
     height: 40px;
     color: white;
-    font-size: 1.1em;
+    font-size: 5vw;
   }
 
   .log-in-form .log-in-button:active {
     width: 52.95%;
     height: 39.95px;
-    font-size: 1.08em;
+    font-size: 4.95vw;
   }
 
   .log-in-container .no-account-text {
     width: 80vw;
     font-size: 0.9em;
-    margin-top: 40vw;
+    margin-top: 38vw;
   }
 
   .sign-up-button {
