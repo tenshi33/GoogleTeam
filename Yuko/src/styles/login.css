@@ -415,7 +415,7 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper i {
     width: 5vw;
     height: 5vw;
-    top: 50%;
+    top: 54%;
     font-size: 4.5vw;
   }
 
@@ -423,7 +423,7 @@ input:-webkit-autofill{
     background-color: transparent;
     width: 9.2vw;
     height: 5vw;
-    top: 1.7rem;
+    top: 6.5vw;
     left: 67vw;
     transform: translateY(-65%);
     font-size: 3.5vw;
@@ -442,6 +442,14 @@ input:-webkit-autofill{
     height: 35px;
     color: white;
     font-size: 1.1em;
+    margin-top: 10vw;
+  }
+
+  .log-in-form .log-in-button:active {
+    width: 54.9%;
+    height: 34.9px;
+    color: white;
+    font-size: 1.09em;
     margin-top: 10vw;
   }
 
