@@ -162,7 +162,7 @@ body .recover-pass-container {
 }
 
 .log-in-container {
-  max-width: 100%; 
+  min-width: 100%; 
   margin: auto;
   border-radius: 1rem;
   align-items: center;
@@ -192,8 +192,8 @@ body .recover-pass-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;     
-  width: 36em;
-  height: 40em;
+  width: 30vw;
+  height: 31vw;
   border-radius: 2.5rem;
   padding: 1.5vw 4vw 0vw 4vw;
   margin-left: 7vw;
