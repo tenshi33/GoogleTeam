@@ -52,21 +52,21 @@ body .recover-pass-container {
   color: #002072;
   font-size: 1.77vw;
   font-weight: 900;
-  margin-bottom: 1.5vw
+  margin-bottom: 1.3vw
 }
 
 .recover-pass .recover-pass-desc {
   color: #002072;
   font-family: Calibri, sans-serif;
-  font-size: 1vw;
+  font-size: 1.25vw;
   margin-bottom: 1vw;
   width: 26.8vw;
 }
 
 .reset-pass-confirmation {
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-family: 'Calibri';
-  width: 26.8vw;
+  width: 26.7vw;
   margin-bottom: 0.2em;
   color: #ED0101 !important;
 }
@@ -120,7 +120,7 @@ body .recover-pass-container {
   font-size: 0.8vw;
   color: white;
   border: none;
-  width: 15vw;
+  width: 15.3vw;
   height: 2.3vw;
   border-radius: 2em;
 }
@@ -368,7 +368,7 @@ input:-webkit-autofill{
     color: white;
     font-size: 2.5em;
     font-weight: 900;
-    margin-bottom: -0.3rem;
+    margin-bottom: 0.25rem;
   }
 
   .error-message {
@@ -398,10 +398,9 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper {
     width: 80vw;
     position: relative;
-    margin-top: 0.3rem;
-    margin-bottom: 0rem;
     display: flex;
     flex-direction: row;
+    margin-bottom: -0.2rem;
   }
   
   .log-in-form .input-wrapper .input-field{
@@ -451,19 +450,12 @@ input:-webkit-autofill{
   }
 
   body .recover-pass-container {
-  background-color: black;
-  filter: opacity(95%);
-  display: flex;
-  position: fixed;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
   min-width: 100vw;
   min-height: 100vh;
 }
 
 .recover-pass-container .recover-pass {
-  background-color: #EEEEEE;
+  background-color: #ffffff;
   filter: opacity(100%);
   width: 32vw;
   height: 17vw;
@@ -482,20 +474,13 @@ input:-webkit-autofill{
 }
 
 .recover-pass .recover-pass-desc {
-  color: #002072;
-  font-family: Calibri, sans-serif;
   font-size: 1vw;
-  margin-bottom: 1vw;
   width: 26.8vw;
 }
 
 .recover-pass .recover-pass-email {
   width: 26.8vw;
   height: 2.5vw;
-  background-color: #EEEEEE;
-  border: solid;
-  color: #002072;
-  border-color: #002072;
   border-width: 1.9px;
   border-radius: 0.7em;
   padding-left: 2.7vw;
@@ -526,7 +511,6 @@ input:-webkit-autofill{
   display: flex;
   flex-direction: row;
   gap: 0.5em;
-  margin-top: 1.5vw;
 }
 
 .recover-pass-buttons .reset-pass-button:hover {
@@ -550,13 +534,11 @@ input:-webkit-autofill{
   font-size: 0.75vw;
 }
 .recover-pass-buttons .close-modal {
-  background-color: #CFCFCF;
   font-size: 0.8vw;
-  color: #002072;
-  border: none;
   width: 10.9vw;
   height: 2.3vw;
   border-radius: 2em;
+  margin-top: 0.7vw;
 }
 
 .recover-pass-buttons .close-modal:hover {
@@ -584,12 +566,21 @@ input:-webkit-autofill{
 
 .recover-pass .recover-pass-desc {
   font-size: 3.15vw;
-  width: 61vw;
+  width: 61.2vw;
   margin-bottom: 3vw;
 }
 
+.reset-pass-confirmation {
+  font-size: 3vw;
+  font-family: 'Calibri';
+  width: 61.2vw;
+  margin-bottom: 0.2em;
+  color: #ED0101 !important;
+}
+
+
 .recover-pass .recover-pass-email {
-  width: 61vw;
+  width: 61.2vw;
   height: 6.5vw;
   font-size: 2.9vw;
   padding-left: 7.5vw;
@@ -613,9 +604,9 @@ input:-webkit-autofill{
 .recover-pass-buttons .reset-pass-button {
   background: linear-gradient(to right, #ED0101, #380050);
   font-size: 2.5vw;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
-  width: 60vw;
+  width: 61.2vw;
   height: 6vw;
   border-radius: 2em;
 }

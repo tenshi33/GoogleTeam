@@ -119,7 +119,7 @@ function LogInDesktop() {
 
           {/* Display error or success message */}
           {(errorMessage || successMessage) && (
-            <p className="message" style={{ color: errorMessage ? "red" : "green" }}>
+            <p className="error-message" style={{ color: errorMessage ? "red" : "green" }}>
               {errorMessage || successMessage}
             </p>
           )}
