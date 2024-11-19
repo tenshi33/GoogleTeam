@@ -157,7 +157,7 @@ body .recover-pass-container {
 }
 
 .yuko-logo {
-  width: 40.5vmin;
+  width: 20vw;
   margin-right: 7vw;
 }
 
@@ -369,7 +369,7 @@ input:-webkit-autofill{
     color: white;
     font-size: 2.5em;
     font-weight: 900;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .error-message {
@@ -401,7 +401,7 @@ input:-webkit-autofill{
     position: relative;
     display: flex;
     flex-direction: row;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
   }
   
   .log-in-form .input-wrapper .input-field{
