@@ -192,8 +192,8 @@ body .recover-pass-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;     
-  width: 35rem;
-  height: 37rem;
+  width: 30vw;
+  height: 32vw;
   border-radius: 2.5rem;
   padding: 1.5vw 4vw 0vw 4vw;
   margin-left: 7vw;
