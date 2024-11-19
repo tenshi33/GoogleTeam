@@ -175,9 +175,9 @@ body .recover-pass-container {
 .log-in-container .login-title{
   text-align: center;
   color: white;
-  font-size: 3.5em;
+  font-size: 3.5vw;
   font-weight: 900;
-  margin-bottom: 3rem;
+  margin-bottom: 3vw;
 }
 
 .error-message {
@@ -318,6 +318,7 @@ input:-webkit-autofill{
   font-size: 0.9em;
   color: rgb(167, 167, 167);
   margin-top: 6vw;
+  margin-bottom: 1.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
