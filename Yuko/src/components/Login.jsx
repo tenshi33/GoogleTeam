@@ -54,42 +54,41 @@ function LogInDesktop() {
 
  // Handle Password Reset
  const handlePasswordReset = async (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Prevent form submission
+
   const emailForReset = document.getElementById("emailForPasswordReset").value;
 
   if (emailForReset === "") {
-    alert("Please enter your email address.");
+    document.getElementById('statusMessage').textContent = 'Please enter your Email Address.';
+    document.getElementById('statusMessage').style.color = 'red';
     return;
   }
 
   const authInstance = getAuth();
-  
+
   try {
-    // Check if the email is associated with an existing Firebase account
-    const signInMethods = await fetchSignInMethodsForEmail(authInstance, emailForReset);
-
-    if (signInMethods.length === 0) {
-      // If no methods are found, email is not associated with an account
-      document.getElementById("statusMessage").textContent =
-        "No account found with this email.";
-      document.getElementById("statusMessage").style.color = "red";
-      return;
-    }
-
-    // Proceed to send the password reset email if the email exists
+    // Send password reset email directly without sign-in method check for now
     await sendPasswordResetEmail(authInstance, emailForReset);
-    document.getElementById("statusMessage").textContent =
-      "Password reset email sent. Please check your inbox.";
-    document.getElementById("statusMessage").style.color = "green";
-    document.getElementById("emailForPasswordReset").value = "";
+    document.getElementById('statusMessage').textContent = 'Password reset email sent. Please check your inbox.';
+    document.getElementById('statusMessage').style.color = 'green';
+    document.getElementById('emailForPasswordReset').value = ''; // Clear the input field
+
   } catch (error) {
-    // Handle other errors such as network issues or invalid email format
-    const errorMessage = error.message;
-    document.getElementById("statusMessage").textContent =
-      "Error: " + errorMessage;
-    document.getElementById("statusMessage").style.color = "red";
+    // Handle any errors (e.g., invalid email format)
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    if (errorCode === 'auth/invalid-email') {
+      document.getElementById('statusMessage').textContent = 'Invalid email address.';
+    } else if (errorCode === 'auth/user-not-found') {
+      document.getElementById('statusMessage').textContent = 'No user found with this email address.';
+    } else {
+      document.getElementById('statusMessage').textContent = 'Error: ' + errorMessage;
+    }
+    document.getElementById('statusMessage').style.color = 'red';
   }
 };
+
 
   const showPassword = (event) => {
     event.preventDefault();  // Prevent form submission
