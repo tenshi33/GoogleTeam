@@ -452,13 +452,14 @@ input:-webkit-autofill{
   .log-in-form .log-in-button:active {
     width: 52.95%;
     height: 39.95px;
-    font-size: 4.95vw;
+    font-size: 4.9vw;
   }
 
   .log-in-container .no-account-text {
     width: 80vw;
     font-size: 0.9em;
     margin-top: 38vw;
+    margin-bottom: -1vw;
   }
 
   .sign-up-button {
