@@ -64,7 +64,11 @@ function Landing() {
                     <p>Fifth Dev Name</p>
                     <p>Fifth Dev Infos</p>
                 </div>
-            
+                <div className='sixth-dev'>
+                    <img className='sixth-dev-pic' src='#'/>
+                    <p>Sixth Dev Name</p>
+                    <p>Sixth Dev Infos</p>
+                </div>
             </section>
 
             <section id='services'>
