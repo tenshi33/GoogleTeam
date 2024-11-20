@@ -46,6 +46,7 @@ body {
 }
 
 .register-container .register {
+    font-size: 2vw;
     display: flex;
     position: relative;
     margin-top: 2vw;
