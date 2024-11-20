@@ -1,5 +1,5 @@
 import React from 'react'
-import './Main.css'
+import '../styles/Yuko.css';
 import { FaDivide } from 'react-icons/fa'
 
 const Main = () => {
