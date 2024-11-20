@@ -28,6 +28,7 @@ function Landing() {
                 <div className='features-first-section'>
                     <h1>FEATURES</h1>
                     <p>Some Description</p>
+                    <img>Yuko Chatbot Pictures in Phone</img>
                 </div>
                 <div className='features-scroll-section'>
                     <div className='first-feature'>
