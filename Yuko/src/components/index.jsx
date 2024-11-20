@@ -25,8 +25,16 @@ function Landing() {
             </section>
 
             <section id='features'>
-                <h1>FEATURES</h1>
-                <div></div>
+                <div className='features-first-section'>
+                    <h1>FEATURES</h1>
+                    <p>Some Description</p>
+                </div>
+                <div className='features-scroll-section'>
+                    <div className='first-feature'>
+                        <p>First Description Title</p>
+                        <p>First Feature Description</p>
+                    </div>
+                </div>
             </section>
 
             <section id='developers'>
