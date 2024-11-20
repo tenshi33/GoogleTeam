@@ -5,9 +5,18 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-        <h1>Landing</h1>
-        <Link to="/Login" className="log-in-button">Log In</Link>
-        <button>ABOUT</button>
+            <div className='landing-header'>
+                <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
+                <a>Home</a>
+                <a>Features</a>
+                <a>Developers</a>
+                <a>Our Services</a>
+                <a>Contacts</a>
+            </div>
+        
+            <h1>Landing</h1>
+            <Link to="/Login" className="log-in-button">Log In</Link>
+            <div className='Header'></div>
         </>
     )
 }
