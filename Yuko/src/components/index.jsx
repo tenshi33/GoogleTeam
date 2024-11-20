@@ -73,6 +73,22 @@ function Landing() {
 
             <section id='services'>
                 <h1>OUR SERVICES</h1>
+                <div className='first-service'>
+                    <p>service description</p>
+                    <img className='first-service-pic'/>
+                </div>
+                <div className='second-service'>
+                    <p>service description</p>
+                    <img className='second-service-pic'/>
+                </div>
+                <div className='third-service'>
+                    <p>service description</p>
+                    <img className='third-service-pic'/>
+                </div>
+                <div className='fourth-service'>
+                    <p>service description</p>
+                    <img className='fourth-service-pic'/>
+                </div>
             </section>
 
             <section id='contacts'></section>
