@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Sidebar.css'
+import '../styles/Yuko sidebar.css';
 import { RiMenuFill } from "react-icons/ri";
 import { RiChatNewLine } from "react-icons/ri";
 import { FaRegMessage } from "react-icons/fa6";
