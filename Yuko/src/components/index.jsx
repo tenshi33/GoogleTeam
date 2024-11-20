@@ -91,7 +91,26 @@ function Landing() {
                 </div>
             </section>
 
-            <section id='contacts'></section>
+            <section id='contacts'>
+                <img className='footer-yuko-logo' src='#'/>
+                <div className='footer-other-pages'>
+                    <p>Other pages</p>
+                    <p>Home</p>
+                    <p>Features</p>
+                    <p>Developers</p>
+                    <p>Services</p>
+                    <p>Contacts</p>
+                </div>
+                
+                <div className='footer-contacts'>
+                    <p>Contacts</p>
+                    <a href='#'>Email</a>
+                    <a href='#'>Facebook</a>
+                    <a href='#'>LinkedIn</a>
+                    <a href='#'>Phone Number</a>
+                </div>
+                
+            </section>
         </>
     )
 }
