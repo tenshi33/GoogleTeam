@@ -9,13 +9,13 @@ function Landing() {
                 <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
                 <a className='header-home' href='#'>Home</a>
                 <p className='header-divider'>|</p>
-                <a className='header-features'>Features</a>
+                <a className='header-features' href='#'>Features</a>
                 <p className='header-divider'>|</p>
-                <a className='header-developers'>Developers</a>
+                <a className='header-developers' href='#'>Developers</a>
                 <p className='header-divider'>|</p>
-                <a className='header-services'>Our Services</a>
+                <a className='header-services' href='#'>Our Services</a>
                 <p className='header-divider'>|</p>
-                <a className='header-contacts'>Contacts</a>
+                <a className='header-contacts' href='#'>Contacts</a>
             </div>
 
             <section id='home'>
@@ -39,9 +39,32 @@ function Landing() {
 
             <section id='developers'>
                 <h1>DEVELOPERS</h1>
+                <div className='first-dev'>
+                    <p>First Dev Name</p>
+                    <p>First Dev Infos</p>
+                </div>
+                <div className='second-dev'>
+                    <p>Second Dev Name</p>
+                    <p>Second Dev Infos</p>
+                </div>
+                <div className='third-dev'>
+                    <p>Third Dev Name</p>
+                    <p>Third Dev Infos</p>
+                </div>
+                <div className='fourth-dev'>
+                    <p>Fourth Dev Name</p>
+                    <p>Fourth Dev Infos</p>
+                </div>
+                <div className='fifth-dev'>
+                    <p>Fifth Dev Name</p>
+                    <p>Fifth Dev Infos</p>
+                </div>
+            
             </section>
 
-            <section id='services'></section>
+            <section id='services'>
+                <h1>OUR SERVICES</h1>
+            </section>
 
             <section id='contacts'></section>
         </>
