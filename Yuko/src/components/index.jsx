@@ -7,8 +7,8 @@ function Landing() {
         <>
             <div className='landing-header'>
                 <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
-                <a className='header-home'>Home</a>
-                <p className='header-dividers'>|</p>
+                <a className='header-home' href='#'>Home</a>
+                <p className='header-divider'>|</p>
                 <a className='header-features'>Features</a>
                 <p className='header-divider'>|</p>
                 <a className='header-developers'>Developers</a>
