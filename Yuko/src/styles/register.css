@@ -15,7 +15,7 @@
     border-radius: 10px;
     color: #fff;
     text-align: left;
-    padding: 0.1vw;
+    padding: 0.1vw; /*added a padding para sa loob mismo nung container*/
 }
 
 .form-group {
@@ -49,5 +49,5 @@ body {
     font-size: 2vw;
     display: flex;
     position: relative;
-    margin-top: 2vw;
+    margin-top: 2vw; /*margin top is para magkaroon ng spacing yung text from the container*/
 }
