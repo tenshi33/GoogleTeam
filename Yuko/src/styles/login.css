@@ -260,7 +260,7 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 51%;
+  top: 55%;
   left: 0.9rem;
   font-size: 1.3vw;
   pointer-events: none;
