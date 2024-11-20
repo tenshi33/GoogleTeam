@@ -40,10 +40,12 @@ function Landing() {
             <section id='developers'>
                 <h1>DEVELOPERS</h1>
                 <div className='first-dev'>
+                    <img src='#'>First Dev pic</img>
                     <p>First Dev Name</p>
                     <p>First Dev Infos</p>
                 </div>
                 <div className='second-dev'>
+                    <img src='#'>Second Dev pic</img>
                     <p>Second Dev Name</p>
                     <p>Second Dev Infos</p>
                 </div>
