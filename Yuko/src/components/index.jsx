@@ -7,6 +7,7 @@ function Landing() {
         <>
         <h1>Landing</h1>
         <Link to="/Login" className="log-in-button">Log In</Link>
+        <button>ABOUT</button>
         </>
     )
 }
