@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';  // Import Firebase functions
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/login.css';
+import styles from './login.module.css';
 
 function LogInDesktop() {
   const [email, setEmail] = useState('');
@@ -109,7 +109,7 @@ function LogInDesktop() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
       <div className="log-in-container">
@@ -216,7 +216,7 @@ function LogInDesktop() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
