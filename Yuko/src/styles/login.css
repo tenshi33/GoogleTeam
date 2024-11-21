@@ -272,7 +272,7 @@ input:-webkit-autofill{
   text-shadow: 0px 0px 8px rgb(245, 245, 245);
 }
 
-.log-in-form .show-pass {
+.log-in-form .show-user-pass {
   position: absolute;
   width: 5vw;
   font-size: 0.8vw;

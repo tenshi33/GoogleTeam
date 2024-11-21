@@ -150,7 +150,7 @@ function LogInDesktop() {
             />
             <i className="material-symbols-rounded">lock</i>
             <button
-              className="show-pass"
+              className="show-user-pass"
               onClick={showPassword} // Toggle password visibility on click
             >
               Show
