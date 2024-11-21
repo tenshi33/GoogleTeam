@@ -1,3 +1,4 @@
+/*
 * {
     align-items: center;
     margin: 0;
@@ -46,12 +47,12 @@
     
 } */
 
-input {
+/*input {
     color: #000000;
-}
-
+}*/
+/*
 body {
-    background-image: url(background.png); /*dapat sa .jsx na file nakalagay*/
+    background-image: url(background.png);
 }
 
 .name {
@@ -64,5 +65,5 @@ body {
     font-size: 2vw;
     display: flex;
     position: relative;
-    margin-top: 2vw; /*margin top is para magkaroon ng spacing yung text from the container*/
-}
+    margin-top: 2vw; 
+} */

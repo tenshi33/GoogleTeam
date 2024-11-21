@@ -436,7 +436,7 @@ input:-webkit-autofill{
     font-size: 4.5vw;
   }
 
-  .log-in-form .show-pass {
+  .log-in-form .show-user-pass {
     background-color: transparent;
     width: 9.2vw;
     height: 5vw;
