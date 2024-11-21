@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';  // Import Firebase functions
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/login.module.css';
+import '../styles/login.css';
 
 function LogInDesktop() {
   const [email, setEmail] = useState('');
