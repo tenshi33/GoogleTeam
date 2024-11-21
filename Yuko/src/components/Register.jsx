@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth, getAuth, createUserWithEmailAndPassword, getFirestore, doc, setDoc } from '../../firebase/firebase';  // Import auth from firebase.js
 import '../styles/register.css';
+import { Link, useNavigate } from 'react-router-dom';
 function Register(){
 
   const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ function Register(){
   const [studentno, setStudentNo] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -38,7 +40,7 @@ function Register(){
       setLoading(false);
 
       // Redirect to Homepage (or any other page)
-      window.location.href = '/Homepage'; 
+      navigate('/Yuko')
     } catch (error) {
       setLoading(false);
       if (error.code === 'auth/email-already-in-use') {
@@ -52,7 +54,7 @@ function Register(){
   return (
     <div className="register-container">
       <h2 className='register' >Register</h2>
-      
+      {message && <div className="message">{message}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="name" htmlFor="name"></label>
@@ -122,11 +124,11 @@ function Register(){
           {loading ? 'Creating Account...' : 'Create Account'}
         </button>
 
-        <p>Already have an account? <a href='#'>Click here</a></p>
+        <p>Already have an account? <Link to="/Login">Click here</Link></p>
 
       </form>
 
-      {message && <div className="message">{message}</div>}
+      
     </div>
   );
 };

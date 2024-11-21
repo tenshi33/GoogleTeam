@@ -1,9 +1,13 @@
 import React from 'react'
 import '../styles/Yuko.css';
 import { FaDivide } from 'react-icons/fa'
+import Sidebar from './Yuko_sidebar';
 
-const Main = () => {
+function Yuko() {
   return (
+    <>
+    <div className="yuko-container">
+      <Sidebar /></div>
     <div className='main'>
         <div className='nav'>
             <p><b>YUKO</b></p>
@@ -33,7 +37,8 @@ const Main = () => {
                     </div>
             </div>
     </div>
+    </>
   )
 }
 
-export default Main
+export default Yuko
