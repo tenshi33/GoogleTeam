@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import './Sidebar.css'
-import { RiMenuFill } from "react-icons/ri";
-import { RiChatNewLine } from "react-icons/ri";
+import '../styles/Sidebar.css';
 import { FaRegMessage } from "react-icons/fa6";
-import { FaQuestion } from "react-icons/fa";
-import { FaHistory } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
+import { CgProfile } from "react-icons/cg";
+import menu from '../../public/menu2.png';
+import newchat from '../../public/new-chat2.png';
 
 
 const Sidebar = () => {
@@ -15,43 +14,39 @@ const Sidebar = () => {
         <div className='sidebar'>
             <div className='top'>
                 <span onClick={()=>setExtended(prev=>!prev)} className='icon-container'>
-                <RiMenuFill />
+                <img src={menu} alt="Description" />
                 </span>
                 {extended? <span className='icon-container'>
-                    <RiChatNewLine className='new-chat' />
+                    <img className='new-chat' src={newchat} alt="Description" />
                 </span> : null}
                 {extended ? <div className="recent">
                     <p className="recent-title"><b>Chat History</b></p>
                     <div className="recent-entry">
                         <FaRegMessage />
-                        <p>What is React...</p>
+                        <p>What is Yuko...</p>
                     </div>
                     <div className="recent-entry">
                         <FaRegMessage />
-                        <p>What is Love...</p>
+                        <p>What does Yuko do...</p>
                     </div>
                     <div className="recent-entry">
                         <FaRegMessage />
-                        <p>Baby, Don't hurt me...</p>
+                        <p>How helpful is Yuko...</p>
                     </div>
                     <div className="recent-entry">
                         <FaRegMessage />
-                        <p>The whole bee movie script...</p>
+                        <p>How can yuko help me...</p>
                     </div>
                 </div> : null}
             </div>
             <div className='bottom'>
                 <div className="bottom-item">
-                    <FaQuestion />
-                    {extended ? <p>Help</p> : null}
-                </div>
-                <div className="bottom-item">
-                    <FaHistory />
-                    {extended ? <p>Activity</p> : null}
-                </div>
-                <div className="bottom-item">
                     <IoIosSettings />
                     {extended ? <p>Settings</p> : null}
+                </div>
+                <div className="bottom-item">
+                    <CgProfile />
+                    {extended ? <p>Profile</p> : null}
                 </div>
             </div>
         </div>
