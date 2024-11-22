@@ -131,7 +131,7 @@
 
 .home-landing {
     background-color: antiquewhite;
-    margin-top: 10vw;
+    margin-top: 9vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +141,7 @@
     height: 50vw;
     margin: 0;
     padding: 10vw;
-    padding-top: 15vw;
+    padding-top: 17vw;
 }
 
 .home-yuko-title {
@@ -149,8 +149,20 @@
     font-size: 8vw;
 }
 
+.home-yuko-description {
+    width: 50vw;
+    font-size: 0.9vw;
+    background-color: aquamarine;
+}
+
+.log-in-button {
+    background: linear-gradient(to right,#CC1819, #201DCD);
+    padding: 0.7rem;
+    color: white;
+    margin-top: 2.5vw;
+}
+
 .features-landing {
     display: flex;
     margin-top: 5vw;
 }
-
