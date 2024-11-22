@@ -94,3 +94,55 @@
     margin-top: 14.5vw;
     color: white;
 }*/
+
+
+
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-family: Arial;
+    font-size: 1vw;
+    color: black;
+    background-color: aliceblue;
+}
+
+.nav-yuko-logo {
+    width: 8vw;
+}
+
+.nav-bar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.8em;
+    margin-left: 43em;
+}
+
+.nav-divider {
+    color: #CC1819;
+}
+
+.home-landing {
+    background-color: antiquewhite;
+    margin-top: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 90vw;
+    height: 70vh;
+    margin: 0;
+}
+
+.home-yuko-title {
+    background-color: azure;
+    font-size: 8vw;
+}
+
+.features-landing {
+    display: flex;
+    margin-top: 5vw;
+}
+

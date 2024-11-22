@@ -5,6 +5,8 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
+            <img src='#' className='landing-background-img' alt='Background Image'/>
+
             <div className='nav-bar-container'>
                 <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                 <ul className='nav-bar-menu'>
@@ -19,8 +21,6 @@ function Landing() {
                     <li className='nav-contacts'>CONTACTS</li>
                 </ul>
             </div>
-
-            <img src='background.png' className='landing-background-img' alt='Background Image'/>
 
             <section id='home' className='home-landing'>
                 <h1 className='home-yuko-title'>YUKO</h1>
