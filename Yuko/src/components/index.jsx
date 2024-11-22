@@ -5,20 +5,23 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-            <div className='landing-header'>
-                <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
-                <a className='header-home' href='#'>Home</a>
-                <p className='header-divider'>|</p>
-                <a className='header-features' href='#'>Features</a>
-                <p className='header-divider'>|</p>
-                <a className='header-developers' href='#'>Developers</a>
-                <p className='header-divider'>|</p>
-                <a className='header-services' href='#'>Our Services</a>
-                <p className='header-divider'>|</p>
-                <a className='header-contacts' href='#'>Contacts</a>
-            </div>
+            <nav className='nav-bar'>
+                <div className='nav-bar-container'>
+                    <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
+                    <a className='header-home' href='#'>Home</a>
+                    <p className='header-divider'>|</p>
+                    <a className='header-features' href='#'>Features</a>
+                    <p className='header-divider'>|</p>
+                    <a className='header-developers' href='#'>Developers</a>
+                    <p className='header-divider'>|</p>
+                    <a className='header-services' href='#'>Our Services</a>
+                    <p className='header-divider'>|</p>
+                    <a className='header-contacts' href='#'>Contacts</a>
+                </div>
+            </nav>
 
             <section id='home'>
+                <img src='' className='landing-background-img' alt='Background Image'/>
                 <h1 className='home-yuko-title'>Yuko</h1>
                 <p className='home-yuko-description'>Decription</p>
                 <Link to="/Login" className="log-in-button">Log In</Link>
