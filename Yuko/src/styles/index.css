@@ -1,15 +1,10 @@
 .landing-background-img {
     display: flex;
-    place-items: center;
-    align-items: center;
-    justify-content: center;
-    min-width: 100%;
-    width: 100vw; /* Ensures it covers full viewport width */
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
+    height: 50vw;
+    width: 100vw;
     z-index: -1;
+    margin-left: 0;
+    position: absolute;
 }
 
 .nav-bar-container {
