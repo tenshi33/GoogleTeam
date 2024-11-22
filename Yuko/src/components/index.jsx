@@ -5,29 +5,33 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-            <nav className='nav-bar'>
-                <div className='nav-bar-container'>
-                    <img className='header-yuko-logo' src='#' alt='Yuko Logo'/>
-                    <a className='header-home' href='#'>Home</a>
-                    <p className='header-divider'>|</p>
-                    <a className='header-features' href='#'>Features</a>
-                    <p className='header-divider'>|</p>
-                    <a className='header-developers' href='#'>Developers</a>
-                    <p className='header-divider'>|</p>
-                    <a className='header-services' href='#'>Our Services</a>
-                    <p className='header-divider'>|</p>
-                    <a className='header-contacts' href='#'>Contacts</a>
-                </div>
-            </nav>
+            <div className='nav-bar-container'>
+                <img className='nav-yuko-logo' src='#' alt='Yuko Logo'/>
+                <ul className='nav-bar-menu'>
+                    <li className='nav-home'>HOME</li>
+                    <li className='nav-divider'>|</li>
+                    <li className='nav-features'>FEATURES</li>
+                    <li className='nav-divider'>|</li>
+                    <li className='nav-developers'>DEVELOPERS</li>
+                    <li className='nav-divider'>|</li>
+                    <li className='nav-services'>OUR SERVICES</li>
+                    <li className='nav-divider'>|</li>
+                    <li className='nav-contacts'>CONTACTS</li>
+                </ul>
+            </div>
 
-            <section id='home'>
-                <img src='' className='landing-background-img' alt='Background Image'/>
-                <h1 className='home-yuko-title'>Yuko</h1>
-                <p className='home-yuko-description'>Decription</p>
+            <img src='background.png' className='landing-background-img' alt='Background Image'/>
+
+            <section id='home' className='home-landing'>
+                <h1 className='home-yuko-title'>YUKO</h1>
+                <p className='home-yuko-description'>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
                 <Link to="/Login" className="log-in-button">Log In</Link>
             </section>
 
-            <section id='features'>
+            <section id='features' className='features-landing'>
                 <div className='features-first-section'>
                     <h1>FEATURES</h1>
                     <p>Some Description</p>
