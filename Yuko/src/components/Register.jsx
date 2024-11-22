@@ -53,12 +53,13 @@ function Register(){
 
   return (
     <div className="register-container">
-      <h2 className='register' >Register</h2>
+     <img className="bg-image" src="background.png" alt="Background Image of Yuko"/>
+      <h2 className='register'>Register</h2>
       {message && <div className="message">{message}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label className="name" htmlFor="name"></label>
           <input
+            className='name'
             type="text"
             id="name"
             placeholder='Full name'
@@ -69,8 +70,8 @@ function Register(){
         </div>
 
         <div className="form-group">
-          <label className='email' htmlFor="rEmail"></label>
           <input
+            className='email'
             type="email"
             id="rEmail"
             placeholder='Email'
@@ -81,8 +82,8 @@ function Register(){
         </div>
 
         <div className="form-group">
-          <label className='password' htmlFor="rPassword"></label>
           <input
+            className='password'
             type="password"
             id="rPassword"
             placeholder='Password'
@@ -93,8 +94,8 @@ function Register(){
         </div>
 
         <div className="form-group">
-          <label className='course' htmlFor="course"></label>
           <input
+            className='course'
             type="text"
             id="course"
             placeholder='Course'
@@ -105,11 +106,11 @@ function Register(){
         </div>
 
         <div className="form-group">
-          <label className='student-no' htmlFor="studentno"></label>
           <input
+            className='studentno'
             type="text"
             id="studentno"
-            placeholder='Student Number'
+            placeholder='Student #'
             value={studentno}
             onChange={(e) => setStudentNo(e.target.value)}
             required
@@ -124,7 +125,8 @@ function Register(){
           {loading ? 'Creating Account...' : 'Create Account'}
         </button>
 
-        <p>Already have an account? <Link to="/Login">Click here</Link></p>
+
+        <p className='signup'>Already have an account? <Link className='href' to="/Login">Click here</Link></p>
 
       </form>
 
