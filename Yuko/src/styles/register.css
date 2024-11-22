@@ -1,11 +1,4 @@
 
-* {
-    align-items: center;
-    margin: 0;
-    place-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .register-container {
     background-color: #002072;
     display: flex;
