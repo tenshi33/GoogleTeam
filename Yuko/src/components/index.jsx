@@ -27,8 +27,9 @@ function Landing() {
                 <p className='home-yuko-description'>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
-                <Link to="/Login" className="log-in-button">Log In</Link>
+                <Link to="/Login" className="log-in-button">Get Started</Link>
             </section>
 
             <section id='features' className='features-landing'>
