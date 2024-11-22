@@ -1,0 +1,96 @@
+/*.landing-background-img {
+    display: flex;
+    height: 100vh; 
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    margin: 0; 
+    padding: 0; 
+    background-color: rgb(148, 148, 0); 
+    background-image: url('your-image.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vw 6.5vw;
+    position: fixed;
+    color: white;
+    font-family: Arial;
+    font-size: 1vw;
+}
+
+.nav-yuko-logo {
+    width: 8em;
+}
+
+.nav-bar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.8em;
+    margin-left: 40em;
+}
+
+.nav-divider {
+    color: #CC1819;
+}
+
+.home-landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    margin-top: 13.5vw;
+}
+
+.home-yuko-title {
+    font-size: 10vw;
+    font-family: Arial;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+}
+
+.home-yuko-description {
+    width: 60vw;
+    font-family: 'Calibri';
+    font-size: 1.2vw;
+    margin-top: -2vw;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.log-in-button {
+    margin-top: 3.5vw;
+    background: linear-gradient(to right,#CC1819, #201DCD);
+    width: 10.5vw;
+    height: 3.2vw;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    align-content: center;
+    justify-self: center;
+    border-radius: 5vw;
+    text-decoration: none;
+}
+
+.features-landing {
+    height: 50vw;
+    width: 100%;
+    background: linear-gradient(to bottom, #6D171E,#1D143E );
+    flex-direction: column;
+    margin-top: 14.5vw;
+    color: white;
+}*/
