@@ -6,7 +6,7 @@ function Landing() {
     return (
         <>
             <div className='nav-bar-container'>
-                <img className='nav-yuko-logo' src='#' alt='Yuko Logo'/>
+                <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                 <ul className='nav-bar-menu'>
                     <li className='nav-home'>HOME</li>
                     <li className='nav-divider'>|</li>

@@ -1,33 +1,41 @@
 .landing-background-img {
     display: flex;
-    height: 50vw;
-    width: 110vw;
+    height: 100vh; /* Ensure full height of the viewport */
+    width: 100%; /* Full width of the container */
     z-index: -1;
-    margin-left: -1rem;
     position: absolute;
+    margin: 0; /* No margins to prevent white space */
+    padding: 0; /* No padding */
+    background-color: rgb(148, 148, 0); /* Backup color if image is missing */
+    background-image: url('your-image.jpg'); /* Make sure to add the background image */
+    background-size: cover; /* Make the image cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure it doesn’t repeat */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .nav-bar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3vw 4vw;
+    margin: 3vw 6.5vw;
     position: fixed;
     color: white;
     font-family: Arial;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 
 .nav-yuko-logo {
-    font-size: 1.5vw;
+    width: 8em;
 }
 
 .nav-bar-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 0.8vw;
-    margin-left: 40vw;
+    gap: 0.8em;
+    margin-left: 40em;
 }
 
 .nav-divider {
@@ -37,31 +45,37 @@
 .home-landing {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin: 9.5vw 7vw 0vw 5vw;
+    align-items: center;
+    justify-items: center;
     color: white;
+    margin-top: 13.5vw;
 }
 
 .home-yuko-title {
-    font-size: 13vw;
+    font-size: 10vw;
     font-family: Arial;
     font-weight: 900;
+    display: flex;
+    justify-content: center;
 }
 
 .home-yuko-description {
+    width: 60vw;
     font-family: 'Calibri';
-    width: 62vw;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     margin-top: -2vw;
     font-weight: 200;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .log-in-button {
     margin-top: 3.5vw;
     background: linear-gradient(to right,#CC1819, #201DCD);
-    width: 10.8vw;
-    height: 3.4vw;
+    width: 10.5vw;
+    height: 3.2vw;
     font-size: 1.3vw;
     font-weight: 700;
     color: white;
@@ -73,10 +87,10 @@
 }
 
 .features-landing {
-    background: linear-gradient(to right,#CC1819, #201DCD);
-    display: flex;
+    height: 50vw;
+    width: 100%;
+    background: linear-gradient(to bottom, #6D171E,#1D143E );
     flex-direction: column;
-    align-items: left;
-    margin: 11vw 7vw 0vw 5vw;
+    margin-top: 14.5vw;
     color: white;
 }
