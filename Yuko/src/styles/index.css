@@ -104,7 +104,8 @@
     margin-left: -5vw;
     width: 100vw;
     height: 50vw;
-    background-position: top;
+    align-content: center;
+    justify-items: center;
 }
 
 .nav-bar-container {
@@ -117,6 +118,7 @@
     color: white;
     width: 90vw;
     height: 7vw;
+    background-color: #201DCD;
 }
 
 .nav-yuko-logo {
@@ -129,7 +131,6 @@
     justify-items: center;
     list-style: none;
     gap: 0.8em;
-    margin-left: 43em;
 }
 
 .nav-divider {
