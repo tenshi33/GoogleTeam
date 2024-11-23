@@ -379,7 +379,7 @@ input:-webkit-autofill{
     color: white;
     font-size: 2.5em;
     font-weight: 900;
-    margin-bottom: 3vw;
+    margin-bottom: 1.5vw;
   }
 
   .error-message {
@@ -457,7 +457,7 @@ input:-webkit-autofill{
     height: 40px;
     color: white;
     font-size: 5vw;
-    margin-top: 9vw;
+    margin-top: 11vw;
   }
 
   .log-in-form .log-in-button:active {
