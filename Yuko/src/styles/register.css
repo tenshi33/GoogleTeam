@@ -1,16 +1,6 @@
-/*
-* {
-    align-items: center;
-    margin: 0;
-    place-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
 
 .register-container {
-
     background-color: #002072;
-    filter: opacity(85%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,52 +8,104 @@
     width: 30vw;
     height: 32vw;
     border-radius: 2.5rem;
-    padding: 1.5vw 4vw 0vw 4vw;
-    margin-left: 7vw;
     box-shadow: 15px 15px 10px rgb(0, 0, 0);
+    font-size: 1vw;
+    color: white;
+}
+
+.register{
+    color: white;
+    margin-bottom: 3vw;
 }
 
 .form-group {
-    height: 20%;
-    width: 40%;
+    height: 2vw;
+    width: 20vw;
     padding: 0 1.25em 0 3.5em;
     border-radius: 1rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
     color: white;
-    border-width: 1px;
+    border-width: 2px;
     font-size: 1.06vw;
     outline: none;
     -webkit-transition: 0.5s;
     transition: 0.2s ease;
-}
-
-/* button {
-    margin-top: 60px;
-    background: linear-gradient(to right, #ED0101, #7602a8);    
-    color: #fff;
-    box-sizing: border-box;
-    
-} */
-
-/*input {
-    color: #000000;
-}*/
-/*
-body {
-    background-image: url(background.png);
+    margin-bottom: 1vw;
 }
 
 .name {
-    width: 57vw;
+    width: 5vw;
     display: flex;
-
+    background: transparent;
+    border: transparent;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-right: 15vw;
 }
 
+.email {
+    width: 5vw;
+    display: flex;
+    background: transparent;
+    border: transparent;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-right: 15vw;
+}
+
+.password{
+    width: 5vw;
+    display: flex;
+    background: transparent;
+    border: transparent;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-right: 15vw;
+}
+
+.course{
+    width: 5vw;
+    display: flex;
+    background: transparent;
+    border: transparent;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-right: 15vw;
+}
+
+.studentno{
+    width: 5vw;
+    display: flex;
+    background: transparent;
+    border: transparent;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-right: 15vw;
+}
 .register-container .register {
-    font-size: 2vw;
+    font-size: 2.5vw;
     display: flex;
     position: relative;
     margin-top: 2vw; 
-} */
+} 
+
+.button {
+    width: 10vw;
+    height: 2vw;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    background: linear-gradient(to right, #380050, #ED0101);
+    margin-top: 3.5vw;
+    border-radius: 2rem;
+    transition: background 0.7s ease-in-out;
+}
+
+.href {
+    color: white;
+}

@@ -117,9 +117,6 @@ body .recover-pass-container {
   pointer-events: none;
 }
 
-*:focus {
-  outline: none;
-}
 
 .recover-pass-buttons {
   display: flex;
@@ -142,13 +139,13 @@ body .recover-pass-container {
   border-radius: 2em;
 }
 
-.recover-pass-buttons .reset-pass-button:active {
+.reset-pass-button:active {
   background: linear-gradient(to right,  #7602a8, #ED0101);
   width: 14.95vw;
   height: 2.25vw;
   font-size: 0.75vw;
 }
-.recover-pass-buttons .close-modal {
+.close-modal {
   background-color: #CFCFCF;
   font-size: 0.8vw;
   color: #002072;
@@ -166,11 +163,6 @@ body .recover-pass-container {
   width: 10.85vw;
   height: 2.25vw;
   font-size: 0.75vw;
-}
-
-#root {
-  width: 100%;
-  padding: 0 0.6rem;
 }
 
 .yuko-logo {
@@ -200,6 +192,7 @@ body .recover-pass-container {
 .error-message {
   width: 23vw;
   margin-bottom: -0.2vw;
+  font-size: 0.9vw;
 }
 
 .log-in-form {
@@ -218,7 +211,7 @@ body .recover-pass-container {
 }
 
 .log-in-form .input-wrapper {
-  height: 54px;
+  height: 61rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -227,9 +220,9 @@ body .recover-pass-container {
 }
 
 .log-in-form .input-wrapper .input-field{
-  height: 97%;
+  height: 100%;
   width: 100%;
-  padding: 0 1.25em 0 3.5em;
+  padding: 0 1.25em 0 3em;
   border-radius: 1rem;
   background-color: transparent;
   border-style: solid;
@@ -260,8 +253,8 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 55%;
-  left: 0.9rem;
+  top: 57%;
+  left: 1rem;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
@@ -280,7 +273,7 @@ input:-webkit-autofill{
   color: rgb(167, 167, 167);
   border: none;
   text-align: center;
-  top: 50%;
+  top: 54%;
   left: 18.5vw;
   transform: translateY(-65%);
 }
@@ -298,7 +291,7 @@ input:-webkit-autofill{
 }
 
 .log-in-form .forgot-pass-link {
-  font-size: 0.9em;
+  font-size: 1vw;
   display: flex;
   justify-content: left;
   margin-top: 0.5em;
@@ -306,7 +299,7 @@ input:-webkit-autofill{
 
 .log-in-form .log-in-button {
   width: 53%;
-  height: 40px;
+  height: 53px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -320,9 +313,9 @@ input:-webkit-autofill{
 }
 
 .log-in-form .log-in-button:active {
-  width: 52.66%;
-  height: 39.86px;
-  font-size: 1.34em;
+  width: 52.75%;
+  height: 52.75px;
+  font-size: 1.35vw;
 }
 
 .log-in-form .log-in-button:hover {
@@ -374,7 +367,7 @@ input:-webkit-autofill{
     width: 45vmin;
     display: flex;
     position: fixed;
-    top: 15vw;
+    top: 9vw;
     left: 27%;
     justify-content: center;
     align-items: center;
@@ -386,13 +379,14 @@ input:-webkit-autofill{
     color: white;
     font-size: 2.5em;
     font-weight: 900;
-    margin-bottom: 3vw;
+    margin-bottom: 1.5vw;
   }
 
   .error-message {
     width: 80vw;
     margin-top: 1vw;
     margin-bottom: 1.2vw;
+    font-size: 3.5vw;
   }
   
   .log-in-form {
@@ -409,19 +403,17 @@ input:-webkit-autofill{
     padding: 0vw 0vw 0vw 0vw;
     left: 12vw;
     margin-left: 0vw;
-    margin-top: 85vw;
+    margin-top: 83vw;
     box-shadow: none;
   }
   
   .log-in-form .input-wrapper {
     width: 80vw;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0.4rem;
+    height: 15vw;
   }
   
   .log-in-form .input-wrapper .input-field{
+    background-color: #002072;
     height: 2.8em;
     width: 100%;
     border-radius: 0.7rem;
@@ -432,8 +424,8 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper i {
     width: 5vw;
     height: 5vw;
-    top: 50%;
-    font-size: 4.5vw;
+    top: 42%;
+    font-size: 4.9vw;
   }
 
   .log-in-form .show-user-pass {
@@ -451,12 +443,13 @@ input:-webkit-autofill{
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-top: -1vw;
+    margin-top: 1.2vw;
   }
 
   .log-in-form .forgot-pass-link {
-    margin-top: 0em;
+    margin-top: -1em;
     padding-bottom: 30px;
+    font-size: 3.5vw;
   }
 
   .log-in-form .log-in-button {
@@ -464,6 +457,7 @@ input:-webkit-autofill{
     height: 40px;
     color: white;
     font-size: 5vw;
+    margin-top: 9vw;
   }
 
   .log-in-form .log-in-button:active {
