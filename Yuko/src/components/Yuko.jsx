@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import '../styles/Yuko.css';
+import { auth, db, doc, getDoc } from '../../firebase/firebase'
+import yukotext from '../../public/yuko-icon2.png';
+import yuko from '../../public/yuko2.png';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
-import yukotext from '../../public/yuko-icon2.png';
-import yuko from '../../public/yuko2.png';
-import { FaRegMessage } from "react-icons/fa6";
-import { IoIosSettings } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
-import menu from '../../public/menu2.png';
-import newchat from '../../public/new-chat2.png';
-
-const Yuko = () => {
-import { FaDivide } from 'react-icons/fa'
-import Sidebar from './Yuko_sidebar';
-import { auth, db, doc, getDoc } from '../../firebase/firebase'
+import Sidebar from './Sidebar';
+import '../styles/Yuko.css';
 
 function Yuko() {
-    const [userName, setUserName] = useState(''); // State to hold the user's name
+  const [userName, setUserName] = useState(''); // State to hold the user's name
   const [userId, setUserId] = useState(null); // State to hold the logged-in user's ID
 
   useEffect(() => {
@@ -44,7 +36,7 @@ function Yuko() {
 
           if (userDoc.exists()) {
             // If the document exists, set the user's name
-            setUserName(userDoc.data().name);
+            setUserName(userDoc.data().fname);
           } else {
             console.log('No such user!');
           }
@@ -100,102 +92,8 @@ function Yuko() {
                     </div>
             </div>
     </div>
-    
+    </>
   )
-}
-
-const Sidebar = () => {
-
-    const [extended, setExtended] = useState(false)
-    return (
-        <div className='sidebar'>
-            <div className='top'>
-                <span onClick={()=>setExtended(prev=>!prev)} className='icon-container'>
-                <img src={menu} alt="Description" />
-                </span>
-                {extended? <span className='icon-container'>
-                    <img className='new-chat' src={newchat} alt="Description" />
-                </span> : null}
-                {extended ? <div className="recent">
-                    <p className="recent-title"><b>Chat History</b></p>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What does Yuko do...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How helpful is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How can yuko help me...</p>
-                    </div>
-                </div> : null}
-            </div>
-            <div className='bottom'>
-                <div className="bottom-item">
-                    <IoIosSettings />
-                    {extended ? <p>Settings</p> : null}
-                </div>
-                <div className="bottom-item">
-                    <CgProfile />
-                    {extended ? <p>Profile</p> : null}
-                </div>
-            </div>
-        </div>
-    )
-}
-
-
-const Sidebar = () => {
-
-    const [extended, setExtended] = useState(false)
-    return (
-        <div className='sidebar'>
-            <div className='top'>
-                <span onClick={()=>setExtended(prev=>!prev)} className='icon-container'>
-                <img src={menu} alt="Description" />
-                </span>
-                {extended? <span className='icon-container'>
-                    <img className='new-chat' src={newchat} alt="Description" />
-                </span> : null}
-                {extended ? <div className="recent">
-                    <p className="recent-title"><b>Chat History</b></p>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What does Yuko do...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How helpful is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How can yuko help me...</p>
-                    </div>
-                </div> : null}
-            </div>
-            <div className='bottom'>
-                <div className="bottom-item">
-                    <IoIosSettings />
-                    {extended ? <p>Settings</p> : null}
-                </div>
-                <div className="bottom-item">
-                    <CgProfile />
-                    {extended ? <p>Profile</p> : null}
-                </div>
-            </div>
-        </div>
-    )
-}
-
+};
 
 export default Yuko

@@ -6,7 +6,8 @@ function Register(){
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [fname, setfName] = useState('');
+  const [lname, setlName] = useState('');
   const [course, setCourse] = useState('');
   const [studentno, setStudentNo] = useState('');
   const [message, setMessage] = useState('');
@@ -27,7 +28,8 @@ function Register(){
       // User data to be saved in Firestore
       const userData = {
         email,
-        name,
+        fname,
+        lname,
         course,
         studentno,
       };
@@ -62,14 +64,27 @@ function Register(){
             className='name'
             type="text"
             id="name"
-            placeholder='Full name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder='First Name'
+            value={fname}
+            onChange={(e) => setfName(e.target.value)}
             required
           />
-        </div>
+        
 
-        <div className="form-group">
+        
+          <input
+            className='name'
+            type="text"
+            id="name"
+            placeholder='Last Name'
+            value={lname}
+            onChange={(e) => setlName(e.target.value)}
+            required
+          />
+        
+
+
+        
           <input
             className='email'
             type="email"
@@ -79,9 +94,9 @@ function Register(){
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </div>
+        
 
-        <div className="form-group">
+        
           <input
             className='password'
             type="password"
@@ -91,9 +106,9 @@ function Register(){
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        </div>
+        
 
-        <div className="form-group">
+        
           <input
             className='course'
             type="text"
@@ -103,9 +118,9 @@ function Register(){
             onChange={(e) => setCourse(e.target.value)}
             required
           />
-        </div>
+        
 
-        <div className="form-group">
+        
           <input
             className='studentno'
             type="text"
