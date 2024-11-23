@@ -48,41 +48,43 @@ function Landing() {
                 
             </section>
 
-            <section id='developers'>
-                <h1>DEVELOPERS</h1>
-                <div className='first-dev'>
-                    <img className='first-dev-pic' src='#'/>
-                    <p>First Dev Name</p>
-                    <p>First Dev Infos</p>
-                </div>
-                <div className='second-dev'>
-                    <img className='second-dev-pic' src='#'/>
-                    <p>Second Dev Name</p>
-                    <p>Second Dev Infos</p>
-                </div>
-                <div className='third-dev'>
-                    <img className='third-dev-pic' src='#'/>
-                    <p>Third Dev Name</p>
-                    <p>Third Dev Infos</p>
-                </div>
-                <div className='fourth-dev'>
-                    <img className='fourth-dev-pic' src='#'/>
-                    <p>Fourth Dev Name</p>
-                    <p>Fourth Dev Infos</p>
-                </div>
-                <div className='fifth-dev'>
-                    <img className='fifth-dev-pic' src='#'/>
-                    <p>Fifth Dev Name</p>
-                    <p>Fifth Dev Infos</p>
-                </div>
-                <div className='sixth-dev'>
-                    <img className='sixth-dev-pic' src='#'/>
-                    <p>Sixth Dev Name</p>
-                    <p>Sixth Dev Infos</p>
+            <section id='developers' className='dev-landing-section'>
+                <div className='dev-landing'>
+                    <h1>DEVELOPERS</h1>
+                    <div className='first-dev'>
+                        <img className='first-dev-pic' src='#'/>
+                        <p>First Dev Name</p>
+                        <p>First Dev Infos</p>
+                    </div>
+                    <div className='second-dev'>
+                        <img className='second-dev-pic' src='#'/>
+                        <p>Second Dev Name</p>
+                        <p>Second Dev Infos</p>
+                    </div>
+                    <div className='third-dev'>
+                        <img className='third-dev-pic' src='#'/>
+                        <p>Third Dev Name</p>
+                        <p>Third Dev Infos</p>
+                    </div>
+                    <div className='fourth-dev'>
+                        <img className='fourth-dev-pic' src='#'/>
+                        <p>Fourth Dev Name</p>
+                        <p>Fourth Dev Infos</p>
+                    </div>
+                    <div className='fifth-dev'>
+                        <img className='fifth-dev-pic' src='#'/>
+                        <p>Fifth Dev Name</p>
+                        <p>Fifth Dev Infos</p>
+                    </div>
+                    <div className='sixth-dev'>
+                        <img className='sixth-dev-pic' src='#'/>
+                        <p>Sixth Dev Name</p>
+                        <p>Sixth Dev Infos</p>
+                    </div>
                 </div>
             </section>
 
-            <section id='services'>
+            <section id='services' className='services-landing-section'>
                 <h1>OUR SERVICES</h1>
                 <div className='first-service'>
                     <p>service description</p>
