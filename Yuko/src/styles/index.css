@@ -110,7 +110,7 @@
     color: black;
     background-color: aliceblue;
     width: 90vw;
-    margin-top: 2vw;
+    height: 6vw;
 }
 
 .nav-yuko-logo {
@@ -147,20 +147,31 @@
 
 .home-yuko-title {
     background-color: azure;
-    font-size: 8vw;
+    font-size: 8.5vw;
 }
 
 .home-yuko-description {
-    width: 50vw;
-    font-size: 0.9vw;
+    width: 54vw;
+    font-size: 1vw;
     background-color: aquamarine;
 }
 
 .log-in-button {
     background: linear-gradient(to right,#CC1819, #201DCD);
-    padding: 0.7rem;
+    padding: 0.8rem;
     color: white;
     margin-top: 2.5vw;
+    width: 11vw;
+    height: 3.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2vw;
+    font-weight: 600;
+    font-family: Arial;
+    font-size: 1.3vw;
+    text-decoration: none;
 }
 
 .features-landing {
