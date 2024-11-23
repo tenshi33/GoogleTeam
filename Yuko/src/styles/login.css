@@ -294,7 +294,7 @@ input:-webkit-autofill{
 }
 
 .log-in-form .forgot-pass-link {
-  font-size: 1.3em;
+  font-size: 1vw;
   display: flex;
   justify-content: left;
   margin-top: 0.5em;
@@ -452,8 +452,9 @@ input:-webkit-autofill{
   }
 
   .log-in-form .forgot-pass-link {
-    margin-top: 0em;
+    margin-top: -1em;
     padding-bottom: 30px;
+    font-size: 3.5vw;
   }
 
   .log-in-form .log-in-button {
