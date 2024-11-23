@@ -112,7 +112,7 @@ function LogInDesktop() {
     <>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
-      <div className="log-in-container">
+      <div className="log-in-container" id='log-in'>
         <img className="bg-image" src="background.png" alt="Background Image of Yuko"/>
         <img className="yuko-logo" src="yuko_logo_full.png" alt="Yuko Logo" />
         <form action="#" className="log-in-form">
@@ -120,7 +120,7 @@ function LogInDesktop() {
 
           {/* Display error or success message */}
           {(errorMessage || successMessage) && (
-            <p className="error-message" style={{ color: errorMessage ? "red" : "green" }}>
+            <p className="error-message" style={{color: errorMessage ? "red" : "green" }}>
               {errorMessage || successMessage}
             </p>
           )}
@@ -150,7 +150,7 @@ function LogInDesktop() {
             />
             <i className="material-symbols-rounded">lock</i>
             <button
-              className="show-pass"
+              className="show-user-pass"
               onClick={showPassword} // Toggle password visibility on click
             >
               Show
