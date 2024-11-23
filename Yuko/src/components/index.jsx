@@ -5,8 +5,6 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-            <img src='background.png' className='landing-background-img' alt='Background Image'/>
-
             <div className='nav-bar-container'>
                 <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                 <ul className='nav-bar-menu'>
@@ -22,14 +20,21 @@ function Landing() {
                 </ul>
             </div>
 
-            <section id='home' className='home-landing'>
-                <h1 className='home-yuko-title'>YUKO</h1>
-                <p className='home-yuko-description'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
-                <Link to="/Login" className="log-in-button">Get Started</Link>
+            <section id='home' className='home-landing-section'>
+                <div className='home-landing'>
+                    <img src='background.png' className='landing-background-img' alt='Background Image'/>
+                    <div className='landing-home-content'>
+                        <h1 className='home-yuko-title'>YUKO</h1>
+                        <p className='home-yuko-description'>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                        <div className='get-started-button'>
+                            <Link to="/Login" className="log-in-button">Get Started</Link>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id='features' className='features-landing-section'>
