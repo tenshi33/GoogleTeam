@@ -367,7 +367,7 @@ input:-webkit-autofill{
     width: 45vmin;
     display: flex;
     position: fixed;
-    top: 15vw;
+    top: 11vw;
     left: 27%;
     justify-content: center;
     align-items: center;
@@ -403,7 +403,7 @@ input:-webkit-autofill{
     padding: 0vw 0vw 0vw 0vw;
     left: 12vw;
     margin-left: 0vw;
-    margin-top: 85vw;
+    margin-top: 83vw;
     box-shadow: none;
   }
   
