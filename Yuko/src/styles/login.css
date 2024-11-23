@@ -117,9 +117,6 @@ body .recover-pass-container {
   pointer-events: none;
 }
 
-*:focus {
-  outline: none;
-}
 
 .recover-pass-buttons {
   display: flex;
@@ -214,7 +211,7 @@ body .recover-pass-container {
 }
 
 .log-in-form .input-wrapper {
-  height: 60px;
+  height: 61rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -256,8 +253,8 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 62%;
-  left: 1.2rem;
+  top: 57%;
+  left: 1rem;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
@@ -307,7 +304,7 @@ input:-webkit-autofill{
   outline: none;
   border: none;
   color: white;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: bold;
   background: linear-gradient(to right, #380050, #ED0101);
   margin-top: 3.5vw;
@@ -318,7 +315,7 @@ input:-webkit-autofill{
 .log-in-form .log-in-button:active {
   width: 52.75%;
   height: 52.75px;
-  font-size: 1.1vw;
+  font-size: 1.35vw;
 }
 
 .log-in-form .log-in-button:hover {
@@ -412,13 +409,11 @@ input:-webkit-autofill{
   
   .log-in-form .input-wrapper {
     width: 80vw;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0.4rem;
+    height: 15vw;
   }
   
   .log-in-form .input-wrapper .input-field{
+    background-color: #002072;
     height: 2.8em;
     width: 100%;
     border-radius: 0.7rem;
@@ -429,8 +424,8 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper i {
     width: 5vw;
     height: 5vw;
-    top: 50%;
-    font-size: 4.5vw;
+    top: 42%;
+    font-size: 4.9vw;
   }
 
   .log-in-form .show-user-pass {
@@ -448,7 +443,7 @@ input:-webkit-autofill{
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-top: -1vw;
+    margin-top: 1.2vw;
   }
 
   .log-in-form .forgot-pass-link {
@@ -462,6 +457,7 @@ input:-webkit-autofill{
     height: 40px;
     color: white;
     font-size: 5vw;
+    margin-top: 9vw;
   }
 
   .log-in-form .log-in-button:active {
