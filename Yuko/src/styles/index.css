@@ -98,6 +98,12 @@
 .landing-background-img {
     display: flex;
     position: absolute;
+    z-index: -1;
+    margin-left: -5vw;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: none;
+    background-position: top;
 }
 
 .nav-bar-container {
@@ -107,8 +113,7 @@
     position: fixed;
     font-family: Arial;
     font-size: 1vw;
-    color: black;
-    background-color: aliceblue;
+    color: white;
     width: 90vw;
     height: 6vw;
 }
@@ -131,7 +136,6 @@
 }
 
 .home-landing {
-    background-color: antiquewhite;
     margin-top: 9vw;
     display: flex;
     flex-direction: column;
@@ -142,18 +146,19 @@
     height: 50vw;
     margin: 0;
     padding: 10vw;
-    padding-top: 17vw;
+    padding-top: 13vw;
 }
 
 .home-yuko-title {
-    background-color: azure;
     font-size: 8.5vw;
+    color: white;
+    font-weight: 900;
 }
 
 .home-yuko-description {
     width: 54vw;
     font-size: 1vw;
-    background-color: aquamarine;
+    color: white;
 }
 
 .log-in-button {

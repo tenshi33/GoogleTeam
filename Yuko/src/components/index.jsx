@@ -5,7 +5,7 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-            <img src='#' className='landing-background-img' alt='Background Image'/>
+            <img src='background.png' className='landing-background-img' alt='Background Image'/>
 
             <div className='nav-bar-container'>
                 <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
@@ -33,15 +33,17 @@ function Landing() {
             </section>
 
             <section id='features' className='features-landing'>
-                <div className='features-first-section'>
-                    <h1>FEATURES</h1>
-                    <p>Some Description</p>
-                </div>
-                <div className='features-scroll-section'>
-                    <div className='first-feature'>
-                        <p>First Description Title</p>
-                        <p>First Feature Description</p>
+                <div>
+                    <div className='features-first-section'>
+                        <h1>FEATURES</h1>
+                        <p>Some Description</p>
                     </div>
+                    <div className='features-scroll-section'>
+                        <div className='first-feature'>
+                            <p>First Description Title</p>
+                            <p>First Feature Description</p>
+                        </div>
+                </div>
                 </div>
             </section>
 
