@@ -15,10 +15,12 @@
 
 .register{
     color: white;
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
+    font-size: 7vw;
 }
 
-.form-group {
+
+.form-group input {
     height: 2vw;
     width: 20vw;
     padding: 0 1.25em 0 3.5em;
@@ -33,6 +35,7 @@
     -webkit-transition: 0.5s;
     transition: 0.2s ease;
     margin-bottom: 1vw;
+    margin-right: .5vw;
 }
 
 .name {
@@ -101,11 +104,21 @@
     font-size: 1vw;
     font-weight: bold;
     background: linear-gradient(to right, #380050, #ED0101);
-    margin-top: 3.5vw;
+    margin-top: 1vw;
+    margin-left: 5vw;
     border-radius: 2rem;
     transition: background 0.7s ease-in-out;
 }
 
 .href {
     color: white;
+}
+
+.signup {
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.remember-forgot {
+    margin-left: 3vw;
 }
