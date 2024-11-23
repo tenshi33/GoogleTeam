@@ -209,6 +209,7 @@
 
 */
 
+
 .landing-background-img {
     display: flex;
     place-items: center;
@@ -329,4 +330,14 @@
     font-family: Arial;
     font-size: 1.3vw;
     text-decoration: none;
+}
+
+.features-landing {
+    background: linear-gradient(to bottom,#6D171E, #1D143E);
+    position: absolute;
+}
+
+.features-first-section {
+    background-color: #754448;
+    z-index: 1;
 }
