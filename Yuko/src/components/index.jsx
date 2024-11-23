@@ -32,8 +32,8 @@ function Landing() {
                 <Link to="/Login" className="log-in-button">Get Started</Link>
             </section>
 
-            <section id='features' className='features-landing'>
-                <div>
+            <section id='features' className='features-landing-section'>
+                <div className='features-landing'>
                     <div className='features-first-section'>
                         <h1>FEATURES</h1>
                         <p>Some Description</p>
@@ -43,8 +43,9 @@ function Landing() {
                             <p>First Description Title</p>
                             <p>First Feature Description</p>
                         </div>
+                    </div>
                 </div>
-                </div>
+                
             </section>
 
             <section id='developers'>

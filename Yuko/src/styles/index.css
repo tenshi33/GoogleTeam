@@ -1,4 +1,5 @@
-/*.landing-background-img {
+/*
+.landing-background-img {
     display: flex;
     height: 100vh; 
     width: 100%;
@@ -93,7 +94,8 @@
     flex-direction: column;
     margin-top: 14.5vw;
     color: white;
-}*/
+}
+*/
 
 .landing-background-img {
     display: flex;
@@ -136,7 +138,7 @@
 }
 
 .home-landing {
-    margin-top: 9vw;
+    margin-top: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,28 +148,29 @@
     height: 50vw;
     margin: 0;
     padding: 10vw;
-    padding-top: 13vw;
+    padding-top: 11vw;
 }
 
 .home-yuko-title {
-    font-size: 8.5vw;
+    font-size: 11vw;
     color: white;
     font-weight: 900;
 }
 
 .home-yuko-description {
-    width: 54vw;
-    font-size: 1vw;
+    width: 66vw;
+    font-size: 1.2vw;
     color: white;
+    margin-top: -2vw;
 }
 
 .log-in-button {
     background: linear-gradient(to right,#CC1819, #201DCD);
     padding: 0.8rem;
     color: white;
-    margin-top: 2.5vw;
+    margin-top: 2.8vw;
     width: 11vw;
-    height: 3.8vw;
+    height: 3.6vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,7 +182,7 @@
     text-decoration: none;
 }
 
-.features-landing {
-    display: flex;
-    margin-top: 5vw;
+.features-landing-section {
+    background-color: rgb(0, 0, 56);
+    color: white;
 }
