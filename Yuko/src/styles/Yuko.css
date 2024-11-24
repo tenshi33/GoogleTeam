@@ -1,26 +1,21 @@
 /* Main CSS */
+.yuko-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+}
 
-/* The entire body of the main */
 .main{
-    flex: 1;
+    flex-grow: 1;
+    margin-left: 1vw;;
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
 }
 
-/* The YUKO icon logo */
-.main .nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.6vw;
-    padding: 2vh;
-    cursor: pointer;
-}
-
-/* main-container is the Yuko icon, greeting and cards at the center */
 .main-container{
-    padding-top: 5vh;
+    padding-top: 6vw;
     display: flex;
     flex-direction: column;
     max-width: 90vw;
@@ -30,7 +25,6 @@
     justify-content: center;
 }
 
-/* "Hello User, how may I help" */
 .main .greet{
     padding-bottom: 1.5vh;
     margin: 1vw 0vh;
@@ -39,20 +33,17 @@
     font-weight: 500;
 }
 
-/* "Hello User, how may I help" but with color */
 .main .greet span{
     background: -webkit-linear-gradient(16deg,#bb0000,#0000bd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* The prompts as a group */
 .main .cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
 
-/* The prompts itself */
 .main .card{
     height: 5.3vh;
     width: 10vw;
@@ -64,13 +55,11 @@
     cursor: pointer;
 }
 
-/* The prompts when highlighted */
 .main .card:hover{
     background-color: #cfcfdfbd;
     color: #1300308e;
 }
 
-/* main-bottom is the chatbox, the icons in the chatbox, and the bottom information */
 .main-bottom{
     position: absolute;
     bottom: 0; 
@@ -82,7 +71,6 @@
     margin: 0; 
 }
 
-/* chatbox itself */
 .search-box{
     display: flex;
     align-items: center;
@@ -93,19 +81,17 @@
     border-radius: 4vw;
 }
 
-/* Icons in the chatbox */
 .search-box .img{
     color: #000000af;
     width: 1.5vw;
     cursor: pointer;
 }
 
-/* Icons in the chatbox when highlighted */
 .search-box .img:hover{
     color: #050505ce;
 }
 
-/* writing in the chatbox */
+
 .search-box input{
     flex: 1;
     background: transparent;
@@ -115,14 +101,12 @@
     font-size: 1vw;
 }
 
-/* Icons in the chatbox space or distance or somthn */
 .search-box div{
     display: flex;
     align-items: center;
     gap: 1vw;
 }
 
-/* Send button design */
 #send{
     height: 3.9vh;
     width: 3.5vw;
@@ -131,98 +115,14 @@
     border-radius: 4vw;
 }
 
-/* Send button design highlighted */
 #send:hover{
    color: #000000c5;
    background-color: #7f7fa3;
 }
 
-/* Yuko is designed to help and guide users to the best of their abilities. Please do not misuse. */
 .main .bottom-info{
     font-size: 0.9vw;
     margin: 1vw auto;
     text-align: center;
     font-weight: 300;
 }    
-
-/* Sidebar CSS */
-
-/* The entire sidebar */
-.sidebar{
-    min-height: 100vh;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(#720000,#00007e);
-    padding: 3vh 1vw;
-    color: #ffffffd8;
-}
-
-/* Hamborgir menu */
-.sidebar .icon-container{
-    margin-left: 0.3vw;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-/* The new chat icon, I wanted to put some extra space between the menu icon */
-.sidebar .icon-container .new-chat{
-    margin-left: 0.5vw;
-}
-
-/* Chat history title and the recent chats */
-.sidebar .recent{
-    display: flex;
-    flex-direction: column;
-}
-
-/* Chat history title itself */
-.sidebar .recent-title{
-    font-size: 1.7vw;
-    margin-top: 3vh;
-    margin-left: 0.3vw;
-    margin-bottom: 1.5vh;
-}
-
-/* recent chats below the chat history title */
-.sidebar .recent-entry{
-    display: flex;
-    align-items: start;
-    margin: 0.6vh;
-    margin-right: 1vw;
-    gap: 1vw;
-    padding: 1.7vh;
-    padding-right: 4vw;
-    color: #e7e7e7;
-    border-style: solid;
-    border-color: #ffffffcb;
-    border-width: 0.1vw;
-    border-top-right-radius: 0.5vw;
-    border-bottom-right-radius: 0.5vw;
-    cursor: pointer;
-}
-
-/* Recent chats get highlighted here */
-.sidebar .recent-entry:hover{
-    background-color: #ffffff18;
-    color: #ffffffd7;
-}
-
-/* Me thinks this is where the settings and profile is located */
-.sidebar .bottom{
-    display: flex;
-    flex-direction: column;
-}
-
-/* I think this is the spacing between the profile and settings icon */
-.sidebar .bottom-item{
-    display: flex;
-    align-items: start;
-    gap: 0.5vw;
-    padding: 1.5vh;
-    padding-right: 4vw;
-    cursor: pointer;
-}

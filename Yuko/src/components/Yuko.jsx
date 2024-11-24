@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { auth, db, doc, getDoc } from '../../firebase/firebase'
-import yukotext from '../../public/yuko-icon2.png';
 import yuko from '../../public/yuko2.png';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
@@ -11,6 +10,7 @@ import '../styles/Yuko.css';
 function Yuko() {
   const [userName, setUserName] = useState(''); // State to hold the user's name
   const [userId, setUserId] = useState(null); // State to hold the logged-in user's ID
+  
 
   useEffect(() => {
     // Listen for authentication state changes (user login)
@@ -51,11 +51,8 @@ function Yuko() {
   return (
     <>
     <div className="yuko-container">
-      <Sidebar /></div>
-    <div className='main'>
-        <span className='nav'>
-        <img src={yukotext} alt="Description" />
-        </span>
+      <Sidebar />
+      <div className='main'>
             <div className="main-container">
                 <span className="yuko-icon">
                     <img src={yuko} alt="" />
@@ -92,6 +89,9 @@ function Yuko() {
                     </div>
             </div>
     </div>
+      </div>
+      
+    
     </>
   )
 };

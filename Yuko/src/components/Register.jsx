@@ -55,82 +55,74 @@ function Register(){
 
   return (
     <div className="register-container">
-     <img className="bg-image" src="background.png" alt="Background Image of Yuko"/>
-      <h2 className='register'>Register</h2>
-      {message && <div className="message">{message}</div>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            className='name'
-            type="text"
-            id="name"
-            placeholder='First Name'
-            value={fname}
-            onChange={(e) => setfName(e.target.value)}
-            required
-          />
-        
+  <img className="bg-image" src="background.png" alt="Background Image of Yuko" />
+  <h2 className="register">Register</h2>
+  {message && <div className="message">{message}</div>}
+  <form onSubmit={handleSubmit}>
+    <div className="form-group">
+      <input
+        className="studentno"
+        type="text"
+        id="studentno"
+        placeholder="Student No."
+        value={studentno}
+        onChange={(e) => setStudentNo(e.target.value)}
+        required
+      />
 
-        
-          <input
-            className='name'
-            type="text"
-            id="name"
-            placeholder='Last Name'
-            value={lname}
-            onChange={(e) => setlName(e.target.value)}
-            required
-          />
-        
+      <div className="name-container">
+        <input
+          className="name first-name"
+          type="text"
+          id="fname"
+          placeholder="First Name"
+          value={fname}
+          onChange={(e) => setfName(e.target.value)}
+          required
+        />
 
+        <input
+          className="name last-name"
+          type="text"
+          id="lname"
+          placeholder="Last Name"
+          value={lname}
+          onChange={(e) => setlName(e.target.value)}
+          required
+        />
+      </div>
 
-        
-          <input
-            className='email'
-            type="email"
-            id="rEmail"
-            placeholder='Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        
+      <input
+        className="course"
+        type="text"
+        id="course"
+        placeholder="Course"
+        value={course}
+        onChange={(e) => setCourse(e.target.value)}
+        required
+      />
 
-        
-          <input
-            className='password'
-            type="password"
-            id="rPassword"
-            placeholder='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        
+      <input
+        className="email"
+        type="email"
+        id="rEmail"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
 
-        
-          <input
-            className='course'
-            type="text"
-            id="course"
-            placeholder='Course'
-            value={course}
-            onChange={(e) => setCourse(e.target.value)}
-            required
-          />
-        
+      <input
+        className="password"
+        type="password"
+        id="rPassword"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+    </div>
 
-        
-          <input
-            className='studentno'
-            type="text"
-            id="studentno"
-            placeholder='Student #'
-            value={studentno}
-            onChange={(e) => setStudentNo(e.target.value)}
-            required
-          />
-        </div>
 
         <div className="remember-forgot">
               <label><input type='checkbox' required />I agree with Privacy and Policy</label>
