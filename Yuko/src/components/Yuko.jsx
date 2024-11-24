@@ -11,6 +11,7 @@ import '../styles/Yuko.css';
 function Yuko() {
   const [userName, setUserName] = useState(''); // State to hold the user's name
   const [userId, setUserId] = useState(null); // State to hold the logged-in user's ID
+  
 
   useEffect(() => {
     // Listen for authentication state changes (user login)
@@ -51,8 +52,8 @@ function Yuko() {
   return (
     <>
     <div className="yuko-container">
-      <Sidebar /></div>
-    <div className='main'>
+      <Sidebar />
+      <div className='main'>
         <span className='nav'>
         <img src={yukotext} alt="Description" />
         </span>
@@ -92,6 +93,9 @@ function Yuko() {
                     </div>
             </div>
     </div>
+      </div>
+      
+    
     </>
   )
 };

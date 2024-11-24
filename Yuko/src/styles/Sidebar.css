@@ -1,6 +1,5 @@
 /* Sidebar CSS */
 
-/* The entire sidebar */
 .sidebar{
     min-height: 100vh;
     display: inline-flex;
@@ -11,7 +10,6 @@
     color: #ffffffd8;
 }
 
-/* Hamborgir menu */
 .sidebar .icon-container{
     margin-left: 0.3vw;
     display: inline-flex;
@@ -21,18 +19,15 @@
     cursor: pointer;
 }
 
-/* The new chat icon, I wanted to put some extra space between the menu icon */
 .sidebar .icon-container .new-chat{
     margin-left: 0.5vw;
 }
 
-/* Chat history title and the recent chats */
 .sidebar .recent{
     display: flex;
     flex-direction: column;
 }
 
-/* Chat history title itself */
 .sidebar .recent-title{
     font-size: 1.7vw;
     margin-top: 3vh;
@@ -40,7 +35,6 @@
     margin-bottom: 1.5vh;
 }
 
-/* recent chats below the chat history title */
 .sidebar .recent-entry{
     display: flex;
     align-items: start;
@@ -58,19 +52,16 @@
     cursor: pointer;
 }
 
-/* Recent chats get highlighted here */
 .sidebar .recent-entry:hover{
     background-color: #ffffff18;
     color: #ffffffd7;
 }
 
-/* Me thinks this is where the settings and profile is located */
 .sidebar .bottom{
     display: flex;
     flex-direction: column;
 }
 
-/* I think this is the spacing between the profile and settings icon */
 .sidebar .bottom-item{
     display: flex;
     align-items: start;
@@ -78,4 +69,8 @@
     padding: 1.5vh;
     padding-right: 4vw;
     cursor: pointer;
+}
+
+.sidebar .bottom-item:hover{
+    color: #aaaaaa;
 }
