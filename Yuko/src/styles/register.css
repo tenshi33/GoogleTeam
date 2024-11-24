@@ -3,7 +3,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;     
+    align-items: center;  
+    align-self: center;
+    align-content: center;   
     width: 30vw;
     height: 32vw;
     border-radius: 2.5rem;
@@ -18,9 +20,14 @@
     font-size: 7vw;
 }
 
+.bg-image {
+    margin-left: 70vw;
+    margin-top: 18.2vw;
+
+}
+
 .form-group input {
     height: 2vw;
-    width: 20vw;
     padding: 0 1.25em 0 3.5em;
     border-radius: 1rem;
     background-color: transparent;
@@ -42,7 +49,7 @@
 }
 
 .name {
-    width: 9.5vw; /* Adjust width of each name input */
+    width: 12vw; /* Adjust width of each name input */
     height: 2vw;
     padding: 0 1.25em;
     border-radius: 1rem;
@@ -51,10 +58,50 @@
     color: white;
     font-size: 1vw;
     margin-top: .4vw;
+    
+}
+
+.studentno {
+    width: 20vw; /* Set other fields to the same width */
+    height: 2vw;
+    padding: 0 1.25em;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-bottom: 1vw;
+}
+
+.password {
+    width: 20vw; /* Set other fields to the same width */
+    height: 2vw;
+    padding: 0 1.25em;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-bottom: 1vw;
 }
 
 /* Adjustments for other input fields */
-.email, .password, .course, .studentno {
+.email {
+    width: 20vw; /* Set other fields to the same width */
+    height: 2vw;
+    padding: 0 1.25em;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+    font-size: 1vw;
+    margin-top: .4vw;
+    margin-bottom: 1vw;
+}
+
+.course {
     width: 20vw; /* Set other fields to the same width */
     height: 2vw;
     padding: 0 1.25em;
