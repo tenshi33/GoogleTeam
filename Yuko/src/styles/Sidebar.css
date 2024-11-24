@@ -19,6 +19,11 @@
     cursor: pointer;
 }
 
+.sidebar .icon-container .textyuko{
+    margin-left: 10vw;
+    height: 1.3vw;
+}
+
 .sidebar .icon-container .new-chat{
     margin-left: 0.5vw;
 }
@@ -30,9 +35,9 @@
 
 .sidebar .recent-title{
     font-size: 1.7vw;
-    margin-top: 3vh;
+    margin-top: 4vh;
     margin-left: 0.3vw;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
 }
 
 .sidebar .recent-entry{

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { auth, db, doc, getDoc } from '../../firebase/firebase'
-import yukotext from '../../public/yuko-icon2.png';
 import yuko from '../../public/yuko2.png';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
@@ -54,9 +53,6 @@ function Yuko() {
     <div className="yuko-container">
       <Sidebar />
       <div className='main'>
-        <span className='nav'>
-        <img src={yukotext} alt="Description" />
-        </span>
             <div className="main-container">
                 <span className="yuko-icon">
                     <img src={yuko} alt="" />

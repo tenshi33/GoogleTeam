@@ -5,7 +5,7 @@ import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import menu from '../../public/menu2.png';
 import newchat from '../../public/new-chat2.png';
-
+import yukotext from '../../public/yuko-icon2.png';
 
 const Sidebar = () => {
 
@@ -18,6 +18,9 @@ const Sidebar = () => {
                 </span>
                 {extended? <span className='icon-container'>
                     <img className='new-chat' src={newchat} alt="Description" />
+                </span> : null}
+                {extended? <span className='icon-container'>
+                    <img className='textyuko' src={yukotext} alt="Description" />
                 </span> : null}
                 {extended ? <div className="recent">
                     <p className="recent-title"><b>Chat History</b></p>
