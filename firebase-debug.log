@@ -1,0 +1,62 @@
+[debug] [2024-11-11T14:51:26.188Z] ----------------------------------------------------------------------
+[debug] [2024-11-11T14:51:26.214Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-11-11T14:51:26.215Z] CLI Version:   13.24.2
+[debug] [2024-11-11T14:51:26.215Z] Platform:      win32
+[debug] [2024-11-11T14:51:26.216Z] Node Version:  v20.18.0
+[debug] [2024-11-11T14:51:26.217Z] Time:          Mon Nov 11 2024 22:51:26 GMT+0800 (Philippine Standard Time)
+[debug] [2024-11-11T14:51:26.217Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-11T14:51:27.109Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-11T14:51:27.111Z] > authorizing via signed-in user (doggerman33@gmail.com)
+[debug] [2024-11-11T14:51:27.119Z] [iam] checking project yukoai-d9c63 for permissions ["firebase.projects.get"]
+[debug] [2024-11-11T14:51:27.132Z] Checked if tokens are valid: false, expires at: 1730991143746
+[debug] [2024-11-11T14:51:27.133Z] Checked if tokens are valid: false, expires at: 1730991143746
+[debug] [2024-11-11T14:51:27.134Z] > refreshing access token with scopes: []
+[debug] [2024-11-11T14:51:27.151Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-11T14:51:27.155Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-11T14:51:27.508Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-11T14:51:27.509Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-11T14:51:27.525Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions [none]
+[debug] [2024-11-11T14:51:27.525Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions x-goog-quota-user=projects/yukoai-d9c63
+[debug] [2024-11-11T14:51:27.526Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-11T14:51:28.498Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions 200
+[debug] [2024-11-11T14:51:28.498Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yukoai-d9c63:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-11T14:51:28.500Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:28.500Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:28.502Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 [none]
+[debug] [2024-11-11T14:51:29.811Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 200
+[debug] [2024-11-11T14:51:29.811Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 {"projectId":"yukoai-d9c63","projectNumber":"503905336199","displayName":"YukoAI","name":"projects/yukoai-d9c63","resources":{"hostingSite":"yukoai-d9c63","realtimeDatabaseInstance":"yukoai-d9c63-default-rtdb"},"state":"ACTIVE","etag":"1_ab4b0c0f-f4f7-4fec-b3cd-88ca8fd5a8ff"}
+[info] 
+[info] === Serving from 'C:\Users\Admin\Desktop\Python\GoogleTeam'...
+[info] 
+[debug] [2024-11-11T14:51:30.027Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.029Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.052Z] defaultcredentials: writing to file C:\Users\Admin\AppData\Roaming\firebase\doggerman33_gmail_com_application_default_credentials.json
+[debug] [2024-11-11T14:51:30.061Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/yukoai-d9c63/sites 
+[debug] [2024-11-11T14:51:30.081Z] Setting GAC to C:\Users\Admin\AppData\Roaming\firebase\doggerman33_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Admin\\AppData\\Roaming\\firebase\\doggerman33_gmail_com_application_default_credentials.json"}}
+[debug] [2024-11-11T14:51:30.182Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.183Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.185Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/adminSdkConfig [none]
+[debug] [2024-11-11T14:51:30.593Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/adminSdkConfig 200
+[debug] [2024-11-11T14:51:30.594Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/adminSdkConfig {"projectId":"yukoai-d9c63","databaseURL":"https://yukoai-d9c63-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"yukoai-d9c63.firebasestorage.app"}
+[debug] [2024-11-11T14:51:30.860Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/yukoai-d9c63/sites 200
+[debug] [2024-11-11T14:51:30.861Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/yukoai-d9c63/sites {"sites":[{"name":"projects/yukoai-d9c63/sites/yukoai-d9c63","defaultUrl":"https://yukoai-d9c63.web.app","appId":"1:503905336199:web:a4de7ab6f0af65caa5b122","type":"DEFAULT_SITE"}]}
+[debug] [2024-11-11T14:51:30.861Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.862Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:30.862Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/webApps/1:503905336199:web:a4de7ab6f0af65caa5b122/config [none]
+[debug] [2024-11-11T14:51:31.619Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/webApps/1:503905336199:web:a4de7ab6f0af65caa5b122/config 200
+[debug] [2024-11-11T14:51:31.620Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63/webApps/1:503905336199:web:a4de7ab6f0af65caa5b122/config {"projectId":"yukoai-d9c63","appId":"1:503905336199:web:a4de7ab6f0af65caa5b122","databaseURL":"https://yukoai-d9c63-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"yukoai-d9c63.firebasestorage.app","apiKey":"AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ","authDomain":"yukoai-d9c63.firebaseapp.com","messagingSenderId":"503905336199","measurementId":"G-XHC05QS4QB"}
+[debug] [2024-11-11T14:51:31.657Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:31.659Z] Checked if tokens are valid: true, expires at: 1731340286509
+[debug] [2024-11-11T14:51:31.660Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 [none]
+[debug] [2024-11-11T14:51:32.029Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 200
+[debug] [2024-11-11T14:51:32.030Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yukoai-d9c63 {"projectId":"yukoai-d9c63","projectNumber":"503905336199","displayName":"YukoAI","name":"projects/yukoai-d9c63","resources":{"hostingSite":"yukoai-d9c63","realtimeDatabaseInstance":"yukoai-d9c63-default-rtdb"},"state":"ACTIVE","etag":"1_ab4b0c0f-f4f7-4fec-b3cd-88ca8fd5a8ff"}
+[info] i  functions: Watching "C:\Users\Admin\Desktop\Python\GoogleTeam\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Admin\\Desktop\\Python\\GoogleTeam\\functions\" for Cloud Functions..."}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: could not deploy functions because the "functions" directory was not found. Please create it or specify a different source directory in firebase.json {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: could not deploy functions because the \u001b[1m\"functions\"\u001b[22m directory was not found. Please create it or specify a different source directory in firebase.json"}}
+[info] i  hosting[yukoai-d9c63]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[yukoai-d9c63]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [11/Nov/2024:14:52:00 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [11/Nov/2024:14:52:00 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\""}}
+[info] i  hosting: ::1 - - [11/Nov/2024:14:52:02 +0000] "GET /script.js HTTP/1.1" 200 493 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [11/Nov/2024:14:52:02 +0000] \"GET /script.js HTTP/1.1\" 200 493 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\""}}
+[info] i  hosting: ::1 - - [11/Nov/2024:14:52:02 +0000] "GET /style.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [11/Nov/2024:14:52:02 +0000] \"GET /style.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\""}}
+[info] i  hosting: ::1 - - [11/Nov/2024:14:52:02 +0000] "GET /register.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [11/Nov/2024:14:52:02 +0000] \"GET /register.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\""}}
+[info] i  hosting: ::1 - - [11/Nov/2024:14:52:06 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [11/Nov/2024:14:52:06 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0\""}}
