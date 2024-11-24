@@ -14,17 +14,8 @@
     position: relative;
 }
 
-.main .nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.6vw;
-    padding: 2vh;
-    cursor: pointer;
-}
-
 .main-container{
-    padding-top: 5vh;
+    padding-top: 6vw;
     display: flex;
     flex-direction: column;
     max-width: 90vw;
