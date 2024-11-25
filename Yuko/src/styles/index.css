@@ -863,3 +863,14 @@ body {
 .services-description {
     margin-top: 0.6vw;
 }
+
+.services-title {
+    font-size: 1vw;
+    font-family: 'Arial';
+    font-weight: 700;
+}
+
+.services-description {
+    font-size: 0.8vw;
+    font-family: 'Calibri';
+}
