@@ -133,7 +133,7 @@ function Register(){
         </button>
 
 
-        <p className='signup'>Already have an account? <Link className='href' to="/Login">Click here</Link></p>
+        <p className='signup'>Already have an account? <Link className='href' to="/Login">Sign In</Link></p>
 
       </form>
 
