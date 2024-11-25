@@ -72,7 +72,7 @@ function Register(){
 
       <div className="name-container">
         <input
-          className="name first-name"
+          className="name-first-name"
           type="text"
           id="fname"
           placeholder="First Name"
@@ -82,7 +82,7 @@ function Register(){
         />
 
         <input
-          className="name last-name"
+          className="name-last-name"
           type="text"
           id="lname"
           placeholder="Last Name"
