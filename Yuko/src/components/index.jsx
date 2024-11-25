@@ -5,7 +5,7 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
-            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 
             <div className='landing-page'>
                 {/*HEADER OF LANDING PAGE*/}
@@ -314,7 +314,7 @@ function Landing() {
                             copyrights @2024 chuchu
                         </div>
                         <div className='footer-socials'>
-                            <i>email</i>
+                            <i>mail</i>
                             <i>facebook</i>
                             <i>LinkedIn</i>
                         </div>
