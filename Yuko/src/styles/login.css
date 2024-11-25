@@ -23,7 +23,7 @@ body {
   background-attachment: fixed;
 }
 
-/*.bg-image {
+.bg-image {
   display: flex;
   place-items: center;
   align-items: center;
@@ -40,15 +40,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}*/
-
-.bg-image {
-  display: flex;
-  position: fixed;
-  z-index: -1;
-  min-width: 100vw;
-  min-height: 100vh;
-  object-fit: cover;
 }
 
 body .recover-pass-container {
@@ -371,7 +362,6 @@ input:-webkit-autofill{
     place-items: center;
     align-items: center;
     justify-content: center;
-    background-image: url(background.png);
   }
 
   .yuko-logo {
