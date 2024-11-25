@@ -42,15 +42,8 @@ const Sidebar = () => {
                     </div>
                 </div> : null}
             </div>
-            <div className='bottom'>
-                <div className="bottom-item">
-                    <IoIosSettings />
-                    {extended ? <p>Settings</p> : null}
-                </div>
-                <div className="bottom-item">
-                    <CgProfile />
-                    {extended ? <p>Profile</p> : null}
-                </div>
+            <div className='bottom'> 
+                 {/* profile and settings */}
             </div>
         </div>
     )

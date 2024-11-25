@@ -62,15 +62,7 @@ function Yuko() {
                     <p><b>How may I help?</b></p>
                 </div>
                     <div className='cards'>
-                        <div className='card'>
-                            <p><b>Lorem impus</b></p>
-                        </div>
-                        <div className='card'>
-                            <p><b>Lorem impus</b></p>
-                        </div>
-                        <div className='card'>
-                            <p><b>Lorem impus</b></p>
-                        </div>
+                         {/* prompt cards here */}
                     </div>
                     <div>
                         <div className='main-bottom'>
