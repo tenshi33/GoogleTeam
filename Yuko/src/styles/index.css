@@ -92,6 +92,14 @@ body {
     font-size: 1.3vw;
     text-decoration: none;
 }
+.log-in-button:hover {
+    background: linear-gradient(to right, #201DCD, #CC1819);
+}
+.log-in-button:active {
+    width: 10.7vw;
+    height: 3.5vw;
+    font-size: 1.2vw;
+}
 
 .features-landing-section {
     background: linear-gradient(to bottom,#6D171E, #1D143E);
