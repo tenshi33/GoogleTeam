@@ -5,6 +5,8 @@ import '../styles/index.css'
 function Landing() {
     return (
         <>
+            
+
             <div className='landing-page'>
                 {/*HEADER OF LANDING PAGE*/}
                 <div className='nav-bar-container'>
@@ -282,25 +284,41 @@ function Landing() {
 
                 </section>
 
-                <section id='contacts' className='contacts-landing-section'>
-                    <img className='footer-yuko-logo' src='#'/>
-                    <div className='footer-other-pages'>
-                        <p>Other pages</p>
-                        <p>Home</p>
-                        <p>Features</p>
-                        <p>Developers</p>
-                        <p>Services</p>
-                        <p>Contacts</p>
+                <section id='contacts' className='landing-footer-section'>
+                    <div className='contacts-landing'>
+                        <div className='footer-left'>
+                            <img className='footer-yuko-logo' src='Yuko_logo_text.png' alt='YUKO Logo'/>
+                            <p className='ai-description-footer'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                        <div className='footer-other-pages'>
+                            <p className='quick-links-title'>Quick Links</p>
+                            <a className='footer-links' href='#'>Home</a>
+                            <a className='footer-links' href='#'>Features</a>
+                            <a className='footer-links' href='#'>Developers</a>
+                            <a className='footer-links' href='#'>Services</a>
+                            <a className='footer-links' href='#'>Contacts</a>
+                        </div>
+                        
+                        <div className='footer-contacts'>
+                            <p className='contacts-title'>Contacts</p>
+                            <a className='footer-links' href='#'>Email</a>
+                            <a className='footer-links' href='#'>Facebook</a>
+                            <a className='footer-links' href='#'>LinkedIn</a>
+                            <a className='footer-links' href='#'>Phone Number</a>
+                        </div>
                     </div>
                     
-                    <div className='footer-contacts'>
-                        <p>Contacts</p>
-                        <a href='#'>Email</a>
-                        <a href='#'>Facebook</a>
-                        <a href='#'>LinkedIn</a>
-                        <a href='#'>Phone Number</a>
+                    <div className='horizontal-line'></div>
+                    <div className='last-section'>
+                        <div className='copyrights'>
+                            copyrights @2024 chuchu
+                        </div>
+                        <div className='footer-socials'>
+                            <i>email</i>
+                            <i>facebook</i>
+                            <i>LinkedIn</i>
+                        </div>
                     </div>
-                    
                 </section>
             </div>
         </>

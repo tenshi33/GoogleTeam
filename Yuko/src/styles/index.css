@@ -822,7 +822,7 @@ body {
 }
 
 .services-scroll-section2::-webkit-scrollbar-thumb:hover{
-    background-color: #110f3a;
+    background-color: #07072000;
     border-radius: 2vw;
 }
 
@@ -848,11 +848,9 @@ body {
     flex-direction: column;
     align-items: center;
     height: 24vw;
-    width: 20vw;
 }
 
 .services-pics {
-    width: 11vw;
     height: 10vw;
 }
 
@@ -873,4 +871,110 @@ body {
 .services-description {
     font-size: 0.8vw;
     font-family: 'Calibri';
+}
+
+.landing-footer-section {
+    background: #07061D;
+    height: 25vw;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: -0.5vw;
+    padding: 3vw;
+}
+
+.contacts-landing {
+    z-index: 0;
+    display: flex;
+    margin-left: 3vw;
+    margin-bottom: 4vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+.footer-left {
+    width: 15vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 0.5vw;
+    margin-left: -3vw;
+    margin-right: 10vw;
+}
+
+.footer-left .footer-yuko-logo {
+    display: flex;
+    justify-self: right;
+    align-self: right;
+    width: 11vw;
+    margin-right: 25vw;
+}
+
+.ai-description-footer {
+    font-size: 0.8vw;
+    margin-top: 1vw;
+}
+
+.landing-contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-other-pages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    align-self: start;
+}
+
+.quick-links-title,
+.contacts-title {
+    font-size: 1.3vw;
+    font-weight: 700;
+    margin-bottom: 1vw;
+}
+
+.footer-links {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial';
+    font-size: 0.95vw;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    justify-items: left;
+    align-content: left;
+    gap: 0.7vw;
+}
+
+.horizontal-line {
+    height: 0.1px;
+    width: 90vw;
+    background-color: white;
+    margin-left: 2vw;
+}
+
+.last-section {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 1vw;
+    z-index: 0;
+    justify-content: space-between;
+    gap: 10vw;
+    width: 90vw;
+    margin-left: 2vw;
 }
