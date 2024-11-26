@@ -1149,33 +1149,20 @@ body {
     .first-dev-shape-outline {
         width: 75vw;
         height: 19vw;
-        display: flex;
-        position: absolute;
         margin-bottom: 9vw;
-        margin-top: 13vw;
-        background-color: transparent;
-        border: solid white;
-        border-width: 0.1rem;
-        z-index: 0;
-        margin-left: -2.5vw;
+        margin-top: 22vw;
+        margin-left: -4vw;
         border-top-right-radius: 1.8vw;
         border-bottom-right-radius: 2.2vw;
-        transform: skew(20deg);
     }
     
     .first-dev-shape-inside {
         width: 73vw;
         height: 20vw;
-        display: flex;
-        position: absolute;
         margin-bottom: 9vw;
-        margin-top: 15vw;
-        background: linear-gradient(to right, #050374, #c50e0e);
-        border-width: 0.1rem;
-        z-index: -1;
-        margin-left: -2.5vw;
+        margin-top: 25vw;
+        margin-left: -4vw;
         border-top-right-radius: 1.8vw;
         border-bottom-right-radius: 2.2vw;
-        transform: skew(20deg);
     }
 }
