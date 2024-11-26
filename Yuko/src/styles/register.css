@@ -10,7 +10,6 @@
     height: 100%;
     object-fit: cover;
     position: fixed;
-    margin-top: -3vw;
     z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
