@@ -54,91 +54,102 @@ function Register(){
   };
 
   return (
-    <div className="register-container">
-  <img className="bg-image" src="background.png" alt="Background Image of Yuko" />
-  <h2 className="register">Register</h2>
-  {message && <div className="message">{message}</div>}
-  <form onSubmit={handleSubmit}>
-    <div className="form-group">
-      <input
-        className="studentno"
-        type="text"
-        id="studentno"
-        placeholder="Student No."
-        value={studentno}
-        onChange={(e) => setStudentNo(e.target.value)}
-        required
-      />
+    <> 
+      <div className="sign-up-container" id='sign-up'>  
+        <img className="sign-up-bg-image" src="background.png" alt="Background Image of Yuko"/>      
+        <form action="#" className="sign-up-form">
+          <h2 className="signup-title">Sign Up</h2>
+          
+          <div className="fname-signup-wrapper">
+            <input
+              className="fname-input-field"
+              type="text" 
+              id="fname" 
+              name="fname"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          
+          <div className="lname-signup-wrapper">
+            <input
+              className="lname-input-field"
+              type="text" 
+              id="lname" 
+              name="lname"
+              placeholder="Last Name"
+              required
+            />
+          </div>
 
-      <div className="name-container">
-        <input
-          className="name-first-name"
-          type="text"
-          id="fname"
-          placeholder="First Name"
-          value={fname}
-          onChange={(e) => setfName(e.target.value)}
-          required
-        />
-
-        <input
-          className="name-last-name"
-          type="text"
-          id="lname"
-          placeholder="Last Name"
-          value={lname}
-          onChange={(e) => setlName(e.target.value)}
-          required
-        />
-      </div>
-
-      <input
-        className="course"
-        type="text"
-        id="course"
-        placeholder="Course"
-        value={course}
-        onChange={(e) => setCourse(e.target.value)}
-        required
-      />
-
-      <input
-        className="email"
-        type="email"
-        id="rEmail"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-
-      <input
-        className="password"
-        type="password"
-        id="rPassword"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-    </div>
-
-
-        <div className="remember-forgot">
-              <label><input type='checkbox' required />I agree with Privacy and Policy</label>
+          <div className="studnum-course-wrapper">
+            <div className="studnum-signup-wrapper">
+              <input
+                className="studnum-input-field"
+                type="text" 
+                id="stdnum" 
+                name="stdnum"
+                placeholder="Student Number"
+                required
+              />
             </div>
 
-        <button className='button' type="submit" disabled={loading}>
-          {loading ? 'Creating Account...' : 'Create Account'}
-        </button>
+            <div className="course-signup-wrapper">
+              <input
+                className="course-input-field"
+                type="text" 
+                id="course" 
+                name="course"
+                placeholder="Course"
+                required
+              />
+            </div>
+          </div>
+          
 
+          <div className="email-signup-wrapper">
+            <input
+              className="email-input-field"
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
 
-        <p className='signup'>Already have an account? <Link className='href' to="/Login">Sign In</Link></p>
+          <div className="pass-signup-wrapper">
+            <input
+              className="pass-input-field"
+              type="password"
+              placeholder="Password"
+              required
+            />
+              <button
+                className="show-new-user-pass"
+              >
+                Show
+              </button>
+          </div>
 
-      </form>
+          <div className="privacy-policy">
+            <input
+              className="privacy-policy-check"
+              type="checkbox" 
+              id="priv-policy" 
+              name="priv-policy"
+              value="Privacy and Policy"
+              required
+            /> I Agree with privacy and policy
+          </div>
 
-      
-    </div>
+          <button className="sign-up-button">Sign Up</button>
+
+          <p className="have-account-text">
+            Have an account already?
+            <a className="sign-in-button">Sign In</a>
+          </p>
+        </form>
+      </div>
+    </>
   );
 };
 

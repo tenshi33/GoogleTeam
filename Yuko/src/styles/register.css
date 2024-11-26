@@ -1,155 +1,291 @@
-.register-container {
-    background-color: #002072;
+.sign-up-bg-image {
     display: flex;
-    flex-direction: column;
+    place-items: center;
+    align-items: center;
     justify-content: center;
-    align-items: center;  
-    align-self: center;
-    align-content: center;   
-    width: 30vw;
-    height: 32vw;
-    border-radius: 2.5rem;
-    box-shadow: 15px 15px 10px rgb(0, 0, 0);
-    font-size: 1vw;
-    color: white;
+    place-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.register {
-    color: white;
-    margin-bottom: 1vw;
-    font-size: 7vw;
-}
-
-
-.form-group {
-    height: 2vw;
-    padding: 0 1.25em 0 3.5em;
+.sign-up-container {
+    min-width: 100%; 
+    margin: auto;
     border-radius: 1rem;
-    background-color: transparent;
+    align-items: center;
     justify-content: center;
-    align-items: center;  
-    align-self: center;
-    align-content: center;
-    border-style: solid;
-    border-color: white;
-    color: white;
-    border-width: 2px;
-    font-size: 1.06vw;
-    outline: none;
-    -webkit-transition: 0.5s;
-    transition: 0.2s ease;
-    margin-bottom: 1vw;
-    margin-right: .5vw;
-}
-
-.name-container {
+    padding: 2rem 1.5rem ;
     display: flex;
-    margin-bottom: 2vw; /* Ensure space below the name fields */
+    gap: 1.31vw;
+    margin-top: 3vw;
+}
+  
+.sign-up-form {
+  background-color: #002072;
+  filter: opacity(85%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     
+  width: 32vw;
+  height: 40vw;
+  border-radius: 3rem;
+  box-shadow: 15px 15px 10px rgb(0, 0, 0);
 }
 
-.name-first-name {
-    width: 10vw; /* Adjust width of each name input */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    
+.sign-up-container .signup-title{
+  text-align: center;
+  color: white;
+  font-size: 3.5vw;
+  font-weight: 900;
+  margin-bottom: 2vw;
+  font-family: Arial;
 }
 
-.name-last-name {
-    width: 10vw; /* Adjust width of each name input */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    
+.sign-up-form .fname-signup-wrapper {
+  height: 3.5rem;
+  width: 23vw;
+  position: relative;
+  margin-top: 0.8vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
 }
 
-.studentno {
-    width: 20vw; /* Set other fields to the same width */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    margin-bottom: 1vw;
+.sign-up-form .fname-signup-wrapper .fname-input-field {
+  height: 100%;
+  width: 100%;
+  padding: 0 1.25em 0 0.7em;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
 }
 
-.password {
-    width: 20vw; /* Set other fields to the same width */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    margin-bottom: 1vw;
+.sign-up-form .lname-signup-wrapper {
+  height: 3.5rem;
+  width: 23vw;
+  position: relative;
+  margin-top: 0.8vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
 }
 
-/* Adjustments for other input fields */
-.email {
-    width: 20vw; /* Set other fields to the same width */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    margin-bottom: 1vw;
+.sign-up-form .lname-signup-wrapper .lname-input-field {
+  height: 100%;
+  width: 100%;
+  padding: 0 1.25em 0 0.7em;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
 }
 
-.course {
-    width: 20vw; /* Set other fields to the same width */
-    height: 2vw;
-    padding: 0 1.25em;
-    border-radius: 1rem;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 1vw;
-    margin-top: .4vw;
-    margin-bottom: 1vw;
+.sign-up-form .studnum-course-wrapper {
+  height: 3.5rem;
+  width: 23vw;
+  position: relative;
+  margin-top: 0.8vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
 }
 
-/* Ensuring the register title font size and position */
-.register-container .register {
-    font-size: 2.5vw;
-    display: flex;
-    position: relative;
-    margin-top: 2vw; 
+.sign-up-form .studnum-course-wrapper .studnum-input-field {
+  height: 100%;
+  width: 11.1vw;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
+  padding-left: 0.6vw;
 }
 
-.button {
-    width: 10vw;
-    height: 2vw;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 1vw;
-    font-weight: bold;
-    background: linear-gradient(to right, #380050, #ED0101);
-    margin-top: 1vw;
-    margin-left: 5vw;
-    border-radius: 2rem;
-    transition: background 0.7s ease-in-out;
+.sign-up-form .course-signup-wrapper .course-input-field {
+  height: 100%;
+  width: 9.3vw;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
+  padding-left: 0.6vw;
 }
 
-.href {
-    color: white;
+.sign-up-form .email-signup-wrapper {
+  height: 3.5rem;
+  width: 23vw;
+  position: relative;
+  margin-top: 0.8vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.sign-up-form .email-signup-wrapper .email-input-field {
+  height: 100%;
+  width: 100%;
+  padding: 0 1.25em 0 0.7em;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
+}
+
+.sign-up-form .pass-signup-wrapper {
+  height: 3.5rem;
+  width: 23vw;
+  position: relative;
+  margin-top: 0.8vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.sign-up-form .pass-signup-wrapper .pass-input-field {
+  height: 100%;
+  width: 100%;
+  padding: 0 1.25em 0 0.7em;
+  border-radius: 1.3rem;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  border-width: 1px;
+  font-size: 1.06vw;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.2s ease;
+  font-size: 0.9vw;
+  font-family: Arial;
+}
+
+.sign-up-form .show-new-user-pass {
+  position: absolute;
+  width: 5vw;
+  font-size: 0.8vw;
+  background-color: transparent;
+  color: rgb(167, 167, 167);
+  border: none;
+  text-align: center;
+  top: 57%;
+  left: 18.5vw;
+  transform: translateY(-65%);
+  font-family: Arial;
+}
+
+.sign-up-form .privacy-policy {
+  width: 23vw;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 0.5vw;
+  color: white;
+  font-size: 0.9vw;
+  font-family: Arial;
+  gap: 0.3vw;
+}
+
+.sign-up-form .privacy-policy-check {
+  font-size: 1vw;
+  display: flex;
+  justify-content: left;
+  background-color: aqua;
+}
+
+input.privacy-policy-check {
+  width: 0.8vw;
+}
+
+.sign-up-form .sign-up-button {
+  width: 40%;
+  height: 60px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: bold;
+  background: linear-gradient(to right, #380050, #ED0101);
+  margin-top: 3.5vw;
+  border-radius: 2rem;
+  transition: background 0.7s ease-in-out;
+}
+
+.sign-up-container .have-account-text {
+  text-align: center;
+  width: 25.5vw;
+  font-size: 0.9vw;
+  color: rgb(167, 167, 167);
+  margin-top: 6vw;
+  margin-bottom: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+
+.sign-in-button {
+  font-size: 1em;
+  width: 10vw;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-left: 2.5vw;
+  font-family: Arial;
+}
+
+.sign-up-container a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
