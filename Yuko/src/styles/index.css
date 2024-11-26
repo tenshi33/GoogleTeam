@@ -832,7 +832,7 @@ body {
     flex-direction: row;
     gap: 2.5vw;
     justify-content: flex-start; /* align items from left */
-    align-items: center; /* align items in the center vertically */
+    align-items: left; /* align items in the center vertically */
 }
 
 .services {
