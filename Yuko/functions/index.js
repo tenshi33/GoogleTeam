@@ -1,19 +1,34 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const functions = require("firebase-functions");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const apiKey = functions.config().google.api_key;
+const genAI = new GoogleGenerativeAI(apiKey);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+exports.getAIResponse = functions.https.onRequest(async (req, res) => {
+  const userQuery = req.body.query;
+  const pdfContent = req.body.pdfContent; // Content of PDF passed in the request
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+  if (!userQuery) {
+    return res.status(400).send('Query is required.');
+  }
+
+  try {
+    const prompt = `
+    You are a helpful assistant with access to both a document and general knowledge. 
+    When the user's query relates to the document, answer based on the document content. 
+    If not, answer with general knowledge.
+
+    Document Content:
+    ${pdfContent}
+
+    User Query:
+    ${userQuery}`;
+
+    const result = await model.generateContent(prompt);
+    res.status(200).send(result?.response?.text() || "No response received.");
+  } catch (error) {
+    console.error("Error fetching AI response:", error);
+    res.status(500).send("Internal server error.");
+  }
+});

@@ -1,7 +1,7 @@
 // Import the functions you need from Firebase SDK
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
-import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, } from 'firebase/auth';
+import { getFirestore, doc, setDoc, getDoc, collection, addDoc  } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyB3el4ddtUczY7yUMfw8lTHeBi3t1oitFQ",
@@ -21,4 +21,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 export default app;
-export { auth, db,  getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, getFirestore, doc, setDoc, getDoc }
+export { auth, db,  getAuth, collection, addDoc, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, getFirestore, doc, setDoc, getDoc }
