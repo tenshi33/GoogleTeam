@@ -109,6 +109,7 @@ function Yuko() {
     setChatHistory([]);
   };
 
+
   return (
     <div className="yuko-container">
       <Sidebar />
@@ -122,7 +123,10 @@ function Yuko() {
             <p><b>How may I help?</b></p>
           </div>
           <div className='cards'>
-            <ChatHistory chatHistory={chatHistory} />
+            {/*<ChatHistory chatHistory={chatHistory} />*/} {/*I moved it to a different div since it placed the message box in an awkward position*/}
+          </div>
+          <div className='message'>
+            <ChatHistory chatHistory={chatHistory} /> {/*over here!!!*/}
           </div>
           <div>
             <div className='main-bottom'>

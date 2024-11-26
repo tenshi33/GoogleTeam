@@ -2,7 +2,7 @@
 
 .sidebar{
     min-height: 100vh;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: linear-gradient(#720000,#00007e);
@@ -20,8 +20,8 @@
 }
 
 .sidebar .icon-container .textyuko{
-    margin-left: 10vw;
-    height: 1.3vw;
+    margin-left: 10rem;
+    height: 1.3rem;
 }
 
 .sidebar .icon-container .new-chat{
@@ -34,10 +34,10 @@
 }
 
 .sidebar .recent-title{
-    font-size: 1.7vw;
-    margin-top: 4vh;
-    margin-left: 0.3vw;
-    margin-bottom: 2vh;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-left: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .sidebar .recent-entry{
@@ -52,8 +52,8 @@
     border-style: solid;
     border-color: #ffffffcb;
     border-width: 0.1vw;
-    border-top-right-radius: 0.5vw;
-    border-bottom-right-radius: 0.5vw;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
     cursor: pointer;
 }
 
@@ -79,3 +79,6 @@
 .sidebar .bottom-item:hover{
     color: #aaaaaa;
 }
+
+
+@media only screen and (max-width: 500px) {}

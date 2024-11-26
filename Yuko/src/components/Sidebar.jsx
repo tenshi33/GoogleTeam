@@ -11,6 +11,7 @@ const Sidebar = () => {
 
     const [extended, setExtended] = useState(false)
     return (
+
         <div className='sidebar'>
             <div className='top'>
                 <span onClick={()=>setExtended(prev=>!prev)} className='icon-container'>
@@ -46,6 +47,8 @@ const Sidebar = () => {
                  {/* profile and settings */}
             </div>
         </div>
+
+        
     )
 }
 
