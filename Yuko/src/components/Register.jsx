@@ -145,7 +145,7 @@ function Register(){
 
           <p className="have-account-text">
             Have an account already?
-            <a className="sign-in-button">Sign In</a>
+            <Link to="/Login" className="sign-in-button">Sign In</Link>
           </p>
         </form>
       </div>
