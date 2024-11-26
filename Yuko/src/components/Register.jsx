@@ -141,7 +141,7 @@ function Register(){
             /> I Agree with privacy and policy
           </div>
 
-          <button className="sign-up-button">Sign Up</button>
+          <button className='signup-button'>Sign Up</button>
 
           <p className="have-account-text">
             Have an account already?

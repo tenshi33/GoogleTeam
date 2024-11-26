@@ -10,6 +10,7 @@
     height: 100%;
     object-fit: cover;
     position: fixed;
+    margin-top: -3vw;
     z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +39,7 @@
   align-items: center;     
   width: 32vw;
   height: 40vw;
-  border-radius: 3rem;
+  border-radius: 4rem;
   box-shadow: 15px 15px 10px rgb(0, 0, 0);
 }
 
@@ -52,7 +53,7 @@
 }
 
 .sign-up-form .fname-signup-wrapper {
-  height: 3.5rem;
+  height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -80,7 +81,7 @@
 }
 
 .sign-up-form .lname-signup-wrapper {
-  height: 3.5rem;
+    height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -108,7 +109,7 @@
 }
 
 .sign-up-form .studnum-course-wrapper {
-  height: 3.5rem;
+    height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -137,7 +138,7 @@
 
 .sign-up-form .course-signup-wrapper .course-input-field {
   height: 100%;
-  width: 9.3vw;
+  width: 10.9vw;
   border-radius: 1.3rem;
   background-color: transparent;
   border-style: solid;
@@ -154,7 +155,7 @@
 }
 
 .sign-up-form .email-signup-wrapper {
-  height: 3.5rem;
+    height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -182,7 +183,7 @@
 }
 
 .sign-up-form .pass-signup-wrapper {
-  height: 3.5rem;
+    height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -246,19 +247,19 @@ input.privacy-policy-check {
   width: 0.8vw;
 }
 
-.sign-up-form .sign-up-button {
-  width: 40%;
-  height: 60px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  color: white;
-  font-size: 1.2vw;
-  font-weight: bold;
-  background: linear-gradient(to right, #380050, #ED0101);
-  margin-top: 3.5vw;
-  border-radius: 2rem;
-  transition: background 0.7s ease-in-out;
+.signup-button {
+    width: 40%;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: bold;
+    background: linear-gradient(to right, #380050, #ED0101);
+    margin-top: 3.5vw;
+    border-radius: 2rem;
+    transition: background 0.7s ease-in-out;
 }
 
 .sign-up-container .have-account-text {
@@ -267,7 +268,7 @@ input.privacy-policy-check {
   font-size: 0.9vw;
   color: rgb(167, 167, 167);
   margin-top: 6vw;
-  margin-bottom: 1.5vw;
+  margin-bottom: 0.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
