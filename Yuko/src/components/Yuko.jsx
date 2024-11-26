@@ -7,44 +7,75 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 import Sidebar from './Sidebar';
 import ChatHistory from "./chathistory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import * as pdfjsLib from "pdfjs-dist"; // Import pdfjs
 import '../styles/Yuko.css';
+
+// Set the workerSrc to the correct path
+// Set the workerSrc manually to work with Vite
+pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.mjs",
+  import.meta.url
+).toString();
+
 
 function Yuko() {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [pdfContent, setPdfContent] = useState("");
-  const [userName, setUserName] = useState(''); // State to hold the user's name
+  const [userName, setUserName] = useState('');
   const [userId, setUserId] = useState(null);
 
   // Initialize Gemini API
   const genAI = new GoogleGenerativeAI("api_key");
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+  // Load PDF content
+  const loadPdf = async () => {
+    try {
+      const pdfUrl = "/info.pdf"; // Path to your PDF file
+      const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+      const numPages = pdf.numPages;
+
+      // Extract text from all pages
+      let pdfText = "";
+      for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+        const textContent = await page.getTextContent();
+        pdfText += textContent.items.map((item) => item.str).join(" ") + " ";
+      }
+
+      setPdfContent(pdfText); // Store extracted content
+    } catch (error) {
+      console.error("Error loading PDF:", error);
+      setPdfContent("Failed to load PDF content.");
+    }
+  };
+
   useEffect(() => {
-    // Listen for authentication state changes (user login)
+    loadPdf(); // Load PDF when the component mounts
+  }, []);
+
+  useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setUserId(user.uid); // Set userId when the user logs in
+        setUserId(user.uid);
       } else {
-        setUserId(null); // Reset userId when no user is logged in
+        setUserId(null);
       }
     });
 
-    return () => unsubscribe(); // Cleanup on unmount
+    return () => unsubscribe();
   }, []);
 
   useEffect(() => {
     if (userId) {
-      // Fetch user data from Firestore when the userId is available
       const fetchUserData = async () => {
         try {
-          // Create a reference to the user document
-          const userDocRef = doc(db, 'users', userId); // Reference to the user's document in Firestore
-          const userDoc = await getDoc(userDocRef); // Fetch the document
+          const userDocRef = doc(db, 'users', userId);
+          const userDoc = await getDoc(userDocRef);
 
           if (userDoc.exists()) {
-            // If the document exists, set the user's name
             setUserName(userDoc.data().fname);
           } else {
             console.log('No such user!');
@@ -54,7 +85,7 @@ function Yuko() {
         }
       };
 
-      fetchUserData(); // Call the fetchUserData function
+      fetchUserData();
     }
   }, [userId]);
 
@@ -76,7 +107,6 @@ function Yuko() {
       User Query:
       ${userInput}`;
 
-      // Call Gemini API to get a response
       const result = await model.generateContent(prompt);
 
       const responseText = result?.response?.text() || "No response received.";
@@ -100,8 +130,8 @@ function Yuko() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault();  // Prevents new line in input field
-      sendMessage();       // Send the message
+      e.preventDefault();
+      sendMessage();
     }
   };
 
@@ -118,7 +148,7 @@ function Yuko() {
             <img src={yuko} alt="" />
           </span>
           <div className='greet'>
-                    <p><b><span>Hello, {userName || 'User'}.</span></b></p>
+            <p><b><span>Hello, {userName || 'User'}.</span></b></p>
             <p><b>How may I help?</b></p>
           </div>
           <div className='cards'>
@@ -132,7 +162,7 @@ function Yuko() {
                   placeholder='Talk to Yuko...'
                   value={userInput}
                   onChange={handleUserInput}
-                  onKeyDown={handleKeyDown} // Add key down listener
+                  onKeyDown={handleKeyDown}
                 />
                 <div>
                   <GrGallery className='img' />
