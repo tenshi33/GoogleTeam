@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css'
 
 function Landing() {
+
+        const [sticky, setSticky] = useState(false);
+
+        useEffect(()=>{
+            window.addEventListener('scroll', ()=>{
+                window.scrollY > 10 ? setSticky(true) : setSticky(false)
+            })
+        },[])
+
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 
             <div className='landing-page'>
                 {/*HEADER OF LANDING PAGE*/}
-                <div className='nav-bar-container'>
+                <nav className={`nav-bar-container ${sticky? 'color-nav' : ''}`}>
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                     <ul className='nav-bar-menu'>
                         <li className='nav-home'>HOME</li>
@@ -22,7 +31,7 @@ function Landing() {
                         <li className='nav-divider'>|</li>
                         <li className='nav-contacts'>CONTACTS</li>
                     </ul>
-                </div>
+                </nav>
 
                 {/*HOME SECTION IN LANDING PAGE*/}
                 <section id='home' className='home-landing-section'>
