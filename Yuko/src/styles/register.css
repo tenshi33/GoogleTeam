@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow-Y: hidden;
 }
 
 .sign-up-container {
@@ -28,6 +29,7 @@
     display: flex;
     gap: 1.31vw;
     margin-top: 3vw;
+    overflow-Y: hidden;
 }
   
 .sign-up-form {
@@ -289,4 +291,8 @@ input.privacy-policy-check {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+
 }
