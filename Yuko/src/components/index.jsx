@@ -66,35 +66,37 @@ function Landing() {
                             {/*FEATURES TOP-RIGHT SIDE WITH SCROLL FEATURE*/}
                             <div className='features-scroll-section'>
                                 <div className='features'>
-                                    <img src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-feature-content'>
-                                        <p className='features-title'>First Feature Title</p>
-                                        <p className='features-description'>First Feature Description</p>
+                                    <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
+                                    <div className='first-feature-content-odd'>
+                                        <p className='features-title-odd'>First Feature Title</p>
+                                        <p className='features-description-odd'>First Feature Description</p>
                                     </div>
                                 </div>
 
                                 <div className='features'>
-                                    <img src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-feature-content'>
-                                        <p className='features-title'>Second Feature Title</p>
-                                        <p className='features-description'>Second Feature Description</p>
+                                    
+                                    <div className='first-feature-content-even'>
+                                        <p className='features-title-even'>Second Feature Title</p>
+                                        <p className='features-description-even'>Second Feature Description</p>
+                                    </div>
+                                    <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
+                                </div>
+
+                                <div className='features'>
+                                    <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
+                                    <div className='first-feature-content-odd'>
+                                        <p className='features-title-odd'>Third Feature Title</p>
+                                        <p className='features-description-odd'>Third Feature Description</p>
                                     </div>
                                 </div>
 
                                 <div className='features'>
-                                    <img src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-feature-content'>
-                                        <p className='features-title'>Third Feature Title</p>
-                                        <p className='features-description'>Third Feature Description</p>
+                                    
+                                    <div className='first-feature-content-even'>
+                                        <p className='features-title-even'>Fourth Feature Title</p>
+                                        <p className='features-description-even'>Fourth Feature Description</p>
                                     </div>
-                                </div>
-
-                                <div className='features'>
-                                    <img src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-feature-content'>
-                                        <p className='features-title'>Fourth Feature Title</p>
-                                        <p className='features-description'>Fourth Feature Description</p>
-                                    </div>
+                                    <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                 </div>
                             </div>
                         </div>

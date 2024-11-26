@@ -187,12 +187,19 @@ body {
     border-radius: 2vw;
 }
 
-.first-feature-content {
+.first-feature-content-odd {
     display: flex;
     flex-direction: column;
     margin-left: 3vw;
 }
 
+.first-feature-content-even {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    text-align: right;
+    margin-right: 3vw;
+}
 
 .features-bottom {
     display: flex;
@@ -226,7 +233,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 29vw;
     margin-top: 12vw;
 }
 
@@ -984,5 +990,192 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    .nav-bar-container {
+        margin-left: 10vw;
+        font-size: 1vw;
+        width: 90%;
+        height: 5vw;
+    }
+
+    .nav-yuko-logo {
+        margin-top: 10vw;
+        margin-left: 5vw;
+        width: 25em;
+    }
+
+    .landing-background-img {
+        height: 210vw;
+        object-fit: cover;
+    }
+
+    .home-yuko-title {
+        margin-top: 3rem;
+        font-size: 20vw;
+    }
+
+    .home-yuko-description {
+        width: 80vw;
+        font-size: 3vw;
+        margin-top: -2vw;
+        font-weight: 200;
+    }
+
+    .log-in-button {
+        margin-top: 10vw;
+        width: 35vw;
+        height: 12vw;
+        display: flex;
+        border-radius: 7vw;
+        font-size: 4vw;
+    }
+
+    .features-landing-section {
+        height: 220vw;
+        margin-top: -1vw;
+    }
+
+    .features-landing {
+        z-index: 0;
+        width: 90vw;
+        margin-left: 3vw;
+        margin-top: 17vw;
+    }
+
+    .features-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features-first-section {
+        width: 100%;
+        height: 17vw;
+        justify-items: center;
+        margin-left: 10vw;
+    }
+
+    .feature-title {
+        width: 100%;
+        font-size: 8.5vw;
+        font-family: Arial;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 2vw;
+    }
+
+    .features-top-left-decscription {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+    .feature-section-divider {
+        background-color: rgba(255, 255, 255, 0);
+        height: 0vw;
+        width: 0vw;
+    }
+
+    .features-scroll-section {
+        max-height: 60vw;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 2.5vw;
+        margin-left: 10vw;
+        margin-top: 45vw;
+        padding-top: 50vw;
+    }
+
+    .features-scroll-section .features {
+        padding: 4vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 83vw;
+    }
+
+    .features-pic {
+        width: 25vw;
+    }
+
+    .features-title {
+        font-size: 3.4vw;
+    }
+
+    .features-description {
+        font-size: 2.9vw;
+    }
+
+    .features-bottom {
+        margin-top: 10vw;
+        height: 65vw;
+        width: 100%;
+        background-color: #050374;
+        margin-left: 10vw;
+    }
+
+    .chatbot1 {
+        width: 60vw;
+        height: 60vw;
+    }
     
+    .chatbot2 {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .dev-landing-section {
+        height: 220vw;
+        margin-top: -0.5vw;
+        margin-left: 9.8vw;
+    }
+
+    .dev-title {
+        font-size: 8.5vw;
+    }
+
+    .first-dev {
+        width: 63vw;
+        height: 11vw;
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        margin-bottom: 9vw;
+        margin-top: 9.5vw;
+    }
+    
+    .first-dev-shape-outline {
+        width: 75vw;
+        height: 19vw;
+        display: flex;
+        position: absolute;
+        margin-bottom: 9vw;
+        margin-top: 13vw;
+        background-color: transparent;
+        border: solid white;
+        border-width: 0.1rem;
+        z-index: 0;
+        margin-left: -2.5vw;
+        border-top-right-radius: 1.8vw;
+        border-bottom-right-radius: 2.2vw;
+        transform: skew(20deg);
+    }
+    
+    .first-dev-shape-inside {
+        width: 73vw;
+        height: 20vw;
+        display: flex;
+        position: absolute;
+        margin-bottom: 9vw;
+        margin-top: 15vw;
+        background: linear-gradient(to right, #050374, #c50e0e);
+        border-width: 0.1rem;
+        z-index: -1;
+        margin-left: -2.5vw;
+        border-top-right-radius: 1.8vw;
+        border-bottom-right-radius: 2.2vw;
+        transform: skew(20deg);
+    }
 }
