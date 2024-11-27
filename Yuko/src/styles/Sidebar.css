@@ -1,6 +1,6 @@
 /* Sidebar CSS */
 
-.sidebar{
+.sidebar-bg{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,11 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
+}
+
+.sidebar .menu-icon-container{
+    margin-left: 0.4vw;
+    padding-right: 0.4rem;
 }
 
 .sidebar .icon-container .textyuko{
@@ -81,4 +86,91 @@
 }
 
 
-@media only screen and (max-width: 500px) {}
+@media only screen and (max-width: 500px) {
+    .sidebar-bg{
+        position: fixed;
+        left: -250vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(#720000,#00007e);
+        padding: 3vh 1vw;
+        color: #ffffffd8;
+    }
+    
+    .sidebar .icon-container{
+        margin-left: 0.3vw;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    
+    .sidebar .menu-icon-container{
+        margin-left: 0.4vw;
+        padding-right: 0.4rem;
+    }
+    
+    .sidebar .icon-container .textyuko{
+        margin-left: 10rem;
+        height: 1.3rem;
+    }
+    
+    .sidebar .icon-container .new-chat{
+        margin-left: 0.5vw;
+    }
+    
+    .sidebar .recent{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sidebar .recent-title{
+        font-size: 1.7rem;
+        margin-top: 2rem;
+        margin-left: 0.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .sidebar .recent-entry{
+        display: flex;
+        align-items: start;
+        margin: 0.6vh;
+        margin-right: 1vw;
+        gap: 1vw;
+        padding: 1.7vh;
+        padding-right: 4vw;
+        color: #e7e7e7;
+        border-style: solid;
+        border-color: #ffffffcb;
+        border-width: 0.1vw;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+        cursor: pointer;
+    }
+    
+    .sidebar .recent-entry:hover{
+        background-color: #ffffff18;
+        color: #ffffffd7;
+    }
+    
+    .sidebar .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sidebar .bottom-item{
+        display: flex;
+        align-items: start;
+        gap: 0.5vw;
+        padding: 1.5vh;
+        padding-right: 4vw;
+        cursor: pointer;
+    }
+    
+    .sidebar .bottom-item:hover{
+        color: #aaaaaa;
+    }
+}

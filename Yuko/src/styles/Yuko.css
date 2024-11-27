@@ -144,3 +144,138 @@
     text-align: center;
     font-weight: 300;
 }    
+
+@media only screen and (max-width: 500px) {
+    .main-container{
+        padding-top: 1vw;
+        display: flex;
+        flex-direction: column;
+        max-width: 90vw;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main .yuko-icon img{
+        height: 30vw;
+        margin-bottom: 0.5rem;
+    }
+    
+    .main .greet{
+        padding-bottom: 1.5vh;
+        margin: 1vw 0vh;
+        font-size: 2rem;
+        color: #130030c9;
+        font-weight: 500;
+    }
+    
+    .main .greet span{
+        background: -webkit-linear-gradient(16deg,#bb0000,#0000bd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .main .cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .main .card{
+        height: 5.3vh;
+        width: 10vw;
+        margin: 0vw 0.6vw;
+        padding: 1.4vh;
+        background-color: #cfcfdf;
+        color: #130030a8;
+        border-radius: 9vh;
+        cursor: pointer;
+    }
+    
+    .main .card:hover{
+        background-color: #cfcfdfbd;
+        color: #1300308e;
+    }
+
+    .main .message-container{
+        display: flex;
+        overflow: hidden;
+        justify-content: right;
+        margin-top: 1rem;
+        width: 85vw;
+        background-color: #0051ff00;
+    }
+    
+    .main .message{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-bottom{
+        position: absolute;
+        bottom: 0; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 100%; 
+        max-width: 90vw; 
+        padding: 1.5vh 1vw; 
+        margin: 0; 
+    }
+    
+    .search-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2vw;
+        background-color: #cfcfdf;
+        padding: 0.5rem 0.5rem;
+        border-radius: 4rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .search-box .img{
+        color: #000000af;
+        width: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .search-box .img:hover{
+        color: #050505ce;
+    }
+    
+    
+    .search-box input{
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+    
+    .search-box div{
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    #send{
+        height: 1.5rem;
+        width: 2.5rem;
+        padding: 8px;
+        background-color: #9191bb;
+        border-radius: 4vw;
+    }
+    
+    #send:hover{
+       color: #000000c5;
+       background-color: #7f7fa3;
+    }
+    
+    .main .bottom-info{
+        font-size: 0.7rem;
+        margin: 1vw auto;
+        text-align: center;
+        font-weight: 300;
+    }    
+}  

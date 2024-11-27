@@ -15,3 +15,22 @@
     padding: 1.5rem; 
 }
 
+@media only screen and (max-width: 500px) {
+    .chat-history{
+        background-color: #dedeee;
+        border-style: solid;
+        border-color: #cfcfe4;
+        border-width: 0.1rem;
+        color: #332f3d;
+        max-height: 100vh;
+        max-width: 50vw;
+        overflow-wrap: break-word;
+        text-align: left;
+        border-radius: 1rem;
+        border-top-right-radius: 0%;
+        margin-top: 2rem;
+        gap: 1rem;
+        padding: 1.5rem; 
+    } 
+}
+
