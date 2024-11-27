@@ -1,4 +1,4 @@
-body {
+html,body {
     overflow-x: hidden; 
 }
 
@@ -990,10 +990,14 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    html,body {
+        overflow-x: hidden; 
+    }
+
     .nav-bar-container {
-        margin-left: 9vw;
+        margin-left: -10vw;
         font-size: 1vw;
-        width: 100%;
+        width: 50%;
         height: 16vw;
     }
 
