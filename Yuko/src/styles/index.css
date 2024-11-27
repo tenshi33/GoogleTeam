@@ -990,6 +990,10 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    body {
+        overflow-x: hidden; 
+    }
+    
     .nav-bar-container {
         margin-left: 9vw;
         font-size: 1vw;
