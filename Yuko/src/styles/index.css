@@ -990,10 +990,10 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-    body {
+    html,body {
         overflow-x: hidden; 
     }
-    
+
     .nav-bar-container {
         margin-left: 9vw;
         font-size: 1vw;
@@ -1197,8 +1197,7 @@ body {
         align-items: center;
         gap: 2vw;
         margin-bottom: 9vw;
-        margin-top: 20vw;
-    
+        margin-top: 20vw
     }
     
     .second-dev-shape-outline {
@@ -1219,6 +1218,7 @@ body {
     .second-dev-pic {
         width: 30vw;
         height: 32vw;
+        margin-left: -10vw;
     }
     
     .second-dev-name {
@@ -1300,6 +1300,7 @@ body {
     .fourth-dev-pic {
         width: 30vw;
         height: 32vw;
+        margin-left: -10vw;
     }
     
     .fourth-dev-name {
@@ -1380,6 +1381,8 @@ body {
     .sixth-dev-pic {
         width: 30vw;
         height: 32vw;
+        margin-left: -10vw;
+
     }
     
     .sixth-dev-name {
