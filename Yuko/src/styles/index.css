@@ -990,10 +990,6 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-    html,body {
-        overflow-x: hidden; 
-    }
-
     .nav-bar-container {
         margin-left: 9vw;
         font-size: 1vw;
@@ -1141,6 +1137,10 @@ body {
         margin-left: 9.8vw;
     }
 
+    .dev-landing {
+        overflow-y: hidden;
+    }
+
     .dev-title {
         font-size: 8.5vw;
         margin-top: 12vw;
@@ -1286,7 +1286,7 @@ body {
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 160vw;
-        margin-left: 28vw;
+        margin-left: 26vw;
     }
     
     .fourth-dev-shape-inside {
@@ -1368,7 +1368,7 @@ body {
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 240vw;
-        margin-left: 28vw;
+        margin-left: 26vw;
     }
     
     .sixth-dev-shape-inside {
