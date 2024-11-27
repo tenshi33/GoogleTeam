@@ -145,8 +145,10 @@ function Yuko() {
           <div className='cards'>
             {/*<ChatHistory chatHistory={chatHistory} />*/} {/*I moved it to a different div since it placed the message box in an awkward position*/}
           </div>
+          <div className='message-container'>
           <div className='message'>
             <ChatHistory chatHistory={chatHistory} /> {/*over here!!!*/}
+          </div>
           </div>
           <div>
             <div className='main-bottom'>

@@ -4,8 +4,8 @@
     border-color: #cfcfe4;
     border-width: 0.1rem;
     color: #332f3d;
-    max-height: 100rem;
-    max-width: 30rem;
+    max-height: 100vh;
+    max-width: 25vw;
     overflow-wrap: break-word;
     text-align: left;
     border-radius: 1rem;

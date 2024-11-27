@@ -15,7 +15,6 @@
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
-    overflow: scroll;
     margin: 0;
 }
 
@@ -65,10 +64,18 @@
     color: #1300308e;
 }
 
+.main .message-container{
+    display: flex;
+    overflow: hidden;
+    justify-content: right;
+    margin-top: 1rem;
+    width: 47.5vw;
+    background-color: #ffffffd2;
+}
+
 .main .message{
     display: flex;
     flex-direction: column;
-    justify-content: right;
 }
 
 .main-bottom{
