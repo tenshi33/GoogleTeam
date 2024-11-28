@@ -1,5 +1,5 @@
-body {
-    overflow-x: hidden;
+html,body {
+    overflow-x: hidden; 
 }
 
 .nav-bar-container {
@@ -121,6 +121,7 @@ body {
     width: 90vw;
     margin-left: 3vw;
     margin-top: 9vw;
+    position: absolute;
 }
 
 .features-top {
@@ -329,7 +330,7 @@ body {
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
-    overflow-x: hidden;
+
 }
 
 .second-dev-shape-outline {
@@ -347,7 +348,6 @@ body {
     border-top-left-radius: 1.8vw;
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
-    overflow-x: hidden;
 }
 
 .second-dev-shape-inside {
@@ -365,7 +365,6 @@ body {
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
     background: linear-gradient(to right,#c50e0e, #050374);
-    overflow-x: hidden;
 }
 
 .second-dev-infos {
@@ -482,6 +481,7 @@ body {
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
+
 }
 
 .fourth-dev-shape-outline {
@@ -631,7 +631,7 @@ body {
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
-    overflow-x: hidden;
+
 }
 
 .sixth-dev-shape-outline {
@@ -649,7 +649,6 @@ body {
     border-top-left-radius: 1.8vw;
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
-    overflow-x: hidden;
 }
 
 .sixth-dev-shape-inside {
@@ -667,7 +666,6 @@ body {
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
     background: linear-gradient(to right, #c50e0e, #050374);
-    overflow-x: hidden;
 }
 
 .sixth-dev-infos {
@@ -700,15 +698,13 @@ body {
     margin-top: 0.5vw;
 }
 
-
-
 .services-landing-section {
     background: linear-gradient(to bottom, #7C0D52, #07061D);
     height: 75vw;
     display: flex;
     justify-items: center;
     flex-direction: column;
-    margin-top: -0.5vw;
+    margin-top: -0.5rem;
 }
 
 .services-scroll-container1 {
@@ -733,7 +729,7 @@ body {
 
 .services-scroll-section1 {
     max-height: 35vw;
-    max-width: 65rem;
+    max-width: 80rem;
     text-align: left;
     color: white;
     display: flex;
@@ -994,22 +990,15 @@ body {
 
 @media only screen and (max-width: 500px) {
     .nav-bar-container {
-        margin-left: 10vw;
+        margin-left: -10vw;
         font-size: 1vw;
-        width: 100%;
+        width: 50%;
         height: 16vw;
-    }
-
-    .nav-bar-menu {
-        display: flex;
-        gap: 0.8em;
-        margin-left: 1em;
     }
 
     .color-nav {
         background: #0000005e;
         transition: 1s;
-        width: 100%;
     }
 
     .nav-yuko-logo {
@@ -1149,6 +1138,8 @@ body {
 
     .dev-landing {
         overflow-y: hidden;
+        overflow-x: hidden;
+        position: absolute;
     }
 
     .dev-title {
@@ -1215,20 +1206,20 @@ body {
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 80vw;
-        margin-left: 10vw;
+        margin-left: 28vw;
     }
     
     .second-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 82vw;
-        margin-left: 10vw;
+        margin-left: 30vw;
     }
     
     .second-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -20vw;
+        margin-left: -10vw;
     }
     
     .second-dev-name {
@@ -1296,21 +1287,21 @@ body {
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 160vw;
-        margin-left: 10vw;
+        margin-left: 26vw;
     }
     
     .fourth-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 162vw;
-        margin-left: 10vw;
+        margin-left: 28vw;
     }
     
     
     .fourth-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -20vw;
+        margin-left: -10vw;
     }
     
     .fourth-dev-name {
@@ -1378,20 +1369,20 @@ body {
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 240vw;
-        margin-left: 10vw;
+        margin-left: 26vw;
     }
     
     .sixth-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 242vw;
-        margin-left: 10vw;
+        margin-left: 28vw;
     }
     
     .sixth-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -20vw;
+        margin-left: -10vw;
 
     }
     
@@ -1407,6 +1398,20 @@ body {
     }
 
     
+
+
+
+
+
+    .services-landing-section {
+        background: linear-gradient(to bottom, #7C0D52, #07061D);
+        height: 120vw;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        margin-top: -0.5vw;
+    }
+    
     .services-scroll-container1 {
         display: flex;
         flex-direction: row;
@@ -1415,39 +1420,21 @@ body {
         justify-content: right;
         margin-top: 8vw;
     }
-
-    .services-scroll-section1 {
-        max-height: 40vw;
-        max-width: 17rem;
-        padding: 1vw;
-    }    
-
-
-
-
-    .services-scroll-container2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; /* changed to allow proper flow */
-        overflow-x: auto; /* enable horizontal scrolling */
-        justify-content: left;
-        margin-top: 5vw;
-    }
     
-    .services-services-title {
+    .services-our-title {
         display: flex;
-        margin-top: 9vw;
+        margin-top: 8vw;
         align-items: first baseline;
-        font-size: 5vw;
+        font-size: 5.5vw;
         font-family: Arial;
         font-weight: 900;
         color: white;
-        margin-left: 2vw;
+        margin-right: 2vw;
     }
     
-    .services-scroll-section2 {
+    .services-scroll-section1 {
         max-height: 35vw;
-        max-width: 70rem;
+        max-width: 80rem;
         text-align: left;
         color: white;
         display: flex;
@@ -1457,15 +1444,5 @@ body {
         justify-content: flex-start; /* change to allow left alignment */
         align-items: flex-start; /* change to allow items to align properly */
         padding: 1vw;
-    }
-
-    .services-scroll-container2 {
-        width: 70vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; /* changed to allow proper flow */
-        overflow-x: auto; /* enable horizontal scrolling */
-        justify-content: left;
-        margin-top: 5vw;
     }
 }
