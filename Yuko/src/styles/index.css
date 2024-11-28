@@ -1151,7 +1151,7 @@ html,body {
 
     .dev-landing-section {
         height: 220vw;
-        overflow-x: hidden;
+        overflow: hidden;
     }
     
     .dev-landing {
@@ -1164,7 +1164,6 @@ html,body {
         background-color: #050374;
         position: absolute;
         margin-left: 7vw;
-        transform: translate(calc(70% - 1rem), -50%);
     }
     
     .dev-title {
