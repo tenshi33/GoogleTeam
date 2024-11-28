@@ -3,6 +3,7 @@ import '../styles/Sidebar.css';
 import { FaRegMessage } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
+import menuicon from '../../public/brmenu.png';
 import menu from '../../public/menu2.png';
 import newchat from '../../public/new-chat2.png';
 import yukotext from '../../public/yuko-icon2.png';
@@ -12,7 +13,7 @@ const Sidebar = () => {
     const [extended, setExtended] = useState(false)
     return (
 
-            <aside className='sidebar'>
+            <div className='sidebar'>
                 <div className='top'>
                     <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
                         <img src={menu} alt="Description" />
@@ -46,7 +47,9 @@ const Sidebar = () => {
                 <div className='bottom'>
                     {/* profile and settings */}
                 </div>
-            </aside>
+            </div>
+
+
 
 
     )

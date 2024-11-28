@@ -137,9 +137,6 @@ function Yuko() {
         <div className="yuko-container">
           <Sidebar />
           <div className='main'>
-            <span onClick={() => setExtended(prev => !prev)} className='nav'>
-              <img src={menuicon} alt="Description" />
-            </span>
             <div className="main-container">
               <span className="yuko-icon">
                 <img src={yuko} alt="" />
