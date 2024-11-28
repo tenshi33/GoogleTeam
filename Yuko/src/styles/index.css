@@ -996,17 +996,15 @@ html,body {
     .nav-bar-container {
         margin-left: -10vw;
         font-size: 1vw;
-        width: 100%;
+        width: 95%;
         height: 16vw;
-        margin-left: 9.7vw;
         overflow-x: hidden;
     }
 
     .color-nav {
         background: #0000005e;
         transition: 1s;
-        width: 100%;
-        margin-left: 9.7vw;
+        width: 95%;
     }
 
     .nav-yuko-logo {
