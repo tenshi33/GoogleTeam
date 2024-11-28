@@ -124,7 +124,7 @@ function Landing() {
                             {/*DEVELOPER 1 INFOS*/}
                             <div className='first-dev-infos'>
                                 <p className='first-dev-name'>Angelo Egwaras</p>
-                                <p className='first-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='first-dev-description'>"Scrum Master/Project Manager"</p>
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@ function Landing() {
                             {/*DEVELOPER 2 INFOS*/}
                             <div className='second-dev-infos'>
                                 <p className='second-dev-name'>Yohan Caballero</p>
-                                <p className='second-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='second-dev-description'>Backend Developer</p>
                             </div>
 
                             {/*DEVELOPER 2 PIC*/}
@@ -155,7 +155,7 @@ function Landing() {
                             {/*DEVELOPER 3 INFOS*/}
                             <div className='third-dev-infos'>
                                 <p className='third-dev-name'>Adryan Antiporda</p>
-                                <p className='third-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='third-dev-description'>Backend Developer</p>
                             </div>
                         </div>
 
@@ -168,7 +168,7 @@ function Landing() {
                             {/*DEVELOPER 4 INFOS*/}
                             <div className='fourth-dev-infos'>
                                 <p className='fourth-dev-name'>Faith Calma</p>
-                                <p className='fourth-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='fourth-dev-description'>UI/UX and Front-end Developer</p>
                             </div>
 
                             {/*DEVELOPER 4 PIC*/}
@@ -186,7 +186,7 @@ function Landing() {
                             {/*DEVELOPER 5 INFOS*/}
                             <div className='fifth-dev-infos'>
                                 <p className='fifth-dev-name'>Wadie Ibrahim Camaligan</p>
-                                <p className='fifth-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='fifth-dev-description'>Front-end Developer</p>
                             </div>
                         </div>
 
@@ -200,7 +200,7 @@ function Landing() {
                             {/*DEVELOPER 6 INFOS*/}
                             <div className='sixth-dev-infos'>
                                 <p className='sixth-dev-name'>Ericka Gracelyn De Guzman</p>
-                                <p className='sixth-dev-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p className='sixth-dev-description'>UI/UX and Front-end Developer</p>
                             </div>
 
                             {/*DEVELOPER 6 PIC*/}
