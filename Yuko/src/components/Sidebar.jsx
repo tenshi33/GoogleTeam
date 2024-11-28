@@ -7,10 +7,26 @@ import menuicon from '../../public/brmenu.png';
 import menu from '../../public/menu2.png';
 import newchat from '../../public/new-chat2.png';
 import yukotext from '../../public/yuko-icon2.png';
+import { auth } from '../../firebase/firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
-
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+        try {
+          await auth.signOut(); // Signs out the user
+          console.log("User logged out successfully");
+          navigate('/');
+        } catch (error) {
+          console.error("Error logging out:", error.message);
+        }
+    };
     const [extended, setExtended] = useState(false)
+
+    const clearChat = () => {
+        setChatHistory([]);
+      };
+
     return (
 
             <div className='sidebar'>
@@ -19,7 +35,7 @@ const Sidebar = () => {
                         <img src={menu} alt="Description" />
                     </span>
                     {extended ? <span className='icon-container'>
-                        <img className='new-chat' src={newchat} alt="Description" />
+                        <img className='new-chat' onClick={clearChat} src={newchat} alt="Description" />
                     </span> : null}
                     {extended ? <span className='icon-container'>
                         <img className='textyuko' src={yukotext} alt="Description" />
@@ -45,7 +61,7 @@ const Sidebar = () => {
                     </div> : null}
                 </div>
                 {extended ? <div className='bottom'>
-                    <button className='log-out'>
+                    <button onClick={handleLogout} className='log-out'>
                         <p>Log Out</p>
                     </button>
                     {/* profile and settings */}
