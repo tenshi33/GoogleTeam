@@ -5,7 +5,6 @@ const cors = require("cors");
 const geminiApiKey = functions.config().gemini.apikey;
 const genAI = new GoogleGenerativeAI(geminiApiKey);
 const model = genAI.getGenerativeModel({ model: "tunedModels/introductionchat-qke62kuk7mst" });
-app.use(cors());
 // Initialize CORS middleware
 const corsOptions = {
   origin: '*', // Allow all origins; you can replace `true` with specific URLs if needed
