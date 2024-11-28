@@ -1011,6 +1011,7 @@ html,body {
         width: 100%;
         height: 16vw;
         overflow-x: hidden;
+        margin-left: 7vw;
     }
 
     /* Color navbar adjustments */
@@ -1065,6 +1066,7 @@ html,body {
     .features-landing-section {
         padding: 0;
         height: 340vw;
+        margin-left: 7vw;
     }
 
     /* Feature section adjustments */
@@ -1099,7 +1101,7 @@ html,body {
     .features-top-left-decscription {
         font-family: 'Calibri';
         font-size: 3vw;
-        width: 85vw;
+        width: 84vw;
         color: white;
         height: 45vw;
     }
@@ -1143,5 +1145,34 @@ html,body {
     .chatbot1, .chatbot2 {
         width: 80vw;
         height: 80vw;
+    }
+
+
+
+    .dev-landing-section {
+        height: 220vw;
+    }
+    
+    .dev-landing {
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 200vw;
+        margin-top: 12vw;
+        background-color: #050374;
+        position: absolute;
+        margin-left: 7vw;
+    }
+    
+    .dev-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 8vw;
+        font-family: Arial;
+        font-weight: 900;
+        color: white;
     }
 }
