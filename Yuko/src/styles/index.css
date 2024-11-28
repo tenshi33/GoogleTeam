@@ -121,6 +121,7 @@ html,body {
     width: 90vw;
     margin-left: 3vw;
     margin-top: 9vw;
+    position: absolute;
 }
 
 .features-top {
@@ -697,15 +698,13 @@ html,body {
     margin-top: 0.5vw;
 }
 
-
-
 .services-landing-section {
     background: linear-gradient(to bottom, #7C0D52, #07061D);
     height: 75vw;
     display: flex;
     justify-items: center;
     flex-direction: column;
-    margin-top: -0.5vw;
+    margin-top: -0.5rem;
 }
 
 .services-scroll-container1 {
@@ -1139,6 +1138,8 @@ html,body {
 
     .dev-landing {
         overflow-y: hidden;
+        overflow-x: hidden;
+        position: absolute;
     }
 
     .dev-title {
@@ -1394,5 +1395,54 @@ html,body {
         font-size: 2vw;
         width: 45vw;
         margin-top: 1vw;
+    }
+
+    
+
+
+
+
+
+    .services-landing-section {
+        background: linear-gradient(to bottom, #7C0D52, #07061D);
+        height: 120vw;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        margin-top: -0.5vw;
+    }
+    
+    .services-scroll-container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* changed to allow proper flow */
+        overflow-x: auto; /* enable horizontal scrolling */
+        justify-content: right;
+        margin-top: 8vw;
+    }
+    
+    .services-our-title {
+        display: flex;
+        margin-top: 8vw;
+        align-items: first baseline;
+        font-size: 5.5vw;
+        font-family: Arial;
+        font-weight: 900;
+        color: white;
+        margin-right: 2vw;
+    }
+    
+    .services-scroll-section1 {
+        max-height: 35vw;
+        max-width: 80rem;
+        text-align: left;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* keep this for horizontal scroll */
+        overflow-y: hidden;
+        justify-content: flex-start; /* change to allow left alignment */
+        align-items: flex-start; /* change to allow items to align properly */
+        padding: 1vw;
     }
 }
