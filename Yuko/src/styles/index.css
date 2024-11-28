@@ -997,9 +997,14 @@ html,body {
 
 @media only screen and (max-width: 500px) {
     body {
-        overflow-x: hidden;
+        overflow-x: hidden; 
         margin: 0;
         padding: 0;
+        display: flex;
+        display: column;
+        place-items: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-bar-container {
