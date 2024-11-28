@@ -998,6 +998,7 @@ html,body {
         font-size: 1vw;
         width: 95%;
         height: 16vw;
+        margin-left: 9.7vw;
         overflow-x: hidden;
     }
 
@@ -1005,6 +1006,7 @@ html,body {
         background: #0000005e;
         transition: 1s;
         width: 95%;
+        margin-left: 9.7vw;
     }
 
     .nav-yuko-logo {
