@@ -44,13 +44,13 @@ const Sidebar = () => {
                         </div>
                     </div> : null}
                 </div>
-                <div className='bottom'>
+                {extended ? <div className='bottom'>
+                    <button className='log-out'>
+                        <p>Log Out</p>
+                    </button>
                     {/* profile and settings */}
-                </div>
+                </div> : null}
             </div>
-
-
-
 
     )
 }

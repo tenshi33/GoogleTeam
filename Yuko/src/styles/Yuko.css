@@ -173,19 +173,6 @@
 
 @media only screen and (max-width: 500px) {
 
-    .main .nav{
-        position: static;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2.4vh;
-    }
-    
-    .main .nav img{
-        height: 1.2em;
-    }
-
     .main-container{
         padding-top: 1vw;
         display: flex;
