@@ -1052,7 +1052,6 @@ html,body {
     .features-top {
         flex-direction: column;
         justify-content: space-evenly;
-        background-color: #151529;
         height: 130vw;
         align-items: center;
     }
@@ -1060,14 +1059,12 @@ html,body {
     .features-first-section {
         width: 100%;
         height: 60vw;
-        background-color: #6b5254;
         align-items: center;
         justify-items: center;
     }
 
     .feature-title {
         font-size: 8vw;
-        background-color: #0d00ff;
         width: 85vw;
         margin-bottom: 2vw;
     }
@@ -1078,7 +1075,6 @@ html,body {
         width: 85vw;
         color: white;
         height: 45vw;
-        background-color: rgb(50, 90, 90);
     }
     
     
@@ -1091,11 +1087,9 @@ html,body {
     .features-scroll-section {
         max-height: 60vw;
         width: 83vw;
-        background-color: #1fcad6;
     }
     
     .features-scroll-section .features {
-        background-color: rgba(255, 255, 255, 0);
         border: solid;
         border-color: rgb(255, 255, 255);
         border-width: 0.1rem;
@@ -1113,7 +1107,6 @@ html,body {
         align-items: center;
         margin-top: 2vw;
         height: 180vw;
-        background-color: bisque;
     }
     .chatbot1 {
         width: 80vw;
