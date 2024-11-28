@@ -1179,7 +1179,7 @@ html,body {
         width: 83vw;
         height: 22vw;
         margin-bottom: 9vw;
-        margin-top: 35vw;
+        margin-top: 33vw;
         margin-left: -4vw;
     }
     
@@ -1187,7 +1187,7 @@ html,body {
         width: 85vw;
         height: 23vw;
         margin-bottom: 11vw;
-        margin-top: 37vw;
+        margin-top: 35vw;
     }
 
     .first-dev-pic {
@@ -1209,7 +1209,44 @@ html,body {
     }
     
     
+    .second-dev {
+        width: 63vw;
+        height: 20vw;
+        margin-bottom: 9vw;
+        margin-top: 25vw;
+    }
+
+    .second-dev-shape-outline {
+        width: 83vw;
+        height: 22vw;
+        margin-bottom: 9vw;
+        margin-top: 80vw;
+    }
     
+    .second-dev-shape-inside {
+        width: 85vw;
+        height: 23vw;
+        margin-bottom: 11vw;
+        margin-top: 82vw;
+    }
+
+    .second-dev-pic {
+        width: 35vw;
+        height: 35vw;
+        margin-left: 8vw;
+        z-index: 1;
+    }
+    
+    .second-dev-name {
+        font-size: 4.5vw;
+    }
+    
+    .second-dev-description {
+        font-size: 2.8vw;
+        font-family: 'Calibri';
+        width: 45vw;
+        margin-top: 0.5vw;
+    }
 
 
 
@@ -1224,7 +1261,7 @@ html,body {
         width: 83vw;
         height: 22vw;
         margin-bottom: 9vw;
-        margin-top: 136vw;
+        margin-top: 134vw;
         margin-left: -4vw;
     }
     
@@ -1232,7 +1269,7 @@ html,body {
         width: 85vw;
         height: 23vw;
         margin-bottom: 11vw;
-        margin-top: 138vw;
+        margin-top: 136vw;
     }
 
     .third-dev-pic {
@@ -1252,4 +1289,53 @@ html,body {
         width: 45vw;
         margin-top: 0.5vw;
     }
+
+
+    
+
+    .fifth-dev {
+        width: 63vw;
+        height: 20vw;
+        margin-bottom: 9vw;
+        margin-top: 50vw;
+    }
+
+    .fifth-dev-shape-outline {
+        width: 83vw;
+        height: 22vw;
+        margin-bottom: 9vw;
+        margin-top: 235vw;
+        margin-left: -4vw;
+    }
+    
+    .fifth-dev-shape-inside {
+        width: 85vw;
+        height: 23vw;
+        margin-bottom: 11vw;
+        margin-top: 237vw;
+    }
+
+    .fifth-dev-pic {
+        width: 35vw;
+        height: 35vw;
+        margin-left: 8vw;
+        z-index: 1;
+    }
+    
+    .fifth-dev-name {
+        font-size: 4.5vw;
+    }
+    
+    .fifth-dev-description {
+        font-size: 2.8vw;
+        font-family: 'Calibri';
+        width: 45vw;
+        margin-top: 0.5vw;
+    }
+
+
+
+
+
+    
 }
