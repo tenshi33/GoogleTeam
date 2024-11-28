@@ -11,45 +11,44 @@ const Sidebar = () => {
 
     const [extended, setExtended] = useState(false)
     return (
-        
-            <div className='sidebar'>
-            <div className='sidebar-bg'>
-            <div className='top'>
-                <span onClick={()=>setExtended(prev=>!prev)} className='menu-icon-container'>
-                <img src={menu} alt="Description" />
-                </span>
-                {extended? <span className='icon-container'>
-                    <img className='new-chat' src={newchat} alt="Description" />
-                </span> : null}
-                {extended? <span className='icon-container'>
-                    <img className='textyuko' src={yukotext} alt="Description" />
-                </span> : null}
-                {extended ? <div className="recent">
-                    <p className="recent-title"><b>Chat History</b></p>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>What does Yuko do...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How helpful is Yuko...</p>
-                    </div>
-                    <div className="recent-entry">
-                        <FaRegMessage />
-                        <p>How can yuko help me...</p>
-                    </div>
-                </div> : null}
-            </div>
-            <div className='bottom'> 
-                 {/* profile and settings */}
-            </div>
-            </div>
-        </div>
-        
+
+            <aside className='sidebar'>
+                <div className='top'>
+                    <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
+                        <img src={menu} alt="Description" />
+                    </span>
+                    {extended ? <span className='icon-container'>
+                        <img className='new-chat' src={newchat} alt="Description" />
+                    </span> : null}
+                    {extended ? <span className='icon-container'>
+                        <img className='textyuko' src={yukotext} alt="Description" />
+                    </span> : null}
+                    {extended ? <div className="recent">
+                        <p className="recent-title"><b>Chat History</b></p>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>What is Yuko...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>What does Yuko do...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>How helpful is Yuko...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>How can yuko help me...</p>
+                        </div>
+                    </div> : null}
+                </div>
+                <div className='bottom'>
+                    {/* profile and settings */}
+                </div>
+            </aside>
+
+
     )
 }
 

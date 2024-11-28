@@ -201,7 +201,6 @@
         display: flex;
         overflow: hidden;
         justify-content: right;
-        margin-top: 1rem;
         width: 85vw;
         background-color: #0051ff00;
     }
