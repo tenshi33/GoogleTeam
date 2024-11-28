@@ -1179,10 +1179,11 @@ html,body {
     }
 
     .first-dev-shape-outline {
-        width: 74vw;
+        width: 80vw;
         height: 18vw;
         margin-bottom: 9vw;
         margin-top: 20vw;
+        margin-left: -4vw;
     }
     
     .first-dev-shape-inside {
