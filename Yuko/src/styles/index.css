@@ -1,6 +1,4 @@
-html,body {
-    overflow-x: hidden; 
-}
+
 
 .nav-bar-container {
     display: flex;
@@ -991,7 +989,7 @@ html,body {
 
 @media only screen and (max-width: 500px) {
     .nav-bar-container {
-        margin-left: -10vw;
+        margin-left: 10vw;
         font-size: 1vw;
         width: 50%;
         height: 16vw;
@@ -1000,6 +998,7 @@ html,body {
     .color-nav {
         background: #0000005e;
         transition: 1s;
+        width: 100%;
     }
 
     .nav-yuko-logo {
