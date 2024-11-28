@@ -998,17 +998,15 @@ html,body {
     .nav-bar-container {
         margin-left: -10vw;
         font-size: 1vw;
-        width: 95%;
+        width: 100%;
         height: 16vw;
-        margin-left: 9.7vw;
         overflow-x: hidden;
     }
 
     .color-nav {
         background: #0000005e;
         transition: 1s;
-        width: 95%;
-        margin-left: 9.7vw;
+        width: 100%;
     }
 
     .nav-yuko-logo {
@@ -1126,5 +1124,53 @@ html,body {
         height: 80vw;
     }
 
-    
+    .services-scroll-container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* changed to allow proper flow */
+        overflow-x: auto; /* enable horizontal scrolling */
+        justify-content: right;
+        margin-top: 8vw;
+        background-color: blanchedalmond;
+        width: 80vw;
+    }
+    .services-scroll-section1 {
+        background-color: #c50e0e;
+        max-height: 35vw;
+        max-width: 40rem;
+        text-align: left;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* keep this for horizontal scroll */
+        overflow-y: hidden;
+        justify-content: flex-start; /* change to allow left alignment */
+        align-items: flex-start; /* change to allow items to align properly */
+        padding: 1vw;
+    }
+
+    .services-scroll-container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* changed to allow proper flow */
+        overflow-x: auto; /* enable horizontal scrolling */
+        justify-content: right;
+        margin-top: 8vw;
+        background-color: blanchedalmond;
+        width: 80vw;
+    }
+    .services-scroll-section2 {
+        background-color: #c50e0e;
+        max-height: 35vw;
+        max-width: 40rem;
+        text-align: left;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* keep this for horizontal scroll */
+        overflow-y: hidden;
+        justify-content: flex-start; /* change to allow left alignment */
+        align-items: flex-start; /* change to allow items to align properly */
+        padding: 1vw;
+    }
 }
