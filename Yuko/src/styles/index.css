@@ -1,4 +1,6 @@
-
+body {
+    overflow-x: hidden;
+}
 
 .nav-bar-container {
     display: flex;
@@ -327,7 +329,7 @@
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
-
+    overflow-x: hidden;
 }
 
 .second-dev-shape-outline {
@@ -345,6 +347,7 @@
     border-top-left-radius: 1.8vw;
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
+    overflow-x: hidden;
 }
 
 .second-dev-shape-inside {
@@ -362,6 +365,7 @@
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
     background: linear-gradient(to right,#c50e0e, #050374);
+    overflow-x: hidden;
 }
 
 .second-dev-infos {
@@ -478,7 +482,6 @@
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
-
 }
 
 .fourth-dev-shape-outline {
@@ -628,7 +631,7 @@
     margin-top: 2.3vw;
     margin-left: 38vw;
     gap: 2vw;
-
+    overflow-x: hidden;
 }
 
 .sixth-dev-shape-outline {
@@ -646,6 +649,7 @@
     border-top-left-radius: 1.8vw;
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
+    overflow-x: hidden;
 }
 
 .sixth-dev-shape-inside {
@@ -663,6 +667,7 @@
     border-bottom-left-radius: 2.2vw;
     transform: skew(-20deg);
     background: linear-gradient(to right, #c50e0e, #050374);
+    overflow-x: hidden;
 }
 
 .sixth-dev-infos {
@@ -713,6 +718,7 @@
     overflow-x: auto; /* enable horizontal scrolling */
     justify-content: right;
     margin-top: 8vw;
+    background-color: #050374;
 }
 
 .services-our-title {
@@ -728,7 +734,7 @@
 
 .services-scroll-section1 {
     max-height: 35vw;
-    max-width: 80rem;
+    max-width: 65rem;
     text-align: left;
     color: white;
     display: flex;
@@ -738,6 +744,7 @@
     justify-content: flex-start; /* change to allow left alignment */
     align-items: flex-start; /* change to allow items to align properly */
     padding: 1vw;
+    background-color: #07061D;
 }
 
 
@@ -991,8 +998,14 @@
     .nav-bar-container {
         margin-left: 10vw;
         font-size: 1vw;
-        width: 50%;
+        width: 100%;
         height: 16vw;
+    }
+
+    .nav-bar-menu {
+        display: flex;
+        gap: 0.8em;
+        margin-left: 1em;
     }
 
     .color-nav {
@@ -1204,20 +1217,20 @@
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 80vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     .second-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 82vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     .second-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -10vw;
+        margin-left: -20vw;
     }
     
     .second-dev-name {
@@ -1285,21 +1298,21 @@
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 160vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     .fourth-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 162vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     
     .fourth-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -10vw;
+        margin-left: -20vw;
     }
     
     .fourth-dev-name {
@@ -1367,20 +1380,20 @@
         height: 20vw;
         margin-bottom: 9vw;
         margin-top: 240vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     .sixth-dev-shape-inside {
         width: 83vw;
         height: 20vw;
         margin-top: 242vw;
-        margin-left: 20vw;
+        margin-left: 10vw;
     }
     
     .sixth-dev-pic {
         width: 30vw;
         height: 32vw;
-        margin-left: -10vw;
+        margin-left: -20vw;
 
     }
     
