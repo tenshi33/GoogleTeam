@@ -294,15 +294,144 @@ input.privacy-policy-check {
 
 @media only screen and (max-width: 500px) {
   .sign-up-form {
-    background-color: transparent;
+    background-color: transparent ;
     filter: opacity(85%);
     display: flex;
     box-shadow: none;
+    height: 30rem;
+    width: 20rem;
   }
 
   .sign-up-form .fname-signup-wrapper {
-    height: 10rem;
-    width: 23vw;
+    height: 10vw;
+    width: 20rem;
+  }
+
+  .sign-up-form .fname-signup-wrapper .fname-input-field {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.25em 0 0.7em;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
+  }
+
+  .sign-up-form .lname-signup-wrapper {
+    height: 10vw;
+    width: 20rem;
+  }
+
+  .sign-up-form .lname-signup-wrapper .lname-input-field {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.25em 0 0.7em;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
+  }
+
+  .sign-up-form .studnum-course-wrapper {
+    height: 10vw;
+    width: 20rem;
+    position: relative;
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+  }
+ 
+  .sign-up-form .studnum-course-wrapper .studnum-input-field {
+    height: 100%;
+    width: 9.9rem;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
+    padding-left: 0.6vw;
+  }
+  
+  .sign-up-form .course-signup-wrapper .course-input-field {
+    height: 100%;
+    width: 9.9rem;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
+    padding-left: 0.6vw;
+  }
+
+  .sign-up-form .email-signup-wrapper {
+    height: 10vw;
+    width: 20rem;
+  }
+
+  .sign-up-form .email-signup-wrapper .email-input-field {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.25em 0 0.7em;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
+  }
+
+  .sign-up-form .pass-signup-wrapper {
+    height: 10vw;
+    width: 20rem;
+  }
+
+  .sign-up-form .pass-signup-wrapper .pass-input-field {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.25em 0 0.7em;
+    border-radius: 1.3rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+    font-size: 1rem;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.2s ease;
+    font-family: Arial;
   }
 
   .sign-up-container .signup-title{
@@ -312,5 +441,10 @@ input.privacy-policy-check {
     font-weight: 900;
     margin-bottom: 2vw;
     font-family: Arial;
+  }
+   
+  .privacy-policy {
+    font-size: 11rem;
+    
   }
 }
