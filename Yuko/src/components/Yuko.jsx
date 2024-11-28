@@ -165,7 +165,7 @@ function Yuko() {
                         onKeyDown={handleKeyDown}
                       />
                       <div>
-                        <GrGallery className='img' />
+                        {/*gallery icon here*/}
                         <FaMicrophoneAlt className='img' />
                         <RiSendPlane2Fill
                           className='img'
