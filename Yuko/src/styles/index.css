@@ -1155,12 +1155,8 @@ html,body {
     }
     
     .dev-landing {
-        z-index: 0;
-        display: flex;
-        flex-direction: column;
         width: 100%;
         height: 200vw;
-        margin-top: 12vw;
         background-color: #050374;
         position: absolute;
         margin-left: 7.2vw;
@@ -1168,14 +1164,65 @@ html,body {
     }
     
     .dev-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         font-size: 8vw;
-        font-family: Arial;
-        font-weight: 900;
-        color: white;
         overflow: hidden;
+    }
+
+    .first-dev {
+        width: 63vw;
+        height: 20vw;
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        margin-bottom: 9vw;
+        margin-top: 10vw;
+    }
+
+    .first-dev-shape-outline {
+        width: 74vw;
+        height: 18vw;
+        margin-bottom: 9vw;
+        margin-top: 20vw;
+    }
+    
+    .first-dev-shape-inside {
+        width: 77vw;
+        height: 19vw;
+        margin-bottom: 11vw;
+        margin-top: 22vw;
+    }
+
+    .first-dev-pic {
+        width: 40vw;
+        height: 30vw;
+        margin-left: 6vw;
+        z-index: 1;
+    }
+    
+    .first-dev-name {
+        font-size: 3vw;
+    }
+    
+    .first-dev-description {
+        font-size: 1vw;
+        font-family: 'Calibri';
+        width: 35vw;
+        margin-top: 0.5vw;
+    }
+    
+    
+    .second-dev {
+        width: 63vw;
+        height: 11vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: right;
+        text-align: right;
+        margin-bottom: 9vw;
+        margin-top: 2.3vw;
+        margin-left: 38vw;
+        gap: 2vw;
+    
     }
 }
