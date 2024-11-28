@@ -991,6 +991,8 @@ html,body {
 @media only screen and (max-width: 500px) {
     body {
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-bar-container {
@@ -1082,7 +1084,6 @@ html,body {
         height: 45vw;
     }
     
-    
     .feature-section-divider {
         background-color: rgba(255, 255, 255, 0);
         height: 0vw;
@@ -1105,6 +1106,7 @@ html,body {
         align-items: center;
         width: 43vw;
     }
+
     .features-bottom {
         display: flex;
         flex-direction: column;
@@ -1113,6 +1115,7 @@ html,body {
         margin-top: 2vw;
         height: 180vw;
     }
+
     .chatbot1 {
         width: 80vw;
         height: 80vw;
