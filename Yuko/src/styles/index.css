@@ -1071,7 +1071,7 @@ html,body {
     .features-landing {
         width: 100%;
         margin-top: 25vw;
-        margin-left: 9.8vw;
+        margin-left: 0;
     }
 
     .features-top {
@@ -1093,8 +1093,6 @@ html,body {
         font-size: 8vw;
         width: 85vw;
         margin-bottom: 0;
-        background-color: #050374;
-        
     }
 
     /* Description in features section */
@@ -1104,7 +1102,6 @@ html,body {
         width: 85vw;
         color: white;
         height: 45vw;
-        background-color: #07061D;
     }
 
     /* Divider size tweak */
@@ -1117,8 +1114,7 @@ html,body {
     /* Feature scroll section */
     .features-scroll-section {
         max-height: 60vw;
-        width: 85vw;
-        background-color: #050374;
+        width: 83vw;
     }
 
     .features-scroll-section .features {
