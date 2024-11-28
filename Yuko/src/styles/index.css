@@ -1008,7 +1008,7 @@ html,body {
         margin: 0;
         padding: 0;
         font-size: 1vw;
-        width: 100%;
+        width: 25rem;
         height: 16vw;
         overflow-x: hidden;
         margin-left: 7vw;
@@ -1018,7 +1018,7 @@ html,body {
     .color-nav {
         background: #0000005e;
         transition: 1s;
-        width: 100%;
+        width: 25rem;
     }
 
     /* Logo adjustments */
@@ -1151,6 +1151,7 @@ html,body {
 
     .dev-landing-section {
         height: 220vw;
+        overflow-x: hidden;
     }
     
     .dev-landing {
@@ -1162,6 +1163,7 @@ html,body {
         margin-top: 12vw;
         background-color: #050374;
         position: absolute;
+        margin-left: 7vw;
     }
     
     .dev-title {
