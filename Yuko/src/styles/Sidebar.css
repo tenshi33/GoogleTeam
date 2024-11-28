@@ -1,6 +1,5 @@
 /* Sidebar CSS */
-
-.sidebar-bg{
+.sidebar{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -87,7 +86,8 @@
 
 
 @media only screen and (max-width: 500px) {
-    .sidebar-bg{
+
+    .sidebar{
         position: fixed;
         left: -250vw;
         min-height: 100vh;
@@ -109,6 +109,7 @@
     }
     
     .sidebar .menu-icon-container{
+        position: absolute;
         margin-left: 0.4vw;
         padding-right: 0.4rem;
     }

@@ -4,6 +4,7 @@ import { auth, db, doc, getDoc, collection, addDoc } from '../../firebase/fireba
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
+import menuicon from '../../public/brmenu.png';
 import Sidebar from './Sidebar';
 import ChatHistory from "./chathistory";
 import * as pdfjsLib from "pdfjs-dist"; // Import pdfjs
@@ -16,6 +17,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function Yuko() {
+  const [extended, setExtended] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -131,54 +133,61 @@ function Yuko() {
   };
 
   return (
-    <div className="yuko-container">
-      <Sidebar />
-      <div className='main'>
-        <div className="main-container">
-          <span className="yuko-icon">
-            <img src={yuko} alt="" />
-          </span>
-          <div className='greet'>
-            <p><b><span>Hello, {userName || 'User'}.</span></b></p>
-            <p><b>How may I help?</b></p>
-          </div>
-          <div className='cards'>
-            {/*<ChatHistory chatHistory={chatHistory} />*/} {/*I moved it to a different div since it placed the message box in an awkward position*/}
-          </div>
-          <div className='message-container'>
-          <div className='message'>
-            <ChatHistory chatHistory={chatHistory} /> {/*over here!!!*/}
-          </div>
-          </div>
-          <div>
-            <div className='main-bottom'>
-              <div className='search-box'>
-                <input
-                  type="text"
-                  placeholder='Talk to Yuko...'
-                  value={userInput}
-                  onChange={handleUserInput}
-                  onKeyDown={handleKeyDown}
-                />
-                <div>
-                  <GrGallery className='img' />
-                  <FaMicrophoneAlt className='img' />
-                  <RiSendPlane2Fill
-                    className='img'
-                    id='send'
-                    onClick={sendMessage}
-                    disabled={isLoading}
-                  />
+
+        <div className="yuko-container">
+          <Sidebar />
+          <div className='main'>
+            <span onClick={() => setExtended(prev => !prev)} className='nav'>
+              <img src={menuicon} alt="Description" />
+            </span>
+            <div className="main-container">
+              <span className="yuko-icon">
+                <img src={yuko} alt="" />
+              </span>
+              <div className='greet'>
+                <p><b><span>Hello, {userName || 'User'}.</span></b></p>
+                <p><b>How may I help?</b></p>
+              </div>
+              <div className='cards'>
+                {/*<ChatHistory chatHistory={chatHistory} />*/} {/*I moved it to a different div since it placed the message box in an awkward position*/}
+              </div>
+              <div className='message-container'>
+                <div className='message'>
+                  <ChatHistory chatHistory={chatHistory} /> {/*over here!!!*/}
                 </div>
               </div>
-              <div className="bottom-info">
-                <p>Yuko is designed to help and guide users to the best of their abilities. Please do not misuse.</p>
+              <div>
+                <div className='main-bottom'>
+                  <div className='search-box-container'>
+                    <div className='search-box'>
+                      <input
+                        type="text"
+                        placeholder='Talk to Yuko...'
+                        value={userInput}
+                        onChange={handleUserInput}
+                        onKeyDown={handleKeyDown}
+                      />
+                      <div>
+                        <GrGallery className='img' />
+                        <FaMicrophoneAlt className='img' />
+                        <RiSendPlane2Fill
+                          className='img'
+                          id='send'
+                          onClick={sendMessage}
+                          disabled={isLoading}
+                        />
+                      </div>
+                    </div>
+                    <div className="bottom-info">
+                      <p>Yuko is designed to help and guide users to the best of their abilities. Please do not misuse.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        
   );
 }
 
