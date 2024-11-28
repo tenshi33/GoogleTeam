@@ -1124,53 +1124,5 @@ html,body {
         height: 80vw;
     }
 
-    .services-scroll-container1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; /* changed to allow proper flow */
-        overflow-x: auto; /* enable horizontal scrolling */
-        justify-content: right;
-        margin-top: 8vw;
-        background-color: blanchedalmond;
-        width: 80vw;
-    }
-    .services-scroll-section1 {
-        background-color: #c50e0e;
-        max-height: 35vw;
-        max-width: 40rem;
-        text-align: left;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto; /* keep this for horizontal scroll */
-        overflow-y: hidden;
-        justify-content: flex-start; /* change to allow left alignment */
-        align-items: flex-start; /* change to allow items to align properly */
-        padding: 1vw;
-    }
-
-    .services-scroll-container2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; /* changed to allow proper flow */
-        overflow-x: auto; /* enable horizontal scrolling */
-        justify-content: right;
-        margin-top: 8vw;
-        background-color: blanchedalmond;
-        width: 80vw;
-    }
-    .services-scroll-section2 {
-        background-color: #c50e0e;
-        max-height: 35vw;
-        max-width: 40rem;
-        text-align: left;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto; /* keep this for horizontal scroll */
-        overflow-y: hidden;
-        justify-content: flex-start; /* change to allow left alignment */
-        align-items: flex-start; /* change to allow items to align properly */
-        padding: 1vw;
-    }
+    
 }
