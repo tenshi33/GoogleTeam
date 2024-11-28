@@ -1008,7 +1008,7 @@ html,body {
         margin: 0;
         padding: 0;
         font-size: 1vw;
-        width: 25rem;
+        width: 15rem;
         height: 16vw;
         overflow-x: hidden;
         margin-left: 7vw;
@@ -1018,7 +1018,7 @@ html,body {
     .color-nav {
         background: #0000005e;
         transition: 1s;
-        width: 25rem;
+        width: 15rem;
     }
 
     /* Logo adjustments */
