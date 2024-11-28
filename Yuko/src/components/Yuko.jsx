@@ -4,6 +4,7 @@ import { auth, db, doc, getDoc, collection, addDoc } from '../../firebase/fireba
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
+import menuicon from '../../public/brmenu.png';
 import Sidebar from './Sidebar';
 import ChatHistory from "./chathistory";
 import * as pdfjsLib from "pdfjs-dist"; // Import pdfjs
@@ -16,6 +17,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function Yuko() {
+  const [extended, setExtended] = useState(false)
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -132,8 +134,11 @@ function Yuko() {
 
   return (
     <div className="yuko-container">
-      <Sidebar />
+      <Sidebar /> 
       <div className='main'>
+      <span onClick={() => setExtended(prev => !prev)} className='nav'>
+        <img src={menuicon} alt="Description" />
+        </span>
         <div className="main-container">
           <span className="yuko-icon">
             <img src={yuko} alt="" />
