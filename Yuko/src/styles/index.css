@@ -1164,6 +1164,7 @@ html,body {
         background-color: #050374;
         position: absolute;
         margin-left: 7vw;
+        overflow: hidden;
     }
     
     .dev-title {
@@ -1175,5 +1176,6 @@ html,body {
         font-family: Arial;
         font-weight: 900;
         color: white;
+        overflow: hidden;
     }
 }
