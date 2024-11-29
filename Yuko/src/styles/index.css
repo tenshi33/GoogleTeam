@@ -305,20 +305,20 @@ html,body {
 }
 
 .first-dev-pic {
-    width: 14.5vw;
-    height: 23vw;
+    width: 16vw;
+    height: 24vw;
     margin-left: 6vw;
     z-index: 1;
 }
 
 .first-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .first-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
@@ -385,20 +385,20 @@ html,body {
 }
 
 .second-dev-pic {
-    width: 14.5vw;
+    width: 16vw;
     height: 23vw;
     margin-left: 0vw;
     z-index: 1;
 }
 
 .second-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .second-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
@@ -456,20 +456,20 @@ html,body {
 }
 
 .third-dev-pic {
-    width: 14.5vw;
+    width: 16vw;
     height: 23vw;
     margin-left: 6vw;
     z-index: 1;
 }
 
 .third-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .third-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
@@ -536,20 +536,20 @@ html,body {
 }
 
 .fourth-dev-pic {
-    width: 14.5vw;
+    width: 16vw;
     height: 23vw;
     margin-left: 0vw;
     z-index: 1;
 }
 
 .fourth-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .fourth-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
@@ -606,20 +606,20 @@ html,body {
 }
 
 .fifth-dev-pic {
-    width: 14.5vw;
+    width: 16vw;
     height: 23vw;
     margin-left: 6vw;
     z-index: 1;
 }
 
 .fifth-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .fifth-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
@@ -686,20 +686,20 @@ html,body {
 }
 
 .sixth-dev-pic {
-    width: 14.5vw;
+    width: 16vw;
     height: 23vw;
     margin-left: 0vw;
     z-index: 1;
 }
 
 .sixth-dev-name {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-family: 'Arial';
     font-weight: 700;
 }
 
 .sixth-dev-description {
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-family: 'Calibri';
     width: 35vw;
     margin-top: 0.5vw;
