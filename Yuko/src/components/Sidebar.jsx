@@ -29,9 +29,13 @@ const Sidebar = () => {
 
     return (
 
-            <div className='sidebar'>
+            <div className='sidebar-container'>
+                    <span onClick={() => setExtended(prev => !prev)} className='pv-menu-icon-container'>
+                        <img src={menuicon} alt="Description" />
+                    </span>
+                    <div className='pv-sidebar'>
                 <div className='top'>
-                    <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
+                    <span onClick={() => setExtended(prev => !prev)} className='in-menu-icon-container'>
                         <img src={menu} alt="Description" />
                     </span>
                     {extended ? <span className='icon-container'>
@@ -67,6 +71,50 @@ const Sidebar = () => {
                     {/* profile and settings */}
                 </div> : null}
             </div>
+                    {/*v v vWeb version of sidebar v v v*/}
+                    <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
+                        <img src={menu} alt="Description" />
+                    </span>
+                <div className='sidebar'>
+                <div className='top'>
+                    <span onClick={() => setExtended(prev => !prev)} className='in-menu-icon-container'>
+                        <img src={menu} alt="Description" />
+                    </span>
+                    {extended ? <span className='icon-container'>
+                        <img className='new-chat' onClick={clearChat} src={newchat} alt="Description" />
+                    </span> : null}
+                    {extended ? <span className='icon-container'>
+                        <img className='textyuko' src={yukotext} alt="Description" />
+                    </span> : null}
+                    {extended ? <div className="recent">
+                        <p className="recent-title"><b>Chat History</b></p>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>What is Yuko...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>What does Yuko do...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>How helpful is Yuko...</p>
+                        </div>
+                        <div className="recent-entry">
+                            <FaRegMessage />
+                            <p>How can yuko help me...</p>
+                        </div>
+                    </div> : null}
+                </div>
+                {extended ? <div className='bottom'>
+                    <button onClick={handleLogout} className='log-out'>
+                        <p>Log Out</p>
+                    </button>
+                    {/* profile and settings */}
+                </div> : null}
+            </div>
+            </div>
+            
 
     )
 }

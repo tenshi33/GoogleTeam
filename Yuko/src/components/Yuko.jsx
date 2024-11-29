@@ -17,7 +17,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function Yuko() {
-  const [extended, setExtended] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
