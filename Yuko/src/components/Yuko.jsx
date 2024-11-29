@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import yuko from '../../public/yuko2.png';
 import { auth, db, doc, getDoc, arrayUnion, updateDoc, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
+import { HiSpeakerWave } from "react-icons/hi2";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import Sidebar from "./Sidebar";
@@ -255,8 +256,7 @@ function Yuko() {
                   onKeyDown={handleKeyDown}
                 />
                 <div>
-                  <GrGallery className="img" />
-                  <FaMicrophoneAlt className="img" />
+                  <HiSpeakerWave className="img" />
                   <RiSendPlane2Fill
                     className="img"
                     id="send"
