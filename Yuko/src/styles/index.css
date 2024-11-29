@@ -1033,13 +1033,20 @@ html,body {
         height: 210vw;
         object-fit: cover;
         width: 100%; /* Ensure no overflow horizontally */
+        position: absolute;
         overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        z-index: 0;
+        margin-left: 7vw;
     }
 
     /* Title size adjustment for smaller screens */
     .home-yuko-title {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
         font-size: 20vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     /* Adjusting the description to remove margins */
@@ -1049,6 +1056,8 @@ html,body {
         margin-top: 0;
         font-weight: 200;
         padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     /* Log in button spacing and size */
@@ -1065,14 +1074,14 @@ html,body {
     /* Feature section container */
     .features-landing-section {
         padding: 0;
-        height: 340vw;
+        height: 560vw;
         margin-left: 7vw;
     }
 
     /* Feature section adjustments */
     .features-landing {
         width: 100%;
-        margin-top: 25vw;
+        margin-top: 230vw;
         margin-left: 0;
     }
 
@@ -1434,5 +1443,4 @@ html,body {
     }
 
 
-    
 }
