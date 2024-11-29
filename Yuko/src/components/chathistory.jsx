@@ -8,6 +8,7 @@ const ChatHistory = ({ chatHistory }) => {
         <div
           key={index}
           className={`message ${entry.type === "user" ? "text-right" : "text-left"}`}
+          aria-label={entry.type === "user" ? "User message" : "Bot message"}
         >
           <p className={`${entry.type === "user" ? "text-blue-500" : "text-gray-700"}`}>
             {entry.message}
