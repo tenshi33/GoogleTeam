@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import '../styles/Sidebar.css';
 import { FaRegMessage } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import menuicon from '../../public/brmenu.png';
 import menu from '../../public/menu2.png';
 import newchat from '../../public/new-chat2.png';
 import yukotext from '../../public/yuko-icon2.png';
 import { auth } from '../../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = ({ clearChat }) => {
     const navigate = useNavigate();
     const handleLogout = async () => {
         try {
@@ -21,19 +20,16 @@ const Sidebar = () => {
           console.error("Error logging out:", error.message);
         }
     };
-    const [extended, setExtended] = useState(false)
 
-    const clearChat = () => {
-        setChatHistory([]);
-      };
+    const [extended, setExtended] = useState(false);
 
     return (
 
             <div className='sidebar-container'>
-                    <span onClick={() => setExtended(prev => !prev)} className='pv-menu-icon-container'>
+                    <span onClick={() => setExtended(prev => !prev)} className={`pv-menu-icon-container ${extended ? "hidden" : ""}`}>
                         <img src={menuicon} alt="Description" />
                     </span>
-                    <div className='pv-sidebar'>
+                   {extended ? <div className='pv-sidebar'>
                 <div className='top'>
                     <span onClick={() => setExtended(prev => !prev)} className='in-menu-icon-container'>
                         <img src={menu} alt="Description" />
@@ -70,7 +66,7 @@ const Sidebar = () => {
                     </button>
                     {/* profile and settings */}
                 </div> : null}
-            </div>
+            </div> : null}
                     {/*v v vWeb version of sidebar v v v*/}
                     <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
                         <img src={menu} alt="Description" />

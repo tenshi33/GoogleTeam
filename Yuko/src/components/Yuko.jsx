@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import yuko from "../../public/yuko2.png";
-import { auth, db, doc, getDoc } from "../../firebase/firebase";
+import React, { useState, useEffect } from 'react';
+import yuko from '../../public/yuko2.png';
+import { auth, db, doc, getDoc, arrayUnion, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
@@ -100,6 +100,23 @@ function Yuko() {
     }
   }, [userId]);
 
+  // Fetch conversation history from Firestore
+  const fetchConversationHistory = async () => {
+    if (!userId) return;
+    
+    try {
+      const convRef = doc(db, 'conversations', userId);
+      const convDoc = await getDoc(convRef);
+      
+      if (convDoc.exists()) {
+        const storedMessages = convDoc.data().messages || [];
+        setChatHistory(storedMessages);
+      }
+    } catch (error) {
+      console.error("Error fetching conversation history:", error);
+    }
+  };
+
   const handleUserInput = (e) => {
     setUserInput(e.target.value);
   };
@@ -147,7 +164,7 @@ function Yuko() {
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      setChatHistory((prev) => [
+      setChatHistory(prev => [
         ...prev,
         { type: "user", message: userInput },
         {
@@ -168,23 +185,40 @@ function Yuko() {
     }
   };
 
+  const clearChat = () => {
+    setChatHistory([]);
+    if (userId) {
+      const convRef = doc(db, 'conversations', userId);
+      setDoc(convRef, { messages: [] }, { merge: true });
+    }
+  };
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserId(user.uid);
+        setChatHistory([]);  // Clear the chat UI when the user logs in
+      } else {
+        setUserId(null);
+        setChatHistory([]);  // Clear chat UI if the user logs out
+      }
+    });
+  
+    return () => unsubscribe();
+  }, []);
+    
+
   return (
     <div className="yuko-container">
-      <Sidebar />
-      <div className="main">
+      <Sidebar clearChat={clearChat} />
+      <div className='main'>
         <div className="main-container">
           <span className="yuko-icon">
             <img src={yuko} alt="" />
           </span>
-          <div className="greet">
-            <p>
-              <b>
-                <span>Hello, {userName || "User"}.</span>
-              </b>
-            </p>
-            <p>
-              <b>How may I help?</b>
-            </p>
+          <div className='greet'>
+            <p><b><span>Hello, {userName || '..'}.</span></b></p>
+            <p><b>How may I help?</b></p>
           </div>
           <div className="cards">
             <ChatHistory chatHistory={chatHistory} />
