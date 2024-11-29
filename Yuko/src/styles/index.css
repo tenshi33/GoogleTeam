@@ -1224,6 +1224,8 @@ html,body {
         margin-bottom: 9vw;
         margin-top: 84vw;
         margin-left: 19vw;
+        border-width: 0.3vw;
+        border-width: 0.3vw;
     }
     
     .second-dev-shape-inside {
@@ -1253,8 +1255,6 @@ html,body {
         margin-top: 0.5vw;
         margin-left: -24vw;
     }
-
-
 
     .third-dev {
         width: 63vw;
@@ -1311,6 +1311,7 @@ html,body {
         margin-bottom: 9vw;
         margin-top: 183vw;
         margin-left: 19vw;;
+        border-width: 0.5px;
     }
     
     .fourth-dev-shape-inside {
@@ -1340,7 +1341,6 @@ html,body {
         margin-top: 0.5vw;
         margin-left: -24vw;
     }
-    
 
     .fifth-dev {
         width: 63vw;
