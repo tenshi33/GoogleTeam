@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import yuko from '../../public/yuko2.png';
-import { auth, db, doc, getDoc, updateDoc, arrayUnion } from '../../firebase/firebase';
+import { auth, db, doc, getDoc, arrayUnion, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
@@ -141,7 +141,7 @@ function Yuko() {
         const convRef = doc(db, 'conversations', userId);
         
         // Use updateDoc instead of setDoc for updating the document
-        await updateDoc(convRef, {
+        await setDoc(convRef, {
           messages: arrayUnion(newMessage, botMessage)
         });
       }
