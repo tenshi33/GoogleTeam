@@ -1156,7 +1156,7 @@ html,body {
     
     .dev-landing {
         width: 100%;
-        height: 330vw;
+        height: 350vw;
         background-color: #050374;
         position: absolute;
         margin-left: 7.2vw;
@@ -1172,7 +1172,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 25vw;
+        margin-top: 24vw;
     }
 
     .first-dev-shape-outline {
@@ -1213,7 +1213,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 25vw;
+        margin-top: 23vw;
     }
 
     .second-dev-shape-outline {
@@ -1235,12 +1235,13 @@ html,body {
     .second-dev-pic {
         width: 35vw;
         height: 35vw;
-        margin-left: -20vw;
+        margin-left: -1vw;
         z-index: 1;
     }
     
     .second-dev-name {
         font-size: 4.5vw;
+        margin-left: -20vw;
     }
     
     .second-dev-description {
@@ -1248,6 +1249,7 @@ html,body {
         font-family: 'Calibri';
         width: 45vw;
         margin-top: 0.5vw;
+        margin-left: -24vw;
     }
 
 
@@ -1256,7 +1258,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 50vw;
+        margin-top: 20vw;
     }
 
     .third-dev-shape-outline {
@@ -1292,7 +1294,48 @@ html,body {
         margin-top: 0.5vw;
     }
 
+    .fourth-dev {
+        width: 63vw;
+        height: 20vw;
+        margin-bottom: 9vw;
+        margin-top: 20vw;
+    }
 
+    .fourth-dev-shape-outline {
+        width: 90vw;
+        height: 22vw;
+        margin-bottom: 9vw;
+        margin-top: 183vw;
+        margin-left: 18vw;;
+    }
+    
+    .fourth-dev-shape-inside {
+        width: 90vw;
+        height: 23vw;
+        margin-bottom: 11vw;
+        margin-top: 185vw;
+        margin-left: 20vw;
+    }
+
+    .fourth-dev-pic {
+        width: 35vw;
+        height: 35vw;
+        margin-left: -1vw;
+        z-index: 1;
+    }
+    
+    .fourth-dev-name {
+        font-size: 4.5vw;
+        margin-left: -20vw;
+    }
+    
+    .fourth-dev-description {
+        font-size: 2.8vw;
+        font-family: 'Calibri';
+        width: 45vw;
+        margin-top: 0.5vw;
+        margin-left: -24vw;
+    }
     
 
     .fifth-dev {
