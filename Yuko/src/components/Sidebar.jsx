@@ -30,10 +30,10 @@ const Sidebar = () => {
     return (
 
             <div className='sidebar-container'>
-                    <span onClick={() => setExtended(prev => !prev)} className='pv-menu-icon-container'>
+                    <span onClick={() => setExtended(prev => !prev)} className={`pv-menu-icon-container ${extended ? "hidden" : ""}`}>
                         <img src={menuicon} alt="Description" />
                     </span>
-                    <div className='pv-sidebar'>
+                   {extended ? <div className='pv-sidebar'>
                 <div className='top'>
                     <span onClick={() => setExtended(prev => !prev)} className='in-menu-icon-container'>
                         <img src={menu} alt="Description" />
@@ -70,7 +70,7 @@ const Sidebar = () => {
                     </button>
                     {/* profile and settings */}
                 </div> : null}
-            </div>
+            </div> : null}
                     {/*v v vWeb version of sidebar v v v*/}
                     <span onClick={() => setExtended(prev => !prev)} className='menu-icon-container'>
                         <img src={menu} alt="Description" />

@@ -263,17 +263,21 @@
     }
     
     .sidebar-container .pv-menu-icon-container{
-        z-index: 0;
+        z-index: 9999;
         position: fixed;
-        top: 27px;
-        left: 15px;
+        top: 1.5rem;
+        left: 0.9rem;
         margin-left: 0.4vw;
         padding-right: 0.2rem;
     }
 
     .sidebar-container .pv-menu-icon-container img{
-        height: 1.5rem;
+        height: 1.2rem;
     }
+
+    .sidebar-container .pv-menu-icon-container.hidden {
+        visibility: hidden; /* Completely hide it visually */
+      }
 
     .in-menu-icon-container{
         visibility: visible;
