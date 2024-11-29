@@ -32,7 +32,7 @@ const Sidebar = ({ clearChat }) => {
           onClick={() => setExtended(true)}
           className="pv-menu-icon-container"
         >
-          <img src={menu} alt="Menu" />
+          <img src={menuicon} alt="Menu" />
         </span>
       )}
 
