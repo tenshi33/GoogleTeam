@@ -1073,6 +1073,7 @@ html,body {
 
     /* Feature section container */
     .features-landing-section {
+        background: linear-gradient(to bottom,#b61212, #1D143E);
         padding: 0;
         height: 560vw;
         margin-left: 7vw;
