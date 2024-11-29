@@ -1043,7 +1043,7 @@ html,body {
 
     /* Title size adjustment for smaller screens */
     .home-yuko-title {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         font-size: 20vw;
         overflow-x: hidden;
         overflow-y: hidden;
