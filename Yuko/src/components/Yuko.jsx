@@ -1,32 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import yuko from '../../public/yuko2.png';
-import { auth, db, doc, getDoc } from '../../firebase/firebase';
+import React, { useState, useEffect } from "react";
+import yuko from "../../public/yuko2.png";
+import { auth, db, doc, getDoc } from "../../firebase/firebase";
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
-import Sidebar from './Sidebar';
+import Sidebar from "./Sidebar";
 import ChatHistory from "./chathistory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import * as pdfjsLib from "pdfjs-dist"; 
-import '../styles/Yuko.css';
+import * as pdfjsLib from "pdfjs-dist";
+import "../styles/Yuko.css";
+import fineTunedData from "../../public/yuko_data.json"; // Ensure this file exists
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.mjs",
   import.meta.url
 ).toString();
 
-
 function Yuko() {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [pdfContent, setPdfContent] = useState("");
-  const [userName, setUserName] = useState('');
+  const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState(null);
 
   // Initialize Gemini API
-  const genAI = new GoogleGenerativeAI("api_key");
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const apiKey = "AIzaSyBiurl2_jlPahPRYP1ht97oRGv7WNq0cT0"; 
+  const genAI = new GoogleGenerativeAI(apiKey);
+
+  
+  const getFineTunedResponse = (input) => {
+    try {
+      const entry = fineTunedData.find(
+        (item) => item.input.toLowerCase() === input.toLowerCase()
+      );
+      return entry ? entry.output : null;
+    } catch (error) {
+      console.error("Error reading fine-tuned dataset:", error);
+      return null;
+    }
+  };
 
   // Load PDF content
   const loadPdf = async () => {
@@ -70,16 +83,16 @@ function Yuko() {
     if (userId) {
       const fetchUserData = async () => {
         try {
-          const userDocRef = doc(db, 'users', userId);
+          const userDocRef = doc(db, "users", userId);
           const userDoc = await getDoc(userDocRef);
 
           if (userDoc.exists()) {
             setUserName(userDoc.data().fname);
           } else {
-            console.log('No such user!');
+            console.log("No such user!");
           }
         } catch (error) {
-          console.error('Error getting user data: ', error);
+          console.error("Error getting user data: ", error);
         }
       };
 
@@ -96,29 +109,51 @@ function Yuko() {
 
     setIsLoading(true);
     try {
-      const prompt =` 
-      You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
-
-      Document Content:
-      ${pdfContent}
-
-      User Query:
-      ${userInput}`;
       
-      const result = await model.generateContent(prompt);
+      const fineTunedResponse = getFineTunedResponse(userInput);
 
-      const responseText = result?.response?.text() || "No response received.";
-      setChatHistory((prev) => [
-        ...prev,
-        { type: "user", message: userInput },
-        { type: "bot", message: responseText },
-      ]);
+      if (fineTunedResponse) {
+        setChatHistory((prev) => [
+          ...prev,
+          { type: "user", message: userInput },
+          { type: "bot", message: fineTunedResponse },
+        ]);
+      } else {
+        // Generate response using the AI generative model
+        const model = await genAI.getGenerativeModel({
+          model: "tunedModels/introductionchat-qke62kuk7mst",
+        });
+
+        const result = await model.startChat({
+          history: [],
+          generationConfig: {
+            maxOutputTokens: 500,
+          },
+        });
+
+        const chatResponse = await result.sendMessageStream(userInput);
+        let responseText = "";
+
+        for await (const chunk of chatResponse.stream) {
+          const chunkText = await chunk.text();
+          responseText += chunkText;
+        }
+
+        setChatHistory((prev) => [
+          ...prev,
+          { type: "user", message: userInput },
+          { type: "bot", message: responseText },
+        ]);
+      }
     } catch (error) {
       console.error("Error sending message:", error);
       setChatHistory((prev) => [
         ...prev,
         { type: "user", message: userInput },
-        { type: "bot", message: "Sorry, I encountered an error while responding." },
+        {
+          type: "bot",
+          message: "Sorry, I encountered an error while responding.",
+        },
       ]);
     } finally {
       setUserInput("");
@@ -133,48 +168,53 @@ function Yuko() {
     }
   };
 
-  const clearChat = () => {
-    setChatHistory([]);
-  };
-
   return (
     <div className="yuko-container">
       <Sidebar />
-      <div className='main'>
+      <div className="main">
         <div className="main-container">
           <span className="yuko-icon">
             <img src={yuko} alt="" />
           </span>
-          <div className='greet'>
-            <p><b><span>Hello, {userName || 'User'}.</span></b></p>
-            <p><b>How may I help?</b></p>
+          <div className="greet">
+            <p>
+              <b>
+                <span>Hello, {userName || "User"}.</span>
+              </b>
+            </p>
+            <p>
+              <b>How may I help?</b>
+            </p>
           </div>
-          <div className='cards'>
+          <div className="cards">
             <ChatHistory chatHistory={chatHistory} />
           </div>
           <div>
-            <div className='main-bottom'>
-              <div className='search-box'>
+            <div className="main-bottom">
+              <div className="search-box">
                 <input
                   type="text"
-                  placeholder='Talk to Yuko...'
+                  placeholder="Talk to Yuko..."
                   value={userInput}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyDown}
                 />
                 <div>
-                  <GrGallery className='img' />
-                  <FaMicrophoneAlt className='img' />
+                  <GrGallery className="img" />
+                  <FaMicrophoneAlt className="img" />
                   <RiSendPlane2Fill
-                    className='img'
-                    id='send'
+                    className="img"
+                    id="send"
                     onClick={sendMessage}
                     disabled={isLoading}
                   />
                 </div>
               </div>
               <div className="bottom-info">
-                <p>Yuko is designed to help and guide users to the best of their abilities. Please do not misuse.</p>
+                <p>
+                  Yuko is designed to help and guide users to the best of their
+                  abilities. Please do not misuse.
+                </p>
               </div>
             </div>
           </div>

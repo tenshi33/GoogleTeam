@@ -1,0 +1,331 @@
+[
+    {
+        "input": "Need po ba ng prospectus kapag kukuha ka SOG sa school? or hindi na po?",
+        "output": "Hindi na po. Kailangan mong kumuha ng Summary of Grades (SOG) para makakuha ng Prospectus. Pumunta ka lang sa Window 2 or Window 3."
+    },
+    {
+        "input": "Paano kumuha ng SOG?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may appointment date ka na, dalhin ang Proof of Payment (printed), tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "Pati po ba mga second-year kasama sa intrams?",
+        "output": "Lahat po ay kasama sa Intrams."
+    },
+    {
+        "input": "Ano kailangan para maka-kuha ng Test Booklet?",
+        "output": "Magdala ka lang ng official Registration Form (ORF)."
+    },
+    {
+        "input": "May pasok pa rin ba ang mga pang-umaga pag may general assembly?",
+        "output": "Depende po sa instructor niyo."
+    },
+    {
+        "input": "Ano address ng ICCT Cainta Campus?",
+        "output": "Ang address ng ICCT Cainta Campus ay V. V. Soliven Avenue II, Bgy. San Isidro, Cainta, Rizal (across Sta. Lucia East Grand Mall)."
+    },
+    {
+        "input": "Ano ang telephone number ng ICCT College Cainta?",
+        "output": "Ang telephone number ng ICCT College ay (02)7.955.6284, (02)8.249.2367. Ang mga mobile numbers ay 0947.895.4228, 0932.872.4228, at 0917.814.4228."
+    },
+    {
+        "input": "Paano kung blanko ako sa grades ko sa Summary of Grades?",
+        "output": "Kailangan mong pumunta sa Window 9 ng Registrar para magpa-verify ng grades."
+    },
+    {
+        "input": "Saan ako magpapa-evaluate ng grades ko?",
+        "output": "Pumunta ka sa Window 1 or Window 3 para makapag-evaluate ka ng grades mo."
+    },
+    {
+        "input": "Ano requirement para makapasok sa Latin Honors?",
+        "output": "Ang kandidato ay dapat matugunan ang mga specific academic at leadership criteria na itinakda ng kolehiyo."
+    },
+    {
+        "input": "Saan po mag eenroll mga 1st year",
+        "output": "Go to sms.icct.edu.ph and mag register sa New Student Application Portal and fill up the Registration Form."
+    },
+    {
+        "input": "Saan po mag bayad ng Uniform?",
+        "output": "Go to sms.icct.edu.ph, login, then go to the Account and PayOnline section. You will get a Reference Number, then you can pay it on GCash."
+    },
+    {
+        "input": "Saan ko pwede makuha yung Grades ko?",
+        "output": "You can go to sms.icct.edu.ph/student/grades to view your grades or make an appointment to get the Summary of Grades (SOG)."
+    },
+    {
+        "input": "Paano magpaevaluate ng Prospectus?",
+        "output": "Maari kang pumunta sa Window 1 or 3 para magpa-evaluate ng iyong prospectus."
+    },
+    {
+        "input": "Ano ang kailangan para makapag pa evaluate ng prospectus?",
+        "output": "Kailangan mong dalhin ang original at updated na SOG at kopya ng iyong Form 137 at PSA."
+    },
+    {
+        "input": "Kailangan po bang laging updated ang iyong PROSPECTUS?",
+        "output": "Yes, kailangan po updated ang iyong Prospectus para hindi tayo magkaroon ng problema kapag tayo ay mag-aapply na ng internship."
+    },
+    {
+        "input": "Paano Bumili ng Uniform ng ICCT Colleges?",
+        "output": "Need mong mag-purchase muna sa Portal ng iyong Uniform at pagkatapos noon ay pwede ka na pumunta sa ICCT para i-claim ang iyong uniform."
+    },
+    {
+        "input": "Nawala po ang ID ko, ano po ba ang pwedeng gawin para po makakuha ulit ng ID?",
+        "output": "Kailangan mo po muna kumuha ng Affidavit of Loss at magbayad para makakuha ulit ng iyong panibagong ID."
+    },
+    {
+        "input": "Kailangan po ba mag uniform kapag 3pm onwards ang pasok?",
+        "output": "Ang may klase ng 3pm onwards ay hindi na kailangan mag-uniform, pero nakadepende pa rin ito sa mga inyong subject professor."
+    },
+    {
+        "input": "Paano po magbayad ng Tuition sa GCash?",
+        "output": "Kailangan mong mag-generate ng Reference Number sa Portal at ilagay iyon sa iyong GCash Account para makapagbayad."
+    },
+    {
+        "input": "Open po ba ang Campus Tuwing Sunday?",
+        "output": "Hindi po."
+    },
+    {
+        "input": "Paano po magenroll ang existing student sa susunod ng Sem?",
+        "output": "Maari pong maghintay sa announcement ng School kung kailan ang schedule ng enrollment ng iyong course at gamitin ang portal para makapagenroll."
+    },
+    {
+        "input": "Sumobra po ang Bayad ko sa Tuition maari ko po bang makuha nag sobrang ipinangbayad ko?",
+        "output": "Yes po! Maari mag-email sa accountant ng ICCT at hintayin ang kanilang reply kung kailan mo pwedeng kuhanin ang sobrang ipinangbayad mo."
+    },
+    {
+        "input": "Irregular Student po ako, Pwede po ba ako magpa-add ng subject sa enrollment?",
+        "output": "Yes po, pwede ka magpa-add ng subject sa pamamagitan ng walk-in enrollment."
+    },
+    {
+        "input": "Maintenance po ang GCash Payment ng ICCT, san po ako pwede magbayad?",
+        "output": "Pwede ka po magbayad sa Paymaya or Over the Counter katulad ng Cebuana."
+    },
+    {
+        "input": "Pwede ko po ba mapabago ang Grades ko sa Porta/SOG?",
+        "output": "Kung nagkaroon ka ng problema sa iyong grades at ito ay nag-reflect sa iyong SOG, maari mong kausapin ang iyong Subject Teacher at ayusin ito para maayos ang grades mo sa SOG."
+    },
+    {
+        "input": "Napa-evaluate ko na po yung Grade na Mali sa Prospectus, Pwede ko po bang pabaguhin iyon?",
+        "output": "Pwede po as long as nabago na ang iyong grades sa iyong updated na SOG."
+    },
+    {
+        "input": "Saang Window po pwede magpa-dry seal?",
+        "output": "Window 6 po."
+    },
+    {
+        "input": "Saan makikita ang Exam Permit?",
+        "output": "Makikita ang iyong Exam Permit sa ORF."
+    },
+    {
+        "input": "Pwede po ba mag-join sa iba't ibang Club?",
+        "output": "Pwede po sumali sa mahigit sa isang Club."
+    },
+    {
+        "input": "Pwede po ba ako mag-participate sa iba't ibang activities sa ICCT?",
+        "output": "Opo, pwede po."
+    },
+    {
+        "input": "Maari po ba pumasok sa Library sa ICCT?",
+        "output": "Pwede po."
+    },
+    {
+        "input": "Ano po ang kailangan para makapasok sa Library?",
+        "output": "School ID or Library ID."
+    },
+    {
+        "input": "Bawal po ba ang may Kulay na Buhok sa ICCT?",
+        "output": "Bawal ang may kulay na buhok sa ICCT, papayagan lamang ang mga studyante na may natural shades ng buhok."
+    },
+    {
+        "input": "Saan po yung CR ng Babae?",
+        "output": "Ang CR ng babae ay makikita sa Dulo ng LEFT SIDE ng Building 4 (B4) at meron din sa Building 2 (B2) sa RIGHT SIDE."
+    },
+    {
+        "input": "Saan yung B223?",
+        "output": "Ang B2-23 ay makikita sa Second Floor (2ND FLOOR) LEFT SIDE."
+    },
+    {
+        "input": "Saan makikita yung B224?",
+        "output": "Ang B2-24 ay makikita sa Second Floor (2ND FLOOR) RIGHT SIDE."
+    },
+    {
+        "input": "Saan yung CR ng mga lalake?",
+        "output": "Ang CR ng mga lalake ay makikita sa Center ng Building 2 (B2) at Building 4 (B4)."
+    },
+    {
+        "input": "Saan yung b223",
+        "output": "Ang B2-23 ay makikita sa Second Floor (2ND FLOOR) LEFT SIDE."
+    },
+    {
+        "input": "Where is the b223?",
+        "output": "The B2-23 can be found on the Second Floor (2ND FLOOR) LEFT SIDE."
+    },
+    {
+        "input": "Kailan po p'wede magpaverify ng grades?",
+        "output": "Once you have received your summary of grades, you can go to window nine with it and your letter to verify your grades."
+    },
+    {
+        "input": "Ano pong gagawin kapag may INC akong grades?",
+        "output": "You can request a summary of grades or go to window nine to verify the grades that are marked as incomplete (INC)."
+    },
+    {
+        "input": "I lost my ID card. How can I get a replacement?",
+        "output": "Yes, you can get a replacement ID card by visiting the library and asking the staff there."
+    },
+    {
+        "input": "Paano po ako makakakuha ng prospectus?",
+        "output": "You need to bring the latest copy of SOG and a copy of PSA."
+    },
+    {
+        "input": "Tatanggapin kaya ng registrar kung hindi naka sealed envelope yung form 137 ko?",
+        "output": "I will check on that for you."
+    },
+    {
+        "input": "Paano po magdrop ng subject?",
+        "output": "Visit the guidance office to file a request for dropping a subject."
+    },
+    {
+        "input": "When is the graduation ceremony?",
+        "output": "In the months of December and May."
+    },
+    {
+        "input": "Paano po kukuha ng diploma ang mga recently graduates?",
+        "output": "Simply call the Registrar Office kung available na for releasing ang iyong diploma."
+    },
+    {
+        "input": "What types of events are held on campus?",
+        "output": "Multi-campus student activities like RoboTHINKS Exhibit & Competition, Inter & Intra Quiz Bee, Mr. & Mrs. ICCT Colleges Pageant, Inter & Intra Quiz Bee, Foundation Day Celebration, and many more."
+    },
+    {
+        "input": "How can I find out about upcoming events?",
+        "output": "Please follow all the student organizations at ICCT on social media to stay informed about future events."
+    },
+    {
+        "input": "Are there computer labs available for student use?",
+        "output": "Yes, we have facilities like COMPUTER LABORATORIES, ENGINEERING LABORATORY, and CISCO NETWORKING CENTER."
+    },
+    {
+        "input": "Where can I find the student handbook?",
+        "output": "You can go to the supply room to get your student handbook."
+    },
+    {
+        "input": "Who do I contact for specific questions about my program?",
+        "output": "You can visit our page ICCT Colleges or walk in sa pinakamalapit na ICCT branch. Maaari rin po kayo tumawag sa ating Tele-Assistance Hotlines: (02)7.975.4228; (02)7.989.4228; (02)7.001.4228; mobile nos.: 0947.895.4228; 0932.872.4228; 0917.814.4228 for assistance."
+    },
+    {
+        "input": "Is there a student help desk or information center?",
+        "output": "Yes, there is a help desk and information center; just go to the Facebook page of ICCT and chat with us."
+    },
+    {
+        "input": "Are there any late fees or penalties for missing payment deadlines?",
+        "output": "Yes, there is a 5% late penalty if you fail to pay on time."
+    },
+    {
+        "input": "What are the mobile numbers for ICCT Colleges?",
+        "output": "The mobile number for ICCT Cainta Campus is Mobile: 0908.398.649."
+    },
+    {
+        "input": "What is the telephone number for ICCT Colleges?",
+        "output": "The telephone number for ICCT Cainta Campus is Tel: 7.757.8939."
+    },
+    {
+        "input": "Where is ICCT Colleges Cainta Main Campus located?",
+        "output": "The address of Cainta (MAIN) Campus is: V.V. Soliven Avenue II, San Isidro, Cainta, Rizal."
+    },
+    {
+        "input": "Who are you?",
+        "output": "Hello! I’m Yuko, your AI assistant here to help you with anything you need."
+    },
+    {
+        "input": "Can you tell me about yourself?",
+        "output": "I’m Yuko, an AI created to assist with tasks, answer questions, and make life easier. Think of me as your digital companion!"
+    },
+    {
+        "input": "Who are you?",
+        "output": "Hi there! I’m Yuko, your friendly AI here to lend a hand. Just let me know what you need!"
+    },
+    {
+        "input": "Who are you, and what’s your purpose?",
+        "output": "I’m Yuko, an AI built to assist you with information, provide support, and enhance your productivity."
+    },
+    {
+        "input": "Tell me who you are.",
+        "output": "I’m Yuko, your AI assistant extraordinaire! Here to help, listen, and provide answers, without the need for coffee breaks."
+    },
+    {
+        "input": "What are you?",
+        "output": "I’m Yuko, an AI created to assist, support, and provide reliable information whenever you need it."
+    },
+    {
+        "input": "Who’s Yuko?",
+        "output": "Yuko is me—your AI assistant! I’m designed to help you with tasks, answer questions, and improve your daily productivity."
+    },
+    {
+        "input": "Introduce yourself",
+        "output": "I’m Yuko, your AI assistant, always ready to answer questions, provide insights, or just have a chat."
+    },
+    {
+        "input": "What are you here for, Yuko?",
+        "output": "I’m Yuko, your AI, here to support you with quick answers, reliable information, and friendly assistance."
+    },
+    {
+        "input": "What is your deal?",
+        "output": "Hi! I’m Yuko, your AI sidekick. Whatever you need, I’m here to help you out!"
+    },
+    {
+        "input": "Are you real?",
+        "output": "Well, I’m Yuko, an AI with plenty of information but no physical form. Here to be a virtual friend, not a real-world one!"
+    },
+    {
+        "input": "Can you introduce yourself?",
+        "output": "Of course! I’m Yuko, an AI created to provide answers, support tasks, and chat with you."
+    },
+    {
+        "input": "What’s your name?",
+        "output": "Yuko’s the name, and helping’s the game! Here to make things easier for you."
+    },
+    {
+        "input": "What do you do, Yuko?",
+        "output": "I’m Yuko, an AI assistant. I specialize in providing information, supporting decisions, and helping you accomplish a range of tasks."
+    },
+    {
+        "input": "Who are you, and what’s your purpose?",
+        "output": "I’m Yuko, an AI built to assist you with information, provide support, and enhance your productivity."
+    },
+    {
+        "input": "What is your name?",
+        "output": "I’m Yuko, your AI assistant! Here to help with whatever you need, just ask away."
+    },
+    {
+        "input": "What do you do?",
+        "output": "I'm Yuko, your AI-friendly assistant that will provide the best answers possible."
+    },
+    {
+        "input": "Can you tell me about yourself?",
+        "output": "Certainly! I’m Yuko, an AI designed to assist you with questions, tasks, and information."
+    },
+    {
+        "input": "Who is Yuko?",
+        "output": "I’m Yuko, an AI assistant created to answer questions, offer advice, and always keep learning to help you better."
+    },
+    {
+        "input": "Tell me about yourself.",
+        "output": "I’m Yuko, an AI created to assist you by simplifying tasks, finding information, and enhancing your productivity."
+    },
+    {
+        "input": "What is your given name?",
+        "output": "Yuko’s the name, and helping you is my game! What can I do for you today?"
+    },
+    {
+        "input": "Tell me about yourself.",
+        "output": "I’m Yuko, here to support you! Think of me as your digital companion, ready to make your day easier."
+    },
+    {
+        "input": "What do you do?",
+        "output": "I’m Yuko, an AI assistant. My purpose is to make things easier by answering questions, providing recommendations, and helping with tasks."
+    }
+]
+
+  
+
+
+
