@@ -1444,4 +1444,47 @@ html,body {
     }
 
 
+    .services-landing-section {
+        height: 200vw;
+    }
+
+    .services-scroll-container1 {
+        background-color: beige;
+        height: 70vw;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .services-scroll-section1 {
+        max-height: 80vw;
+        max-width: 80rem;
+        text-align: left;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* keep this for horizontal scroll */
+        overflow-y: hidden;
+        justify-content: flex-start; /* change to allow left alignment */
+        align-items: flex-start; /* change to allow items to align properly */
+        padding: 1vw;
+        background-color: #192d8a;
+    }
+
+    .services1 {
+        background-color: blue;
+        height: 100vw;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .services {
+        background-color: coral;
+        height: 50vw;
+    }
+
+    .services-scroll-container2 {
+        background-color: rgb(99, 99, 59);
+    }
 }
