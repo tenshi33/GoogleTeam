@@ -239,7 +239,10 @@ function Yuko() {
             <p><b>How may I help?</b></p>
           </div>
           <div className="cards">
-            <ChatHistory chatHistory={chatHistory} />
+            {/*Prompt cards here */}
+          </div>
+          <div className='message-container'>
+          <ChatHistory chatHistory={chatHistory} />
           </div>
           <div>
             <div className="main-bottom">
