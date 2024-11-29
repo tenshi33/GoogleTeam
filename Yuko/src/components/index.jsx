@@ -124,7 +124,7 @@ function Landing() {
                             {/*DEVELOPER 1 INFOS*/}
                             <div className='first-dev-infos'>
                                 <p className='first-dev-name'>Angelo Egwaras</p>
-                                <p className='first-dev-description'>"Scrum Master/Project Manager"</p>
+                                <p className='first-dev-description'>Project Manager</p>
                             </div>
                         </div>
 
