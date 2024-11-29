@@ -1303,7 +1303,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 22vw;
+        margin-top: 20vw;
     }
 
     .fourth-dev-shape-outline {
@@ -1347,7 +1347,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 20vw;
+        margin-top: 21vw;
     }
 
     .fifth-dev-shape-outline {
@@ -1420,8 +1420,8 @@ html,body {
     
     .sixth-dev-name {
         font-size: 4.5vw;
-        margin-left: -18vw;
-        width: 40vw;
+        margin-left: -13vw;
+        width: 35vw;
     }
     
     .sixth-dev-description {
