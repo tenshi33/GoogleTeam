@@ -124,7 +124,7 @@ function Landing() {
                             {/*DEVELOPER 1 INFOS*/}
                             <div className='first-dev-infos'>
                                 <p className='first-dev-name'>Angelo Egwaras</p>
-                                <p className='first-dev-description'>Project Manager</p>
+                                <p className='first-dev-description'>Scrum Master/Project Manager</p>
                             </div>
                         </div>
 
@@ -168,7 +168,7 @@ function Landing() {
                             {/*DEVELOPER 4 INFOS*/}
                             <div className='fourth-dev-infos'>
                                 <p className='fourth-dev-name'>Faith Calma</p>
-                                <p className='fourth-dev-description'>UI/UX and Front-end Developer</p>
+                                <p className='fourth-dev-description'>UI/UX/Front-end Developer</p>
                             </div>
 
                             {/*DEVELOPER 4 PIC*/}
@@ -200,7 +200,7 @@ function Landing() {
                             {/*DEVELOPER 6 INFOS*/}
                             <div className='sixth-dev-infos'>
                                 <p className='sixth-dev-name'>Ericka Gracelyn De Guzman</p>
-                                <p className='sixth-dev-description'>UI/UX and Front-end Developer</p>
+                                <p className='sixth-dev-description'>UI/UX/Front-end Developer</p>
                             </div>
 
                             {/*DEVELOPER 6 PIC*/}
