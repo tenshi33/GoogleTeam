@@ -1217,23 +1217,25 @@ html,body {
     }
 
     .second-dev-shape-outline {
-        width: 83vw;
+        width: 90vw;
         height: 22vw;
         margin-bottom: 9vw;
-        margin-top: 80vw;
+        margin-top: 84vw;
+        margin-left: 18vw;;
     }
     
     .second-dev-shape-inside {
-        width: 85vw;
+        width: 90vw;
         height: 23vw;
         margin-bottom: 11vw;
-        margin-top: 82vw;
+        margin-top: 87vw;
+        margin-left: 20vw;
     }
 
     .second-dev-pic {
         width: 35vw;
         height: 35vw;
-        margin-left: 8vw;
+        margin-left: -20vw;
         z-index: 1;
     }
     
