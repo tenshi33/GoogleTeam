@@ -1264,20 +1264,20 @@ html,body {
     }
 
     .third-dev-shape-outline {
-        width: 92vw;
+        width: 90vw;
         height: 22vw;
         margin-bottom: 9vw;
         margin-top: 134vw;
-        margin-left: 17vw;
+        margin-left: -4.5vw;
         border-width: 0.5px;
     }
     
     .third-dev-shape-inside {
-        width: 90vw;
+        width: 92vw;
         height: 22vw;
         margin-bottom: 11vw;
         margin-top: 136vw;
-        margin-left: 18.5vw;
+        margin-left: -8vw;
     }
 
     .third-dev-pic {
@@ -1307,11 +1307,11 @@ html,body {
     }
 
     .fourth-dev-shape-outline {
-        width: 90vw;
+        width: 92vw;
         height: 22vw;
         margin-bottom: 9vw;
         margin-top: 183vw;
-        margin-left: 19vw;;
+        margin-left: 17vw;
         border-width: 0.5px;
     }
     
@@ -1320,7 +1320,7 @@ html,body {
         height: 22vw;
         margin-bottom: 11vw;
         margin-top: 185vw;
-        margin-left: 20vw;
+        margin-left: 18.5vw;
     }
 
     .fourth-dev-pic {
@@ -1351,20 +1351,20 @@ html,body {
     }
 
     .fifth-dev-shape-outline {
-        width: 92vw;
+        width: 90vw;
         height: 22vw;
         margin-bottom: 9vw;
         margin-top: 235vw;
-        margin-left: 17vw;
+        margin-left: -4.5vw;
         border-width: 0.5px;
     }
     
     .fifth-dev-shape-inside {
-        width: 90vw;
+        width: 92vw;
         height: 22vw;
         margin-bottom: 11vw;
         margin-top: 237vw;
-        margin-left: 18.5vw;
+        margin-left: -8vw;
     }
 
     .fifth-dev-pic {
@@ -1395,11 +1395,11 @@ html,body {
     }
 
     .sixth-dev-shape-outline {
-        width: 90vw;
+        width: 92w;
         height: 22vw;
         margin-bottom: 9vw;
         margin-top: 288vw;
-        margin-left: 19vw;
+        margin-left: 17vw;
         border-width: 0.5px;
     }
     
@@ -1408,7 +1408,7 @@ html,body {
         height: 22vw;
         margin-bottom: 11vw;
         margin-top: 290vw;
-        margin-left: 20vw;
+        margin-left: 18.5vw;
     }
 
     .sixth-dev-pic {
