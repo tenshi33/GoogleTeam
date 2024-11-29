@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import yuko from '../../public/yuko2.png';
-import { auth, db, doc, getDoc } from '../../firebase/firebase';
+import { auth, db, doc, getDoc, arrayUnion, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
@@ -15,7 +15,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-
 function Yuko() {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
@@ -25,7 +24,7 @@ function Yuko() {
   const [userId, setUserId] = useState(null);
 
   // Initialize Gemini API
-  const genAI = new GoogleGenerativeAI("api_key");
+  const genAI = new GoogleGenerativeAI("AIzaSyAvkJ_zzQFGaLqqyF2oqMoAxW3lxSjoyhM");
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   // Load PDF content
@@ -87,6 +86,23 @@ function Yuko() {
     }
   }, [userId]);
 
+  // Fetch conversation history from Firestore
+  const fetchConversationHistory = async () => {
+    if (!userId) return;
+    
+    try {
+      const convRef = doc(db, 'conversations', userId);
+      const convDoc = await getDoc(convRef);
+      
+      if (convDoc.exists()) {
+        const storedMessages = convDoc.data().messages || [];
+        setChatHistory(storedMessages);
+      }
+    } catch (error) {
+      console.error("Error fetching conversation history:", error);
+    }
+  };
+
   const handleUserInput = (e) => {
     setUserInput(e.target.value);
   };
@@ -95,27 +111,44 @@ function Yuko() {
     if (userInput.trim() === "") return;
 
     setIsLoading(true);
-    try {
-      const prompt =` 
-      You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
 
+    try {
+      // Build prompt using the chat history
+      const previousMessages = chatHistory.map(entry => `${entry.type === "user" ? "User" : "Bot"}: ${entry.message}`).join("\n");
+      const prompt = `You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
+      
+      Previous conversation:
+      ${previousMessages}
+      
       Document Content:
       ${pdfContent}
 
       User Query:
       ${userInput}`;
-      
+
       const result = await model.generateContent(prompt);
 
       const responseText = result?.response?.text() || "No response received.";
-      setChatHistory((prev) => [
-        ...prev,
-        { type: "user", message: userInput },
-        { type: "bot", message: responseText },
-      ]);
+
+      // Update the chat history
+      const newMessage = { type: "user", message: userInput };
+      const botMessage = { type: "bot", message: responseText };
+
+      setChatHistory(prev => [...prev, newMessage, botMessage]);
+
+      // Save the conversation to Firestore
+      if (userId) {
+        const convRef = doc(db, 'conversations', userId);
+        
+        // Use updateDoc instead of setDoc for updating the document
+        await setDoc(convRef, {
+          messages: arrayUnion(newMessage, botMessage)
+        });
+      }
+
     } catch (error) {
       console.error("Error sending message:", error);
-      setChatHistory((prev) => [
+      setChatHistory(prev => [
         ...prev,
         { type: "user", message: userInput },
         { type: "bot", message: "Sorry, I encountered an error while responding." },
@@ -135,18 +168,37 @@ function Yuko() {
 
   const clearChat = () => {
     setChatHistory([]);
+    if (userId) {
+      const convRef = doc(db, 'conversations', userId);
+      setDoc(convRef, { messages: [] }, { merge: true });
+    }
   };
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserId(user.uid);
+        setChatHistory([]);  // Clear the chat UI when the user logs in
+      } else {
+        setUserId(null);
+        setChatHistory([]);  // Clear chat UI if the user logs out
+      }
+    });
+  
+    return () => unsubscribe();
+  }, []);
+    
 
   return (
     <div className="yuko-container">
-      <Sidebar />
+      <Sidebar clearChat={clearChat} />
       <div className='main'>
         <div className="main-container">
           <span className="yuko-icon">
             <img src={yuko} alt="" />
           </span>
           <div className='greet'>
-            <p><b><span>Hello, {userName || 'User'}.</span></b></p>
+            <p><b><span>Hello, {userName || '..'}.</span></b></p>
             <p><b>How may I help?</b></p>
           </div>
           <div className='cards'>
