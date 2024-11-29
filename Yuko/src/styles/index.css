@@ -1176,7 +1176,7 @@ html,body {
     }
 
     .first-dev-shape-outline {
-        width: 85vw;
+        width: 88vw;
         height: 22vw;
         margin-bottom: 9vw;
         margin-top: 33vw;
@@ -1185,11 +1185,11 @@ html,body {
     }
     
     .first-dev-shape-inside {
-        width: 87vw;
+        width: 88vw;
         height: 22vw;
         margin-bottom: 11vw;
         margin-top: 35vw;
-        margin-left: -6vw;
+        margin-left: -4.5vw;
     }
 
     .first-dev-pic {
