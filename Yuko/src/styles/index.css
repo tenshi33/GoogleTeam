@@ -1172,7 +1172,7 @@ html,body {
         width: 63vw;
         height: 20vw;
         margin-bottom: 9vw;
-        margin-top: 24vw;
+        margin-top: 25vw;
     }
 
     .first-dev-shape-outline {
@@ -1195,6 +1195,7 @@ html,body {
         width: 35vw;
         height: 35vw;
         margin-left: 4vw;
+        margin-right: 1vw;
         z-index: 1;
     }
     
@@ -1282,6 +1283,7 @@ html,body {
         width: 35vw;
         height: 35vw;
         margin-left: 4vw;
+        margin-right: 1vw;
         z-index: 1;
     }
     
@@ -1367,6 +1369,7 @@ html,body {
         width: 35vw;
         height: 35vw;
         margin-left: 4vw;
+        margin-right: 1vw;
         z-index: 1;
     }
     
