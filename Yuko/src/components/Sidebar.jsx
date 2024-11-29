@@ -3,11 +3,12 @@ import "../styles/Sidebar.css";
 import { FaRegMessage } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import menu from "../../public/menu2.png";
-import newchat from "../../public/new-chat2.png";
-import yukotext from "../../public/yuko-icon2.png";
-import { auth } from "../../firebase/firebase";
-import { useNavigate } from "react-router-dom";
+import menuicon from '../../public/brmenu.png';
+import menu from '../../public/menu2.png';
+import newchat from '../../public/new-chat2.png';
+import yukotext from '../../public/yuko-icon2.png';
+import { auth } from '../../firebase/firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ clearChat }) => {
   const [extended, setExtended] = useState(false);
