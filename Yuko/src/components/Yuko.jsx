@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import yuko from '../../public/yuko2.png';
-import { auth, db, doc, getDoc, arrayUnion, setDoc } from '../../firebase/firebase';
+import { auth, db, doc, getDoc, arrayUnion, updateDoc, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiSendPlane2Fill } from "react-icons/ri";
@@ -123,45 +123,61 @@ function Yuko() {
 
   const sendMessage = async () => {
     if (userInput.trim() === "") return;
-
-    setIsLoading(true);
+  
+    setIsLoading(true);  // Show loading indicator
+  
     try {
-      
+      // Check if there is a fine-tuned response for the user input
       const fineTunedResponse = getFineTunedResponse(userInput);
-
+  
+      let botResponse = "";
       if (fineTunedResponse) {
-        setChatHistory((prev) => [
-          ...prev,
-          { type: "user", message: userInput },
-          { type: "bot", message: fineTunedResponse },
-        ]);
+        // If a fine-tuned response exists, use it
+        botResponse = fineTunedResponse;
       } else {
-        // Generate response using the AI generative model
+        // Otherwise, call the generative AI model
         const model = await genAI.getGenerativeModel({
           model: "tunedModels/introductionchat-qke62kuk7mst",
         });
-
+  
         const result = await model.startChat({
           history: [],
           generationConfig: {
             maxOutputTokens: 500,
           },
         });
-
+  
         const chatResponse = await result.sendMessageStream(userInput);
         let responseText = "";
-
+  
         for await (const chunk of chatResponse.stream) {
           const chunkText = await chunk.text();
           responseText += chunkText;
         }
-
-        setChatHistory((prev) => [
-          ...prev,
-          { type: "user", message: userInput },
-          { type: "bot", message: responseText },
-        ]);
+  
+        botResponse = responseText;
       }
+  
+      // Update the chat history in React state
+      setChatHistory((prev) => [
+        ...prev,
+        { type: "user", message: userInput },
+        { type: "bot", message: botResponse },
+      ]);
+  
+      // Save the conversation to Firestore
+      if (userId) {
+        const convRef = doc(db, 'conversations', userId);
+  
+        // Use updateDoc to append messages to the Firestore document
+        await updateDoc(convRef, {
+          messages: arrayUnion(
+            { type: "user", message: userInput },
+            { type: "bot", message: botResponse }
+          ),
+        });
+      }
+  
     } catch (error) {
       console.error("Error sending message:", error);
       setChatHistory(prev => [
@@ -173,10 +189,12 @@ function Yuko() {
         },
       ]);
     } finally {
+      // Clear input field and stop loading
       setUserInput("");
       setIsLoading(false);
     }
   };
+    
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
