@@ -255,8 +255,8 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 55%;
-  left: 2rem;
+  top: 57%;
+  left: 1.3rem;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
@@ -301,7 +301,7 @@ input:-webkit-autofill{
 
 .log-in-form .log-in-button {
   width: 53%;
-  height: 5rem;
+  height: 53px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -310,7 +310,7 @@ input:-webkit-autofill{
   font-weight: bold;
   background: linear-gradient(to right, #380050, #ED0101);
   margin-top: 3.5vw;
-  border-radius: 3rem;
+  border-radius: 2rem;
   transition: background 0.7s ease-in-out;
 }
 
@@ -447,7 +447,7 @@ input:-webkit-autofill{
   }
 
   .log-in-form .forgot-pass-link {
-    margin-top: -0.5em;
+    margin-top: -1em;
     padding-bottom: 30px;
     font-size: 3.5vw;
   }
@@ -485,7 +485,7 @@ input:-webkit-autofill{
     background-color: #ffffff;
     filter: opacity(100%);
     width: 32vw;
-    height: 20vw;
+    height: 17vw;
     border-radius: 1.5em;
     display: flex;
     flex-direction: column;
@@ -502,7 +502,7 @@ input:-webkit-autofill{
 
   .recover-pass .recover-pass-desc {
     font-size: 1vw;
-    width: 27vw;
+    width: 26.8vw;
   }
 
   .recover-pass .recover-pass-email {
