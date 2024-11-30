@@ -23,7 +23,7 @@ html,body {
     height: 5vw;
 }
 
-.nav-bar-menu li{
+.nav-bar-menu i{
     cursor: pointer;
 }
 
@@ -54,9 +54,53 @@ html,body {
     margin-left: 42em;
 }
 
+.nav-home {
+    cursor: pointer;
+}
+
+.nav-home:hover {
+    color: #6563ec;
+    text-shadow: 0vw 0vw 0.7vw #6563ec;
+}
+
+.nav-home:active,
+.nav-features:active,
+.nav-developers:active,
+.nav-contacts:active {
+    font-size: 0.95vw;
+}
+
+.nav-features {
+    cursor: pointer;
+}
+
+.nav-features:hover {
+    color: #b44651;
+    text-shadow: 0vw 0vw 0.7vw #b44651;
+}
+
+.nav-developers {
+    cursor: pointer;
+}
+
+.nav-developers:hover {
+    color: #b34087;
+    text-shadow: 0vw 0vw 0.7vw #b34087;
+}
+
+.nav-contacts {
+    cursor: pointer;
+}
+
+.nav-contacts:hover {
+    color: #193bfc;
+    text-shadow: 0vw 0vw 0.7vw #0727dd;
+}
+
 .nav-divider {
     color: #CC1819;
 }
+
 
 .landing-background-img {
     display: flex;
