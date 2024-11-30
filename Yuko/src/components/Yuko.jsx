@@ -200,11 +200,6 @@ function Yuko() {
     }
   };
     
-  useEffect(() => {
-    if (userInput.trim() !== "") {
-      setIsConversationStarted(false); 
-    }
-  }, [userInput]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -221,6 +216,7 @@ function Yuko() {
 
   const clearChat = () => {
     setChatHistory([]);
+    setIsConversationStarted(false);
   };
 
   useEffect(() => {
