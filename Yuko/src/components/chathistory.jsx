@@ -3,6 +3,7 @@ import "../styles/chathistory.css";
 import { PiUserCircle } from "react-icons/pi"; 
 import yuko from "../../public/yuko2.png"; 
 
+
 const ChatHistory = ({ chatHistory }) => {
   const [visibleMessages, setVisibleMessages] = useState([]);
   const chatHistoryRef = useRef(null);
