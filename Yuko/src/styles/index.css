@@ -820,7 +820,7 @@ html,body {
 }
 
 .horizontal-line {
-    width: 120rem;
+    width: 100%;
     height: 0.1vw
 }
 
