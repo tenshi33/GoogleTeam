@@ -30,6 +30,7 @@ html,body {
 .color-nav {
     background: #0000005e;
     transition: 1s;
+    margin-left: 1vw;
 }
 
 .nav-yuko-logo {
@@ -886,9 +887,9 @@ html,body {
     }
 
     .log-in-button:active {
-        width: 34.9vw;
-        height: 11.9vw;
-        font-size: 3.9vw;
+        width: 34.8vw;
+        height: 11.8vw;
+        font-size: 3.8vw;
     }
 
     .features-landing-section {
