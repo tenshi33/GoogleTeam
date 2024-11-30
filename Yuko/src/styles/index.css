@@ -991,7 +991,8 @@ html,body {
 
     .features-scroll-section {
         max-height: 60vw;
-        width: 83vw;
+        width: 84vw;
+        overflow-x: hidden;
     }
 
     .features-scroll-section .features {
