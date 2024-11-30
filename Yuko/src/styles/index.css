@@ -113,7 +113,7 @@ html,body {
 }
 
 .features-landing-section {
-    background: linear-gradient(to bottom,#6D171E, #1D143E);
+    background: linear-gradient(to bottom,#6D171E, #7C0D52);
     padding: 2vw;
     height: 65vw;
     display: flex;
@@ -228,7 +228,7 @@ html,body {
 }
 
 .dev-landing-section {
-    background: linear-gradient(to bottom,#1D143E, #7C0D52);
+    background: linear-gradient(to bottom,#7C0D52, #07061D);
     height: 155vw;
     display: flex;
     justify-items: center;
@@ -838,7 +838,6 @@ html,body {
 
     .nav-yuko-logo {
         margin-top: 1vw;
-        margin-left: 7vw; /* Reset margin-left to avoid offset */
         width: 25em;
     }
     
@@ -883,7 +882,6 @@ html,body {
     }
 
     .features-landing-section {
-        background: linear-gradient(to bottom,#b61212, #1D143E);
         padding: 0;
         height: 560vw;
     }
@@ -912,7 +910,6 @@ html,body {
         font-size: 8vw;
         width: 85vw;
         margin-bottom: 0;
-        margin-left: 7vw;
     }
 
     .features-top-left-decscription {
@@ -921,7 +918,6 @@ html,body {
         width: 84vw;
         color: white;
         height: 45vw;
-        margin-left: 7vw;
     }
 
     .feature-section-divider {
@@ -962,7 +958,7 @@ html,body {
     }
 
     .dev-landing-section {
-        height: 380vw;
+        height: 360vw;
         overflow: hidden;
     }
 
@@ -1241,4 +1237,106 @@ html,body {
         margin-top: 0.5vw;
         margin-left: -23vw;
     }
+
+    .landing-footer-section {
+        background: #07061D;
+        height: 50vw;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        margin-top: -0.5vw;
+        padding: 3vw;
+    }
+
+    .contacts-landing {
+        gap: 5.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .footer-left {
+        width: 25vw;
+        height: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        gap: 0.5vw;
+        margin-left: -3vw;
+        margin-right: 8vw;
+    }
+    
+    .footer-left .footer-yuko-logo {
+        width: 25vw;
+        margin-right: 25vw;
+    }
+
+    .ai-description-footer {
+        font-size: 2vw;
+        margin-top: 1vw;
+    }
+    
+    .footer-other-pages {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        height: 30vw;
+    }
+    
+    .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        align-self: start;
+    }
+    
+    .quick-links-title,
+    .contacts-title {
+        font-size: 3.7vw;
+        font-weight: 700;
+        margin-bottom: 1vw;
+    }
+    
+    .footer-links {
+        text-decoration: none;
+        color: white;
+        font-family: 'Arial';
+        font-size: 2.5vw;
+        margin-top: 0.5vw;
+        margin-bottom: 1vw;
+    }
+
+    .footer-socials {
+        display: flex;
+        flex-direction: row;
+        justify-items: left;
+        align-content: left;
+        gap: 0.7vw;
+    }
+    
+    .horizontal-line {
+        height: 0.1vw;
+        width: 90vw;
+        background-color: white;
+        margin-left: 2vw;
+    }
+    
+    .last-section {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        margin-top: 1vw;
+        z-index: 0;
+        justify-content: space-between;
+        gap: 10vw;
+        width: 90vw;
+        margin-left: 2vw;
+    }
+
+    .copyrights {
+        width: 100%;
+        margin-top: 2vw;
+        font-size: 2.4vw;
+        text-align: center;
+    }
+
 }   

@@ -226,7 +226,6 @@ function Landing() {
                             <a className='footer-links' href='#'>Home</a>
                             <a className='footer-links' href='#'>Features</a>
                             <a className='footer-links' href='#'>Developers</a>
-                            <a className='footer-links' href='#'>Services</a>
                             <a className='footer-links' href='#'>Contacts</a>
                         </div>
                         
@@ -243,11 +242,6 @@ function Landing() {
                     <div className='last-section'>
                         <div className='copyrights'>
                             copyrights @2024 chuchu
-                        </div>
-                        <div className='footer-socials'>
-                            <i>mail</i>
-                            <i>facebook</i>
-                            <i>LinkedIn</i>
                         </div>
                     </div>
                 </section>
