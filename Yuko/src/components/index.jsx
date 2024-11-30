@@ -25,6 +25,8 @@ function Landing() {
         }
     };
 
+    let date = new Date().getFullYear();
+
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
@@ -246,9 +248,9 @@ function Landing() {
                     
                     <div className='horizontal-line'></div>
                     <div className='last-section'>
-                        <div className='copyrights'>
-                            copyrights @2024 chuchu
-                        </div>
+                        <p className='copyrights'>
+                         Copyrights &copy; {date}{" "} JNA Tech Solution. All Right Reserved.
+                        </p>
                     </div>
                 </section>
             </div>

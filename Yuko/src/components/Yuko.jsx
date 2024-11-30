@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import yuko from '../../public/yuko2.png';
 import { auth, db, doc, getDoc, arrayUnion, updateDoc, setDoc } from '../../firebase/firebase';
 import { GrGallery } from "react-icons/gr";
@@ -24,6 +24,8 @@ function Yuko() {
   const [pdfContent, setPdfContent] = useState("");
   const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState(null);
+  const chatHistoryRef = useRef(null);
+  const [isConversationStarted, setIsConversationStarted] = useState(false);
 
   // Initialize Gemini API
   const apiKey = "AIzaSyBiurl2_jlPahPRYP1ht97oRGv7WNq0cT0"; 
@@ -163,8 +165,10 @@ function Yuko() {
       setChatHistory((prev) => [
         ...prev,
         { type: "user", message: userInput },
-        { type: "bot", message: botResponse },
+        { type: "bot", message: botResponse, typing: true },
       ]);
+
+      setIsConversationStarted(true);
   
       // Save the conversation to Firestore
       if (userId) {
@@ -196,6 +200,11 @@ function Yuko() {
     }
   };
     
+  useEffect(() => {
+    if (userInput.trim() !== "") {
+      setIsConversationStarted(false); 
+    }
+  }, [userInput]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -204,12 +213,14 @@ function Yuko() {
     }
   };
 
+  useEffect(() => {
+    if (chatHistoryRef.current) {
+      chatHistoryRef.current.scrollTop = chatHistoryRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
+
   const clearChat = () => {
     setChatHistory([]);
-    if (userId) {
-      const convRef = doc(db, 'conversations', userId);
-      setDoc(convRef, { messages: [] }, { merge: true });
-    }
   };
 
   useEffect(() => {
@@ -232,13 +243,17 @@ function Yuko() {
       <Sidebar clearChat={clearChat} />
       <div className='main'>
         <div className="main-container">
-          <span className="yuko-icon">
-            <img src={yuko} alt="" />
-          </span>
-          <div className='greet'>
-            <p><b><span>Hello, {userName || '..'}.</span></b></p>
-            <p><b>How may I help?</b></p>
-          </div>
+        {!isConversationStarted && (
+            <div>
+              <span className="yuko-icon">
+                <img src={yuko} alt="Yuko logo" />
+              </span>
+              <div className='greet'>
+                <p><b><span>Hello, {userName || '..'}.</span></b></p>
+                <p><b>How may I help?</b></p>
+              </div>
+            </div>
+          )}
           <div className="cards">
             {/*Prompt cards here */}
           </div>
