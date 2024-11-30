@@ -426,7 +426,7 @@ input:-webkit-autofill{
     height: 5vw;
     top: 42%;
     font-size: 4.9vw;
-    margin-left: 1vw;
+    margin-left: -1vw;
   }
 
   .log-in-form .show-user-pass {
