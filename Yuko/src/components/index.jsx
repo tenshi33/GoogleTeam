@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css'
 
@@ -12,6 +12,19 @@ function Landing() {
             })
         },[])
 
+        // Creating refs for each section
+    const homeRef = useRef(null);
+    const featuresRef = useRef(null);
+    const developersRef = useRef(null);
+    const contactsRef = useRef(null);
+
+    // Scroll function
+    const scrollToSection = (sectionRef) => {
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
@@ -21,25 +34,23 @@ function Landing() {
                 <nav className={`nav-bar-container ${sticky? 'color-nav' : ''}`}>
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                     <ul className='nav-bar-menu'>
-                        <li className='nav-home'>HOME</li>
+                        <li className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
                         <li className='nav-divider'>|</li>
-                        <li className='nav-features'>FEATURES</li>
+                        <li className='nav-features' onClick={() => scrollToSection(featuresRef)}>FEATURES</li>
                         <li className='nav-divider'>|</li>
-                        <li className='nav-developers'>DEVELOPERS</li>
+                        <li className='nav-developers' onClick={() => scrollToSection(developersRef)}>DEVELOPERS</li>
                         <li className='nav-divider'>|</li>
-                        <li className='nav-services'>OUR SERVICES</li>
-                        <li className='nav-divider'>|</li>
-                        <li className='nav-contacts'>CONTACTS</li>
+                        <li className='nav-contacts' onClick={() => scrollToSection(contactsRef)}>CONTACTS</li>
                     </ul>
                 </nav>
 
                 {/*HOME SECTION IN LANDING PAGE*/}
-                <section id='home' className='home-landing-section'>
+                <section id='home' className='home-landing-section' ref={homeRef}>
                     <div className='home-landing'>
                         {/*BACKGROUND IMAGE OF LANDING PAGE*/}
                         <img src='background.png' className='landing-background-img' alt='Background Image'/>
                         {/*HOME SECTION CONTENTS*/}
-                        <div className='landing-home-content'>
+                        <div className='landing-home-content' >
                             <h1 className='home-yuko-title'>YUKO</h1>
                             <p className='home-yuko-description'>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -54,7 +65,7 @@ function Landing() {
                 </section>
                 
                 {/*FEATURES SECTION IN LANDING PAGE*/}
-                <section id='features' className='features-landing-section'>
+                <section id='features' ref={featuresRef} className='features-landing-section'>
                     <div className='features-landing'>
                         {/*FEATURES TOP-LEFT SIDE*/}
                         <div className='features-top'>
@@ -109,7 +120,7 @@ function Landing() {
                 </section>
 
                 {/*DEVELOPERS SECTION IN LANDING PAGE*/}
-                <section id='developers' className='dev-landing-section'>
+                <section id='developers' ref={developersRef} className='dev-landing-section'>
                     <div className='dev-landing'>
                         {/*DEVELOPERS PAGE TITLE*/}
                         <h1 className='dev-title'>DEVELOPERS</h1>
@@ -209,13 +220,8 @@ function Landing() {
                     </div>
                 </section>
 
-                {/*SERVICES SECTION IN LANDING PAGE*/}
-                <section id='services' className='services-landing-section'>
-                    
 
-                </section>
-
-                <section id='contacts' className='landing-footer-section'>
+                <section id='contacts' ref={contactsRef} className='landing-footer-section'>
                     <div className='contacts-landing'>
                         <div className='footer-left'>
                             <img className='footer-yuko-logo' src='Yuko_logo_text.png' alt='YUKO Logo'/>
@@ -223,10 +229,10 @@ function Landing() {
                         </div>
                         <div className='footer-other-pages'>
                             <p className='quick-links-title'>Quick Links</p>
-                            <a className='footer-links' href='#'>Home</a>
-                            <a className='footer-links' href='#'>Features</a>
-                            <a className='footer-links' href='#'>Developers</a>
-                            <a className='footer-links' href='#'>Contacts</a>
+                            <a className='footer-links' onClick={() => scrollToSection(homeRef)} style={{ cursor: 'pointer' }}>Home</a>
+                            <a className='footer-links' onClick={() => scrollToSection(featuresRef)} style={{ cursor: 'pointer' }}>Features</a>
+                            <a className='footer-links' onClick={() => scrollToSection(developersRef)} style={{ cursor: 'pointer' }}>Developers</a>
+                            <a className='footer-links' onClick={() => scrollToSection(contactsRef)} style={{ cursor: 'pointer' }}>Contacts</a>
                         </div>
                         
                         <div className='footer-contacts'>

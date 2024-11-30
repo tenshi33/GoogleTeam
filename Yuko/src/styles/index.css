@@ -23,6 +23,10 @@ html,body {
     height: 5vw;
 }
 
+.nav-bar-menu li{
+    cursor: pointer;
+}
+
 .color-nav {
     background: #0000005e;
     transition: 1s;
