@@ -255,8 +255,8 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 57%;
-  left: 1rem;
+  top: 3rem;
+  left: 2rem;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
@@ -301,7 +301,7 @@ input:-webkit-autofill{
 
 .log-in-form .log-in-button {
   width: 53%;
-  height: 53px;
+  height: 55rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -310,7 +310,7 @@ input:-webkit-autofill{
   font-weight: bold;
   background: linear-gradient(to right, #380050, #ED0101);
   margin-top: 3.5vw;
-  border-radius: 2rem;
+  border-radius: 3rem;
   transition: background 0.7s ease-in-out;
 }
 
@@ -424,6 +424,7 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper i {
     width: 5vw;
     height: 5vw;
+    margin-left: -1rem;
     top: 42%;
     font-size: 4.9vw;
   }
