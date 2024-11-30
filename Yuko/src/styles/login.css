@@ -224,7 +224,7 @@ body .recover-pass-container {
 .log-in-form .input-wrapper .input-field{
   height: 2.8em;
   width: 100%;
-  padding: 0 1.25em 0 3em;
+  padding: 0 1.25em 0 3.5em;
   border-radius: 1.3rem;
   background-color: transparent;
   border-style: solid;
@@ -256,7 +256,7 @@ input:-webkit-autofill{
   color: rgb(182, 182, 182);
   position: absolute;
   top: 57%;
-  left: 1rem;
+  left: 1.2vw;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
@@ -426,7 +426,7 @@ input:-webkit-autofill{
     height: 5vw;
     top: 42%;
     font-size: 4.9vw;
-    margin-left: -1vw;
+    margin-left: 1vw;
   }
 
   .log-in-form .show-user-pass {
