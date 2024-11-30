@@ -200,12 +200,39 @@ html,body {
     width: 43vw;
 }
 
+.features-pic-odd {
+    width: 15vw;
+}
+
+.features-title-odd {
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+
+.features-description-odd {
+    font-size: 1vw;
+}
+
+.features-pic-even {
+    width: 35vw;
+}
+
+.features-title-even {
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+
+.features-description-even {
+    font-size: 1vw;
+}
+
+
 .features-scroll-section::-webkit-scrollbar {
     background-color: transparent;
 }
 
 .features-scroll-section::-webkit-scrollbar-thumb:hover{
-    background-color: rgba(121, 28, 28, 0.616);
+    background-color: rgba(196, 3, 3, 0.616);
     border-radius: 2vw;
 }
 
