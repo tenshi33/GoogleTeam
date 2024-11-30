@@ -129,14 +129,16 @@
   }
 
 .main-bottom{
-    position: absolute;
-    bottom: 0; 
+    position: fixed; /* Fixes the element to the viewport */
+    bottom: 0; /* Positions it at the bottom of the viewport */
     left: 50%; 
     transform: translateX(-50%); 
     width: 100%; 
     max-width: 50vw; 
     padding: 1.5vh 1vw; 
     margin: 0; 
+    background-color: #ffffff; 
+    z-index: 1000; 
 }
 
 .main .search-box-container{
