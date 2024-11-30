@@ -962,10 +962,11 @@ html,body {
     }
 
     .features-first-section {
-        width: 100%;
+        width: 90%;
         height: 60vw;
         align-items: center;
         justify-items: center;
+        margin-bottom: 6vw;
     }
 
     .feature-title {
