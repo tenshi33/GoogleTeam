@@ -293,24 +293,26 @@ input.privacy-policy-check {
 }
 
 @media only screen and (max-width: 500px) {
+  
   .sign-up-form {
     background-color: transparent  ;
     filter: opacity(85%);
     display: flex;
     box-shadow: none;
-    margin-top: -.1rem;
-    height: 50rem;
-    width: 23rem;
-    gap: .5rem;
+    height: 160vw;
+    width: 100vw;
+    gap: 2vw;
   }
   
+
+
   .sign-up-form .fname-signup-wrapper {
     height: 10vw;
-    width: 20rem;
+    width: 82vw;
   }
 
   .sign-up-form .fname-signup-wrapper .fname-input-field {
-    height: 2.4rem;
+    height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
     border-radius: 1.3rem;
@@ -329,11 +331,11 @@ input.privacy-policy-check {
 
   .sign-up-form .lname-signup-wrapper {
     height: 10vw;
-    width: 20rem;
+    width: 82vw;
   }
 
   .sign-up-form .lname-signup-wrapper .lname-input-field {
-    height: 2.4rem;
+    height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
     border-radius: 1.3rem;
@@ -352,7 +354,7 @@ input.privacy-policy-check {
 
   .sign-up-form .studnum-course-wrapper {
     height: 10vw;
-    width: 20rem;
+    width: 82vw;
     position: relative;
     margin-top: 0.8vw;
     display: flex;
@@ -362,8 +364,8 @@ input.privacy-policy-check {
   }
  
   .sign-up-form .studnum-course-wrapper .studnum-input-field {
-    height: 100%;
-    width: 9.6rem;
+    height: 11vw;
+    width: 39.4vw;
     border-radius: 1.3rem;
     background-color: transparent;
     border-style: solid;
@@ -380,8 +382,8 @@ input.privacy-policy-check {
   }
   
   .sign-up-form .course-signup-wrapper .course-input-field {
-    height: 2.4rem;
-    width: 9.6em;
+    height: 11vw;
+    width: 39.4vw;
     border-radius: 1.3rem;
     background-color: transparent;
     border-style: solid;
@@ -398,11 +400,11 @@ input.privacy-policy-check {
 
   .sign-up-form .email-signup-wrapper {
     height: 10vw;
-    width: 20rem;
+    width: 82vw;
   }
 
   .sign-up-form .email-signup-wrapper .email-input-field {
-    height: 2.4rem;
+    height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
     border-radius: 1.3rem;
@@ -421,11 +423,11 @@ input.privacy-policy-check {
 
   .sign-up-form .pass-signup-wrapper {
     height: 10vw;
-    width: 20rem;
+    width: 82vw;
   }
 
   .sign-up-form .pass-signup-wrapper .pass-input-field {
-    height: 2.4rem;
+    height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
     border-radius: 1.3rem;
@@ -443,9 +445,9 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .show-new-user-pass {
-    font-size: .8rem;
-    left: 17rem;
-    top: 1.4rem;
+    font-size: 3vw;
+    left: 70vw;
+    top: 6vw;
   }
 
   .sign-up-container .signup-title{
@@ -458,7 +460,7 @@ input.privacy-policy-check {
   }
    
   .sign-up-form .privacy-policy  {
-  width: 15rem;
+  width: 70vw;
   display: flex;
   justify-content: left;
   align-items: left;
@@ -467,7 +469,7 @@ input.privacy-policy-check {
   font-size: 0.9rem;
   font-family: Arial;
   gap: 0.3vw;
-  margin-left: -4rem;
+  margin-left: -5vw;
     
   }
 
@@ -479,23 +481,31 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .signup-button{
-    font-size: 1.5rem;
-    height: 3rem;
-    width: 12rem;
+    font-size: 7vw;
+    height: 13vw;
+    width: 50vw;
   }
 
   .sign-up-form .have-account-text {
-    font-size: 1rem;
-    width: 20rem;
-    margin-top: 10rem;
+    font-size: 4vw;
+    width: 70vw;
+    margin-top: 10vw;
   }
 
   .sign-up-form .sign-in-button {
-    width: 4rem;
+    width: 14vw;
   }
+  
   .sign-up-container {
-    background-color: transparent;
-    height: 50rem;
+    min-width: 100%; 
+    margin: auto;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem ;
+    display: flex;
+    gap: 1.31vw;
+    overflow-Y: hidden;
   }
 
   .fname-input-field ::placeholder {
