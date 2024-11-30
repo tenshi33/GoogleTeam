@@ -820,6 +820,7 @@ html,body {
 }
 
 .horizontal-line {
+    margin-left: -1vw;
     width: 100%;
     height: 0.1vw
 }
