@@ -940,8 +940,40 @@ html,body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 43vw;
+        width: 79vw;
     }
+
+    .features-pic-odd {
+        width: 32vw;
+        margin: 1vw;
+    }
+
+    .features-pic-even {
+        width: 32vw;
+        margin: 1vw;
+    }
+
+
+    .features-title-odd {
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+
+    .features-title-even {
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+
+    .features-description-odd {
+        font-size: 2.5vw;
+    }
+
+    .features-description-even {
+        font-size: 2.5vw;
+    }
+
+
+
 
     .features-bottom {
         display: flex;
