@@ -958,7 +958,7 @@ html,body {
     .features-scroll-section .features {
         border: solid;
         border-color: rgb(255, 255, 255);
-        border-width: 0.1rem;
+        border-width: 0.5px;
         border-radius: 1.3rem;
         padding: 1.5vw;
         display: flex;
