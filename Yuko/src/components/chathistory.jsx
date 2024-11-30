@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import '../styles/chathistory.css';
 
 const ChatHistory = ({ chatHistory }) => {
+  const [visibleMessages, setVisibleMessages] = useState([]);
+  const chatHistoryRef = useRef(null);
+  
+  useEffect(() => {
+    const lastMessage = chatHistory[chatHistory.length - 1];
+    if (lastMessage && lastMessage.type === "bot" && lastMessage.typing) {
+      let i = 0;
+      const typingMessage = lastMessage.message;
+      setVisibleMessages([ ...chatHistory.slice(0, -1), { ...lastMessage, message: "" } ]);
+
+      const typingInterval = setInterval(() => {
+        if (i < typingMessage.length) {
+          setVisibleMessages((prevMessages) => [
+            ...prevMessages.slice(0, -1),
+            { ...lastMessage, message: typingMessage.slice(0, i + 1) }
+          ]);
+          i++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 30); // Adjust speed here of the typing style of bot
+    }
+  }, [chatHistory]);
+
   return (
-    <div className="chat-history mb-4 h-80 overflow-auto">
-      {chatHistory.map((entry, index) => (
+    <div className="chat-history mb-4 h-80 overflow-auto" ref={chatHistoryRef}>
+      {visibleMessages.map((entry, index) => (
         <div
           key={index}
           className={`message ${entry.type === "user" ? "text-right" : "text-left"}`}
