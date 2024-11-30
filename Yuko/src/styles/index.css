@@ -1334,7 +1334,7 @@ html,body {
 
     .landing-footer-section {
         background: #07061D;
-        height: 50vw;
+        height: 60vw;
         display: flex;
         justify-items: center;
         flex-direction: column;
@@ -1361,7 +1361,7 @@ html,body {
     
     .footer-left .footer-yuko-logo {
         width: 25vw;
-        margin-right: 25vw;
+        margin-right: 20vw;
     }
 
     .ai-description-footer {
