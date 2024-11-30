@@ -256,7 +256,7 @@ input:-webkit-autofill{
   color: rgb(182, 182, 182);
   position: absolute;
   top: 57%;
-  left: 1.5rem;
+  left: 1.2rem;
   font-size: 1.3vw;
   pointer-events: none;
   transform: translateY(-65%);
