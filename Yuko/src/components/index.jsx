@@ -30,6 +30,7 @@ function Landing() {
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 
             <div className='landing-page'>
                 {/*HEADER OF LANDING PAGE*/}
@@ -47,6 +48,12 @@ function Landing() {
                                 <li href='#' className='nav-contacts' onClick={() => scrollToSection(contactsRef)}>CONTACTS</li>
                             </div>
                         </ul>
+
+                        <button id='hamburger-toggle' className='hamburger'>
+                            <i class="material-symbols-outlined">
+                                menu
+                            </i>
+                        </button>
                 </nav>
 
                 {/*HOME SECTION IN LANDING PAGE*/}
