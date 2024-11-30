@@ -30,7 +30,7 @@ html,body {
 .color-nav {
     background: #0000005e;
     transition: 1s;
-    margin-left: 1.3vw;
+    margin-left: 0.9vw;
 }
 
 .nav-yuko-logo {
@@ -820,7 +820,7 @@ html,body {
 }
 
 .horizontal-line {
-    margin-left: -1vw;
+    margin-left: 1vw;
     width: 100%;
     height: 0.1vw
 }
