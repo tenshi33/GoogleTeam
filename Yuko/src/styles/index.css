@@ -885,6 +885,12 @@ html,body {
         padding: 0; /* Ensure no extra padding */
     }
 
+    .log-in-button:active {
+        width: 34.9vw;
+        height: 11.9vw;
+        font-size: 3.9vw;
+    }
+
     .features-landing-section {
         padding: 0;
         height: 560vw;
