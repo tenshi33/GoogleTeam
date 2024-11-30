@@ -30,7 +30,7 @@ html,body {
 .color-nav {
     background: #0000005e;
     transition: 1s;
-    margin-left: 1vw;
+    margin-left: 1.3vw;
 }
 
 .nav-yuko-logo {
@@ -768,6 +768,7 @@ html,body {
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
+    height: 10vw;
 }
 
 .footer-contacts {
@@ -816,6 +817,18 @@ html,body {
     gap: 10vw;
     width: 90vw;
     margin-left: 2vw;
+}
+
+.horizontal-line {
+    width: 163rem;
+    height: 0.1vw
+}
+
+.copyrights {
+    width: 100%;
+    margin-top: 0.5vw;
+    font-size: 1vw;
+    text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1292,7 +1305,7 @@ html,body {
     }
 
     .contacts-landing {
-        gap: 5.5vw;
+        gap: 5.8vw;
         margin-bottom: 2vw;
     }
 
