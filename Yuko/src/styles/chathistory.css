@@ -3,6 +3,8 @@
     width: 100vw;
     background-color: #ffffff00;
     border-radius: 0.5rem;
+
+    
 }
 
 @media only screen and (max-width: 500px) {

@@ -86,33 +86,50 @@
 
 .main .message-container{
     display: flex;
+    align-items: center;
     overflow: hidden;
-    justify-content: right;
-    margin-bottom: -1rem;
-    margin-top: 1rem;
+    justify-content: flex-start;
+    margin: 1rem 0;
     width: 47.5vw;
     min-height: 10vw;
     background-color: #ff000000;
 }
 
-.message {
+.message{
     margin: 2rem 0;
     display: flex;
+    flex-direction: row;
   }
   
-  .text-right {
+  .text-right{
     justify-content: flex-end;
   }
   
-  .text-left {
+  .text-left{
     justify-content: flex-start;
+  }
+
+  .message-avatar{
+    position: absolute;
+    right: 27vw;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+    justify-content: flex-end;
+  }
+
+  .yuko-avatar{
+    height: 3rem;
+    margin-right: 1rem;
   }
   
   .text-blue-500 {
+    justify-content: flex-end;
     text-align: left;
     background-color: #d9dfe6;
     color: #322f46;
     padding: 1.5rem 1.5rem;
+    margin-right: 3.5rem;
     border-radius: 0.6rem;
     border-top-right-radius: 0;
     max-width: 70%;
@@ -258,8 +275,8 @@
         display: flex;
         overflow: hidden;
         justify-content: right;
-        width: 85vw;
-        background-color: #0051ff00;
+        width: 94vw;
+        background-color: #ff000000;
     }
     
     .message {
@@ -277,6 +294,7 @@
       
       .text-blue-500 {
         text-align: left;
+        margin-right: 2.4rem;
         background-color: #d9dfe6;
         color: #322f46;
         padding: 1.2rem 1.2rem;
@@ -295,6 +313,20 @@
         max-width: 70%;
       }
 
+      .message-avatar{
+        position: absolute;
+        right: 1.9rem;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 0rem;
+        justify-content: flex-end;
+      }
+    
+      .yuko-avatar{
+        height: 2rem;
+        margin-right: 0.5rem;
+      }
+      
     .main-bottom{
         bottom: 0; 
         left: 50%; 

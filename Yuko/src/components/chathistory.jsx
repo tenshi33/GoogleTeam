@@ -50,7 +50,7 @@ const ChatHistory = ({ chatHistory }) => {
               <img
                 src={yuko}
                 alt="Yuko"
-                className="message-avatar"
+                className="yuko-avatar"
               />
             )}
           </div>
