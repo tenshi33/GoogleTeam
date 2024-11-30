@@ -211,49 +211,6 @@ function Landing() {
 
                 {/*SERVICES SECTION IN LANDING PAGE*/}
                 <section id='services' className='services-landing-section'>
-                    <div className='services-scroll-container1'>
-                        <div className='services-scroll-section1'>
-                            <h1 className='services-our-title'>OUR</h1>
-                            <div className='services1'>
-                                <div className='services'>
-                                    <img className='services-pics' src='https://placehold.co/168x115' alt='feature content picture'></img>
-                                    <div className='first-services-content'>
-                                        <p className='services-title'>First Feature Title</p>
-                                        <p className='services-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    </div>
-                                </div>
-
-                                <div className='services'>
-                                    <img className='services-pics' src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-services-content'>
-                                        <p className='services-title'>First Feature Title</p>
-                                        <p className='services-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    </div>
-                                </div>
-
-                                <div className='services'>
-                                    <img className='services-pics' src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-services-content'>
-                                        <p className='services-title'>First Feature Title</p>
-                                        <p className='services-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    </div>
-                                </div>
-
-                                <div className='services'>
-                                    <img className='services-pics' src='https://placehold.co/168x113' alt='feature content picture'></img>
-                                    <div className='first-services-content'>
-                                        <p className='services-title'>First Feature Title</p>
-                                        <p className='services-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
-
-
                     <div className='services-scroll-container2'>
                         <div className='services-scroll-section2'>
                             <div className='services2'>
