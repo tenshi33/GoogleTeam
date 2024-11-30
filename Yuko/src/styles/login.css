@@ -255,7 +255,7 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 57%;
+  top: 46%;
   left: 1.2vw;
   font-size: 1.3vw;
   pointer-events: none;
@@ -309,7 +309,7 @@ input:-webkit-autofill{
   font-size: 1.4vw;
   font-weight: bold;
   background: linear-gradient(to right, #380050, #ED0101);
-  margin-top: 3.5vw;
+  margin-top: 3.5rem;
   border-radius: 3rem;
   transition: background 0.7s ease-in-out;
 }
