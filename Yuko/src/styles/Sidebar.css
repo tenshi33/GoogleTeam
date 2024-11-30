@@ -1,16 +1,19 @@
 /* Sidebar CSS */
 
 .pv-sidebar{
-    z-index: 9999;
-    position: absolute;
-    left: 0;
-    min-height: 100vh;
+    position: fixed; /* Fix the sidebar relative to the viewport */
+    top: 0; /* Align it with the top of the viewport */
+    left: 0; /* Align it with the left of the viewport */
+    width: 24rem; /* Set a fixed width for the sidebar */
+    height: 100vh; /* Make it span the entire height of the viewport */
+    overflow-y: auto; /* Add scrolling if the content exceeds the height */
+    background: linear-gradient(#720000, #00007e); /* Preserve your background */
+    color: #ffffffd8;
+    z-index: 9999; /* Ensure it stays on top of other elements */
+    padding: 3vh 1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(#720000,#00007e);
-    padding: 3vh 1vw;
-    color: #ffffffd8;
 }
 
 .icon-container{
@@ -49,7 +52,7 @@
 
 .icon-container .textyuko{
     padding-right: 0.2rem;
-    margin-left: 12.5rem;
+    margin-left: 12rem;
     height: 1.3rem;
 }
 
@@ -113,7 +116,7 @@
     border-color: #e7e7e7b6;
     border-radius: 0.2rem;
     align-content: center;
-    margin-left: 6rem;
+    margin-left: 5.5rem;
     width: 10rem;
     color: #e7e7e7;
     padding: 0.5rem;
