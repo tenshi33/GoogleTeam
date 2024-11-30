@@ -2,12 +2,12 @@
 
 .pv-sidebar{
     position: fixed; /* Fix the sidebar relative to the viewport */
-    top: 0; /* Align it with the top of the viewport */
-    left: 0; /* Align it with the left of the viewport */
-    width: 24rem; /* Set a fixed width for the sidebar */
-    height: 100vh; /* Make it span the entire height of the viewport */
-    overflow-y: auto; /* Add scrolling if the content exceeds the height */
-    background: linear-gradient(#720000, #00007e); /* Preserve your background */
+    top: 0; 
+    left: 0; 
+    width: 24rem; 
+    height: 100vh; 
+    overflow-y: auto; 
+    background: linear-gradient(#720000, #00007e); 
     color: #ffffffd8;
     z-index: 9999; /* Ensure it stays on top of other elements */
     padding: 3vh 1vw;
