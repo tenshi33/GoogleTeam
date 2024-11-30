@@ -723,7 +723,7 @@ html,body {
 
 .landing-footer-section {
     background: #07061D;
-    height: 25vw;
+    height: 40vw;
     display: flex;
     justify-items: center;
     flex-direction: column;
@@ -735,6 +735,7 @@ html,body {
     z-index: 0;
     display: flex;
     margin-left: 3vw;
+    margin-top: 12vw;
     margin-bottom: 4vw;
     color: white;
     justify-content: center;
@@ -829,7 +830,7 @@ html,body {
 }
 
 .horizontal-line {
-    margin-left: 0.5vw;
+    margin-left: 1vw;
     width: 95%;
     height: 0.1vw
 }
