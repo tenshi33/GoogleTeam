@@ -1,122 +1,9 @@
 /* Sidebar CSS */
 
-.sidebar-container{
-    display: flex;
-    position: relative;
-    overflow: hidden;
-}
-
-.sidebar{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(#720000,#00007e);
-    padding: 3vh 1vw;
-    color: #ffffffd8;
-}
-
-.sidebar .icon-container{
-    margin-left: 1vw;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.sidebar-container .menu-icon-container{
-    z-index: 9999; /* Ensure it stays on top of other elements */
-    position: fixed;
-    top: 27px;
-    left: 15px;
-    margin-left: 0.4vw;
-    padding-right: 0.2rem;
-}
-
-.sidebar .in-menu-icon-container{
-    visibility: hidden;
-    margin-left: 0.4vw;
-    padding-right: 0.3rem;
-}
-
-.sidebar .icon-container .textyuko{
-    margin-left: 10rem;
-    height: 1.3rem;
-}
-
-.sidebar .icon-container .new-chat{
-    margin-left: -0.5vw;
-}
-
-.sidebar .recent{
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar .recent-title{
-    font-size: 1.7rem;
-    margin-top: 2rem;
-    margin-left: 0.3rem;
-    margin-bottom: 1rem;
-}
-
-.sidebar .recent-entry{
-    display: flex;
-    align-items: start;
-    margin: 0.6vh;
-    margin-right: 1vw;
-    gap: 1vw;
-    padding: 1.7vh;
-    padding-right: 4vw;
-    color: #e7e7e7;
-    border-style: solid;
-    border-color: #ffffffcb;
-    border-width: 0.1vw;
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-    cursor: pointer;
-}
-
-.sidebar .recent-entry:hover{
-    background-color: #ffffff18;
-    color: #ffffffd7;
-}
-
-.sidebar .bottom{
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar .bottom-item{
-    display: flex;
-    align-items: start;
-    gap: 0.5vw;
-    padding: 1.5vh;
-    padding-right: 4vw;
-    cursor: pointer;
-}
-
-.sidebar .log-out{
-    background-color: #00007e00;
-    border-color: #e7e7e7b6;
-    border-radius: 0.2rem;
-    align-content: center;
-    margin-left: 4.5rem;
-    width: 10rem;
-    color: #e7e7e7;
-    padding: 0.5rem;
-}
-
-.sidebar .bottom-item:hover{
-    color: #aaaaaa;
-}
-
-/*Phone ver of sidebar*/
-
 .pv-sidebar{
-    position: fixed;
-    left: -250vw;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -132,51 +19,56 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+.sidebar-container .pv-menu-icon-container{
+    z-index: 9999;
+    position: fixed;
+    top: 1.5rem;
+    left: 0.9rem;
+    margin-left: 0.4vw;
+    padding-right: 0.2rem;
     cursor: pointer;
 }
 
-.sidebar-container .pv-menu-icon-container{
-    z-index: 0;
-    position: fixed;
-    top: 27px;
-    left: -250vw;
-    margin-left: 0.4vw;
-    padding-right: 0.2rem;
+.sidebar-container .pv-menu-icon-container img{
+    height: 1.2rem;
 }
 
-.sidebar-container .menu-icon-container{
-    z-index: 9999; /* Ensure it stays on top of other elements */
-    position: fixed;
-    top: 27px;
-    left: 15px;
-    margin-left: 0.4vw;
-    padding-right: 0.2rem;
-}
+.sidebar-container .pv-menu-icon-container.hidden {
+    visibility: hidden; /* Completely hide it visually */
+  }
 
 .in-menu-icon-container{
-    visibility: hidden;
-    margin-left: 0.4vw;
+    visibility: visible;
+    margin-left: 0.3vw;
     padding-right: 0.3rem;
+    cursor: pointer;
 }
 
 .icon-container .textyuko{
-    margin-left: 10rem;
+    padding-right: 0.2rem;
+    margin-left: 12.5rem;
     height: 1.3rem;
 }
 
 .icon-container .new-chat{
     margin-left: -0.5vw;
+    cursor: pointer;
 }
 
 .recent{
+    margin-right: 0.2rem;
+    margin-left: 0rem;
     display: flex;
     flex-direction: column;
 }
 
 .recent-title{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-top: 2rem;
-    margin-left: 0.3rem;
+    margin-left: 0.2rem;
     margin-bottom: 1rem;
 }
 
@@ -184,9 +76,9 @@
     display: flex;
     align-items: start;
     margin: 0.6vh;
-    margin-right: 1vw;
+    margin-right: 0.5vw;
     gap: 1vw;
-    padding: 1.7vh;
+    padding: 2vh;
     padding-right: 4vw;
     color: #e7e7e7;
     border-style: solid;
@@ -221,10 +113,11 @@
     border-color: #e7e7e7b6;
     border-radius: 0.2rem;
     align-content: center;
-    margin-left: 4.5rem;
+    margin-left: 6rem;
     width: 10rem;
     color: #e7e7e7;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 .bottom-item:hover{
@@ -257,10 +150,6 @@
         cursor: pointer;
     }
     
-    .sidebar-container .menu-icon-container{
-        z-index: 0; 
-        visibility: hidden;
-    }
     
     .sidebar-container .pv-menu-icon-container{
         z-index: 9999;
@@ -361,119 +250,4 @@
     }
 
     /*phone version of sidebar end here*/
-
-    .sidebar-container{
-        display: flex;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .sidebar{
-        position: fixed;
-        left: -250vw;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: linear-gradient(#720000,#00007e);
-        padding: 3vh 1vw;
-        color: #ffffffd8;
-    }
-    
-    .sidebar .icon-container{
-        margin-left: 1vw;
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        cursor: pointer;
-    }
-    
-    .sidebar-container .menu-icon-container{
-        z-index: 9999; /* Ensure it stays on top of other elements */
-        position: fixed;
-        top: 27px;
-        left: 15px;
-        margin-left: 0.4vw;
-        padding-right: 0.2rem;
-    }
-    
-    .sidebar .in-menu-icon-container{
-        visibility: hidden;
-        margin-left: 0.4vw;
-        padding-right: 0.3rem;
-    }
-    
-    .sidebar .icon-container .textyuko{
-        margin-left: 10rem;
-        height: 1.3rem;
-    }
-    
-    .sidebar .icon-container .new-chat{
-        margin-left: -0.5vw;
-    }
-    
-    .sidebar .recent{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .sidebar .recent-title{
-        font-size: 1.7rem;
-        margin-top: 2rem;
-        margin-left: 0.3rem;
-        margin-bottom: 1rem;
-    }
-    
-    .sidebar .recent-entry{
-        display: flex;
-        align-items: start;
-        margin: 0.6vh;
-        margin-right: 1vw;
-        gap: 1vw;
-        padding: 1.7vh;
-        padding-right: 4vw;
-        color: #e7e7e7;
-        border-style: solid;
-        border-color: #ffffffcb;
-        border-width: 0.1vw;
-        border-top-right-radius: 0.3rem;
-        border-bottom-right-radius: 0.3rem;
-        cursor: pointer;
-    }
-    
-    .sidebar .recent-entry:hover{
-        background-color: #ffffff18;
-        color: #ffffffd7;
-    }
-    
-    .sidebar .bottom{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .sidebar .bottom-item{
-        display: flex;
-        align-items: start;
-        gap: 0.5vw;
-        padding: 1.5vh;
-        padding-right: 4vw;
-        cursor: pointer;
-    }
-    
-    .sidebar .log-out{
-        background-color: #00007e00;
-        border-color: #e7e7e7b6;
-        border-radius: 0.2rem;
-        align-content: center;
-        margin-left: 4.5rem;
-        width: 10rem;
-        color: #e7e7e7;
-        padding: 0.5rem;
-    }
-    
-    .sidebar .bottom-item:hover{
-        color: #aaaaaa;
-    }
-    
 }
