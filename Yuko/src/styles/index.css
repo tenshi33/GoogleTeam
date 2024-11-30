@@ -886,6 +886,11 @@ html,body {
         overflow-x: hidden;
     }
 
+    .nav-bar-container .toggle-nav {
+        display: none;
+
+    }
+
     .color-nav {
         background: #0000005e;
         transition: 1s;
@@ -895,6 +900,7 @@ html,body {
     .nav-yuko-logo {
         margin-top: 1vw;
         width: 25em;
+        background-color: #050374;
     }
     
     .landing-background-img {

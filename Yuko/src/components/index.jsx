@@ -35,15 +35,18 @@ function Landing() {
                 {/*HEADER OF LANDING PAGE*/}
                 <nav className={`nav-bar-container ${sticky? 'color-nav' : ''}`}>
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
-                    <ul className='nav-bar-menu'>
-                        <li className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
-                        <li className='nav-divider'>|</li>
-                        <li className='nav-features' onClick={() => scrollToSection(featuresRef)}>FEATURES</li>
-                        <li className='nav-divider'>|</li>
-                        <li className='nav-developers' onClick={() => scrollToSection(developersRef)}>DEVELOPERS</li>
-                        <li className='nav-divider'>|</li>
-                        <li className='nav-contacts' onClick={() => scrollToSection(contactsRef)}>CONTACTS</li>
-                    </ul>
+                    
+                        <ul className='nav-bar-menu'>
+                            <div className='toggle-nav'>
+                                <li href='#' className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
+                                <li href='#' className='nav-divider'>|</li>
+                                <li href='#' className='nav-features' onClick={() => scrollToSection(featuresRef)}>FEATURES</li>
+                                <li href='#' className='nav-divider'>|</li>
+                                <li href='#' className='nav-developers' onClick={() => scrollToSection(developersRef)}>DEVELOPERS</li>
+                                <li href='#' className='nav-divider'>|</li>
+                                <li href='#' className='nav-contacts' onClick={() => scrollToSection(contactsRef)}>CONTACTS</li>
+                            </div>
+                        </ul>
                 </nav>
 
                 {/*HOME SECTION IN LANDING PAGE*/}
