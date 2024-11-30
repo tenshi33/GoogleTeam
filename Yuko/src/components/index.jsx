@@ -249,7 +249,7 @@ function Landing() {
                     <div className='horizontal-line'></div>
                     <div className='last-section'>
                         <p className='copyrights'>
-                           &copy; {date}{" "} JNA Tech Solution. All Right Reserved.
+                         Copyrights &copy; {date}{" "} JNA Tech Solution. All Right Reserved.
                         </p>
                     </div>
                 </section>
