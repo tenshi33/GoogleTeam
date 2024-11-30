@@ -705,189 +705,7 @@ html,body {
     margin-top: 0.5vw;
 }
 
-.services-landing-section {
-    background: linear-gradient(to bottom, #7C0D52, #07061D);
-    height: 75vw;
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-    margin-top: -0.5rem;
-}
 
-.services-scroll-container1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* changed to allow proper flow */
-    overflow-x: auto; /* enable horizontal scrolling */
-    justify-content: right;
-    margin-top: 8vw;
-}
-
-.services-our-title {
-    display: flex;
-    margin-top: 8vw;
-    align-items: first baseline;
-    font-size: 5.5vw;
-    font-family: Arial;
-    font-weight: 900;
-    color: white;
-    margin-right: 2vw;
-}
-
-.services-scroll-section1 {
-    max-height: 35vw;
-    max-width: 80rem;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto; /* keep this for horizontal scroll */
-    overflow-y: hidden;
-    justify-content: flex-start; /* change to allow left alignment */
-    align-items: flex-start; /* change to allow items to align properly */
-    padding: 1vw;
-}
-
-
-.services-scroll-section1::-webkit-scrollbar {
-    background-color: transparent;
-}
-
-.services-scroll-section1::-webkit-scrollbar-thumb:hover{
-    background-color: #7C0D52;
-    border-radius: 2vw;
-}
-
-.services1 {
-    max-height: 25vw;
-    max-width: 120rem;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    gap: 2.5vw;
-    justify-content: flex-start; /* align items from left */
-    align-items: center; /* align items in the center vertically */
-}
-
-.services {
-    border: solid;
-    background: linear-gradient(to bottom, #192d8a, #07072000);
-    border-color: rgb(255, 255, 255);
-    border-width: 0.1rem;
-    border-radius: 1.3rem;
-    padding: 1.5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 20vw;
-    width: 20vw;
-}
-
-.services-pics {
-    width: 11vw;
-    height: 10vw;
-}
-
-.first-services-content {
-    margin-top: 2vw;
-}
-
-.services-description {
-    margin-top: 0.6vw;
-}
-
-
-
-.services-scroll-container2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* changed to allow proper flow */
-    overflow-x: auto; /* enable horizontal scrolling */
-    justify-content: left;
-    margin-top: 5vw;
-}
-
-.services-services-title {
-    display: flex;
-    margin-top: 9vw;
-    align-items: first baseline;
-    font-size: 5vw;
-    font-family: Arial;
-    font-weight: 900;
-    color: white;
-    margin-left: 2vw;
-}
-
-.services-scroll-section2 {
-    max-height: 35vw;
-    max-width: 80rem;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto; /* keep this for horizontal scroll */
-    overflow-y: hidden;
-    justify-content: flex-start; /* change to allow left alignment */
-    align-items: flex-start; /* change to allow items to align properly */
-    padding: 1vw;
-}
-
-.services-scroll-section2::-webkit-scrollbar {
-    background-color: transparent;
-}
-
-.services-scroll-section2::-webkit-scrollbar-thumb:hover{
-    background-color: #0a0752;
-    border-radius: 2vw;
-}
-
-.services2 {
-    max-height: 25vw;
-    max-width: 120rem;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    gap: 2.5vw;
-    justify-content: flex-start; /* align items from left */
-    align-items: left; /* align items in the center vertically */
-}
-
-.services {
-    border: solid;
-    border-color: rgb(255, 255, 255);
-    border-width: 0.1rem;
-    border-radius: 1.3rem;
-    padding: 1.5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 24vw;
-}
-
-.services-pics {
-    height: 10vw;
-}
-
-.first-services-content {
-    margin-top: 2vw;
-}
-
-.services-description {
-    margin-top: 0.6vw;
-}
-
-.services-title {
-    font-size: 1vw;
-    font-family: 'Arial';
-    font-weight: 700;
-}
-
-.services-description {
-    font-size: 0.8vw;
-    font-family: 'Calibri';
-}
 
 .landing-footer-section {
     background: #07061D;
@@ -1003,7 +821,6 @@ html,body {
         overflow-x: hidden;
     }
 
-    /* Ensure no horizontal overflow for the navbar */
     .nav-bar-container {
         margin: 0;
         padding: 0;
@@ -1011,24 +828,20 @@ html,body {
         width: 100%;
         height: 16vw;
         overflow-x: hidden;
-        margin-left: 7vw;
     }
 
-    /* Color navbar adjustments */
     .color-nav {
         background: #0000005e;
         transition: 1s;
         width: 100%;
     }
 
-    /* Logo adjustments */
     .nav-yuko-logo {
         margin-top: 1vw;
         margin-left: 7vw; /* Reset margin-left to avoid offset */
         width: 25em;
     }
-
-    /* Landing background image adjustments */
+    
     .landing-background-img {
         height: 210vw;
         object-fit: cover;
@@ -1038,10 +851,8 @@ html,body {
         overflow-x: hidden;
         overflow-y: hidden;
         z-index: 0;
-        margin-left: 7.4vw;
     }
 
-    /* Title size adjustment for smaller screens */
     .home-yuko-title {
         margin-top: 2rem;
         font-size: 20vw;
@@ -1071,15 +882,12 @@ html,body {
         padding: 0; /* Ensure no extra padding */
     }
 
-    /* Feature section container */
     .features-landing-section {
         background: linear-gradient(to bottom,#b61212, #1D143E);
         padding: 0;
         height: 560vw;
-        margin-left: 7vw;
     }
 
-    /* Feature section adjustments */
     .features-landing {
         width: 100%;
         margin-top: 230vw;
@@ -1100,7 +908,6 @@ html,body {
         justify-items: center;
     }
 
-    /* Title in features section */
     .feature-title {
         font-size: 8vw;
         width: 85vw;
@@ -1108,7 +915,6 @@ html,body {
         margin-left: 7vw;
     }
 
-    /* Description in features section */
     .features-top-left-decscription {
         font-family: 'Calibri';
         font-size: 3vw;
@@ -1118,14 +924,12 @@ html,body {
         margin-left: 7vw;
     }
 
-    /* Divider size tweak */
     .feature-section-divider {
         background-color: rgba(255, 255, 255, 0);
         height: 0;
         width: 0;
     }
 
-    /* Feature scroll section */
     .features-scroll-section {
         max-height: 60vw;
         width: 83vw;
@@ -1143,7 +947,6 @@ html,body {
         width: 43vw;
     }
 
-    /* Adjust bottom features */
     .features-bottom {
         display: flex;
         flex-direction: column;
@@ -1153,27 +956,23 @@ html,body {
         height: 180vw;
     }
 
-    /* Chatbot sizing */
     .chatbot1, .chatbot2 {
         width: 80vw;
         height: 80vw;
     }
 
-
-
     .dev-landing-section {
         height: 380vw;
         overflow: hidden;
     }
-    
+
     .dev-landing {
         width: 100%;
         height: 350vw;
         position: absolute;
-        margin-left: 7.2vw;
         overflow: hidden;
     }
-    
+
     .dev-title {
         font-size: 8vw;
         overflow: hidden;
@@ -1442,7 +1241,4 @@ html,body {
         margin-top: 0.5vw;
         margin-left: -23vw;
     }
-
-
-
-}
+}   
