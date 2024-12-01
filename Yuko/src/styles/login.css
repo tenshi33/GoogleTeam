@@ -301,7 +301,7 @@ input:-webkit-autofill{
 
 .log-in-form .log-in-button {
   width: 53%;
-  height: 5rem;
+  height: 3rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -399,13 +399,14 @@ input:-webkit-autofill{
     align-items: center;
     position: fixed;   
     width: 80%;
-    height: 120vw;
+    height: 110vw;
     border: none;
     padding: 0vw 0vw 0vw 0vw;
     left: 12vw;
     margin-left: 0vw;
-    margin-top: 83vw;
+    margin-top: 75vw;
     box-shadow: none;
+    background-color: #380050;
   }
   
   .log-in-form .input-wrapper {
