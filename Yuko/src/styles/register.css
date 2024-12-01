@@ -79,6 +79,7 @@
   transition: 0.2s ease;
   font-size: 0.9vw;
   font-family: Arial;
+  
 }
 
 .sign-up-form .lname-signup-wrapper {
@@ -116,12 +117,12 @@
   margin-top: 0.8vw;
   display: flex;
   flex-direction: row;
-  gap: 1vw;
+  gap: .8vw;
 }
 
 .sign-up-form .studnum-course-wrapper .studnum-input-field {
   height: 100%;
-  width: 11.1vw;
+  width: 11.2vw;
   border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
@@ -139,7 +140,7 @@
 
 .sign-up-form .course-signup-wrapper .course-input-field {
   height: 100%;
-  width: 10.9vw;
+  width: 11vw;
   border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
