@@ -307,6 +307,14 @@ input.privacy-policy-check {
   font-family: Arial;
 }
 
+.sign-in-button:active {
+  text-decoration: underline;
+}
+
+.sign-in-button:hover {
+  text-decoration: underline;
+}
+
 .sign-up-container a{
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -553,6 +561,10 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .sign-in-button:active {
+    text-decoration: underline;
+  }
+  
+  .sign-in-button:hover {
     text-decoration: underline;
   }
   
