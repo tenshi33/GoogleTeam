@@ -309,6 +309,7 @@ input.privacy-policy-check {
 
 .sign-in-button:active {
   text-decoration: underline;
+  width: 9.9vw;
 }
 
 .sign-in-button:hover {
@@ -563,7 +564,7 @@ input.privacy-policy-check {
   .sign-up-form .sign-in-button:active {
     text-decoration: underline;
   }
-  
+
   .sign-in-button:hover {
     text-decoration: underline;
   }
