@@ -1004,9 +1004,13 @@ html,body {
     .nav-features:hover,
     .nav-developers:hover,
     .nav-contacts:hover {
-        background-color: none;
+        background-color: white;
+        width: 35vw;
+        height: 9vw;
+        border-radius: 6vw;
         text-shadow: none;
-        color: white;
+        color: #13119b;
+        font-size: 3.95vw;
     }
 
 
@@ -1021,7 +1025,6 @@ html,body {
         text-shadow: none;
         color: #13119b;
         font-size: 3.95vw;
-        transition: all 0.3s ease-in;
     }
 
     .color-nav {
