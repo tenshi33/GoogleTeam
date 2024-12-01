@@ -1005,9 +1005,6 @@ html,body {
     .nav-developers:hover,
     .nav-contacts:hover {
         background-color: none;
-        width: 35vw;
-        height: 9vw;
-        border-radius: 6vw;
         text-shadow: none;
         color: white;
     }
