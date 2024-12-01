@@ -27,7 +27,7 @@ function Landing() {
 
     let date = new Date().getFullYear();
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const toggleMenu = ()=> {
         setIsOpen (!isOpen)
