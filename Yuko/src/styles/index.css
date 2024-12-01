@@ -951,6 +951,10 @@ html,body {
         border: none;
         margin-left: 70vw;
     }
+    
+    .nav-divider {
+        display: none;
+    }
 
     .nav-bar-container .hamburger {
         display: flex;
@@ -959,6 +963,51 @@ html,body {
         background-color: unset;
         justify-content: right;
         cursor: pointer;
+    }
+
+    .nav-bar-menu .toggle-nav {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        height: 100vw;
+        font-size: 3vw;
+        margin-top: 74vw;
+        margin-left: -89vw;
+        z-index: 0;
+        background-color: #050374;
+    }
+
+    .nav-home {
+        margin-top: 23vw;
+    }
+
+    .nav-home,
+    .nav-features,
+    .nav-developers,
+    .nav-contacts {
+        font-size: 4vw;
+        text-align: center;
+        align-content: center;
+        justify-items: center;
+        font-weight: bold;
+        transition: 0s;
+    }
+
+
+    .nav-home:active,
+    .nav-features:active,
+    .nav-developers:active,
+    .nav-contacts:active {
+        background-color: white;
+        width: 35vw;
+        height: 9vw;
+        border-radius: 6vw;
+        text-shadow: none;
+        color: #13119b;
+        font-size: 3.95vw;
     }
 
     .color-nav {
@@ -970,6 +1019,7 @@ html,body {
     .nav-yuko-logo {
         margin-top: 1vw;
         width: 25em;
+        z-index: 3;
     }
     
     .landing-background-img {
