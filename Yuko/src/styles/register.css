@@ -326,7 +326,7 @@ input.privacy-policy-check {
     box-shadow: none;
     height: 160vw;
     width: 100vw;
-    gap: 2vw;
+    gap: 3.3vw;
   }
   
 
@@ -385,7 +385,7 @@ input.privacy-policy-check {
     display: flex;
     flex-direction: row;
     gap: 1vw;
-    column-gap: .8rem;
+    column-gap: .7rem;
   }
  
   .sign-up-form .studnum-course-wrapper .studnum-input-field {
@@ -480,7 +480,7 @@ input.privacy-policy-check {
     color: white;
     font-size: 15vw;
     font-weight: 900;
-    margin-bottom: 20vw;
+    margin-bottom: 10vw;
     font-family: Arial;
   }
    
@@ -503,7 +503,7 @@ input.privacy-policy-check {
 
   .sign-up-form .signup-button{
     width: 40vw;
-    height: 100vw;
+    height: 10vw;
     cursor: pointer;
     outline: none;
     border: none;
@@ -519,7 +519,7 @@ input.privacy-policy-check {
   .sign-up-form .have-account-text {
     width: 80vw;
     font-size: 0.9em;
-    margin-top: 20vw;
+    margin-top: 10vw;
   }
 
   .sign-up-form .sign-in-button {
