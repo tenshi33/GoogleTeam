@@ -1,6 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import yuko from '../../public/yuko2.png';
-import { auth, db, doc, getDoc, arrayUnion, updateDoc, setDoc } from '../../firebase/firebase';
+import React, { useState, useEffect, useRef } from "react";
+import yuko from "../../public/yuko2.png";
+import {
+  auth,
+  db,
+  doc,
+  getDoc,
+  arrayUnion,
+  updateDoc,
+  setDoc,
+} from "../../firebase/firebase";
 import { GrGallery } from "react-icons/gr";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { FaMicrophoneAlt } from "react-icons/fa";
@@ -21,6 +29,7 @@ function Yuko() {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [pdfContent, setPdfContent] = useState("");
   const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState(null);
@@ -28,10 +37,9 @@ function Yuko() {
   const [isConversationStarted, setIsConversationStarted] = useState(false);
 
   // Initialize Gemini API
-  const apiKey = "AIzaSyBiurl2_jlPahPRYP1ht97oRGv7WNq0cT0"; 
+  const apiKey = "AIzaSyBiurl2_jlPahPRYP1ht97oRGv7WNq0cT0";
   const genAI = new GoogleGenerativeAI(apiKey);
 
-  
   const getFineTunedResponse = (input) => {
     try {
       const entry = fineTunedData.find(
@@ -106,11 +114,11 @@ function Yuko() {
   // Fetch conversation history from Firestore
   const fetchConversationHistory = async () => {
     if (!userId) return;
-    
+
     try {
-      const convRef = doc(db, 'conversations', userId);
+      const convRef = doc(db, "conversations", userId);
       const convDoc = await getDoc(convRef);
-      
+
       if (convDoc.exists()) {
         const storedMessages = convDoc.data().messages || [];
         setChatHistory(storedMessages);
@@ -126,13 +134,13 @@ function Yuko() {
 
   const sendMessage = async () => {
     if (userInput.trim() === "") return;
-  
-    setIsLoading(true);  // Show loading indicator
-  
+    setLoading(true);
+    setIsLoading(true);
+
     try {
       // Check if there is a fine-tuned response for the user input
       const fineTunedResponse = getFineTunedResponse(userInput);
-  
+
       let botResponse = "";
       if (fineTunedResponse) {
         // If a fine-tuned response exists, use it
@@ -142,25 +150,25 @@ function Yuko() {
         const model = await genAI.getGenerativeModel({
           model: "tunedModels/introductionchat-qke62kuk7mst",
         });
-  
+
         const result = await model.startChat({
           history: [],
           generationConfig: {
             maxOutputTokens: 500,
           },
         });
-  
+
         const chatResponse = await result.sendMessageStream(userInput);
         let responseText = "";
-  
+
         for await (const chunk of chatResponse.stream) {
           const chunkText = await chunk.text();
           responseText += chunkText;
         }
-  
+
         botResponse = responseText;
       }
-  
+
       // Update the chat history in React state
       setChatHistory((prev) => [
         ...prev,
@@ -169,11 +177,11 @@ function Yuko() {
       ]);
 
       setIsConversationStarted(true);
-  
+
       // Save the conversation to Firestore
       if (userId) {
-        const convRef = doc(db, 'conversations', userId);
-  
+        const convRef = doc(db, "conversations", userId);
+
         // Use updateDoc to append messages to the Firestore document
         await updateDoc(convRef, {
           messages: arrayUnion(
@@ -182,10 +190,9 @@ function Yuko() {
           ),
         });
       }
-  
     } catch (error) {
       console.error("Error sending message:", error);
-      setChatHistory(prev => [
+      setChatHistory((prev) => [
         ...prev,
         { type: "user", message: userInput },
         {
@@ -194,12 +201,12 @@ function Yuko() {
         },
       ]);
     } finally {
-      // Clear input field and stop loading
-      setUserInput("");
+      // After everything completes, stop loading and reset the button
+      setUserInput(""); // Clear the input field
       setIsLoading(false);
+      setLoading(false);
     }
   };
-    
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -223,38 +230,41 @@ function Yuko() {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUserId(user.uid);
-        setChatHistory([]);  // Clear the chat UI when the user logs in
+        setChatHistory([]); // Clear the chat UI when the user logs in
       } else {
         setUserId(null);
-        setChatHistory([]);  // Clear chat UI if the user logs out
+        setChatHistory([]); // Clear chat UI if the user logs out
       }
     });
-  
+
     return () => unsubscribe();
   }, []);
-    
 
   return (
     <div className="yuko-container">
       <Sidebar clearChat={clearChat} />
-      <div className='main'>
+      <div className="main">
         <div className="main-container">
-        {!isConversationStarted && (
+          {!isConversationStarted && (
             <div>
               <span className="yuko-icon">
                 <img src={yuko} alt="Yuko logo" />
               </span>
-              <div className='greet'>
-                <p><b><span>Hello, {userName || '..'}.</span></b></p>
-                <p><b>How may I help?</b></p>
+              <div className="greet">
+                <p>
+                  <b>
+                    <span>Hello, {userName || ".."}.</span>
+                  </b>
+                </p>
+                <p>
+                  <b>How may I help?</b>
+                </p>
               </div>
             </div>
           )}
-          <div className="cards">
-            {/*Prompt cards here */}
-          </div>
-          <div className='message-container'>
-          <ChatHistory chatHistory={chatHistory} /> 
+          <div className="cards">{/*Prompt cards here */}</div>
+          <div className="message-container">
+            <ChatHistory chatHistory={chatHistory} />
           </div>
           <div>
             <div className="main-bottom">
@@ -266,14 +276,20 @@ function Yuko() {
                   onChange={handleUserInput}
                   onKeyDown={handleKeyDown}
                 />
-                <div>
-                  <HiSpeakerWave className="img" />
-                  <RiSendPlane2Fill
-                    className="img"
-                    id="send"
-                    onClick={sendMessage}
-                    disabled={isLoading}
-                  />
+                <div
+                  className="send-button"
+                  type="button"
+                  onClick={sendMessage}
+                  disabled={loading || isLoading} // Disable the button during loading or async operations
+                >
+                  {loading || isLoading ? (
+                    <span>Loading...</span> // Show loading text when processing
+                  ) : (
+                    <>
+                      <HiSpeakerWave className="img" />
+                      <RiSendPlane2Fill className="img" id="send" />
+                    </>
+                  )}
                 </div>
               </div>
               <div className="bottom-info">
