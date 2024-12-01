@@ -913,7 +913,7 @@ html,body {
     text-align: center;
 }
 
-.nav-bar-container .toogle-nav {
+.nav-bar-container .toggle-nav {
     display: flex;
     flex-direction: row;
     gap: 2vw;
