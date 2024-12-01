@@ -292,6 +292,30 @@ input.privacy-policy-check {
   font-weight: bold;
 }
 
+.sign-up-form .fname-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.sign-up-form .lname-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.sign-up-form .email-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.sign-up-form .pass-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.sign-up-form .studnum-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.sign-up-form .course-input-field::placeholder {
+  color: rgb(167, 167, 167);
+}
+
 @media only screen and (max-width: 500px) {
   
   .sign-up-form {
