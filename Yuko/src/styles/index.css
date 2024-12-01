@@ -928,6 +928,7 @@ html,body {
     body {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
         overflow: hidden;
     }
 
@@ -1020,6 +1021,7 @@ html,body {
     .features-landing-section {
         padding: 0;
         height: 560vw;
+        width: 100vw;
     }
 
     .features-landing {
