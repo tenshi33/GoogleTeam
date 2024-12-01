@@ -1021,6 +1021,7 @@ html,body {
         text-shadow: none;
         color: #13119b;
         font-size: 3.95vw;
+        transition: all 0.3s ease-in;
     }
 
     .color-nav {
