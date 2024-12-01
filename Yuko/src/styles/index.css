@@ -919,6 +919,12 @@ html,body {
     gap: 2vw;
 }
 
+.nav-bar-container .toggle-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
 .nav-bar-container .hamburger {
     display: none;
 }
