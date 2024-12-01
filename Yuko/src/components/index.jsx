@@ -27,6 +27,12 @@ function Landing() {
 
     let date = new Date().getFullYear();
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = ()=> {
+        setIsOpen (!isOpen)
+    }
+
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
@@ -38,7 +44,8 @@ function Landing() {
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                     
                         <ul className='nav-bar-menu'>
-                            <div className='toggle-nav'>
+                            
+                            <div className={isOpen ? "toogle-nav active" : "toggle-nav"}>
                                 <li className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
                                 <li className='nav-divider'>|</li>
                                 <li className='nav-features' onClick={() => scrollToSection(featuresRef)}>FEATURES</li>
@@ -49,7 +56,7 @@ function Landing() {
                             </div>
                         </ul>
 
-                        <button id='hamburger-toggle' className='hamburger'>
+                        <button id='hamburger-toggle' className='hamburger' onClick={toggleMenu}>
                             <i class="material-symbols-outlined">
                                 menu
                             </i>

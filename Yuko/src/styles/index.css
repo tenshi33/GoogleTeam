@@ -943,7 +943,7 @@ html,body {
         flex-direction: row;
     }
 
-    .nav-bar-container .toggle-nav {
+    .nav-bar-container .toogle-nav {
         display: none;
     }
 
@@ -972,16 +972,20 @@ html,body {
         justify-content: space-evenly;
         align-items: center;
         width: 100vw;
-        height: 100vw;
+        height: 130vw;
         font-size: 3vw;
         margin-top: 74vw;
         margin-left: -89vw;
         z-index: 0;
-        background-color: #050374;
+        background: linear-gradient(to bottom,#020068ea, #a10d0def 110%);
     }
 
     .nav-home {
-        margin-top: 23vw;
+        margin-top: 30vw;
+    }
+
+    .nav-contacts {
+        margin-bottom: 2vw;
     }
 
     .nav-home,
@@ -994,6 +998,18 @@ html,body {
         justify-items: center;
         font-weight: bold;
         transition: 0s;
+    }
+
+    .nav-home:hover,
+    .nav-features:hover,
+    .nav-developers:hover,
+    .nav-contacts:hover {
+        background-color: none;
+        width: 35vw;
+        height: 9vw;
+        border-radius: 6vw;
+        text-shadow: none;
+        color: white;
     }
 
 
