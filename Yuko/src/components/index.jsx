@@ -84,8 +84,8 @@ function Landing() {
                 </section>
                 
                 {/*FEATURES SECTION IN LANDING PAGE*/}
-                <section id='features' ref={featuresRef} className='features-landing-section'>
-                    <div className='features-landing'>
+                <section id='features' className='features-landing-section'>
+                    <div className='features-landing' ref={featuresRef}>
                         {/*FEATURES TOP-LEFT SIDE*/}
                         <div className='features-top'>
                             <div className='features-first-section'>
