@@ -67,7 +67,7 @@
   height: 100%;
   width: 100%;
   padding: 0 1.25em 0 0.7em;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -95,7 +95,7 @@
   height: 100%;
   width: 100%;
   padding: 0 1.25em 0 0.7em;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -122,7 +122,7 @@
 .sign-up-form .studnum-course-wrapper .studnum-input-field {
   height: 100%;
   width: 11.1vw;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -140,7 +140,7 @@
 .sign-up-form .course-signup-wrapper .course-input-field {
   height: 100%;
   width: 10.9vw;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -169,7 +169,7 @@
   height: 100%;
   width: 100%;
   padding: 0 1.25em 0 0.7em;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -197,7 +197,7 @@
   height: 100%;
   width: 100%;
   padding: 0 1.25em 0 0.7em;
-  border-radius: 1.3rem;
+  border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
   border-color: white;
@@ -315,7 +315,7 @@ input.privacy-policy-check {
     height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -338,7 +338,7 @@ input.privacy-policy-check {
     height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -366,7 +366,7 @@ input.privacy-policy-check {
   .sign-up-form .studnum-course-wrapper .studnum-input-field {
     height: 11vw;
     width: 39.4vw;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -384,7 +384,7 @@ input.privacy-policy-check {
   .sign-up-form .course-signup-wrapper .course-input-field {
     height: 11vw;
     width: 39.4vw;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -407,7 +407,7 @@ input.privacy-policy-check {
     height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -430,7 +430,7 @@ input.privacy-policy-check {
     height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
-    border-radius: 1.3rem;
+    border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
     border-color: white;
@@ -460,16 +460,12 @@ input.privacy-policy-check {
   }
    
   .sign-up-form .privacy-policy  {
-  width: 70vw;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  margin-top: 2vw;
-  color: white;
-  font-size: 0.9rem;
-  font-family: Arial;
-  gap: 0.3vw;
-  margin-left: -5vw;
+    width: 80vw;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 1.2vw;
+    font-size: 3.5vw;
     
   }
 
@@ -481,15 +477,24 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .signup-button{
-    font-size: 7vw;
-    height: 13vw;
-    width: 50vw;
+    width: 40vw;
+    height: 100vw;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    background: linear-gradient(to right, #380050, #ED0101);
+    margin-top: 3.5vw;
+    border-radius: 3rem;
+    transition: background 0.7s ease-in-out;
   }
 
   .sign-up-form .have-account-text {
-    font-size: 4vw;
-    width: 70vw;
-    margin-top: 10vw;
+    width: 80vw;
+    font-size: 0.9em;
+    margin-top: 20vw;
   }
 
   .sign-up-form .sign-in-button {
@@ -508,7 +513,28 @@ input.privacy-policy-check {
     overflow-Y: hidden;
   }
 
-  .fname-input-field ::placeholder {
-    color: white;
+  .sign-up-form .fname-input-field::placeholder {
+    color: rgb(167, 167, 167);
   }
+
+  .sign-up-form .lname-input-field::placeholder {
+    color: rgb(167, 167, 167);
+  }
+
+  .sign-up-form .email-input-field::placeholder {
+    color: rgb(167, 167, 167);
+  }
+
+  .sign-up-form .pass-input-field::placeholder {
+    color: rgb(167, 167, 167);
+  }
+
+  .sign-up-form .studnum-input-field::placeholder {
+    color: rgb(167, 167, 167);
+  }
+
+  .sign-up-form .course-input-field::placeholder {
+    color: rgb(167, 167, 167);
+  }
+
 }
