@@ -164,7 +164,7 @@ function Register() {
             value="Privacy and Policy"
             required
           />
-          I Agree with privacy and policy
+          I Agree with <p className='privacy'> privacy </p>and <p className='policy'> policy</p>
         </div>
 
         {/* Submit Button */}

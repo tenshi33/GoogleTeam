@@ -226,6 +226,11 @@
   font-family: Arial;
 }
 
+.show-new-user-pass:hover {
+  text-shadow: 0px 0px 8px rgb(245, 245, 245);
+  color: white;
+}
+
 .sign-up-form .privacy-policy {
   width: 23vw;
   display: flex;
@@ -249,9 +254,14 @@ input.privacy-policy-check {
   width: 0.8vw;
 }
 
+.privacy,
+.policy {
+  color: #ff0000;
+}
+
 .signup-button {
-    width: 40%;
-    height: 60px;
+    width: 35%;
+    height: 63px;
     cursor: pointer;
     outline: none;
     border: none;
@@ -262,6 +272,16 @@ input.privacy-policy-check {
     margin-top: 3.5vw;
     border-radius: 2rem;
     transition: background 0.7s ease-in-out;
+}
+
+.signup-button:hover {
+  background: linear-gradient(to right, #ED0101, #7602a8);
+}
+
+.signup-button:active {
+  font-size: 1.1vw;
+  width: 34.9%;
+  height: 62.9px;
 }
 
 .sign-up-container .have-account-text {
@@ -283,7 +303,7 @@ input.privacy-policy-check {
   display: flex;
   justify-content: right;
   align-items: right;
-  margin-left: 2.5vw;
+  margin-left: 1vw;
   font-family: Arial;
 }
 
@@ -491,9 +511,10 @@ input.privacy-policy-check {
     align-items: left;
     margin-top: 1.2vw;
     font-size: 3.5vw;
-    
+    gap: 1.3vw;
   }
 
+  
   .sign-up-form .privacy-policy .privacy-policy-check{
     font-size: .8rem;
     height: 4rem;
@@ -502,18 +523,22 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .signup-button{
-    width: 40vw;
-    height: 10vw;
+    width: 42vw;
+    height: 11vw;
     cursor: pointer;
     outline: none;
     border: none;
     color: white;
-    font-size: 4vw;
+    font-size: 4.5vw;
     font-weight: bold;
     background: linear-gradient(to right, #380050, #ED0101);
     margin-top: 3.5vw;
     border-radius: 3rem;
     transition: background 0.7s ease-in-out;
+  }
+
+  .signup-button:hover {
+    background: linear-gradient(to right, #ED0101, #7602a8);
   }
 
   .sign-up-form .have-account-text {
@@ -524,6 +549,11 @@ input.privacy-policy-check {
 
   .sign-up-form .sign-in-button {
     width: 14vw;
+    margin-left: 15vw;
+  }
+
+  .sign-up-form .sign-in-button:active {
+    text-decoration: underline;
   }
   
   .sign-up-container {

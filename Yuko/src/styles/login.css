@@ -285,6 +285,10 @@ input:-webkit-autofill{
   color: white;
 }
 
+.show-user-pass:active {
+ font-size: 0.7vw;
+}
+
 .log-in-form .forgot-password-wrapper {
   width: 23vw;
   display: flex;
@@ -315,8 +319,8 @@ input:-webkit-autofill{
 }
 
 .log-in-form .log-in-button:active {
-  width: 52.75%;
-  height: 52.75px;
+  width: 52%;
+  height: 2.90rem;
   font-size: 1.35vw;
 }
 
@@ -404,7 +408,7 @@ input:-webkit-autofill{
     padding: 0vw 0vw 0vw 0vw;
     left: 12vw;
     margin-left: 0vw;
-    margin-top: 75vw;
+    margin-top: 65vw;
     box-shadow: none;
   }
   
@@ -455,7 +459,7 @@ input:-webkit-autofill{
 
   .log-in-form .log-in-button {
     width: 53%;
-    height: 40px;
+    height: 43px;
     color: white;
     font-size: 5vw;
     margin-top: 9vw;
