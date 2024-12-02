@@ -87,8 +87,8 @@ function Yuko() {
     setIsLoading(true);
 
     try {
-      const fineTunedResponse = getFineTunedResponse(input);
-
+      const fineTunedResponse = getFineTunedResponse(userInput);
+    
       let responseText = "";
       if (fineTunedResponse) {
         responseText = fineTunedResponse;
@@ -100,13 +100,13 @@ function Yuko() {
           ${pdfContent}
           
           User Query:
-          ${input}
+          ${userInput}
         `;
-
+    
         const model = await genAI.getGenerativeModel({
           model: "tunedModels/introductionchat-qke62kuk7mst",
         });
-
+    
         const result = await model.startChat({
           prompt,
           history: [],
@@ -114,50 +114,41 @@ function Yuko() {
             maxOutputTokens: 500,
           },
         });
-
-        const chatResponse = await result.sendMessageStream(input);
+    
+        const chatResponse = await result.sendMessageStream(userInput);
         responseText = "";
         for await (const chunk of chatResponse.stream) {
           const chunkText = await chunk.text();
           responseText += chunkText;
         }
       }
-
-      // Update chat history
+    
+      // **Unified Chat History Update**
       setChatHistory((prev) => [
         ...prev,
-        { type: "user", message: input },
-        { type: "bot", message: responseText, typing: true },
+        { type: "user", message: userInput },
+        { type: "bot", message: responseText },
       ]);
-
-      setBotResponse(responseText);
+    
+      setBotResponse(responseText); // Update bot response state (optional for TTS)
       setIsConversationStarted(true);
-
+    
       // Save conversation to Firestore
       if (userId) {
         const convRef = doc(db, "conversations", userId);
         await updateDoc(convRef, {
           messages: arrayUnion(
-            { type: "user", message: input },
+            { type: "user", message: userInput },
             { type: "bot", message: responseText }
           ),
         });
       }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      setChatHistory((prev) => [
-        ...prev,
-        { type: "user", message: input },
-        {
-          type: "bot",
-          message: "Sorry, I encountered an error while responding.",
-        },
-      ]);
     } finally {
       setUserInput("");
       setIsLoading(false);
     }
   };
+    
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
