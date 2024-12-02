@@ -97,7 +97,7 @@ body .recover-pass-container {
   border: solid;
   color: #002072;
   border-color: #002072;
-  border-width: 0.5px;
+  border-width: 1.9px;
   border-radius: 0.7em;
   padding-left: 2.7vw;
   font-size: 0.9vw;
@@ -513,7 +513,7 @@ input:-webkit-autofill{
   .recover-pass .recover-pass-email {
     width: 26.8vw;
     height: 2.5vw;
-    border-width: 1.9px;
+    border-width: 0.2vw;
     border-radius: 0.7em;
     padding-left: 2.7vw;
     font-size: 0.9vw;
