@@ -391,7 +391,7 @@ html,body {
 
 .first-dev-pic {
     width: 16vw;
-    height: 22vw;
+    height: 20vw;
     margin-left: 6vw;
     z-index: 1;
     object-fit: cover;
@@ -473,7 +473,7 @@ html,body {
 
 .second-dev-pic {
     width: 16vw;
-    height: 22vw;
+    height: 20vw;
     margin-left: 0vw;
     z-index: 1;
     object-fit: cover;
@@ -546,7 +546,7 @@ html,body {
 
 .third-dev-pic {
     width: 16vw;
-    height: 22vw;
+    height: 20.5vw;
     margin-left: 6vw;
     z-index: 1;
     object-fit: cover;
@@ -628,7 +628,7 @@ html,body {
 
 .fourth-dev-pic {
     width: 16vw;
-    height: 22w;
+    height: 20vw;
     margin-left: 0vw;
     z-index: 1;
     object-fit: cover;
@@ -700,7 +700,7 @@ html,body {
 
 .fifth-dev-pic {
     width: 16vw;
-    height: 23vw;
+    height: 20vw;
     margin-left: 6vw;
     z-index: 1;
 }
@@ -780,7 +780,7 @@ html,body {
 
 .sixth-dev-pic {
     width: 16vw;
-    height: 22vw;
+    height: 20vw;
     margin-left: 0vw;
     z-index: 1;
     object-fit: cover;
@@ -1260,7 +1260,7 @@ html,body {
         margin-right: 1vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .first-dev-name {
@@ -1305,7 +1305,7 @@ html,body {
         margin-left: 1vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .second-dev-name {
@@ -1352,7 +1352,7 @@ html,body {
         margin-right: 1vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .third-dev-name {
@@ -1396,7 +1396,7 @@ html,body {
         margin-left: 1vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .fourth-dev-name {
@@ -1443,7 +1443,7 @@ html,body {
         margin-right: 1vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .fifth-dev-name {
@@ -1488,7 +1488,7 @@ html,body {
         margin-left: 0.8vw;
         z-index: 1;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
     
     .sixth-dev-name {
