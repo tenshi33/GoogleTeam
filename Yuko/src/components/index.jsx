@@ -29,8 +29,8 @@ function Landing() {
 
     const [isOpen, setIsOpen] = useState(true);
 
-    const toggleMenu = ()=> {
-        setIsOpen (!isOpen)
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
     }
 
     return (
