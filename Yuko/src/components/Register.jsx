@@ -150,7 +150,7 @@ function Register() {
             type="button"
             onClick={showPassword}  // Call showPassword to toggle visibility
           >
-            {passwordVisible ? 'Hide' : 'Show'}
+            {passwordVisible ? 'Show' : 'Show'}
           </button>
         </div>
 
