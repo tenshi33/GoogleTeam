@@ -10,7 +10,7 @@ import yukotext from '../../public/yuko-icon2.png';
 import { auth } from '../../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({ clearChat }) => {
+const Sidebar = ({ clearChat, sendMessage}) => {
   const [extended, setExtended] = useState(false);
   const navigate = useNavigate();
 
@@ -22,8 +22,15 @@ const Sidebar = ({ clearChat }) => {
     } catch (error) {
       console.error("Error logging out:", error.message);
     }
-  };
+  }
 
+    const faqItems = [
+      "What is Yuko?",
+      "What does Yuko do?",
+      "How helpful is Yuko?",
+      "How can Yuko help me?"
+    ];
+  
   return (
     <div className="sidebar-container">
       {/* Menu Icon (Collapsed State) */}
@@ -64,17 +71,13 @@ const Sidebar = ({ clearChat }) => {
 
             {/* Chat History */}
             <div className="recent">
-              <p className="recent-title">
-                <b>Chat History</b>
-              </p>
-              {["What is Yuko...", "What does Yuko do...", "How helpful is Yuko...", "How can Yuko help me..."].map(
-                (item, index) => (
-                  <div key={index} className="recent-entry">
-                    <FaRegMessage />
-                    <p>{item}</p>
-                  </div>
-                )
-              )}
+            <p className="recent-title"><b>Frequently Asked Questions</b></p>
+              {faqItems.map((item, index) => (
+                <div key={index} className="recent-entry" onClick={() => sendMessage(item)}>
+                  <FaRegMessage />
+                  <p>{item}</p>
+                </div>
+              ))}
             </div>
           </div>
 

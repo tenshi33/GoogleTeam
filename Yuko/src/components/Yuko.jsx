@@ -79,14 +79,15 @@ function Yuko() {
   }, []);
 
   // Handle user input and send message
-  const sendMessage = async () => {
-    if (userInput.trim() === "") return;
+  const sendMessage = async (messageInput) => {
+    const input = messageInput.trim() === "" ? userInput : messageInput;
+    if (input === "") return;
 
-    if (loading || isLoading ) return;
+    if (loading || isLoading) return;
     setIsLoading(true);
 
     try {
-      const fineTunedResponse = getFineTunedResponse(userInput);
+      const fineTunedResponse = getFineTunedResponse(input);
 
       let responseText = "";
       if (fineTunedResponse) {
@@ -99,7 +100,7 @@ function Yuko() {
           ${pdfContent}
           
           User Query:
-          ${userInput}
+          ${input}
         `;
 
         const model = await genAI.getGenerativeModel({
@@ -114,7 +115,7 @@ function Yuko() {
           },
         });
 
-        const chatResponse = await result.sendMessageStream(userInput);
+        const chatResponse = await result.sendMessageStream(input);
         responseText = "";
         for await (const chunk of chatResponse.stream) {
           const chunkText = await chunk.text();
@@ -125,7 +126,7 @@ function Yuko() {
       // Update chat history
       setChatHistory((prev) => [
         ...prev,
-        { type: "user", message: userInput },
+        { type: "user", message: input },
         { type: "bot", message: responseText, typing: true },
       ]);
 
@@ -137,7 +138,7 @@ function Yuko() {
         const convRef = doc(db, "conversations", userId);
         await updateDoc(convRef, {
           messages: arrayUnion(
-            { type: "user", message: userInput },
+            { type: "user", message: input },
             { type: "bot", message: responseText }
           ),
         });
@@ -146,7 +147,7 @@ function Yuko() {
       console.error("Error sending message:", error);
       setChatHistory((prev) => [
         ...prev,
-        { type: "user", message: userInput },
+        { type: "user", message: input },
         {
           type: "bot",
           message: "Sorry, I encountered an error while responding.",
@@ -161,7 +162,7 @@ function Yuko() {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      sendMessage();
+      sendMessage(userInput);
     }
   };
 
@@ -213,7 +214,7 @@ function Yuko() {
 
   return (
     <div className="yuko-container">
-      <Sidebar clearChat={clearChat} />
+      <Sidebar clearChat={clearChat} sendMessage={sendMessage} />
       <div className="main">
         <div className="main-container">
           {!isConversationStarted && (
@@ -251,7 +252,7 @@ function Yuko() {
                 <div
                   className="send-button"
                   type="button"
-                  onClick={sendMessage}
+                  onClick={() => sendMessage(userInput)}
                   disabled={loading || isLoading}
                 >
                   {loading || isLoading ? (
