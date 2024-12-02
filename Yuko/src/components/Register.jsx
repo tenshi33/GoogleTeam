@@ -47,9 +47,9 @@ function Register() {
     } catch (error) {
       setLoading(false);
       if (error.code === 'auth/email-already-in-use') {
-        setMessage('Email Address Already Exists!');
+        setMessage(<span className='error-exist'>Email Address Already Exists!</span>);
       } else {
-        setMessage('Unable to create user. Please try again.');
+        setMessage(<span className='error-exist'>Unable to create user. Please try again.</span>);
       }
     }
   };
