@@ -44,7 +44,6 @@ function Landing() {
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                     
                         <ul className='nav-menu'>
-                            
                             <div className={isOpen ? "toogle-nav active" : "toggle-nav"}>
                                 <li className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
                                 <li className='nav-divider'>|</li>
