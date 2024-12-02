@@ -1,14 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import yuko from "../../public/yuko2.png";
-import {
-  auth,
-  db,
-  doc,
-  getDoc,
-  arrayUnion,
-  updateDoc,
-  setDoc,
-} from "../../firebase/firebase";
+import { auth, db, doc, getDoc, arrayUnion, updateDoc } from "../../firebase/firebase";
 import { GrGallery } from "react-icons/gr";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { FaMicrophoneAlt } from "react-icons/fa";
@@ -35,6 +27,7 @@ function Yuko() {
   const [userId, setUserId] = useState(null);
   const chatHistoryRef = useRef(null);
   const [isConversationStarted, setIsConversationStarted] = useState(false);
+  const [botResponse, setBotResponse] = useState("");
 
   // Initialize Gemini API
   const apiKey = "AIzaSyBiurl2_jlPahPRYP1ht97oRGv7WNq0cT0";
@@ -50,6 +43,13 @@ function Yuko() {
       console.error("Error reading fine-tuned dataset:", error);
       return null;
     }
+  };
+
+  // Text-to-Speech function
+  const handleSpeech = (text) => {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US"; // You can customize this to other languages
+    window.speechSynthesis.speak(speech);
   };
 
   // Load PDF content
@@ -78,80 +78,35 @@ function Yuko() {
     loadPdf(); // Load PDF when the component mounts
   }, []);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserId(user.uid);
-      } else {
-        setUserId(null);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  useEffect(() => {
-    if (userId) {
-      const fetchUserData = async () => {
-        try {
-          const userDocRef = doc(db, "users", userId);
-          const userDoc = await getDoc(userDocRef);
-
-          if (userDoc.exists()) {
-            setUserName(userDoc.data().fname);
-          } else {
-            console.log("No such user!");
-          }
-        } catch (error) {
-          console.error("Error getting user data: ", error);
-        }
-      };
-
-      fetchUserData();
-    }
-  }, [userId]);
-
-  // Fetch conversation history from Firestore
-  const fetchConversationHistory = async () => {
-    if (!userId) return;
-
-    try {
-      const convRef = doc(db, "conversations", userId);
-      const convDoc = await getDoc(convRef);
-
-      if (convDoc.exists()) {
-        const storedMessages = convDoc.data().messages || [];
-        setChatHistory(storedMessages);
-      }
-    } catch (error) {
-      console.error("Error fetching conversation history:", error);
-    }
-  };
-
-  const handleUserInput = (e) => {
-    setUserInput(e.target.value);
-  };
-
+  // Handle user input and send message
   const sendMessage = async () => {
     if (userInput.trim() === "") return;
-    setLoading(true);
+
     setIsLoading(true);
 
     try {
-      // Check if there is a fine-tuned response for the user input
       const fineTunedResponse = getFineTunedResponse(userInput);
 
-      let botResponse = "";
+      let responseText = "";
       if (fineTunedResponse) {
-        // If a fine-tuned response exists, use it
-        botResponse = fineTunedResponse;
+        responseText = fineTunedResponse;
       } else {
-        // Otherwise, call the generative AI model
+        const prompt = `
+          You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
+          
+          Document Content:
+          ${pdfContent}
+          
+          User Query:
+          ${userInput}
+        `;
+
         const model = await genAI.getGenerativeModel({
           model: "tunedModels/introductionchat-qke62kuk7mst",
         });
 
         const result = await model.startChat({
+          prompt,
           history: [],
           generationConfig: {
             maxOutputTokens: 500,
@@ -159,34 +114,30 @@ function Yuko() {
         });
 
         const chatResponse = await result.sendMessageStream(userInput);
-        let responseText = "";
-
+        responseText = "";
         for await (const chunk of chatResponse.stream) {
           const chunkText = await chunk.text();
           responseText += chunkText;
         }
-
-        botResponse = responseText;
       }
 
-      // Update the chat history in React state
+      // Update chat history
       setChatHistory((prev) => [
         ...prev,
         { type: "user", message: userInput },
-        { type: "bot", message: botResponse, typing: true },
+        { type: "bot", message: responseText, typing: true },
       ]);
 
+      setBotResponse(responseText);
       setIsConversationStarted(true);
 
-      // Save the conversation to Firestore
+      // Save conversation to Firestore
       if (userId) {
         const convRef = doc(db, "conversations", userId);
-
-        // Use updateDoc to append messages to the Firestore document
         await updateDoc(convRef, {
           messages: arrayUnion(
             { type: "user", message: userInput },
-            { type: "bot", message: botResponse }
+            { type: "bot", message: responseText }
           ),
         });
       }
@@ -201,10 +152,8 @@ function Yuko() {
         },
       ]);
     } finally {
-      // After everything completes, stop loading and reset the button
-      setUserInput(""); // Clear the input field
+      setUserInput("");
       setIsLoading(false);
-      setLoading(false);
     }
   };
 
@@ -230,10 +179,10 @@ function Yuko() {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUserId(user.uid);
-        setChatHistory([]); // Clear the chat UI when the user logs in
+        setChatHistory([]);
       } else {
         setUserId(null);
-        setChatHistory([]); // Clear chat UI if the user logs out
+        setChatHistory([]);
       }
     });
 
@@ -262,7 +211,7 @@ function Yuko() {
               </div>
             </div>
           )}
-          <div className="cards">{/*Prompt cards here */}</div>
+          <div className="cards">{/* Prompt cards here */}</div>
           <div className="message-container">
             <ChatHistory chatHistory={chatHistory} />
           </div>
@@ -273,20 +222,23 @@ function Yuko() {
                   type="text"
                   placeholder="Talk to Yuko..."
                   value={userInput}
-                  onChange={handleUserInput}
+                  onChange={(e) => setUserInput(e.target.value)}
                   onKeyDown={handleKeyDown}
                 />
                 <div
                   className="send-button"
                   type="button"
                   onClick={sendMessage}
-                  disabled={loading || isLoading} // Disable the button during loading or async operations
+                  disabled={loading || isLoading}
                 >
                   {loading || isLoading ? (
-                    <span>Loading...</span> // Show loading text when processing
+                    <span>Loading...</span>
                   ) : (
                     <>
-                      <HiSpeakerWave className="img" />
+                      <HiSpeakerWave
+                        className="img"
+                        onClick={() => handleSpeech(botResponse)} // Trigger speech
+                      />
                       <RiSendPlane2Fill className="img" id="send" />
                     </>
                   )}
@@ -294,8 +246,7 @@ function Yuko() {
               </div>
               <div className="bottom-info">
                 <p>
-                  Yuko is designed to help and guide users to the best of their
-                  abilities. Please do not misuse.
+                  Yuko is designed to help and guide users to the best of their abilities. Please do not misuse.
                 </p>
               </div>
             </div>
