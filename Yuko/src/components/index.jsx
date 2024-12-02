@@ -43,7 +43,7 @@ function Landing() {
                 <nav className={`nav-bar-container ${sticky? 'color-nav' : ''}`}>
                     <img className='nav-yuko-logo' src='Yuko_logo_text.png' alt='Yuko Logo'/>
                     
-                        <ul className='nav-bar-menu'>
+                        <ul className='nav-menu'>
                             
                             <div className={isOpen ? "toogle-nav active" : "toggle-nav"}>
                                 <li className='nav-home' onClick={() => scrollToSection(homeRef)}>HOME</li>
@@ -56,11 +56,11 @@ function Landing() {
                             </div>
                         </ul>
 
-                        <button id='hamburger-toggle' className='hamburger' onClick={toggleMenu}>
-                            <i class="material-symbols-outlined">
-                                menu
-                            </i>
-                        </button>
+                        <div id='hamburger-toggle' className='hamburger' onClick={toggleMenu}>
+                            <span className='bar'></span>
+                            <span className='bar'></span>
+                            <span className='bar'></span>
+                        </div>
                 </nav>
 
                 {/*HOME SECTION IN LANDING PAGE*/}
