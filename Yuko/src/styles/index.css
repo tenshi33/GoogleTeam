@@ -391,9 +391,11 @@ html,body {
 
 .first-dev-pic {
     width: 16vw;
-    height: 24vw;
+    height: 22vw;
     margin-left: 6vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .first-dev-name {
@@ -471,9 +473,11 @@ html,body {
 
 .second-dev-pic {
     width: 16vw;
-    height: 23vw;
+    height: 22vw;
     margin-left: 0vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .second-dev-name {
@@ -542,9 +546,11 @@ html,body {
 
 .third-dev-pic {
     width: 16vw;
-    height: 23vw;
+    height: 22vw;
     margin-left: 6vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .third-dev-name {
@@ -570,7 +576,7 @@ html,body {
     justify-items: right;
     text-align: right;
     margin-bottom: 9vw;
-    margin-top: 2.3vw;
+    margin-top: 2.8vw;
     margin-left: 38vw;
     gap: 2vw;
 
@@ -622,9 +628,11 @@ html,body {
 
 .fourth-dev-pic {
     width: 16vw;
-    height: 23vw;
+    height: 22w;
     margin-left: 0vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .fourth-dev-name {
@@ -648,7 +656,7 @@ html,body {
     align-items: center;
     gap: 2vw;
     margin-bottom: 9vw;
-    margin-top: 1vw;
+    margin-top: 0.7vw;
 }
 
 .fifth-dev-shape-outline {
@@ -772,9 +780,11 @@ html,body {
 
 .sixth-dev-pic {
     width: 16vw;
-    height: 23vw;
+    height: 22vw;
     margin-left: 0vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .sixth-dev-name {
@@ -1244,11 +1254,13 @@ html,body {
     }
 
     .first-dev-pic {
-        width: 35vw;
-        height: 35vw;
+        width: 31vw;
+        height: 42vw;
         margin-left: 4vw;
         margin-right: 1vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .first-dev-name {
@@ -1288,10 +1300,12 @@ html,body {
     }
 
     .second-dev-pic {
-        width: 35vw;
-        height: 35vw;
-        margin-left: -2vw;
+        width: 31vw;
+        height: 42vw;
+        margin-left: 0vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .second-dev-name {
@@ -1332,11 +1346,13 @@ html,body {
     }
 
     .third-dev-pic {
-        width: 35vw;
-        height: 35vw;
+        width: 31vw;
+        height: 42vw;
         margin-left: 4vw;
         margin-right: 1vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .third-dev-name {
@@ -1375,10 +1391,12 @@ html,body {
     }
 
     .fourth-dev-pic {
-        width: 35vw;
-        height: 35vw;
+        width: 31vw;
+        height: 42vw;
         margin-left: -2vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .fourth-dev-name {
@@ -1419,11 +1437,13 @@ html,body {
     }
 
     .fifth-dev-pic {
-        width: 35vw;
-        height: 35vw;
+        width: 31vw;
+        height: 42vw;
         margin-left: 4vw;
         margin-right: 1vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .fifth-dev-name {
@@ -1463,10 +1483,12 @@ html,body {
     }
 
     .sixth-dev-pic {
-        width: 35vw;
-        height: 35vw;
+        width: 31vw;
+        height: 42vw;
         margin-left: -2vw;
         z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
     }
     
     .sixth-dev-name {

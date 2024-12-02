@@ -150,7 +150,7 @@ function Landing() {
                         {/*DEVELOPER 1 CONTENT*/}
                         <div className='first-dev'>
                             {/*DEVELOPER 1 PIC*/}
-                            <img className='first-dev-pic' src='https://placehold.co/250x312' alt='first developer picture'/>
+                            <img className='first-dev-pic' src='angelo.jpg' alt='first developer picture'/>
                             {/*DEVELOPER 1 INFOS*/}
                             <div className='first-dev-infos'>
                                 <p className='first-dev-name'>Angelo Egwaras</p>
@@ -171,7 +171,7 @@ function Landing() {
                             </div>
 
                             {/*DEVELOPER 2 PIC*/}
-                            <img className='second-dev-pic' src='https://placehold.co/250x312' alt='second developer picture'/>
+                            <img className='second-dev-pic' src='yohan.jpeg' alt='second developer picture'/>
                         </div>
 
                         {/*DEVELOPER 3 SHAPES CONTAINER*/}
@@ -181,7 +181,7 @@ function Landing() {
                         {/*DEVELOPER 3 CONTENT*/}
                         <div className='third-dev'>
                             {/*DEVELOPER 3 PIC*/}
-                            <img className='third-dev-pic' src='https://placehold.co/250x312' alt='third developer picture'/>
+                            <img className='third-dev-pic' src='adryan.jpg' alt='third developer picture'/>
                             {/*DEVELOPER 3 INFOS*/}
                             <div className='third-dev-infos'>
                                 <p className='third-dev-name'>Adryan Antiporda</p>
@@ -202,7 +202,7 @@ function Landing() {
                             </div>
 
                             {/*DEVELOPER 4 PIC*/}
-                            <img className='fourth-dev-pic' src='https://placehold.co/250x312' alt='fourth developer picture'/>
+                            <img className='fourth-dev-pic' src='faith.jpg' alt='fourth developer picture'/>
                         </div>
 
                         {/*DEVELOPER 5 SHAPES CONTAINER*/}
@@ -234,7 +234,7 @@ function Landing() {
                             </div>
 
                             {/*DEVELOPER 6 PIC*/}
-                            <img className='sixth-dev-pic' src='https://placehold.co/250x312' alt='sixth developer picture'/>
+                            <img className='sixth-dev-pic' src='ericka.jpg' alt='sixth developer picture'/>
                         </div>
                     </div>
                 </section>
