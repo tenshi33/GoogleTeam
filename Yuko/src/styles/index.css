@@ -703,6 +703,8 @@ html,body {
     height: 20vw;
     margin-left: 6vw;
     z-index: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .fifth-dev-name {
@@ -994,7 +996,6 @@ html,body {
         margin-left: -89vw;
         z-index: 0;
         background: linear-gradient(to bottom,#020068ea, #a10d0def 110%);
-        transition: height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-home {
@@ -1436,7 +1437,7 @@ html,body {
     }
 
     .fifth-dev-pic {
-        width: 31vw;
+        width: 40vw;
         height: 42vw;
         margin-left: 4vw;
         margin-right: 1vw;

@@ -155,7 +155,7 @@ function LogInDesktop() {
               className="show-user-pass"
               onClick={showPassword} // Toggle password visibility on click
             >
-              Show
+              {passwordVisible ? 'Hide' : 'Show'}
             </button>
           </div>
 

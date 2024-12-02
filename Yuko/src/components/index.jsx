@@ -212,7 +212,7 @@ function Landing() {
                         {/*DEVELOPER 5 CONTENT*/}
                         <div className='fifth-dev'>
                             {/*DEVELOPER 5 PIC*/}
-                            <img className='fifth-dev-pic' src='https://placehold.co/250x312' alt='third developer picture'/>
+                            <img className='fifth-dev-pic' src='wadie.jpg' alt='third developer picture'/>
                             {/*DEVELOPER 5 INFOS*/}
                             <div className='fifth-dev-infos'>
                                 <p className='fifth-dev-name'>Wadie Ibrahim Camaligan</p>
