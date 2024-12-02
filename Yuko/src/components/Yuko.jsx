@@ -189,6 +189,27 @@ function Yuko() {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    if (userId) {
+      const fetchUserData = async () => {
+        try {
+          const userDocRef = doc(db, "users", userId);
+          const userDoc = await getDoc(userDocRef);
+
+          if (userDoc.exists()) {
+            setUserName(userDoc.data().fname);
+          } else {
+            console.log("No such user!");
+          }
+        } catch (error) {
+          console.error("Error getting user data: ", error);
+        }
+      };
+
+      fetchUserData();
+    }
+  }, [userId]);
+
   return (
     <div className="yuko-container">
       <Sidebar clearChat={clearChat} />
