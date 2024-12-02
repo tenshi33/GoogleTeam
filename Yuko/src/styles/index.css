@@ -886,6 +886,10 @@ html,body {
     font-size: 0.95vw;
 }
 
+.footer-links:hover {
+    text-decoration: underline;
+}
+
 .footer-socials {
     display: flex;
     flex-direction: row;
