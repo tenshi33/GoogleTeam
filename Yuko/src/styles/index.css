@@ -1029,11 +1029,11 @@ html,body {
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(6.7px) rotate(50deg);
+        transform: translateY(6.8px) rotate(50deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-6.7px) rotate(-50deg);
+        transform: translateY(-6.8px) rotate(-50deg);
     }
 
     .nav-home {
