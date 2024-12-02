@@ -82,6 +82,7 @@ function Yuko() {
   const sendMessage = async () => {
     if (userInput.trim() === "") return;
 
+    if (loading || isLoading ) return;
     setIsLoading(true);
 
     try {
@@ -245,6 +246,7 @@ function Yuko() {
                   value={userInput}
                   onChange={(e) => setUserInput(e.target.value)}
                   onKeyDown={handleKeyDown}
+                  disabled={loading || isLoading}
                 />
                 <div
                   className="send-button"
@@ -253,7 +255,7 @@ function Yuko() {
                   disabled={loading || isLoading}
                 >
                   {loading || isLoading ? (
-                    <span>Loading...</span>
+                    <p>Loading...</p>
                   ) : (
                     <>
                       <HiSpeakerWave
