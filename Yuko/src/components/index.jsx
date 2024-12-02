@@ -131,8 +131,8 @@ function Landing() {
                         </div>
 
                         <div className='features-bottom'>
-                            <img src='https://placehold.co/320x480' alt='chatbot' className='chatbot1'></img>
-                            <img src='https://placehold.co/320x480' alt='chatbot' className='chatbot2'></img>
+                            <img src='chatbot1.png' alt='chatbot' className='chatbot1'></img>
+                            <img src='chatbot2.png' alt='chatbot' className='chatbot2'></img>
                         </div>
                     </div>
                 </section>

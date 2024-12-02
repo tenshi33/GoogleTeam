@@ -173,7 +173,7 @@ html,body {
 .features-landing-section {
     background: linear-gradient(to bottom,#6D171E, #7C0D52);
     padding: 2vw;
-    height: 65vw;
+    height: 85vw;
     display: flex;
     justify-items: center;
     flex-direction: column;
@@ -304,12 +304,13 @@ html,body {
 
 .chatbot1 {
     width: 30vw;
-    height: 30vw;
+    height: 50vw;
 }
 
 .chatbot2 {
     width: 30vw;
-    height: 30vw;
+    height: 50vw;
+    margin-left: -10vw;
 }
 
 .dev-landing-section {
@@ -1138,7 +1139,7 @@ html,body {
 
     .features-landing-section {
         padding: 0;
-        height: 560vw;
+        height: 640vw;
         width: 100vw;
     }
 
@@ -1242,7 +1243,11 @@ html,body {
 
     .chatbot1, .chatbot2 {
         width: 80vw;
-        height: 80vw;
+        height: 135vw;
+    }
+
+    .chatbot2 {
+        margin-left: 0.1vw;
     }
 
     .dev-landing-section {
