@@ -31,7 +31,7 @@ function Landing() {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    }
+    };
 
     return (
         <>
@@ -55,7 +55,7 @@ function Landing() {
                             </div>
                         </ul>
 
-                        <div id='hamburger-toggle' className='hamburger' onClick={toggleMenu}>
+                        <div id='hamburger-toggle' className={`hamburger ${!isOpen ? 'active' : ''}`}  onClick={toggleMenu}>
                             <span className='bar'></span>
                             <span className='bar'></span>
                             <span className='bar'></span>
