@@ -1302,7 +1302,7 @@ html,body {
     .second-dev-pic {
         width: 31vw;
         height: 42vw;
-        margin-left: 1.3vw;
+        margin-left: 1vw;
         z-index: 1;
         object-fit: cover;
         border-radius: 1rem;
@@ -1311,7 +1311,6 @@ html,body {
     .second-dev-name {
         font-size: 5vw;
         margin-left: -21vw;
-        background-color: #050374;
     }
     
     .second-dev-description {
@@ -1319,7 +1318,7 @@ html,body {
         font-family: 'Calibri';
         width: 45vw;
         margin-top: 0.5vw;
-        margin-left: -26vw;
+        margin-left: -25vw;
     }
 
     .third-dev {
@@ -1394,7 +1393,7 @@ html,body {
     .fourth-dev-pic {
         width: 31vw;
         height: 42vw;
-        margin-left: 1.3vw;
+        margin-left: 1vw;
         z-index: 1;
         object-fit: cover;
         border-radius: 1rem;
@@ -1486,7 +1485,7 @@ html,body {
     .sixth-dev-pic {
         width: 31vw;
         height: 42vw;
-        margin-left: 1.3vw;
+        margin-left: 0.8vw;
         z-index: 1;
         object-fit: cover;
         border-radius: 1rem;
@@ -1494,7 +1493,7 @@ html,body {
     
     .sixth-dev-name {
         font-size: 5vw;
-        margin-left: -18vw;
+        margin-left: -17vw;
         width: 38vw;
     }
     
@@ -1503,7 +1502,7 @@ html,body {
         font-family: 'Calibri';
         width: 46vw;
         margin-top: 0.5vw;
-        margin-left: -26vw;
+        margin-left: -25vw;
     }
 
     .landing-footer-section {
