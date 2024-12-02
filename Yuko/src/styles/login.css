@@ -513,7 +513,7 @@ input:-webkit-autofill{
   .recover-pass .recover-pass-email {
     width: 26.8vw;
     height: 2.5vw;
-    border-width: 0.8vw;
+    border-width: 0.5vw;
     border-radius: 0.7em;
     padding-left: 2.7vw;
     font-size: 0.9vw;
