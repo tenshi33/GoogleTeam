@@ -215,7 +215,7 @@ html,body {
 
 .features-top-left-decscription {
     font-family: 'Calibri';
-    font-size: 1vw;
+    font-size: 1.25vw;
     width: 38vw;
     color: white;
 }
@@ -255,6 +255,8 @@ html,body {
 
 .features-description-odd {
     font-size: 1vw;
+    margin-top: 0.3vw;
+    line-height: 1.2vw;
 }
 
 .features-pic-even {
@@ -268,6 +270,8 @@ html,body {
 
 .features-description-even {
     font-size: 1vw;
+    margin-top: 0.3vw;
+    line-height: 1.2vw;
 }
 
 
@@ -851,6 +855,7 @@ html,body {
 .ai-description-footer {
     font-size: 0.8vw;
     margin-top: 1vw;
+    width: 12vw;
 }
 
 .landing-contacts {
@@ -1199,7 +1204,7 @@ html,body {
         border-color: rgb(255, 255, 255);
         border-width: 0.5px;
         border-radius: 1.3rem;
-        padding: 1.5vw;
+        padding: 2.5vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1223,16 +1228,20 @@ html,body {
     }
 
     .features-title-even {
-        font-size: 3.5vw;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     .features-description-odd {
         font-size: 2.5vw;
+        line-height: 3.5vw;
+        margin-top: 1.5vw;
     }
 
     .features-description-even {
         font-size: 2.5vw;
+        line-height: 3.5vw;
+        margin-top: 1.5vw;
     }
 
 
@@ -1582,6 +1591,7 @@ html,body {
     .ai-description-footer {
         font-size: 2vw;
         margin-top: 1vw;
+        width: 30vw;
     }
     
     .footer-other-pages {

@@ -71,9 +71,7 @@ function Landing() {
                         <div className='landing-home-content' >
                             <h1 className='home-yuko-title'>YUKO</h1>
                             <p className='home-yuko-description'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                Yuko is a Generative AI assistant powered by Google Gemini, providing accurate answers to student queries. Tailored to meet students' needs, it makes academic support more accessible and helps you stay organized and on track for success.
                             </p>
                             <div className='get-started-button'>
                                 <Link to="/Login" className="log-in-button">Get Started</Link>
@@ -89,7 +87,7 @@ function Landing() {
                         <div className='features-top'>
                             <div className='features-first-section'>
                                 <h1 className='feature-title'>FEATURES</h1>
-                                <p className='features-top-left-decscription'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p className='features-top-left-decscription'>Yuko AI is a powerful and reliable tool designed specifically for ICCT students, offering instant, accurate answers to academic and administrative queries. With its up-to-date information, easy navigation, and student-centric design, Yuko makes school procedures more accessible and helps students stay organized and informed. Whether you need guidance on where to submit assignments or how to contact a faculty member, Yuko is always available to assist, ensuring a seamless and efficient academic experience for every student.</p>
                             </div>
                             <div className='feature-section-divider'></div>
                             {/*FEATURES TOP-RIGHT SIDE WITH SCROLL FEATURE*/}
@@ -97,16 +95,16 @@ function Landing() {
                                 <div className='features'>
                                     <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                     <div className='first-feature-content-odd'>
-                                        <p className='features-title-odd'>First Feature Title</p>
-                                        <p className='features-description-odd'>First Feature Description</p>
+                                        <p className='features-title-odd'>Academic Guidance</p>
+                                        <p className='features-description-odd'>Yuko helps ICCT students navigate their educational journey by providing answers to common questions related to school procedures, such as where to submit assignments or how to contact faculty members.</p>
                                     </div>
                                 </div>
 
                                 <div className='features'>
                                     
                                     <div className='first-feature-content-even'>
-                                        <p className='features-title-even'>Second Feature Title</p>
-                                        <p className='features-description-even'>Second Feature Description</p>
+                                        <p className='features-title-even'>Access to Information</p>
+                                        <p className='features-description-even'>Yuko provides quick, accurate answers to a wide range of academic and administrative queries, ensuring students can easily find the information they need, anytime.</p>
                                     </div>
                                     <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                 </div>
@@ -114,16 +112,18 @@ function Landing() {
                                 <div className='features'>
                                     <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                     <div className='first-feature-content-odd'>
-                                        <p className='features-title-odd'>Third Feature Title</p>
-                                        <p className='features-description-odd'>Third Feature Description</p>
+                                        <p className='features-title-odd'>Updated and Accurate</p>
+                                        <p className='features-description-odd'>Yuko is continuously updated with the latest school information, policies, and schedules, ensuring students always have access to the most current details.</p>
                                     </div>
                                 </div>
 
                                 <div className='features'>
                                     
                                     <div className='first-feature-content-even'>
-                                        <p className='features-title-even'>Fourth Feature Title</p>
-                                        <p className='features-description-even'>Fourth Feature Description</p>
+                                        <p className='features-title-even'>Easy Navigation</p>
+                                        <p className='features-description-even'>
+                                            Need to know where to go for a specific task? Yuko can guide you to the right department, office, or faculty, helping you navigate campus procedures efficiently.
+                                        </p>
                                     </div>
                                     <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                 </div>
@@ -243,7 +243,7 @@ function Landing() {
                     <div className='contacts-landing'>
                         <div className='footer-left'>
                             <img className='footer-yuko-logo' src='Yuko_logo_text.png' alt='YUKO Logo'/>
-                            <p className='ai-description-footer'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <p className='ai-description-footer'> Yuko is a Generative AI assistant powered by Google Gemini.</p>
                         </div>
                         <div className='footer-other-pages'>
                             <p className='quick-links-title'>Quick Links</p>
