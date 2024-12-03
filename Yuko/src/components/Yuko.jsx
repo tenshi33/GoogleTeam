@@ -80,132 +80,98 @@ function Yuko() {
 
 // Handle user input and send message
 const sendMessage = async (messageInput) => {
-    // Trim the input to remove leading/trailing spaces
-    const input = messageInput.trim();
-    
-    // If the input is empty (even after trimming), exit the function early
-    if (input === "") return;
+  // Trim the input to remove leading/trailing spaces
+  const input = messageInput.trim();
+  
+  // If the input is empty (even after trimming), exit the function early
+  if (input === "") return;
 
-    // Check if the input is one of the FAQ items
-    const faqItems = [
-      "What is Yuko?",
-      "What does Yuko do?",
-      "How helpful is Yuko?",
-      "How can Yuko help me?"
-    ];
-    const isFAQItem = faqItems.includes(input);
+  // Check if the input is one of the FAQ items
+  const faqItems = [
+    "What is Yuko?",
+    "What does Yuko do?",
+    "How helpful is Yuko?",
+    "How can Yuko help me?"
+  ];
+  const isFAQItem = faqItems.includes(input);
 
-    let responseText = "";
+  let responseText = "";
 
-    // Prevent sending message while loading or processing another request
-    if (loading || isLoading) return;
+  // Prevent sending message while loading or processing another request
+  if (loading || isLoading) return;
 
-    setIsLoading(true);
+  setIsLoading(true);
 
-    try {
-        if (isFAQItem) {
-            // Handle FAQ items
-            const fineTunedResponse = getFineTunedResponse(input);
-            if (fineTunedResponse) {
-                responseText = fineTunedResponse;
-            } else {
-                // If no fine-tuned response, use the general AI model
-                const prompt = `
-                    You are a helpful assistant. The user is asking about the following FAQ question:
+  try {
+    // Try to get a fine-tuned response if available
+    const fineTunedResponse = getFineTunedResponse(input);
+    if (fineTunedResponse) {
+      responseText = fineTunedResponse;
+    } else {
+      // If no fine-tuned response, use the general AI model for both FAQ and non-FAQ
+      const prompt = isFAQItem
+        ? `You are a helpful assistant. The user is asking about the following FAQ question:\nFAQ Question: "${input}"\nProvide a helpful, concise response to this FAQ.`
+        : `
+          You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
 
-                    FAQ Question: "${input}"
+          Document Content:
+          ${pdfContent}
 
-                    Provide a helpful, concise response to this FAQ.
-                `;
+          User Query:
+          ${input}
+        `;
 
-                const model = await genAI.getGenerativeModel({
-                    model: "tunedModels/introductionchat-qke62kuk7mst",
-                });
+      const model = await genAI.getGenerativeModel({
+        model: "tunedModels/introductionchat-qke62kuk7mst",
+      });
 
-                const result = await model.startChat({
-                    prompt,
-                    history: [],
-                    generationConfig: {
-                        maxOutputTokens: 500,
-                    },
-                });
+      const result = await model.startChat({
+        prompt,
+        history: [],
+        generationConfig: {
+          maxOutputTokens: 500,
+        },
+      });
 
-                const chatResponse = await result.sendMessageStream(input);
-                responseText = "";
-                for await (const chunk of chatResponse.stream) {
-                    const chunkText = await chunk.text();
-                    responseText += chunkText;
-                }
-            }
-        } else {
-            // Regular user input handling (non-FAQ)
-            const fineTunedResponse = getFineTunedResponse(input);
-
-            if (fineTunedResponse) {
-                responseText = fineTunedResponse; 
-            } else {
-                
-                const prompt = `
-                    You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
-
-                    Document Content:
-                    ${pdfContent}
-
-                    User Query:
-                    ${input}
-                `;
-
-                const model = await genAI.getGenerativeModel({
-                    model: "tunedModels/introductionchat-qke62kuk7mst",
-                });
-
-                const result = await model.startChat({
-                    prompt,
-                    history: [],
-                    generationConfig: {
-                        maxOutputTokens: 500,
-                    },
-                });
-
-                const chatResponse = await result.sendMessageStream(input);
-                responseText = "";
-                for await (const chunk of chatResponse.stream) {
-                    const chunkText = await chunk.text();
-                    responseText += chunkText;
-                }
-            }
-        }
-
-        // Update chat history for both FAQ and general user inputs
-        setChatHistory((prev) => [
-            ...prev,
-            { type: "user", message: input },
-            { type: "bot", message: responseText },
-        ]);
-        setBotResponse(responseText);  
-
-        // Mark conversation as started
-        setIsConversationStarted(true);
-
-        // Save conversation to Firestore ONLY if it's a general user query (not FAQ)
-        if (userId) {
-          const convRef = doc(db, "conversations", userId);
-          await updateDoc(convRef, {
-                createdAt: Timestamp.now(),
-                messages: arrayUnion(
-                    { type: "user", message: input },
-                    { type: "bot", message: responseText }
-                ),
-                lastUpdated: Timestamp.now(),
-            }, { merge: true });
-        }
-    } catch (error) {
-        console.error("Error while handling the message:", error);
-    } finally {
-        setUserInput(""); // Clear user input after response
-        setIsLoading(false); // Reset loading state
+      const chatResponse = await result.sendMessageStream(input);
+      responseText = "";
+      for await (const chunk of chatResponse.stream) {
+        const chunkText = await chunk.text();
+        responseText += chunkText;
+      }
     }
+
+    // Update chat history for both FAQ and general user inputs
+    setChatHistory((prev) => [
+      ...prev,
+      { type: "user", message: input },
+      { type: "bot", message: responseText },
+    ]);
+    setBotResponse(responseText);  
+
+    // Mark conversation as started
+    setIsConversationStarted(true);
+
+    // Save conversation to Firestore ONLY if it's a general user query (not FAQ)
+    if (userId) {
+      const convRef = doc(db, "conversations", userId);
+      await updateDoc(convRef, {
+        createdAt: Timestamp.now(),
+        messages: arrayUnion(
+          { type: "user", message: input },
+          { type: "bot", message: responseText }
+        ),
+        lastUpdated: Timestamp.now(),
+      }, { merge: true });
+    }
+  } catch (error) {
+    console.error("Error while handling the message:", error);
+  } finally {
+    setUserInput(""); // Clear user input after response
+    setIsLoading(false); // Reset loading state
+  }
 };
+
 
     
 
