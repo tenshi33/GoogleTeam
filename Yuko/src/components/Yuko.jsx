@@ -10,7 +10,7 @@ import ChatHistory from "./chathistory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import * as pdfjsLib from "pdfjs-dist";
 import "../styles/Yuko.css";
-import fineTunedData from "../../public/yuko_data.json"; // Ensure this file exists
+import fineTunedData from "../../public/yuko_data.json"; 
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.mjs",
@@ -48,14 +48,14 @@ function Yuko() {
   // Text-to-Speech function
   const handleSpeech = (text) => {
     const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-US"; // You can customize this to other languages
+    speech.lang = "en-US"; 
     window.speechSynthesis.speak(speech);
   };
 
   // Load PDF content
   const loadPdf = async () => {
     try {
-      const pdfUrl = "/info.pdf"; // Path to your PDF file
+      const pdfUrl = "/info.pdf"; 
       const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
       const numPages = pdf.numPages;
 
@@ -75,79 +75,138 @@ function Yuko() {
   };
 
   useEffect(() => {
-    loadPdf(); // Load PDF when the component mounts
+    loadPdf();
   }, []);
 
-  // Handle user input and send message
-  const sendMessage = async (messageInput) => {
-    const input = messageInput.trim() === "" ? userInput : messageInput;
+// Handle user input and send message
+const sendMessage = async (messageInput) => {
+    // Trim the input to remove leading/trailing spaces
+    const input = messageInput.trim();
+    
+    // If the input is empty (even after trimming), exit the function early
     if (input === "") return;
 
+    // Check if the input is one of the FAQ items
+    const faqItems = [
+      "What is Yuko?",
+      "What does Yuko do?",
+      "How helpful is Yuko?",
+      "How can Yuko help me?"
+    ];
+    const isFAQItem = faqItems.includes(input);
+
+    let responseText = "";
+
+    // Prevent sending message while loading or processing another request
     if (loading || isLoading) return;
+
     setIsLoading(true);
 
     try {
-      const fineTunedResponse = getFineTunedResponse(userInput);
-    
-      let responseText = "";
-      if (fineTunedResponse) {
-        responseText = fineTunedResponse;
-      } else {
-        const prompt = `
-          You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
-          
-          Document Content:
-          ${pdfContent}
-          
-          User Query:
-          ${userInput}
-        `;
-    
-        const model = await genAI.getGenerativeModel({
-          model: "tunedModels/introductionchat-qke62kuk7mst",
-        });
-    
-        const result = await model.startChat({
-          prompt,
-          history: [],
-          generationConfig: {
-            maxOutputTokens: 500,
-          },
-        });
-    
-        const chatResponse = await result.sendMessageStream(userInput);
-        responseText = "";
-        for await (const chunk of chatResponse.stream) {
-          const chunkText = await chunk.text();
-          responseText += chunkText;
+        if (isFAQItem) {
+            // Handle FAQ items
+            const fineTunedResponse = getFineTunedResponse(input);
+            if (fineTunedResponse) {
+                responseText = fineTunedResponse;
+            } else {
+                // If no fine-tuned response, use the general AI model
+                const prompt = `
+                    You are a helpful assistant. The user is asking about the following FAQ question:
+
+                    FAQ Question: "${input}"
+
+                    Provide a helpful, concise response to this FAQ.
+                `;
+
+                const model = await genAI.getGenerativeModel({
+                    model: "tunedModels/introductionchat-qke62kuk7mst",
+                });
+
+                const result = await model.startChat({
+                    prompt,
+                    history: [],
+                    generationConfig: {
+                        maxOutputTokens: 500,
+                    },
+                });
+
+                const chatResponse = await result.sendMessageStream(input);
+                responseText = "";
+                for await (const chunk of chatResponse.stream) {
+                    const chunkText = await chunk.text();
+                    responseText += chunkText;
+                }
+            }
+        } else {
+            // Regular user input handling (non-FAQ)
+            const fineTunedResponse = getFineTunedResponse(input);
+
+            if (fineTunedResponse) {
+                responseText = fineTunedResponse; 
+            } else {
+                
+                const prompt = `
+                    You are a helpful assistant with access to both a document and general knowledge. When the user's query relates to the document, answer based on the document content. If not, answer with general knowledge.
+
+                    Document Content:
+                    ${pdfContent}
+
+                    User Query:
+                    ${input}
+                `;
+
+                const model = await genAI.getGenerativeModel({
+                    model: "tunedModels/introductionchat-qke62kuk7mst",
+                });
+
+                const result = await model.startChat({
+                    prompt,
+                    history: [],
+                    generationConfig: {
+                        maxOutputTokens: 500,
+                    },
+                });
+
+                const chatResponse = await result.sendMessageStream(input);
+                responseText = "";
+                for await (const chunk of chatResponse.stream) {
+                    const chunkText = await chunk.text();
+                    responseText += chunkText;
+                }
+            }
         }
-      }
-    
-      // **Unified Chat History Update**
-      setChatHistory((prev) => [
-        ...prev,
-        { type: "user", message: userInput },
-        { type: "bot", message: responseText },
-      ]);
-    
-      setBotResponse(responseText); // Update bot response state (optional for TTS)
-      setIsConversationStarted(true);
-    
-      // Save conversation to Firestore
-      if (userId) {
-        const convRef = doc(db, "conversations", userId);
-        await updateDoc(convRef, {
-          messages: arrayUnion(
-            { type: "user", message: userInput },
-            { type: "bot", message: responseText }
-          ),
-        });
-      }
+
+        // Update chat history for both FAQ and general user inputs
+        setChatHistory((prev) => [
+            ...prev,
+            { type: "user", message: input },
+            { type: "bot", message: responseText },
+        ]);
+        setBotResponse(responseText);  
+
+        // Mark conversation as started
+        setIsConversationStarted(true);
+
+        // Save conversation to Firestore ONLY if it's a general user query (not FAQ)
+        if (userId) {
+          const convRef = doc(db, "conversations", userId);
+          await updateDoc(convRef, {
+                createdAt: Timestamp.now(),
+                messages: arrayUnion(
+                    { type: "user", message: input },
+                    { type: "bot", message: responseText }
+                ),
+                lastUpdated: Timestamp.now(),
+            }, { merge: true });
+        }
+    } catch (error) {
+        console.error("Error while handling the message:", error);
     } finally {
-      setUserInput("");
-      setIsLoading(false);
+        setUserInput(""); // Clear user input after response
+        setIsLoading(false); // Reset loading state
     }
-  };
+};
+
     
 
   const handleKeyDown = (e) => {
@@ -252,7 +311,7 @@ function Yuko() {
                     <>
                       <HiSpeakerWave
                         className="img"
-                        onClick={() => handleSpeech(botResponse)} // Trigger speech
+                        onClick={() => handleSpeech(botResponse)} 
                       />
                       <RiSendPlane2Fill className="img" id="send" />
                     </>
