@@ -1198,6 +1198,7 @@ html,body {
         max-height: 60vw;
         width: 84vw;
         overflow-x: hidden;
+        margin-top: -22vw;
     }
 
     .features-scroll-section .features {
