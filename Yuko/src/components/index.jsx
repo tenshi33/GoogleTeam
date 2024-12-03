@@ -256,10 +256,10 @@ function Landing() {
                         
                         <div className='footer-contacts'>
                             <p className='contacts-title'>Contacts</p>
-                            <a className='footer-links' href='#'>Email</a>
-                            <a className='footer-links' href='#'>Facebook</a>
-                            <a className='footer-links' href='#'>LinkedIn</a>
-                            <a className='footer-links' href='#'>Phone Number</a>
+                            <a className='footer-links' title='solutionjnatech@gmail.com' target='_blank' href='https://mail.google.com/mail/u/0/#inbox?compose=new' >Email</a>
+                            <a className='footer-links' title='none' onClick={() => scrollToSection(contactsRef)}>Facebook</a>
+                            <a className='footer-links' title='JNA Tech Solution' href='https://www.linkedin.com/company/jnatechsolution/' target='_blank'>LinkedIn</a>
+                            <a className='footer-links' title='+639218087458' onClick={() => scrollToSection(contactsRef)}>Phone Number</a>
                         </div>
                     </div>
                     
