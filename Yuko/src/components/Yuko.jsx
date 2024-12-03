@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import yuko from "../../public/yuko2.png";
-import { auth, db, doc, getDoc, arrayUnion, updateDoc } from "../../firebase/firebase";
+import { auth, db, doc, getDoc, setDoc, arrayUnion, updateDoc, Timestamp } from "../../firebase/firebase";
 import { GrGallery } from "react-icons/gr";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { FaMicrophoneAlt } from "react-icons/fa";
@@ -80,10 +80,9 @@ function Yuko() {
 
 // Handle user input and send message
 const sendMessage = async (messageInput) => {
-  // Trim the input to remove leading/trailing spaces
+  
   const input = messageInput.trim();
   
-  // If the input is empty (even after trimming), exit the function early
   if (input === "") return;
 
   // Check if the input is one of the FAQ items
@@ -187,17 +186,17 @@ const sendMessage = async (messageInput) => {
       // Mark conversation as started
       setIsConversationStarted(true);
 
-      // Save conversation to Firestore ONLY if it's a general user query (not FAQ)
-      if (userId && !isFAQItem) {
-          const convRef = doc(db, "conversations", userId);
-          await updateDoc(convRef, {
+      // Save conversation to Firestore for both FAQ and general user queries
+      if (userId) {
+          const convRef = doc(db, "conversations", userId); 
+          await setDoc(convRef, { 
               createdAt: Timestamp.now(),
+              lastUpdated: Timestamp.now(),
               messages: arrayUnion(
                   { type: "user", message: input },
                   { type: "bot", message: responseText }
               ),
-              lastUpdated: Timestamp.now(),
-          }, { merge: true });
+          }, { merge: true }); 
       }
   } catch (error) {
       console.error("Error while handling the message:", error);
@@ -206,10 +205,6 @@ const sendMessage = async (messageInput) => {
       setIsLoading(false); // Reset loading state
   }
 };
-
-
-
-    
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {

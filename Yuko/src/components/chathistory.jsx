@@ -1,20 +1,29 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/chathistory.css";
-import { PiUserCircle } from "react-icons/pi"; 
+import { PiUserCircle } from "react-icons/pi";
 import yuko from "../../public/yuko2.png"; 
-
 
 const ChatHistory = ({ chatHistory }) => {
   const [visibleMessages, setVisibleMessages] = useState([]);
   const chatHistoryRef = useRef(null);
 
   useEffect(() => {
-    const lastMessage = chatHistory[chatHistory.length - 1];
-    if (lastMessage && lastMessage.type === "bot" && lastMessage.typing) {
-      let i = 0;
-      const typingMessage = lastMessage.message;
-      setVisibleMessages([ ...chatHistory.slice(0, -1), { ...lastMessage, message: "" } ]);
+    const updatedMessages = [...chatHistory];
+    setVisibleMessages(updatedMessages);
 
+    const lastMessage = updatedMessages[updatedMessages.length - 1];
+    
+    if (lastMessage && lastMessage.type === "bot") {
+      const typingMessage = lastMessage.message;
+      let i = 0;
+
+      // Temporarily remove the message so it can be replaced letter by letter
+      setVisibleMessages((prevMessages) => [
+        ...prevMessages.slice(0, -1),
+        { ...lastMessage, message: "" }
+      ]);
+
+      // Start the typing animation by revealing one letter at a time
       const typingInterval = setInterval(() => {
         if (i < typingMessage.length) {
           setVisibleMessages((prevMessages) => [
@@ -23,17 +32,11 @@ const ChatHistory = ({ chatHistory }) => {
           ]);
           i++;
         } else {
-          clearInterval(typingInterval);
+          clearInterval(typingInterval); 
         }
-      }, 30); // Adjust speed here for typing animation
+      }, 30); 
     }
   }, [chatHistory]);
-
-  useEffect(() => {
-    // Whenever chatHistory updates, manage the display of typing animations
-    const updatedMessages = [...chatHistory];
-    setVisibleMessages(updatedMessages);
-  }, [chatHistory]); // Re-run this effect when the chat history changes
 
   return (
     <div className="chat-history mb-4 h-80 overflow-auto" ref={chatHistoryRef}>
@@ -44,7 +47,6 @@ const ChatHistory = ({ chatHistory }) => {
           aria-label={entry.type === "user" ? "User message" : "Bot message"}
         >
           <div className="message-icon">
-           
             {entry.type === "user" ? (
               <PiUserCircle className="message-avatar" />
             ) : (
