@@ -889,6 +889,7 @@ html,body {
     color: white;
     font-family: 'Arial';
     font-size: 0.95vw;
+    cursor: pointer;
 }
 
 .footer-links:hover {

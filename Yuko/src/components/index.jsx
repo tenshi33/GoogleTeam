@@ -33,6 +33,27 @@ function Landing() {
         setIsOpen(!isOpen);
     };
 
+
+    const [emailText, setEmailText] = useState('Email');
+ 
+    const handleClicked = () => {
+        setEmailText('solutionjnatech@gmail.com');
+ 
+        setTimeout(() => {
+            setEmailText('Email');
+        }, 3000); // Reverts back to 'Submit' after 2 seconds
+    };
+
+    const [buttonText, setButtonText] = useState('Phone Number');
+ 
+    const handleClick = () => {
+        setButtonText('+639218087458');
+ 
+        setTimeout(() => {
+            setButtonText('Phone Number');
+        }, 3000); // Reverts back to 'Submit' after 2 seconds
+    };
+
     return (
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
@@ -256,10 +277,10 @@ function Landing() {
                         
                         <div className='footer-contacts'>
                             <p className='contacts-title'>Contacts</p>
-                            <a className='footer-links' title='solutionjnatech@gmail.com' target='_blank' href='https://mail.google.com/mail/u/0/#inbox?compose=new' >Email</a>
+                            <a className='footer-links' title='solutionjnatech@gmail.com' target='_blank' onClick={handleClicked}>{emailText}</a>
                             <a className='footer-links' title='none' onClick={() => scrollToSection(contactsRef)}>Facebook</a>
                             <a className='footer-links' title='JNA Tech Solution' href='https://www.linkedin.com/company/jnatechsolution/' target='_blank'>LinkedIn</a>
-                            <a className='footer-links' title='+639218087458' onClick={() => scrollToSection(contactsRef)}>Phone Number</a>
+                            <a className='footer-links' title='+639218087458' onClick={handleClick}>{buttonText}</a>
                         </div>
                     </div>
                     
