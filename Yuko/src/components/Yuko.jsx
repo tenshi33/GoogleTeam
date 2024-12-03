@@ -118,7 +118,7 @@ const sendMessage = async (messageInput) => {
               `;
 
               const model = await genAI.getGenerativeModel({
-                  model: "tunedModels/introductionchat-qke62kuk7mst",
+                  model: "tunedModels/newtunedmodel-mx539ftxsdlk",
               });
 
               const result = await model.startChat({

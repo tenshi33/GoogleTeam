@@ -338,6 +338,186 @@
     {
         "input": "How can Yuko help me?",
         "output": "Yuko is here to assist you by answering questions, helping you solve problems, and simplifying tasks to make your day easier."
+    },
+    {
+        "input": "Who founded the ICCT?",
+        "output": "ICCT Colleges Foundation, Inc. was founded in 1992 by Dr. William S"
+    },
+    {
+        "input": "When was ICCT established?",
+        "output": "ICCT Colleges Foundation Inc. was established on December 15, 1992 by Dr. William S. Co and Dr. Consuelo L. Co."
+    },
+    {
+        "input": "Where are the other campuses located?",
+        "output": "The campuses are  locatted in the municipality of Cainta, Angono,  San Mateo, Sumulong (Cainta), Cogeo (Antipolo), Taytay, Binangonan and the city of Antipolo"
+    },
+    {
+        "input": "What does the ICCT offers?",
+        "output": "It  offers  degree  programs  and  diploma  programs  in  Engineering,  Business  Administration  & Accountancy, Information & Communication Technology, Criminology, Education, Arts & Sciences. and Health Science  Education.  Also,  it  offers  certificate  programs  in  Health  Care  Assistant,  Professional  Caregiving,  E-Learning, Call  Center  Courses, Medical  Transcription, International  Studies,  Digital  Art Animation and Language Proficiency and many others"
+    },
+    {
+        "input": "What does ICCT provides?",
+        "output": "A tertiary education provider in the Philippines that offers courses in a variety of fields, including arts and sciences, business, computer science, criminology, engineering, and more. ICCT Colleges also offers short-term and certificate programs, as well as senior high school."
+    },
+    {
+        "input": "What sorts of events are there in ICCT?",
+        "output": "ICCT Colleges Foundation Inc. hosts a variety of events, including student activities, competitions, and festivals."
+    },
+    {
+        "input": "Who is the current president of ICCT?",
+        "output": "Dr. Vivien Co-Say"
+    },
+    {
+        "input": "Paano kumuha ng SOG?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may APPOINTMENT DATE ka na, dalhin ang Proof of Payment (PRINTED) tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "Ano ang dapat na gawin para kumuha ng SOG?",
+        "output": "Para sa pag-appoint ng Summary of Grades (SOG), maaari kang mag-email sa mganda@icct.edu.ph. Pagdating sa Registrar Window 15 sa Cainta Branch, dalhin ang Printed Proof of Payment. strictly from 9 am to 2 pm."
+    },
+    {
+        "input": "Who is the owner of ICCT?",
+        "output": "Dr. William S. Co is the founder and chairman of ICCT Colleges"
+    },
+    {
+        "input": "Ano pong gagawin kapag may INC na grades?",
+        "output": "To confirm the grades that are designated as incomplete (INC), you can visit window nine or ask for a summary of grades."
+    },
+    {
+        "input": "What kind of events are there in ICCT?",
+        "output": "Activities for students include the CinemaLENTE Festival, the RoboTHINKS Exhibit & Competition, the Fun Run, and the Fun Dance. The Senior High School Majestic Ball, the Voice Singing Competition, and the Photojournalism Exhibit & Competition are among the competitions. Festivals: These consist of the Cheer Dancing Competition and the Sports Festival. Seminars: These consist of CoCA seminars and EduACTION seminars/forums. The E-Day: Exhibit & Competition and the In Service of the Nation Exhibit and Competition are examples of competitions and exhibits. Additional events include the Foundation Day Celebration, Buwan ng Wika Celebration, and Student Social Week. The Giant Christmas Tree: Upcycled Blue Jeans Ornaments Competition is one of the contests for student organizations."
+    },
+    {
+        "input": "Need po ba ng prospectus kapag kukuha ka SOG sa school?",
+        "output": "Hindi napo"
+    },
+    {
+        "input": "saan po pede mag enroll ang 1st year?",
+        "output": "Register on the New Student Application Portal by visiting sms.icct.edu.ph and completing the Registration Form."
+    },
+    {
+        "input": "Ano ang gagawin sa kapag blanko ang SOG?",
+        "output": "Kailangan mong pumunta sa Window 9 ng Registrar para magpa-verify ng grades."
+    },
+    {
+        "input": "Saan po pwede mag bayad ng Uniform?",
+        "output": "After logging in at sms.icct.edu.ph, proceed to Account and PayOnline to obtain your Reference Number, and then use Gcash to make the payment."
+    },
+    {
+        "input": "Ano kailangan para makakuha ng Test Booklet?",
+        "output": "Magdala ka lang ng official Registration Form (ORF)."
+    },
+    {
+        "input": "Paano magpa evaluate ng Prospectus?",
+        "output": "Maaaring i-evaluate mo ang iyong prospectus sa pamamagitan ng pagpunta sa Window 1 or 3."
+    },
+    {
+        "input": "Kailangan po bang laging updated ang prospectus?",
+        "output": "Opo, kailangang i-update ang iyong prospectus upang maiwasan ang mga isyu kapag nag-aapply tayo ng internship."
+    },
+    {
+        "input": "Saan ko pwede makita yung Grades ko?",
+        "output": "You can examine your grades at sms.icct.edu.ph/student/grades or schedule an appointment to obtain the Summary of Grades (SOG)."
+    },
+    {
+        "input": "Ano po ang kailangan para makapag pa evaluate ng prospectus?",
+        "output": "Kailangan mong dalhin ang original at updated na SOG at kopya ng iyong Form 137 at PSA."
+    },
+    {
+        "input": "Paano bumili ng Uniform?",
+        "output": "Need mo muna magpurchase muna sa Portal ng iyong Uniform at pagkatapos noon ay pwede ka na pumunta sa ICCT para i-claim ang iyong uniform"
+    },
+    {
+        "input": "Paano po magenroll sa susunod na sem?",
+        "output": "Maaaring gamitin ang portal upang mag-enroll at maghintay sa announcement ng school kung kailan magsisimula ang enrollment."
+    },
+    {
+        "input": "Saan po pwede magbayad ng tuition?",
+        "output": "Maari kang magbayad ng tuiton sa Cebuana, 7-eleven, at gcash."
+    },
+    {
+        "input": "Paano makuha ang sobrang bayad sa tuition?",
+        "output": "Maari kang mag-email sa accountant ng ICCT at hintayin ang kanilang reply kung kailan mo pwedeng kuhanin ang sobrang ipinangbayad mo."
+    },
+    {
+        "input": "Ano ang gagawin kapag may sobrang bayad ng tuition?",
+        "output": "kailan maaari mong makuha ang excess payment, maaari kang mag-email sa accountant ng ICCT at hintayin ang kanilang tugon sa email."
+    },
+    {
+        "input": "Paano magpa add ng subject?",
+        "output": "Kailangan mong pumunta sa campus, at magpa walk-in enrollment para magpa-add"
+    },
+    {
+        "input": "Pwede ko po ba mapabago ang Grades ko sa Portal?",
+        "output": "Maaaring makipag-usap sa iyong subject teacher kung may isyu sa iyong mga marka na nauugnay sa iyong SOG."
+    },
+    {
+        "input": "Pwede ko po ba mapabago ang Grades ko sa SOG?",
+        "output": "Maaaring makipag-usap sa iyong subject teacher kung may isyu sa iyong mga marka na grades sa iyong SOG."
+    },
+    {
+        "input": "Saang Window po pwede magpadry seal?",
+        "output": "Sa window 6 po."
+    },
+    {
+        "input": "Saan banda yung cr ng mga lalake?",
+        "output": "Ang CR ng mga lalaki ay matatagpuan sa Center ng Building 2 (B2) at Building 4 (B4)."
+    },
+    {
+        "input": "Ano ang gagawin kapag may sobrang bayad ng tuition?",
+        "output": "Maari mag-email sa accountant ng ICCT at hintayin ang kanilang reply kung kailan mo pwedeng kuhanin ang sobrang ipinangbayad mo."
+    },
+    {
+        "input": "Paano po mag drop ng subject?",
+        "output": "To file a request for dropping a subject, go to the guidance office."
+    },
+    {
+        "input": "Ano kailangan para makakuha ng Test Booklet?",
+        "output": "Magdala kalang ng official Registration Form (ORF)."
+    },
+    {
+        "input": "Ano ang address ng ICCT cainta campus?",
+        "output": "Ang address ng ICCT Cainta Campus ay V. V. Soliven Avenue II, Bgy. San Isidro, Cainta, Rizal (across Sta. Lucia East Grand Mall)."
+    },
+    {
+        "input": "Ano ang number number ng ICCT College Cainta?",
+        "output": "Ang telephone number ng ICCT College ay (02)7.955.6284, (02)8.249.2367. Ang mga mobile numbers naman  ay 0947.895.4228, 0932.872.4228, at 0917.814.4228."
+    },
+    {
+        "input": "Paano po kumuha ng diploma?",
+        "output": "Kung ikaw ang nagtapos recently, Simply call the Registrar Office kung available na for releasing ang iyong diploma."
+    },
+    {
+        "input": "Ano po ba ang pwedeng gawin para po makakuha ulit ng ID?",
+        "output": "Kailangan mopo muna kumuha ng Affidavit of Loss at magbayad para makakuha ulit ng iyong panibagong ID"
+    },
+    {
+        "input": "Kailangan poba mag uniform kapag 3pm onwards ang pasok?",
+        "output": "Ang may klase ng 3pm onwards ay hindi na kailangan maguniform, pero nakadepende parin ito sa mga inyong subject professor"
+    },
+    {
+        "input": "Paano poba magbayad sa Gcash?",
+        "output": "Kailangan mong mag-generate ng Reference Number sa Portal at ilagay iyon sa iyong Gcash Account para makapagbayad"
+    },
+    {
+        "input": "Sino po pedeng macontact about sa program ko?",
+        "output": "You can visit the of page ICCT Colleges or walk in sa pinakamalapit na ICCT branch. Maaari rin po kayo tumawag sa ating Tele-Assistance Hotlines: (02)7.975.4228; (02)7.989.4228; (02)7.001.4228; mobile nos.: 0947.895.4228; 0932.872.4228; 0917.814.4228 for assistance."
+    },
+    {
+        "input": "Who is the founder of ICCT?",
+        "output": "Dr. William S. Co is the founder and chairman of ICCT Colleges"
+    },
+    {
+        "input": "Ano po mangyayari kapag walang exam permit?",
+        "output": " No Permit, No Examination. An Examination Permit is a prerequisite for taking any of the scheduled examinations."
+    },
+    {
+        "input": "Ano poba mangyayari kapag di nakapag bayad sa tamang oras?",
+        "output": "A student, who fails to take any of the scheduled examinations due to a fortuitous event or circumstance beyond his control, maybe allowed to take a special/completion examination. The written justification together with supporting papers if any should be submitted to the Academic Affairs Office within ten (10) school days from the last day of the examinations."
+    },
+    {
+        "input": "Ano po ang grading system sa ICCT?",
+        "output": "Grades shall be either passing (3.0 or higher) or failing (5.0).  There are three (3) grading periods during a school term: prelim grade (FG), midterm grade (MG)  and  final  grade  (FG).  Final  grades  are  issued  in  a  computer  generated  form  (Grade  Slips)  at  every  end  of  a term/trimester/semester."
     }
 ]
 
