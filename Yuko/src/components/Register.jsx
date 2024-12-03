@@ -62,6 +62,8 @@ function Register() {
 
   return (
     <div className="sign-up-container" id="sign-up">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2565346911167424"
+     crossorigin="anonymous"></script>
       <img className="sign-up-bg-image" src="background.png" alt="Background Image of Yuko" />
       <form onSubmit={handleSubmit} className="sign-up-form">
         <h2 className="signup-title">Sign Up</h2>

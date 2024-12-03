@@ -112,7 +112,8 @@ function LogInDesktop() {
     <>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock" />
-
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2565346911167424"
+     crossorigin="anonymous"></script>
       
       <div className="log-in-container" id='log-in'>
         <img className="bg-image" src="background.png" alt="Background Image of Yuko"/>

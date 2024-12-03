@@ -266,6 +266,8 @@ const sendMessage = async (messageInput) => {
 
   return (
     <div className="yuko-container">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2565346911167424"
+     crossorigin="anonymous"></script>
       <Sidebar clearChat={clearChat} sendMessage={sendMessage} />
       <div className="main">
         <div className="main-container">
