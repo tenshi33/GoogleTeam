@@ -109,7 +109,7 @@ function Landing() {
                         <div className='features-top'>
                             <div className='features-first-section'>
                                 <h1 className='feature-title'>FEATURES</h1>
-                                <p className='features-top-left-decscription'>Yuko AI is a powerful and reliable tool designed specifically for ICCT students, offering instant, accurate answers to academic and administrative queries. With its up-to-date information, easy navigation, and student-centric design, Yuko makes school procedures more accessible and helps students stay organized and informed. Whether you need guidance on where to submit assignments or how to contact a faculty member, Yuko is always available to assist, ensuring a seamless and efficient academic experience for every student.</p>
+                                <p className='features-top-left-decscription'>Yuko AI is a powerful and reliable tool designed specifically for students, offering instant, accurate answers to academic and administrative queries. With its up-to-date information, easy navigation, and student-centric design, Yuko makes school procedures more accessible and helps students stay organized and informed. Whether you need guidance on where to submit assignments or how to contact a faculty member, Yuko is always available to assist, ensuring a seamless and efficient academic experience for every student.</p>
                             </div>
                             <div className='feature-section-divider'></div>
                             {/*FEATURES TOP-RIGHT SIDE WITH SCROLL FEATURE*/}
@@ -117,7 +117,7 @@ function Landing() {
                                 <div className='features'>
                                     <div className='first-feature-content-odd'>
                                         <p className='features-title-odd'>Academic Guidance</p>
-                                        <p className='features-description-odd'>Yuko helps ICCT students navigate their educational journey by providing answers to common questions related to school procedures, such as where to submit assignments or how to contact faculty members.</p>
+                                        <p className='features-description-odd'>Yuko helps students navigate their educational journey by providing answers to common questions related to school procedures, such as where to submit assignments or how to contact faculty members.</p>
                                     </div>
                                 </div>
 
