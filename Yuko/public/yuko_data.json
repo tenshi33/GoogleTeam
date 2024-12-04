@@ -518,6 +518,62 @@
     {
         "input": "Ano po ang grading system sa ICCT?",
         "output": "Grades shall be either passing (3.0 or higher) or failing (5.0).  There are three (3) grading periods during a school term: prelim grade (FG), midterm grade (MG)  and  final  grade  (FG).  Final  grades  are  issued  in  a  computer  generated  form  (Grade  Slips)  at  every  end  of  a term/trimester/semester."
+    },
+    {
+        "input": "Dr. William S. Co is the founder and chairman of ICCT Colleges",
+        "output": "Grades shall be either passing (3.0 or higher) or failing (5.0).  There are three (3) grading periods during a school term: prelim grade (FG), midterm grade (MG)  and  final  grade  (FG).  Final  grades  are  issued  in  a  computer  generated  form  (Grade  Slips)  at  every  end  of  a term/trimester/semester."
+    },
+    {
+        "input": "Where Can I get my prospectus?",
+        "output": "Maaaring i-evaluate mo ang iyong prospectus sa pamamagitan ng pagpunta sa Window 1 or 3."
+    },
+    {
+        "input": "Who is the owner of ICCT Colleges?",
+        "output": "ICCT Colleges Foundation, Inc. was owned by Dr. William S"
+    },
+    {
+        "input": "How can I get my prospectus?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may appointment date ka na, dalhin ang Proof of Payment (printed), tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "Where can I get my sog?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may APPOINTMENT DATE ka na, dalhin ang Proof of Payment (PRINTED) tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "Where can I get the summary of grades?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may APPOINTMENT DATE ka na, dalhin ang Proof of Payment (PRINTED) tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "Who is the founder of ICCT Colleges?",
+        "output": "Dr. William S. Co is the founder and chairman of ICCT Colleges"
+    },
+    {
+        "input": "Who is the owner of ICCT Colleges?",
+        "output": "Dr. William S. Co, conceptualized the birth of Information & Communication Technology education in the Province of Rizal and administered the growth of ICCT Colleges Foundation, Inc. at the commercial district of Cainta, Rizal, Philippines"
+    },
+    {
+        "input": "Paano kumuha ng prospectus?",
+        "output": "Maaaring i-evaluate mo ang iyong prospectus sa pamamagitan ng pagpunta sa Window 1 or 3."
+    },
+    {
+        "input": "Paano kumuha ng Summary of Grades?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may APPOINTMENT DATE ka na, dalhin ang Proof of Payment (PRINTED) tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "How to get SOG?",
+        "output": "Pwede kang mag-email sa mganda@icct.edu.ph para makapag-appoint ka ng Summary of Grades (SOG). Pag may appointment date ka na, dalhin ang Proof of Payment (printed), tapos pumunta sa Registrar Window 15 (Cainta Branch). STRICTLY 9AM-2PM ONLY."
+    },
+    {
+        "input": "How to get prospectus??",
+        "output": "Maaaring i-evaluate mo ang iyong prospectus sa pamamagitan ng pagpunta sa Window 1 or 3."
+    },
+    {
+        "input": "When was ICCT Colleges established?",
+        "output": "ICCT Colleges Foundation Inc. was established on December 15, 1992 by Dr. William S. Co and Dr. Consuelo L. Co."
+    },
+    {
+        "input": "Who is the current president of ICCT Colleges?",
+        "output": "Dr. Vivien Co-Say"
     }
 ]
 
