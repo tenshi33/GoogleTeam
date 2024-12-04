@@ -287,7 +287,7 @@ input:-webkit-autofill{
   color: rgb(167, 167, 167);
   border: none;
   text-align: center;
-  top: 54%;
+  margin-top: 1.7vw;
   left: 18.5vw;
   transform: translateY(-65%);
 }
@@ -464,7 +464,7 @@ input:-webkit-autofill{
     background-color: transparent;
     width: 9.2vw;
     height: 5vw;
-    top: 6.5vw;
+    margin-top: 6.3vw;
     left: 67vw;
     transform: translateY(-65%);
     font-size: 3.5vw;
