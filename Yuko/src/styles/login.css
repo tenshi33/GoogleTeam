@@ -255,7 +255,7 @@ input:-webkit-autofill{
 .log-in-form .input-wrapper i {
   color: rgb(182, 182, 182);
   position: absolute;
-  top: 57%;
+  margin-top: 1.7vw;
   left: 1.2vw;
   font-size: 1.3vw;
   pointer-events: none;
@@ -428,9 +428,9 @@ input:-webkit-autofill{
   .log-in-form .input-wrapper i {
     width: 5vw;
     height: 5vw;
-    top: 42%;
+    margin-top: 6.1vw;
     font-size: 4.9vw;
-    margin-left: 2vw;
+    margin-left: 2.5vw;
   }
 
   .log-in-form .show-user-pass {
