@@ -23,6 +23,18 @@ body {
   background-attachment: fixed;
 }
 
+.disclaimer {
+  display: flex;
+  position: absolute;
+  color: white;
+  margin-top: 40vw;
+  font-family: Arial;
+  font-weight: lighter;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
 .bg-image {
   display: flex;
   place-items: center;
@@ -368,6 +380,21 @@ input:-webkit-autofill{
     justify-content: center;
   }
 
+  .disclaimer {
+    display: flex;
+    position: absolute;
+    color: white;
+    margin-top: 208vw;
+    font-family: Arial;
+    font-weight: lighter;
+    flex-direction: row;
+    font-size: 2.5vw;
+    width: 85vw;
+    justify-content: center;
+    text-align: center;
+    line-height: 3.5vw;
+  }
+  
   .yuko-logo {
     width: 45vmin;
     display: flex;
