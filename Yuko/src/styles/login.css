@@ -382,7 +382,7 @@ input:-webkit-autofill{
 
   .disclaimer {
     display: flex;
-    position: relative;
+    position: fixed;
     color: white;
     margin-top: 190vw;
     font-family: Arial;
