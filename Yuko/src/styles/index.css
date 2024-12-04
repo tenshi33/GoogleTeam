@@ -287,7 +287,7 @@ html,body {
 .first-feature-content-odd {
     display: flex;
     flex-direction: column;
-    margin-left: 3vw;
+    padding: 1vw;
 }
 
 .first-feature-content-even {
@@ -295,7 +295,7 @@ html,body {
     flex-direction: column;
     width: 50vw;
     text-align: right;
-    margin-right: 3vw;
+    padding: 1vw;
 }
 
 .features-bottom {
@@ -1205,7 +1205,7 @@ html,body {
         border: solid;
         border-color: rgb(255, 255, 255);
         border-width: 0.5px;
-        border-radius: 1.3rem;
+        border-radius: 0.8rem;
         padding: 2.5vw;
         display: flex;
         flex-direction: row;
@@ -1219,10 +1219,17 @@ html,body {
     }
 
     .features-pic-even {
-        width: 32vw;
         margin: 1vw;
     }
 
+    .first-feature-content-odd {
+        padding: 2vw;
+    }
+
+    .first-feature-content-even {
+        padding: 2vw;
+        width: 75vw;
+    }
 
     .features-title-odd {
         font-size: 3.5vw;

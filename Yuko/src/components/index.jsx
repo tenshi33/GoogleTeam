@@ -115,7 +115,6 @@ function Landing() {
                             {/*FEATURES TOP-RIGHT SIDE WITH SCROLL FEATURE*/}
                             <div className='features-scroll-section'>
                                 <div className='features'>
-                                    <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                     <div className='first-feature-content-odd'>
                                         <p className='features-title-odd'>Academic Guidance</p>
                                         <p className='features-description-odd'>Yuko helps ICCT students navigate their educational journey by providing answers to common questions related to school procedures, such as where to submit assignments or how to contact faculty members.</p>
@@ -128,11 +127,9 @@ function Landing() {
                                         <p className='features-title-even'>Access to Information</p>
                                         <p className='features-description-even'>Yuko provides quick, accurate answers to a wide range of academic and administrative queries, ensuring students can easily find the information they need, anytime.</p>
                                     </div>
-                                    <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                 </div>
 
                                 <div className='features'>
-                                    <img className='features-pic-odd' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                     <div className='first-feature-content-odd'>
                                         <p className='features-title-odd'>Updated and Accurate</p>
                                         <p className='features-description-odd'>Yuko is continuously updated with the latest school information, policies, and schedules, ensuring students always have access to the most current details.</p>
@@ -147,7 +144,6 @@ function Landing() {
                                             Need to know where to go for a specific task? Yuko can guide you to the right department, office, or faculty, helping you navigate campus procedures efficiently.
                                         </p>
                                     </div>
-                                    <img className='features-pic-even' src='https://placehold.co/168x113' alt='feature content picture'></img>
                                 </div>
                             </div>
                         </div>
