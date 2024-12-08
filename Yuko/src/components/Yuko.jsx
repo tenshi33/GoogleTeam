@@ -40,7 +40,7 @@ function Yuko() {
     window.speechSynthesis.speak(speech);
   };
 
-  // Load PDF content
+  // Load PDF content asdasdasd
   const loadPdf = async () => {
     try {
       const pdfUrl = "/info.pdf"; 
