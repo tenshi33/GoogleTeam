@@ -663,23 +663,21 @@ input:-webkit-autofill{
     border: none;
     width: 61.2vw;
     height: 6vw;
-  border-radius: 2em;
+    border-radius: 2em;
+    transform: scale(1);
   }
 
   .recover-pass-buttons .reset-pass-button:active {
-    width: 59.90vw;
-    height: 5.9vw;
-    font-size:2.45vw;
+    transform: scale(0.95);
   }
   .recover-pass-buttons .close-modal {
     font-size: 2.5vw;
-    width: 60vw;
+    width: 61.2vw;
     height: 6vw;
+    transform: scale(1);
   }
 
   .recover-pass-buttons .close-modal:active {
-    width: 59.90vw;
-    height: 5.9vw;
-    font-size:2.45vw;
+    transform: scale(0.95);
   }
 }
