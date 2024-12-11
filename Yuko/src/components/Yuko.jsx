@@ -40,7 +40,7 @@ function Yuko() {
     window.speechSynthesis.speak(speech);
   };
 
-  // Load PDF content asdasdasd
+  // Load PDF content
   const loadPdf = async () => {
     try {
       const pdfUrl = "/info.pdf"; 
@@ -55,7 +55,7 @@ function Yuko() {
         pdfText += textContent.items.map((item) => item.str).join(" ") + " ";
       }
 
-      setPdfContent(pdfText); // Store extracted content
+      setPdfContent(pdfText);
     } catch (error) {
       console.error("Error loading PDF:", error);
       setPdfContent("Failed to load PDF content.");
@@ -125,7 +125,7 @@ const sendMessage = async (messageInput) => {
             `;
 
       const model = await genAI.getGenerativeModel({
-        model: "gemini-1.5-flash",
+        model: "tunedModels/newtunedmodel2-eay9y2pyqy94",
       });
 
       const result = await model.startChat({
