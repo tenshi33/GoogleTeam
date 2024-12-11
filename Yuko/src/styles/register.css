@@ -264,7 +264,6 @@
   height: 17vw;
   text-align: center;
   align-content: center;
-  overflow-y: auto; 
 }
 
 .modal-content2 {
@@ -631,7 +630,6 @@ input.privacy-policy-check {
     height: 80vw;
     text-align: center;
     align-content: center;
-    overflow-y: auto; 
   }
   
   .modal-content2 {
