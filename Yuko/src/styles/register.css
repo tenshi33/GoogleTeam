@@ -598,42 +598,13 @@ input.privacy-policy-check {
     width: 1rem;
     margin-top: -1.5rem;
   }
-
-
-  .modal1 {
-    background-color: rgba(0, 0, 0, 0.664);
-    filter: opacity(95%);
-    display: flex;
-    position: absolute;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-  }
-  
-  .modal2 {
-    background-color: rgba(0, 0, 0, 0.664);
-    filter: opacity(95%);
-    display: flex;
-    position: absolute;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-  }
   
   .modal-content1 {
     background-color: white;
-    padding: 20px;
+    padding: 5vw;
     border-radius: 8px;
     width: 90vw;
-    height: 80vw;
+    height: 60vw;
     text-align: center;
     align-content: center;
   }
@@ -643,7 +614,7 @@ input.privacy-policy-check {
     padding: 20px;
     border-radius: 8px;
     width: 90vw;
-    height: 120vw;
+    height: 110vw;
     text-align: center;
     align-content: center;
     overflow-y: auto; 
@@ -659,24 +630,25 @@ input.privacy-policy-check {
   }
   
   .privacy-policy-title {
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 700;
+    margin-bottom: 4vw;
   }
   
   .privacy-policy-desc {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
     font-family: 'Arial';
   }
   
   
   .policy-title {
     margin-bottom: 4vw;
-    font-size: 9.4vw;
+    font-size: 8vw;
     font-weight: 700;
   }
   
   .policy-desc {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
     font-family: 'Arial';
   }
   
