@@ -83,7 +83,7 @@
 }
 
 .sign-up-form .lname-signup-wrapper {
-    height: 4rem;
+  height: 4rem;
   width: 23vw;
   position: relative;
   margin-top: 0.8vw;
@@ -111,7 +111,7 @@
 }
 
 .sign-up-form .course-signup-wrapper .course-input-field {
-  height: 2.15rem;
+  height: 3.7rem;
   width: 23vw;
   border-radius: 0.7rem;
   background-color: transparent;
