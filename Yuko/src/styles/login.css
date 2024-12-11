@@ -152,13 +152,12 @@ body .recover-pass-container {
   width: 15.3vw;
   height: 2.3vw;
   border-radius: 2em;
+  transform: scale(1);
 }
 
 .reset-pass-button:active {
   background: linear-gradient(to right,  #7602a8, #ED0101);
-  width: 14.95vw;
-  height: 2.25vw;
-  font-size: 0.75vw;
+  transform: scale(0.95);
 }
 .close-modal {
   background-color: #CFCFCF;
@@ -168,6 +167,7 @@ body .recover-pass-container {
   width: 10.9vw;
   height: 2.3vw;
   border-radius: 2em;
+  transform: scale(1);
 }
 
 .recover-pass-buttons .close-modal:hover {
@@ -175,9 +175,7 @@ body .recover-pass-container {
 }
 
 .recover-pass-buttons .close-modal:active {
-  width: 10.85vw;
-  height: 2.25vw;
-  font-size: 0.75vw;
+  transform: scale(0.95);
 }
 
 .yuko-logo {
@@ -583,20 +581,21 @@ input:-webkit-autofill{
     width: 15vw;
     height: 2.3vw;
     border-radius: 2em;
+    transform: scale(1);
 }
 
-  .recover-pass-buttons .reset-pass-button:active {
+.recover-pass-buttons .reset-pass-button:active {
     background: linear-gradient(to right,  #7602a8, #ED0101);
-    width: 14.95vw;
-    height: 2.25vw;
-    font-size: 0.75vw;
+    transform: scale(0.99);
   }
+
   .recover-pass-buttons .close-modal {
     font-size: 0.8vw;
     width: 10.9vw;
     height: 2.3vw;
     border-radius: 2em;
     margin-top: 0.7vw;
+    transform: scale(1);
   }
 
   .recover-pass-buttons .close-modal:hover {
@@ -604,9 +603,7 @@ input:-webkit-autofill{
   }
 
   .recover-pass-buttons .close-modal:active {
-    width: 10.85vw;
-    height: 2.25vw;
-    font-size: 0.75vw;
+    transform: scale(0.99);
   }
 
 
