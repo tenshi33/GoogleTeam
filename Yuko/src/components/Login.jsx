@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';  // Import Firebase functions
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../../firebase/firebase';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/login.css';
 
@@ -7,9 +7,9 @@ function LogInDesktop() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState(''); // Add success message state
-  const [passwordVisible, setPasswordVisible] = useState(false); // Track password visibility
-  const [isPasswordModalVisible, setPasswordModalVisible] = useState(false); // Track visibility of reset password modal
+  const [successMessage, setSuccessMessage] = useState(''); 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [isPasswordModalVisible, setPasswordModalVisible] = useState(false); 
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {

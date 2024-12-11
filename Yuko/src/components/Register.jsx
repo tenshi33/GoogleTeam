@@ -12,7 +12,9 @@ function Register() {
   const [studentno, setStudentNo] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [passwordVisible, setPasswordVisible] = useState(false);  // Use passwordVisible for toggling visibility
+  const [passwordVisible, setPasswordVisible] = useState(false); 
+  const [isPrivacyModalVisible, setPrivacyModalVisible] = useState(false); 
+  const [isPolicyModalVisible, setPolicyModalVisible] = useState(false); 
   const navigate = useNavigate();
 
   // Handle form submission
@@ -96,21 +98,7 @@ function Register() {
           />
         </div>
 
-        {/* Student Number and Course Inputs */}
-        <div className="studnum-course-wrapper">
-          <div className="studnum-signup-wrapper">
-            <input
-              className="studnum-input-field"
-              type="text"
-              id="stdnum"
-              name="stdnum"
-              placeholder="Student Number"
-              value={studentno}
-              onChange={(e) => setStudentNo(e.target.value)}  // Binding the input value to state
-              required
-            />
-          </div>
-
+        {/* Course Inputs */}
           <div className="course-signup-wrapper">
             <input
               className="course-input-field"
@@ -123,7 +111,6 @@ function Register() {
               required
             />
           </div>
-        </div>
 
         {/* Email Input */}
         <div className="email-signup-wrapper">
@@ -166,8 +153,60 @@ function Register() {
             value="Privacy and Policy"
             required
           />
-          I Agree with <p className='privacy'> privacy </p>and <p className='policy'> policy</p>
+          I Agree with <p className='privacy' 
+            onClick={(e) => {
+                e.preventDefault();
+                setPrivacyModalVisible(true);
+              }}> privacy </p>and <p className='policy' 
+              onClick={(e) => {
+                e.preventDefault();
+                setPolicyModalVisible(true);
+              }}> policy</p>
         </div>
+             {/* Privacy Modal */}
+      {isPrivacyModalVisible && (
+        <div className="modal">
+          <div className="modal-content">
+            <span
+              className="close"
+              onClick={() => setPrivacyModalVisible(false)}
+            >
+              &times;
+            </span>
+            <h2>Privacy Policy</h2>
+            <p>Data Sharing
+            We do not sell or rent your personal information to third parties. However, we may share your data with trusted third-party service providers who assist in operating the website, provided that they comply with our privacy standards.</p>
+          </div>
+        </div>
+      )}
+
+      {/* Policy Modal */}
+      {isPolicyModalVisible && (
+        <div className="modal">
+          <div className="modal-content">
+            <span
+              className="close"
+              onClick={() => setPolicyModalVisible(false)} 
+            >
+              &times;
+            </span>
+            <h2>Terms of Service</h2>
+            <p>How we use Personal Data
+We may use Personal Data for the following purposes:
+
+To provide analyze, and maintain our Services, for example to respond to your questions for ChatGPT;
+
+To improve and develop our Services and conduct research, for example to develop new product features;
+
+To communicate with you, including to send you information about our Services and events, for example about changes or improvements to the Services;
+
+To prevent fraud, illegal activity, or misuses of our Services, and to protect the security of our systems and Services;
+
+To comply with legal obligations and to protect the rights, privacy, safety, or property of our users, OpenAI, or third parties.
+</p>
+          </div>
+        </div>
+      )}
 
         {/* Submit Button */}
         <button className="signup-button" type="submit" disabled={loading}>
@@ -183,7 +222,7 @@ function Register() {
           <Link to="/Login" className="sign-in-button">Sign In</Link>
         </p>
       </form>
-    </div>
+      </div>
   );
 }
 
