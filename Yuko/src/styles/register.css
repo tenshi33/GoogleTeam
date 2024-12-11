@@ -635,7 +635,7 @@ input.privacy-policy-check {
     padding: 20px;
     border-radius: 8px;
     width: 90vw;
-    height: 100vw;
+    height: 120vw;
     text-align: center;
     align-content: center;
     overflow-y: auto; 
@@ -643,8 +643,8 @@ input.privacy-policy-check {
   
   .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 3vw;
+    right: 4vw;
     cursor: pointer;
     font-size: 10vw;
     color: white;
