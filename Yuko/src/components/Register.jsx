@@ -170,8 +170,8 @@ function Register() {
 
              {/* Privacy Modal */}
       {isPrivacyModalVisible && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal1">
+          <div className="modal-content1">
             <span
               className="close"
               onClick={() => setPrivacyModalVisible(false)}
@@ -179,7 +179,7 @@ function Register() {
               &times;
             </span>
             <h2 className='privacy-policy-title'>Privacy Policy</h2>
-            <p className='privacy-policy-desc'> We do not sell or rent your personal information to third parties. However, we may share your data with trusted third-party service providers who assist in operating the website, provided that they comply with our privacy standards.</p>
+            <p className='privacy-policy-desc'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           </div>
         </div>
       )}
@@ -187,8 +187,8 @@ function Register() {
 
       {/* Policy Modal */}
       {isPolicyModalVisible && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal2">
+          <div className="modal-content2">
             <span
               className="close"
               onClick={() => setPolicyModalVisible(false)} 
@@ -196,23 +196,22 @@ function Register() {
               &times;
             </span>
             <h2 className='policy-title'>Terms of Service</h2>
-            <p className='policy-desc'> <span className='policy-desc-top'>We may use Personal Data for the following purposes:</span> <br/>
+            <p className='policy-desc'> <span className='policy-desc-top'>What is Lorem Ipsum?</span> <br/>
+            <br/>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  <br/>
             <br/>
 
-To provide analyze, and maintain our Services, for example to respond to your questions for ChatGPT; <br/>
-<br/>
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>
+            <br/>
 
-To improve and develop our Services and conduct research, for example to develop new product features; <br/>
-<br/>
+            Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br/>
+            <br/>
 
-To communicate with you, including to send you information about our Services and events, for example about changes or improvements to the Services; <br/>
-<br/>
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br/>
+            <br/>
 
-To prevent fraud, illegal activity, or misuses of our Services, and to protect the security of our systems and Services; <br/>
-<br/>
-
-To comply with legal obligations and to protect the rights, privacy, safety, or property of our users, OpenAI, or third parties.
-</p>
+            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+            </p>
           </div>
         </div>
       )}
