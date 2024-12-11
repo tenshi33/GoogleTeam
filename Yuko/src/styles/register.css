@@ -461,9 +461,14 @@ input.privacy-policy-check {
     padding-left: 1rem;
   }
 
-  .sign-up-form .course-signup-wrapper .course-input-field {
+  .sign-up-form .course-signup-wrapper {
     height: 10vw;
     width: 82vw;
+  }
+  
+  .sign-up-form .course-signup-wrapper .course-input-field {
+    height: 11vw;
+    width: 100%;
     padding: 0 1.25em 0 0.7em;
     border-radius: 0.7rem;
     background-color: transparent;
