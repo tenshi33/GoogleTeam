@@ -627,8 +627,8 @@ input.privacy-policy-check {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 25vw;
-    height: 20vw;
+    width: 90vw;
+    height: 80vw;
     text-align: center;
     align-content: center;
     overflow-y: auto; 
@@ -638,8 +638,8 @@ input.privacy-policy-check {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 25vw;
-    height: 30vw;
+    width: 90vw;
+    height: 100vw;
     text-align: center;
     align-content: center;
     overflow-y: auto; 
