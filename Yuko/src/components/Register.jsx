@@ -99,18 +99,17 @@ function Register() {
         </div>
 
         {/* Course Inputs */}
-          <div className="course-signup-wrapper">
-            <input
-              className="course-input-field"
-              type="text"
-              id="course"
-              name="course"
-              placeholder="Course"
-              value={course}
-              onChange={(e) => setCourse(e.target.value)}  // Binding the input value to state
-              required
-            />
-          </div>
+        <div className="course-signup-wrapper">
+          <input
+            className="course-input-field"
+            type="text"
+            id="course"
+            placeholder="Course"
+            value={course}
+            onChange={(e) => setCourse(e.target.value)}  // Binding the input value to state
+            required
+          />
+        </div>
 
         {/* Email Input */}
         <div className="email-signup-wrapper">
@@ -163,6 +162,12 @@ function Register() {
                 setPolicyModalVisible(true);
               }}> policy</p>
         </div>
+
+        {/* Submit Button */}
+        <button className="signup-button" type="submit" disabled={loading}>
+          {loading ? 'Signing Up...' : 'Sign Up'}
+        </button>
+
              {/* Privacy Modal */}
       {isPrivacyModalVisible && (
         <div className="modal">
@@ -173,12 +178,12 @@ function Register() {
             >
               &times;
             </span>
-            <h2>Privacy Policy</h2>
-            <p>Data Sharing
-            We do not sell or rent your personal information to third parties. However, we may share your data with trusted third-party service providers who assist in operating the website, provided that they comply with our privacy standards.</p>
+            <h2 className='privacy-policy-title'>Privacy Policy</h2>
+            <p className='privacy-policy-desc'> We do not sell or rent your personal information to third parties. However, we may share your data with trusted third-party service providers who assist in operating the website, provided that they comply with our privacy standards.</p>
           </div>
         </div>
       )}
+      
 
       {/* Policy Modal */}
       {isPolicyModalVisible && (
@@ -190,17 +195,21 @@ function Register() {
             >
               &times;
             </span>
-            <h2>Terms of Service</h2>
-            <p>How we use Personal Data
-We may use Personal Data for the following purposes:
+            <h2 className='policy-title'>Terms of Service</h2>
+            <p className='policy-desc'> <span className='policy-desc-top'>We may use Personal Data for the following purposes:</span> <br/>
+            <br/>
 
-To provide analyze, and maintain our Services, for example to respond to your questions for ChatGPT;
+To provide analyze, and maintain our Services, for example to respond to your questions for ChatGPT; <br/>
+<br/>
 
-To improve and develop our Services and conduct research, for example to develop new product features;
+To improve and develop our Services and conduct research, for example to develop new product features; <br/>
+<br/>
 
-To communicate with you, including to send you information about our Services and events, for example about changes or improvements to the Services;
+To communicate with you, including to send you information about our Services and events, for example about changes or improvements to the Services; <br/>
+<br/>
 
-To prevent fraud, illegal activity, or misuses of our Services, and to protect the security of our systems and Services;
+To prevent fraud, illegal activity, or misuses of our Services, and to protect the security of our systems and Services; <br/>
+<br/>
 
 To comply with legal obligations and to protect the rights, privacy, safety, or property of our users, OpenAI, or third parties.
 </p>
@@ -208,10 +217,6 @@ To comply with legal obligations and to protect the rights, privacy, safety, or 
         </div>
       )}
 
-        {/* Submit Button */}
-        <button className="signup-button" type="submit" disabled={loading}>
-          {loading ? 'Signing Up...' : 'Sign Up'}
-        </button>
 
         {/* Message */}
         {message && <p className="message">{message}</p>}

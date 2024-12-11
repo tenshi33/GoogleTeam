@@ -318,6 +318,7 @@ input:-webkit-autofill{
 .log-in-form .log-in-button {
   width: 53%;
   height: 3rem;
+  transform: scale(1);
   cursor: pointer;
   outline: none;
   border: none;
@@ -331,9 +332,7 @@ input:-webkit-autofill{
 }
 
 .log-in-form .log-in-button:active {
-  width: 52%;
-  height: 2.90rem;
-  font-size: 1.35vw;
+  transform: scale(0.95);
 }
 
 .log-in-form .log-in-button:hover {

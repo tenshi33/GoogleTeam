@@ -110,37 +110,9 @@
   font-family: Arial;
 }
 
-.sign-up-form .studnum-course-wrapper {
-    height: 4rem;
-  width: 23vw;
-  position: relative;
-  margin-top: 0.8vw;
-  display: flex;
-  flex-direction: row;
-  gap: .8vw;
-}
-
-.sign-up-form .studnum-course-wrapper .studnum-input-field {
-  height: 100%;
-  width: 11.2vw;
-  border-radius: 0.7rem;
-  background-color: transparent;
-  border-style: solid;
-  border-color: white;
-  color: white;
-  border-width: 1px;
-  font-size: 1.06vw;
-  outline: none;
-  -webkit-transition: 0.5s;
-  transition: 0.2s ease;
-  font-size: 0.9vw;
-  font-family: Arial;
-  padding-left: 0.6vw;
-}
-
 .sign-up-form .course-signup-wrapper .course-input-field {
-  height: 100%;
-  width: 11vw;
+  height: 2.15rem;
+  width: 23vw;
   border-radius: 0.7rem;
   background-color: transparent;
   border-style: solid;
@@ -154,6 +126,7 @@
   font-size: 0.9vw;
   font-family: Arial;
   padding-left: 0.6vw;
+  margin-top: 0.75vw;
 }
 
 .sign-up-form .email-signup-wrapper {
@@ -244,15 +217,17 @@
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.664);
+  filter: opacity(95%);
+  display: flex;
+  position: absolute;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-attachment: fixed;
 }
 
 .modal-content {
@@ -269,8 +244,42 @@
   right: 10px;
   cursor: pointer;
   font-size: 24px;
+  color: white;
 }
 
+.privacy-policy-title {
+  color: #002072;
+  font-size: 2.5vw;
+  font-family: 'Arial';
+  font-weight: 700;
+}
+
+.privacy-policy-desc {
+  margin-top: 1vw;
+  color: #002072;
+  font-size: 1.1vw;
+  font-family: 'Arial';
+}
+
+
+.policy-title {
+  color: #002072;
+  font-size: 2.5vw;
+  font-family: 'Arial';
+  font-weight: 700;
+}
+
+.policy-desc {
+  text-align: left;
+  margin-top: 1vw;
+  color: #002072;
+  font-size: 1.1vw;
+  font-family: 'Arial';
+}
+
+.policy-desc-top {
+  font-weight: 600;
+}
 
 .sign-up-form .privacy-policy-check {
   font-size: 1vw;
@@ -291,7 +300,8 @@ input.privacy-policy-check {
 
 .signup-button {
     width: 35%;
-    height: 63px;
+    height: 63.5px;
+    transform: scale(1);
     cursor: pointer;
     outline: none;
     border: none;
@@ -309,9 +319,8 @@ input.privacy-policy-check {
 }
 
 .signup-button:active {
-  font-size: 1.1vw;
-  width: 34.9%;
-  height: 62.9px;
+  transform: scale(0.95);
+
 }
 
 .sign-up-container .have-account-text {
@@ -441,38 +450,10 @@ input.privacy-policy-check {
     padding-left: 1rem;
   }
 
-  .sign-up-form .studnum-course-wrapper {
+  .sign-up-form .course-signup-wrapper .course-input-field {
     height: 10vw;
     width: 82vw;
-    position: relative;
-    margin-top: 0.8vw;
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    column-gap: .7rem;
-  }
- 
-  .sign-up-form .studnum-course-wrapper .studnum-input-field {
-    height: 11vw;
-    width: 39.4vw;
-    border-radius: 0.7rem;
-    background-color: transparent;
-    border-style: solid;
-    border-color: white;
-    color: white;
-    border-width: 1px;
-    font-size: 1rem;
-    outline: none;
-    -webkit-transition: 0.5s;
-    transition: 0.2s ease;
-    font-family: Arial;
-    padding-left: 1rem;
-    
-  }
-  
-  .sign-up-form .course-signup-wrapper .course-input-field {
-    height: 11vw;
-    width: 39.4vw;
+    padding: 0 1.25em 0 0.7em;
     border-radius: 0.7rem;
     background-color: transparent;
     border-style: solid;
@@ -565,6 +546,57 @@ input.privacy-policy-check {
     width: 1rem;
     margin-top: -1.5rem;
   }
+
+
+  .modal {
+    border-radius: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal-content {
+    border-radius: 13px;
+    height: 60vw;
+    width: 90vw;
+    overflow-y: auto;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 10vw;
+    color: white;
+  }
+  
+  .privacy-policy-title {
+    font-size: 10vw;
+    font-weight: 700;
+  }
+  
+  .privacy-policy-desc {
+    font-size: 4.5vw;
+    font-family: 'Arial';
+  }
+  
+  
+  .policy-title {
+    margin-bottom: 4vw;
+    font-size: 9.4vw;
+    font-weight: 700;
+  }
+  
+  .policy-desc {
+    font-size: 4.5vw;
+    font-family: 'Arial';
+  }
+  
+  .policy-desc-top {
+    font-weight: 600;
+  }
+
+
 
   .sign-up-form .signup-button{
     width: 42vw;
