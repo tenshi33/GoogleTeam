@@ -600,7 +600,7 @@
         "output": "You need to bring the latest copy of SOG and a copy of PSA. Maaaring i-evaluate mo ang iyong prospectus sa pamamagitan ng pagpunta sa Window 1 or 3."
     },
     {
-        "input": "Wwhen did icct built?",
+        "input": "when did icct built?",
         "output": "ICCT Colleges Foundation Inc. was established on December 15, 1992 by Dr. William S. Co and Dr. Consuelo L. Co."
     },
     {
@@ -669,15 +669,31 @@
     },
     {
         "input": "Sino si Faith Calma?",
-        "output": "Ericka focuses on the Chatbot page, ensuring the interface is user-friendly and intuitive for users who interact with me. She also contributes to the overall UI/UX, working closely with Faith to ensure a seamless, consistent experience across the entire app. Ericka’s designs ensure that chatting with me feels natural and engaging, with an easy-to-navigate interface."
+        "output": "Faith is responsible for designing and creating the landing and login pages, ensuring that users have an inviting first experience when they visit the site. As a UI/UX designer, she focuses on creating clean, user-friendly designs that are intuitive and aesthetically pleasing. Her work ensures that users not only understand how to use the app but also enjoy navigating it."
     },
     {
         "input": "Sino si Ericka Gracelyn De Guzman?",
-        "output": "I’m powered by an incredible team of developers. Our Project Manager, Angelo Egwaras, makes sure everything goes according to plan. Yohan Cabellero and Adryan Antiporda, our Backend Developers, ensure that I’m efficient and reliable. Meanwhile, our talented UI/UX and Frontend Developers, Faith Calma, Wadie Ibrahi Camaligan, and Ericka Gracelyn De Guzman, made sure I look great for you! Together, they’ve created me to make your experience as smooth as possible"
+        "output": "Ericka focuses on the Chatbot page, ensuring the interface is user-friendly and intuitive for users who interact with me. She also contributes to the overall UI/UX, working closely with Faith to ensure a seamless, consistent experience across the entire app. Ericka’s designs ensure that chatting with me feels natural and engaging, with an easy-to-navigate interface."
     },
     {
         "input": "Sino si Wadie Ibrahi Camaliga?",
         "output": "Wadie is responsible for creating and designing the signup page, ensuring that users can easily create an account and start using the application. His work focuses on streamlining the user registration process, making sure it’s quick, clear, and hassle-free. He also focuses on maintaining a visually consistent design that aligns with the app’s overall aesthetic."
+    },
+    {
+        "input": "Who is Angelo Egwaras?",
+        "output": "Angelo is the leader of the team, overseeing the entire project from start to finish. He ensures that everything runs on schedule, coordinates between team members, and makes sure all aspects of the project align with the goals. His organizational and leadership skills ensure smooth communication and efficient task management, making him crucial in keeping the project on track."
+    },
+    {
+        "input": "Who is Faith Calma?",
+        "output": "Faith is responsible for designing and creating the landing and login pages, ensuring that users have an inviting first experience when they visit the site. As a UI/UX designer, she focuses on creating clean, user-friendly designs that are intuitive and aesthetically pleasing. Her work ensures that users not only understand how to use the app but also enjoy navigating it."
+    },
+    {
+        "input": "Sino si Yohan Caballero?",
+        "output": "Yohan plays a critical role in setting up Firebase, which powers much of the backend functionality, and is also responsible for deployment. He ensures that the application is stable, reliable, and secure by integrating Firebase services and deploying the app for users to access. His work ensures that everything works seamlessly, both in terms of performance and reliability, from the backend to the deployment process."
+    },
+    {
+        "input": "Who is Yohan Caballero?",
+        "output": "Yohan plays a critical role in setting up Firebase, which powers much of the backend functionality, and is also responsible for deployment. He ensures that the application is stable, reliable, and secure by integrating Firebase services and deploying the app for users to access. His work ensures that everything works seamlessly, both in terms of performance and reliability, from the backend to the deployment process."
     }
 ]
 
