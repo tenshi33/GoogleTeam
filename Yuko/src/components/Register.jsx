@@ -98,19 +98,6 @@ function Register() {
           />
         </div>
 
-        {/* Course Inputs */}
-        <div className="course-signup-wrapper">
-          <input
-            className="course-input-field"
-            type="text"
-            id="course"
-            placeholder="Course"
-            value={course}
-            onChange={(e) => setCourse(e.target.value)}  // Binding the input value to state
-            required
-          />
-        </div>
-
         {/* Email Input */}
         <div className="email-signup-wrapper">
           <input

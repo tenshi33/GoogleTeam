@@ -110,35 +110,6 @@
   font-family: Arial;
 }
 
-.sign-up-form .course-signup-wrapper {
-  height: 4rem;
-  width: 23vw;
-  position: relative;
-  margin-bottom: 0.8vw;
-  display: flex;
-  flex-direction: row;
-  gap: 1vw;
-}
-
-.sign-up-form .course-signup-wrapper .course-input-field {
-  height: 100%;
-  width: 100%;
-  border-radius: 0.7rem;
-  background-color: transparent;
-  border-style: solid;
-  border-color: white;
-  color: white;
-  border-width: 1px;
-  font-size: 1.06vw;
-  outline: none;
-  -webkit-transition: 0.5s;
-  transition: 0.2s ease;
-  font-size: 0.9vw;
-  font-family: Arial;
-  padding-left: 0.6vw;
-  margin-top: 0.75vw;
-}
-
 .sign-up-form .email-signup-wrapper {
     height: 4rem;
   width: 23vw;
@@ -424,14 +395,6 @@ input.privacy-policy-check {
   color: rgb(167, 167, 167);
 }
 
-.sign-up-form .studnum-input-field::placeholder {
-  color: rgb(167, 167, 167);
-}
-
-.sign-up-form .course-input-field::placeholder {
-  color: rgb(167, 167, 167);
-}
-
 .error-exist {
   color: red;
   font-size: 0.9vw;
@@ -480,29 +443,6 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .lname-signup-wrapper .lname-input-field {
-    height: 11vw;
-    width: 100%;
-    padding: 0 1.25em 0 0.7em;
-    border-radius: 0.7rem;
-    background-color: transparent;
-    border-style: solid;
-    border-color: white;
-    color: white;
-    border-width: 1px;
-    font-size: 1rem;
-    outline: none;
-    -webkit-transition: 0.5s;
-    transition: 0.2s ease;
-    font-family: Arial;
-    padding-left: 1rem;
-  }
-
-  .sign-up-form .course-signup-wrapper {
-    height: 10vw;
-    width: 82vw;
-  }
-  
-  .sign-up-form .course-signup-wrapper .course-input-field {
     height: 11vw;
     width: 100%;
     padding: 0 1.25em 0 0.7em;
@@ -731,14 +671,6 @@ input.privacy-policy-check {
   }
 
   .sign-up-form .pass-input-field::placeholder {
-    color: rgb(167, 167, 167);
-  }
-
-  .sign-up-form .studnum-input-field::placeholder {
-    color: rgb(167, 167, 167);
-  }
-
-  .sign-up-form .course-input-field::placeholder {
     color: rgb(167, 167, 167);
   }
 
